@@ -1,0 +1,69 @@
+Running 62 tests using 1 worker
+(node:41768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [admin-setup] › tests\auth\login.setup.ts:14:6 › admin login (6.0s)
+(node:30208) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -   2 [admin] › tests\story\us-5-1-1-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.1.1 用微信一键登录
+  -   3 [admin] › tests\story\us-5-1-1-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.1.2 再次访问时自动登录
+  -   4 [admin] › tests\story\us-5-1-2-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.2.1 查看我的积分和等级
+  -   5 [admin] › tests\story\us-5-1-2-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.2.2 查看消费记录
+  -   6 [admin] › tests\story\us-5-10-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.10.1 商品列表对沽清与库存（含预扣）进行校验
+  -   7 [admin] › tests\story\us-5-10-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.10.2 按「一级分类名+其下商品」「二级分类名+其下商品」层级浏览。
+  -   8 [admin] › tests\story\us-5-10-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.10.3 在商品列表/详情看到我可用的最优优惠券名称。
+  -   9 [admin] › tests\story\us-5-11-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.11.1 确认订单时看到可用与不可用券列表及不可用原因
+  -  10 [admin] › tests\story\us-5-11-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.11.2 在个人中心查看有效、历史与过期优惠券。
+  -  11 [admin] › tests\story\us-5-12-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.12.1 生成代表我会员身份的二维码
+  -  12 [admin] › tests\story\us-5-13-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.1 确认订单/购物车再次校验沽清与预扣库存
+  -  13 [admin] › tests\story\us-5-13-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.2 查看结账详情并完成微信付款；支付失败时生成待支付订单，15分钟未付自动超…
+  -  14 [admin] › tests\story\us-5-13-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.3 支付成功后订单进入待制作、清预扣并扣减真实库存
+  -  15 [admin] › tests\story\us-5-13-4.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.4 待取订单随制作/出餐进度显示状态文案与超时提示
+  -  16 [admin] › tests\story\us-5-13-5.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.5 取消待支付订单或订单超时取消时库存被退回
+  -  17 [admin] › tests\story\us-5-13-6.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.6 出餐后满48小时未取的订单自动完成收口。
+  -  18 [admin] › tests\story\us-5-14-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.14.1 在优惠券列表看到每张券的适用门店信息
+  -  19 [admin] › tests\story\us-5-15-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.15.1 看到分类图标、富文本和标签（后台可开关）
+  -  20 [admin] › tests\story\us-5-15-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.15.2 商品列表的最优券推荐按「优惠金额→最快到期→券类型」规则排序
+  -  21 [admin] › tests\story\us-5-15-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.15.3 在系统套餐分类下看到各套餐促销活动及其套餐组/商品明细
+  -  22 [admin] › tests\story\us-5-16-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.16.1 在购物车/确认订单里按套餐组选购套餐
+  -  23 [admin] › tests\story\us-5-16-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.16.2 确认订单自动计算促销活动优惠、打包费（自提无服务费），并看到优惠金额与应…
+  -  24 [admin] › tests\story\us-5-16-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.16.3 固价商品不被任何优惠影响
+  -  25 [admin] › tests\story\us-5-17-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.17.1 订单列表按全部/自提/外卖/门店/其他分类查看，并看到分类标签
+  -  26 [admin] › tests\story\us-5-17-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.17.2 订单详情菜单默认收起、超过2个商品时展开查看，并清楚看到套餐构成与各项费…
+  -  27 [admin] › tests\story\us-5-2-1-1.story.spec.ts:9:7 › 小程序·商品瀏覽 › US-5.2.1.1 按分类浏览商品
+  -  28 [admin] › tests\story\us-5-2-1-2.story.spec.ts:9:7 › 小程序·商品瀏覽 › US-5.2.1.2 看到商品的主图和价格
+  -  29 [admin] › tests\story\us-5-4-1-1.story.spec.ts:9:7 › 小程序·下單 › US-5.4.1.1 快速完成下单
+  -  30 [admin] › tests\story\us-5-8-1.story.spec.ts:9:7 › 小程序·授權 › US-5.8.1 登录小程序时授权手机号
+  -  31 [admin] › tests\story\us-5-9-1.story.spec.ts:9:7 › 小程序·營業時段 › US-5.9.1 门店支持一天多个营业时间段
+  ok 32 [admin] › tests\story\us-7-7-1-1.story.spec.ts:11:7 › 後台·店員門店 › US-7.7.1.1 新增店员并为其分配一个门店 (3.3s)
+  ok 33 [admin] › tests\story\us-7-7-10-1.story.spec.ts:11:7 › 後台·庫存 › US-7.7.10.1 流水新增销售出库与退单入库 (2.8s)
+  ok 34 [admin] › tests\story\us-7-7-10-2.story.spec.ts:11:7 › 後台·庫存 › US-7.7.10.2 通过盘点修改商品库存 (2.8s)
+  ok 35 [admin] › tests\story\us-7-7-11-1.story.spec.ts:11:7 › 後台·營業時段 › US-7.7.11.1 为门店配置一天多个营业时间段（含按周） (2.7s)
+  ok 36 [admin] › tests\story\us-7-7-2-1.story.spec.ts:11:7 › 後台·優惠券 › US-7.7.2.1 管理四类优惠券、查看核销明细与使用记录并精准发放 (2.7s)
+  ok 37 [admin] › tests\story\us-7-7-3-1.story.spec.ts:11:7 › 後台·積分 › US-7.7.3.1 查看会员积分列表 (2.6s)
+  ok 38 [admin] › tests\story\us-7-7-3-2.story.spec.ts:11:7 › 後台·積分 › US-7.7.3.2 配置积分累计规则 (2.5s)
+  ok 39 [admin] › tests\story\us-7-7-4-1.story.spec.ts:11:7 › 後台·小票機 › US-7.7.4.1 添加/修改/预览厨打与收银小票机 (2.6s)
+  ok 40 [admin] › tests\story\us-7-7-4-2.story.spec.ts:11:7 › 後台·小票機 › US-7.7.4.2 把商品绑定到厨房小票机（一个商品绑一台厨打机） (2.7s)
+  ok 41 [admin] › tests\story\us-7-7-5-1.story.spec.ts:11:7 › 後台·票據模板 › US-7.7.5.1 分别设置厨打与收银小票模板的基本/商品/结算/文本区块 (2.5s)
+  ok 42 [admin] › tests\story\us-7-7-6-1.story.spec.ts:11:7 › 後台·商品 › US-7.7.6.1 在商品上设置点餐端显示渠道与小票机设置 (2.6s)
+  ok 43 [admin] › tests\story\us-7-7-6-2.story.spec.ts:11:7 › 後台·商品 › US-7.7.6.2 维护商品单位、批量上下架、规格属性排序。 (2.5s)
+  ok 44 [admin] › tests\story\us-7-7-6-3.story.spec.ts:11:7 › 後台·商品 › US-7.7.6.3 能在一级分类或其二级分类下创建商品。 (2.5s)
+  ok 45 [admin] › tests\story\us-7-7-6-4.story.spec.ts:11:7 › 後台·商品 › US-7.7.6.4 新增/编辑商品时不能直接修改库存 (2.6s)
+  ok 46 [admin] › tests\story\us-7-7-7-1.story.spec.ts:11:7 › 後台·訂單 › US-7.7.7.1 订单详情新增优惠金额、抹零、应收、实收、商品销售实收、售后与订单Flow (2.8s)
+  ok 47 [admin] › tests\story\us-7-7-7-2.story.spec.ts:11:7 › 後台·訂單 › US-7.7.7.2 订单列表新增商品总价/优惠/抹零/应收/实收列，并查询退货/售后单。 (2.9s)
+  ok 48 [admin] › tests\story\us-7-7-8-1.story.spec.ts:11:7 › 後台·會員 › US-7.7.8.1 会员详情展示积分与优惠券、消费记录显示订单类型 (2.5s)
+  ok 49 [admin] › tests\story\us-7-7-9-1.story.spec.ts:11:7 › 後台·存酒 › US-7.7.9.1 搜索/统计存酒并导出Excel (2.7s)
+  ok 50 [admin] › tests\story\us-7-7-9-2.story.spec.ts:11:7 › 後台·存酒 › US-7.7.9.2 配置存酒推送、有效期、临期提醒与凭证规则 (2.5s)
+  ok 51 [admin] › tests\story\us-7-8-1-1.story.spec.ts:11:7 › 後台·券圖 › US-7.8.1.1 系统提供一张正方形的优惠券默认图片 (2.7s)
+  ok 52 [admin] › tests\story\us-7-8-10-1.story.spec.ts:11:7 › 後台·憑證模板 › US-7.8.10.1 维护取酒凭证、退单凭证（退单小票）与收银小票优惠明细模板 (2.6s)
+  ok 53 [admin] › tests\story\us-7-8-11-1.story.spec.ts:11:7 › 後台·訂單核賬 › US-7.8.11.1 订单列表/详情展示促销优惠、优惠券、服务费、打包费、折后价与套餐构成，并… (2.8s)
+  ok 54 [admin] › tests\story\us-7-8-2-1.story.spec.ts:11:7 › 後台·促銷活動 › US-7.8.2.1 配置套餐促销、打折特价、满减活动 (2.9s)
+  ok 55 [admin] › tests\story\us-7-8-3-1.story.spec.ts:11:7 › 後台·權限 › US-7.8.3.1 为收银端账号设置挂账、反结账权限，并限制免单仅店长可用 (2.6s)
+  ok 56 [admin] › tests\story\us-7-8-4-1.story.spec.ts:11:7 › 後台·商品屬性 › US-7.8.4.1 维护门店全局的商品属性列表，编辑商品属性时从列表中选择（类似筛选模型） (2.7s)
+  ok 57 [admin] › tests\story\us-7-8-5-1.story.spec.ts:11:7 › 後台·商品表單 › US-7.8.5.1 新的商品表单支持商品类型、固价、副单位、条码、定位tab、参数排序、图集… (2.8s)
+  ok 58 [admin] › tests\story\us-7-8-6-1.story.spec.ts:11:7 › 後台·全域分類 › US-7.8.6.1 统一管理全局分类并同步下发到门店 (2.6s)
+  ok 59 [admin] › tests\story\us-7-8-6-2.story.spec.ts:11:7 › 後台·全域分類 › US-7.8.6.2 系统保留唯一的「套餐」系统分类 (2.5s)
+  ok 60 [admin] › tests\story\us-7-8-7-1.story.spec.ts:11:7 › 後台·服務費打包費 › US-7.8.7.1 配置服务费与打包费规则 (2.6s)
+  ok 61 [admin] › tests\story\us-7-8-8-1.story.spec.ts:11:7 › 後台·會員檔案 › US-7.8.8.1 会员档案含消费次数、累计金额、来源、首充金额，并有会员ID与会员卡号两个… (2.7s)
+  ok 62 [admin] › tests\story\us-7-8-9-1.story.spec.ts:11:7 › 後台·副單位庫存 › US-7.8.9.1 库存查询、出入库、盘点与库存记录都支持副单位计量 (2.6s)
+  30 skipped
+  32 passed (1.6m)

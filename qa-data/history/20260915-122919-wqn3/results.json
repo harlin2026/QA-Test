@@ -1,0 +1,24 @@
+{
+  "e2e:case-mu25y38u": {
+    "id": "e2e:case-mu25y38u",
+    "status": "passed",
+    "startedAt": "2026-09-15T04:29:19.118Z",
+    "finishedAt": "2026-09-15T04:29:29.913Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "e2e:case-mu25y38u",
+        "status": "passed",
+        "title": "查看門店商品列表",
+        "screenshot": "/api/shots/20260915-122919-wqn3/mu26a9fh-f3aab3397af8.png",
+        "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+        "duration": 1901,
+        "how": "Playwright 執行 tests/e2e/inventory-store-products-journey.spec.ts → e2e\\inventory-store-products-journey.spec.ts › E2E｜庫存／門店商品 › 查看門店商品列表"
+      }
+    ],
+    "runId": "20260915-122919-wqn3",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-store-products-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  }
+}

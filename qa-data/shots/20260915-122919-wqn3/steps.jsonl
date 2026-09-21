@@ -1,0 +1,1 @@
+{"file":"tests/e2e/inventory-store-products-journey.spec.ts","title":"查看門店商品列表","titlePath":["e2e\\inventory-store-products-journey.spec.ts","E2E｜庫存／門店商品","查看門店商品列表"],"status":"passed","duration":1901,"url":"http://192.168.30.55:5174/goods/list?storeId=133","screenshot":"mu26a9fh-f3aab3397af8.png","error":null}

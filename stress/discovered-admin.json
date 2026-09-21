@@ -1,0 +1,147 @@
+{
+  "system": "admin",
+  "capturedAt": "2026-09-14T09:42:52.611Z",
+  "baseURL": "http://192.168.30.55:5174",
+  "apiBase": "https://peterson-gw.weprogram.site",
+  "originCounts": {
+    "https://peterson-gw.weprogram.site": 27
+  },
+  "endpoints": [
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/system/settings/stores?pageIndex=1&pageSize=10000",
+      "pathname": "/api/system/settings/stores",
+      "resourceType": "xhr",
+      "count": 7
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/products/all-categories?storeId=317",
+      "pathname": "/api/admin/products/all-categories",
+      "resourceType": "xhr",
+      "count": 2
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/orders/stats?storeId=317",
+      "pathname": "/api/admin/orders/stats",
+      "resourceType": "xhr",
+      "count": 2
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/orders?storeId=317&pageIndex=1&pageSize=15",
+      "pathname": "/api/admin/orders",
+      "resourceType": "xhr",
+      "count": 2
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/orders/refunds?StoreId=317&PageIndex=1&PageSize=15",
+      "pathname": "/api/admin/orders/refunds",
+      "resourceType": "xhr",
+      "count": 2
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/reports/order-report?storeId=0&timeRange=today",
+      "pathname": "/api/admin/reports/order-report",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/reports/order-trend?storeId=0&timeRange=today",
+      "pathname": "/api/admin/reports/order-trend",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/reports/product-calculate?storeId=0&timeRange=today",
+      "pathname": "/api/admin/reports/product-calculate",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/member-stats?period=30days",
+      "pathname": "/api/admin/member-stats",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/products/home-page-details",
+      "pathname": "/api/admin/products/home-page-details",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/products?storeId=317&tab=0&pageIndex=1&pageSize=15",
+      "pathname": "/api/admin/products",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/products/product-count?storeId=317",
+      "pathname": "/api/admin/products/product-count",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/products/units",
+      "pathname": "/api/admin/products/units",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/products/filter-models",
+      "pathname": "/api/admin/products/filter-models",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/users?pageIndex=1&pageSize=20",
+      "pathname": "/api/users",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/marketing/admin/coupons?pageIndex=1&pageSize=15",
+      "pathname": "/api/marketing/admin/coupons",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/points/records?pageNumber=1&pageSize=15",
+      "pathname": "/api/admin/points/records",
+      "resourceType": "xhr",
+      "count": 1
+    }
+  ]
+}

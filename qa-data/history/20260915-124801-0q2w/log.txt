@@ -1,0 +1,33 @@
+Running 2 tests using 1 worker
+(node:44684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [admin-setup] › tests\auth\login.setup.ts:14:6 › admin login (2.9s)
+(node:42392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 [admin] › tests\e2e\vip-search-journey.spec.ts:6:5 › 會員搜索與詳情查看 (1.1m)
+  1) [admin] › tests\e2e\vip-search-journey.spec.ts:6:5 › 會員搜索與詳情查看 ────────────────────────────────
+    Test timeout of 60000ms exceeded.
+    Error: locator.fill: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByPlaceholder('請輸入手機號')
+      11 |   // 搜索測試會員
+      12 |   const testPhone = '13800138000'; // 測試用手機號
+    > 13 |   await page.getByPlaceholder('請輸入手機號').fill(testPhone);
+         |                                         ^
+      14 |   await page.getByRole('button', { name: '搜索' }).click();
+      15 |   await expect(page.locator('.ant-table-row')).toHaveCount(1);
+      16 |
+        at F:\Test\tests\e2e\vip-search-journey.spec.ts:13:41
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-search-journey-會員搜索與詳情查看-admin\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #2: dashboard-shot (image/png) ──────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-search-journey-會員搜索與詳情查看-admin\attachments\dashboard-shot-bf59ddc3f654103f9690dd967be884583f78f1b4.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-search-journey-會員搜索與詳情查看-admin\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: test-results\pw-output\e2e-vip-search-journey-會員搜索與詳情查看-admin\error-context.md
+  1 failed
+    [admin] › tests\e2e\vip-search-journey.spec.ts:6:5 › 會員搜索與詳情查看 ─────────────────────────────────
+  1 passed (1.2m)

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "crud:pos-members",
+    "module": "會員",
+    "name": "新增會員",
+    "path": "/pages/members/index",
+    "file": "tests/pos/crud/members.crud.spec.ts",
+    "description": "新增手機號會員 → 搜尋驗證"
+  },
+  {
+    "id": "crud:pos-wine",
+    "module": "存酒",
+    "name": "新建存酒",
+    "path": "/pages/inventory/create",
+    "file": "tests/pos/crud/wine-storage.crud.spec.ts",
+    "description": "登記存酒 → 回列表搜尋"
+  },
+  {
+    "id": "crud:pos-cart",
+    "module": "點單",
+    "name": "購物車增刪",
+    "path": "/pages/pos/index",
+    "file": "tests/pos/crud/cart.crud.spec.ts",
+    "description": "加購商品 → 改數量 → 清空購物車"
+  },
+  {
+    "id": "crud:pos-kitchen",
+    "module": "廚房",
+    "name": "製作進度分頁",
+    "path": "/pages/kitchen/index",
+    "file": "tests/pos/crud/kitchen.crud.spec.ts",
+    "description": "切換待製作／製作中／已完成分頁"
+  },
+  {
+    "id": "crud:pos-orders",
+    "module": "訂單",
+    "name": "訂單列表與詳情",
+    "path": "/pages/orders/index",
+    "file": "tests/pos/crud/orders.crud.spec.ts",
+    "description": "狀態篩選並嘗試打開訂單詳情"
+  },
+  {
+    "id": "crud:pos-inventory-overview",
+    "module": "總覽",
+    "name": "即時庫存總覽",
+    "path": "/pages/inventory/overview",
+    "file": "tests/pos/crud/inventory-overview.crud.spec.ts",
+    "description": "從總覽進入庫存總覽並同步"
+  },
+  {
+    "id": "crud:pos-extras",
+    "module": "點單",
+    "name": "會員登錄與備註",
+    "path": "/pages/pos/index",
+    "file": "tests/pos/crud/pos-extras.crud.spec.ts",
+    "description": "會員登錄入口與備註彈層"
+  },
+  {
+    "id": "crud:pos-product-search",
+    "module": "點單",
+    "name": "商品搜尋與分類",
+    "path": "/pages/pos/index",
+    "file": "tests/pos/crud/product-search.crud.spec.ts",
+    "description": "切換分類 → 搜尋商品"
+  },
+  {
+    "id": "crud:pos-cleaning",
+    "module": "沽清",
+    "name": "沽清分頁切換",
+    "path": "/pages/cleaning/index",
+    "file": "tests/pos/crud/cleaning.crud.spec.ts",
+    "description": "未沽清/已沽清與分類切換"
+  },
+  {
+    "id": "crud:pos-orders-filter",
+    "module": "訂單",
+    "name": "訂單進階篩選",
+    "path": "/pages/orders/index",
+    "file": "tests/pos/crud/orders-filter.crud.spec.ts",
+    "description": "訂單全狀態分頁與今天/昨天快捷篩選"
+  },
+  {
+    "id": "crud:pos-scan",
+    "module": "掃碼",
+    "name": "掃碼入口",
+    "path": "/pages/pos/index",
+    "file": "tests/pos/crud/scan.crud.spec.ts",
+    "description": "點擊掃碼入口並保持頁面可用"
+  },
+  {
+    "id": "crud:pos-dashboard-periods",
+    "module": "總覽",
+    "name": "總覽時段切換",
+    "path": "/pages/dashboard/index",
+    "file": "tests/pos/crud/dashboard-periods.crud.spec.ts",
+    "description": "今日到上月等多時段切換"
+  }
+]

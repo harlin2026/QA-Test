@@ -1,0 +1,24 @@
+{
+  "e2e:admin-vip-detail": {
+    "id": "e2e:admin-vip-detail",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:53:35.231Z",
+    "finishedAt": "2026-09-15T06:53:46.297Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "e2e:admin-vip-detail",
+        "status": "passed",
+        "title": "搜索并查看详情",
+        "screenshot": "/api/shots/20260915-145335-01wd/mu2bfsr2-64e89481b0a6.png",
+        "url": "http://192.168.30.55:5174/vip/detail/8c09668e-d782-4961-b920-9540526080de",
+        "duration": 2152,
+        "how": "Playwright 執行 tests/e2e/vip-detail-journey.spec.ts → e2e\\vip-detail-journey.spec.ts › E2E｜会员 › 搜索并查看详情"
+      }
+    ],
+    "runId": "20260915-145335-01wd",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-detail-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  }
+}

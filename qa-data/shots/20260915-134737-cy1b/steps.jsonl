@@ -1,0 +1,1 @@
+{"file":"tests/e2e/vip-search-detail-journey.spec.ts","title":"通過手機號搜索會員並查看詳情","titlePath":["e2e\\vip-search-detail-journey.spec.ts","會員搜索與詳情查看","通過手機號搜索會員並查看詳情"],"status":"timedOut","duration":60007,"url":"http://192.168.30.55:5174/vip/list","screenshot":"mu2946wn-dad844b34033.png","error":"\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"}

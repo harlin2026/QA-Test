@@ -1,0 +1,13 @@
+{
+  "e2e:case-mu25y38u": {
+    "id": "e2e:case-mu25y38u",
+    "status": "failed",
+    "startedAt": "2026-09-15T04:24:52.847Z",
+    "finishedAt": "2026-09-15T04:24:54.209Z",
+    "error": "執行失敗（詳見日誌）",
+    "steps": [],
+    "runId": "20260915-122452-0gdu",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-store-products-journey.spec.ts",
+    "hasShots": false
+  }
+}

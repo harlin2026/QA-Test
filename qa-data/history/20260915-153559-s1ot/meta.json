@@ -1,0 +1,18 @@
+{
+  "runId": "20260915-153559-s1ot",
+  "system": "admin",
+  "target": "e2e:admin-vip-create-by-phone",
+  "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-create-by-phone-journey.spec.ts",
+  "exitCode": 1,
+  "startedAt": "2026-09-15T07:35:59.669Z",
+  "finishedAt": "2026-09-15T07:36:27.705Z",
+  "ids": [
+    "e2e:admin-vip-create-by-phone"
+  ],
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0
+  }
+}

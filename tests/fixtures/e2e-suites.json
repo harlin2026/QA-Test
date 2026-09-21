@@ -1,0 +1,212 @@
+[
+  {
+    "id": "e2e:dashboard-home",
+    "module": "首页",
+    "name": "數據總覽閉環",
+    "file": "tests/e2e/dashboard-home-journey.spec.ts",
+    "description": "首頁總覽 → 跳轉商品/訂單並確認可用"
+  },
+  {
+    "id": "e2e:shop-config",
+    "module": "商城设置",
+    "name": "商城配置閉環",
+    "file": "tests/e2e/shop-config-journey.spec.ts",
+    "description": "門店管理 → 頁面設計 → 小票機"
+  },
+  {
+    "id": "e2e:goods-catalog",
+    "module": "商品管理",
+    "name": "商品目錄閉環",
+    "file": "tests/e2e/goods-catalog-journey.spec.ts",
+    "description": "分類 → 篩選模型 → 單位 → 商品列表 → 添加商品頁"
+  },
+  {
+    "id": "e2e:product-publish",
+    "module": "商品管理",
+    "name": "商品上架寫入閉環",
+    "file": "tests/e2e/product-publish-journey.spec.ts",
+    "description": "添加商品填寫 → 返回列表篩選 → 打開詳情/編輯入口"
+  },
+  {
+    "id": "e2e:store-ops",
+    "module": "跨模組",
+    "name": "門店經營閉環",
+    "file": "tests/e2e/store-ops-journey.spec.ts",
+    "description": "選門店 → 商品篩選 → 訂單 → 會員詳情 → 報表"
+  },
+  {
+    "id": "e2e:order-lifecycle",
+    "module": "订单管理",
+    "name": "訂單與售後閉環",
+    "file": "tests/e2e/order-lifecycle-journey.spec.ts",
+    "description": "訂單列表篩選 → 退貨售後 → 訂單銷量報表"
+  },
+  {
+    "id": "e2e:order-detail-aftersale",
+    "module": "订单管理",
+    "name": "訂單詳情與售後閉環",
+    "file": "tests/e2e/order-detail-aftersale-journey.spec.ts",
+    "description": "打開訂單詳情 → 售後篩選 → 銷量/收銀報表"
+  },
+  {
+    "id": "e2e:vip-points-promo",
+    "module": "会员与促销",
+    "name": "會員積分促銷閉環",
+    "file": "tests/e2e/vip-points-promo-journey.spec.ts",
+    "description": "會員詳情 → 積分列表/設置 → 優惠券 → 相關統計"
+  },
+  {
+    "id": "e2e:vip-promo-write",
+    "module": "会员与促销",
+    "name": "會員積分促銷寫入閉環",
+    "file": "tests/e2e/vip-promo-write-journey.spec.ts",
+    "description": "會員詳情 → 積分設置切換還原 → 優惠券寫入入口 → 統計"
+  },
+  {
+    "id": "e2e:inventory-ops",
+    "module": "库存管理",
+    "name": "庫存運營閉環",
+    "file": "tests/e2e/inventory-ops-journey.spec.ts",
+    "description": "庫存查詢 → 出入庫 → 盤點 → 記錄 → 庫存報表"
+  },
+  {
+    "id": "e2e:inventory-document",
+    "module": "库存管理",
+    "name": "庫存單據寫入閉環",
+    "file": "tests/e2e/inventory-document-journey.spec.ts",
+    "description": "出入庫/盤點新建入口 → 記錄篩選 → 庫存查詢與報表"
+  },
+  {
+    "id": "e2e:wine-storage",
+    "module": "存酒管理",
+    "name": "存酒管理閉環",
+    "file": "tests/e2e/wine-storage-journey.spec.ts",
+    "description": "存酒列表 → 存酒設置"
+  },
+  {
+    "id": "e2e:store-receipt-wine",
+    "module": "商城设置",
+    "name": "門店出票與存酒配置閉環",
+    "file": "tests/e2e/store-receipt-wine-config-journey.spec.ts",
+    "description": "門店 → 小票機 → 單據模板 → 存酒設置/列表"
+  },
+  {
+    "id": "e2e:reports-tour",
+    "module": "报表统计",
+    "name": "報表巡覽閉環",
+    "file": "tests/e2e/reports-tour-journey.spec.ts",
+    "description": "依序開啟全部報表頁並確認可用"
+  },
+  {
+    "id": "e2e:system-admin",
+    "module": "设置",
+    "name": "系統管理閉環",
+    "file": "tests/e2e/system-admin-journey.spec.ts",
+    "description": "單據模板 → 通知 → 用戶 → 角色 → 登錄日誌"
+  },
+  {
+    "id": "e2e:access-lifecycle",
+    "module": "设置",
+    "name": "帳號權限生命週期閉環",
+    "file": "tests/e2e/access-lifecycle-journey.spec.ts",
+    "description": "角色確認 → 新增臨時用戶 → 搜尋 → 刪除清理 → 登錄日誌"
+  },
+  {
+    "id": "e2e:bridge-seed-product",
+    "module": "跨端閉環",
+    "name": "跨端種子｜後台商品標記",
+    "file": "tests/e2e/bridge-seed-product.spec.ts",
+    "description": "後台讀取門店商品關鍵字寫入 bridge，供 POS 驗證"
+  },
+  {
+    "id": "e2e:bridge-verify-pos-member",
+    "module": "跨端閉環",
+    "name": "跨端驗證｜後台可見 POS 會員",
+    "file": "tests/e2e/bridge-verify-pos-member.spec.ts",
+    "description": "需先跑 POS 跨端種子；後台會員列表搜尋 bridge 手機號"
+  },
+  {
+    "id": "e2e:goods-ops",
+    "module": "商品管理",
+    "name": "商品列表運營閉環",
+    "file": "tests/e2e/goods-ops-journey.spec.ts",
+    "description": "排序/批量入口 → 添加商品 → 返回列表篩選"
+  },
+  {
+    "id": "e2e:inventory-check-write",
+    "module": "库存管理",
+    "name": "庫存盤點寫入閉環",
+    "file": "tests/e2e/inventory-check-write-journey.spec.ts",
+    "description": "新增盤點/導出導入 → 篩選 → 出入庫入口"
+  },
+  {
+    "id": "e2e:member-order-points",
+    "module": "会员与促销",
+    "name": "會員訂單積分聯動閉環",
+    "file": "tests/e2e/member-order-points-journey.spec.ts",
+    "description": "會員詳情 → 訂單篩選 → 積分列表/設置"
+  },
+  {
+    "id": "e2e:multi-store-switch",
+    "module": "跨模組",
+    "name": "多門店切換聯動閉環",
+    "file": "tests/e2e/multi-store-switch-journey.spec.ts",
+    "description": "門店A商品篩選 → 切換門店B → 訂單列表可用"
+  },
+  {
+    "id": "e2e:promo-order-report",
+    "module": "会员与促销",
+    "name": "促銷訂單報表聯動閉環",
+    "file": "tests/e2e/promo-order-report-journey.spec.ts",
+    "description": "優惠券入口 → 訂單篩選 → 優惠券/收銀統計"
+  },
+  {
+    "id": "e2e:stock-to-sales-report",
+    "module": "库存管理",
+    "name": "庫存到銷售報表聯動閉環",
+    "file": "tests/e2e/stock-to-sales-report-journey.spec.ts",
+    "description": "庫存查詢 → 出入庫入口 → 進銷存/商品銷量報表"
+  },
+  {
+    "id": "e2e:notification-audit",
+    "module": "设置",
+    "name": "用戶稽核聯動閉環",
+    "file": "tests/e2e/notification-audit-journey.spec.ts",
+    "description": "單據模板 → 用戶篩選 → 角色 → 登錄日誌"
+  },
+  {
+    "id": "e2e:admin-vip-phone-journey",
+    "module": "会员",
+    "name": "手机号搜索会员并查看详情/积分/优惠券/消费记录",
+    "file": "tests/e2e/vip-phone-journey.spec.ts",
+    "description": "店員以手機號 13909091140 搜尋會員，開啟詳情並檢視積分、優惠券與消費記錄。"
+  },
+  {
+    "id": "e2e:admin-vip-phone-search-detail",
+    "module": "会员",
+    "name": "手机号搜索会员并查看详情闭环",
+    "file": "tests/e2e/vip-phone-search-detail-journey.spec.ts",
+    "description": "店员登录后进入会员列表，用手机号 13909091140 搜索会员，进入详情页依次查看基本信息、积分、优惠券与消费记录。"
+  },
+  {
+    "id": "e2e:admin-vip-detail-journey",
+    "module": "会员",
+    "name": "手机号搜索会员并查看详情积分优惠券消费记录",
+    "file": "tests/e2e/vip-detail-journey.spec.ts",
+    "description": "店员登录后台，用手机号13909091140搜索会员，进入详情查看积分、优惠券与消费记录，并逐步截图保存。"
+  },
+  {
+    "id": "e2e:admin-store-create",
+    "module": "门店管理",
+    "name": "新增门店闭环",
+    "file": "tests/e2e/store-create-journey.spec.ts",
+    "description": "登录后台进入门店列表，打开新增门店弹窗填写门店信息并提交，最后在列表中检索到新建门店。"
+  },
+  {
+    "id": "e2e:admin-inventory-query",
+    "module": "库存查询",
+    "name": "登录后查看库存数据",
+    "file": "tests/e2e/inventory-query-journey.spec.ts",
+    "description": "登录后台管理系统，进入库存查询页并校验库存列表与表头数据可用。"
+  }
+]

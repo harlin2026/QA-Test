@@ -1,0 +1,67 @@
+Running 9 tests using 1 worker
+(node:38612) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [pos-setup] › tests\pos\auth\login.setup.ts:14:6 › pos login (1.7s)
+(node:51132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:24:7 › E2E POS 進店點單支付到取餐閉環 › 1. 進店：打開 POS 點單並選用餐方式 (3.4s)
+  ok 3 [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:33:7 › E2E POS 進店點單支付到取餐閉環 › 2. 選購商品加入購物車 (5.9s)
+  x  4 [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:44:7 › E2E POS 進店點單支付到取餐閉環 › 3. 選擇支付方式並完成支付 (1.1m)
+  -  5 [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:59:7 › E2E POS 進店點單支付到取餐閉環 › 4. 支付後可見列印／小票相關語意（前廳／後廚）
+  -  6 [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:66:7 › E2E POS 進店點單支付到取餐閉環 › 5. 訂單進入制作进度且可見制作中
+  -  7 [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:86:7 › E2E POS 進店點單支付到取餐閉環 › 6. 後廚完成制作 → 狀態待取单
+  -  8 [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:107:7 › E2E POS 進店點單支付到取餐閉環 › 7. 顧客取单 → 已取单 → 已完成
+  -  9 [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:118:7 › E2E POS 進店點單支付到取餐閉環 › 8. 訂單列表可見已完成（訂單結束）
+  1) [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:44:7 › E2E POS 進店點單支付到取餐閉環 › 3. 選擇支付方式並完成支付 
+    Test timeout of 60000ms exceeded.
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('uni-button').filter({ hasText: /^结账$/ }).first()
+        - locator resolved to <uni-button id="" data-v-88962b07="" class="checkout-button">结账</uni-button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <uni-view data-v-88962b07="" class="spec-modal-mask">…</uni-view> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <uni-view data-v-88962b07="" class="spec-modal-mask">…</uni-view> intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        116 × waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <uni-view data-v-88962b07="" class="spec-modal-mask">…</uni-view> intercepts pointer events
+          - retrying click action
+            - waiting 500ms
+       at pos\helpers\pos.ts:122
+      120 |   const btn = page.locator('uni-button', { hasText: text }).first();
+      121 |   await expect(btn).toBeVisible({ timeout: 10_000 });
+    > 122 |   await btn.click();
+          |             ^
+      123 | }
+      124 |
+      125 | /** 清空購物車（若有商品） */
+        at clickTextButton (f:\Test\tests\pos\helpers\pos.ts:122:13)
+        at completeCheckoutPayment (f:\Test\tests\pos\helpers\pos.ts:322:3)
+        at f:\Test\tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:53:20
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\pw-output\pos-e2e-dine-pay-kitchen-p-65b18-S-進店點單支付到取餐閉環-3-選擇支付方式並完成支付-pos\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #2: dashboard-shot (image/png) ──────────────────────────────────────────────────────
+    test-results\pw-output\pos-e2e-dine-pay-kitchen-p-65b18-S-進店點單支付到取餐閉環-3-選擇支付方式並完成支付-pos\attachments\dashboard-shot-138ffaeee2295557f01421ebc4d888c722e03e0d.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\pw-output\pos-e2e-dine-pay-kitchen-p-65b18-S-進店點單支付到取餐閉環-3-選擇支付方式並完成支付-pos\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: test-results\pw-output\pos-e2e-dine-pay-kitchen-p-65b18-S-進店點單支付到取餐閉環-3-選擇支付方式並完成支付-pos\error-context.md
+  1 failed
+    [pos] › tests\pos\e2e\dine-pay-kitchen-pickup-journey.spec.ts:44:7 › E2E POS 進店點單支付到取餐閉環 › 3. 選擇支付方式並完成支付 
+  5 did not run
+  3 passed (1.3m)

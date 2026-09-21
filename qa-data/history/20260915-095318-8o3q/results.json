@@ -1,0 +1,24 @@
+{
+  "smoke:/": {
+    "id": "smoke:/",
+    "status": "passed",
+    "startedAt": "2026-09-15T01:53:18.001Z",
+    "finishedAt": "2026-09-15T01:53:33.138Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/",
+        "status": "passed",
+        "title": "開啟 / 功能可用",
+        "screenshot": "/api/shots/20260915-095318-8o3q/mu20ppje-950f4c64b42e.png",
+        "url": "http://192.168.30.55:5174/",
+        "duration": 1842,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 首页 / 主页 › 開啟 / 功能可用"
+      }
+    ],
+    "runId": "20260915-095318-8o3q",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke -g 開啟 / 功能可用",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  }
+}

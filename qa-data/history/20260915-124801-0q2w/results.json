@@ -1,0 +1,25 @@
+{
+  "e2e:admin-vip-search": {
+    "id": "e2e:admin-vip-search",
+    "status": "failed",
+    "startedAt": "2026-09-15T04:48:01.920Z",
+    "finishedAt": "2026-09-15T04:49:14.681Z",
+    "error": "tests\\e2e\\vip-search-journey.spec.ts:6:5 › 會員搜索與詳情查看",
+    "steps": [
+      {
+        "id": "e2e:admin-vip-search",
+        "status": "failed",
+        "title": "會員搜索與詳情查看",
+        "screenshot": "/api/shots/20260915-124801-0q2w/mu26zkec-ad9f97e15c5d.png",
+        "url": "http://192.168.30.55:5174/vip/list",
+        "duration": 60014,
+        "error": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+        "how": "Playwright 執行 tests/e2e/vip-search-journey.spec.ts → e2e\\vip-search-journey.spec.ts › 會員搜索與詳情查看"
+      }
+    ],
+    "runId": "20260915-124801-0q2w",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+  }
+}

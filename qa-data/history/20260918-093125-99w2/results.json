@@ -1,0 +1,20 @@
+{
+  "story:US-5.1.2.2": {
+    "id": "story:US-5.1.2.2",
+    "status": "skipped",
+    "startedAt": "2026-09-18T01:31:25.130Z",
+    "finishedAt": "2026-09-18T01:31:35.337Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.1.2.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-1-2-2.story.spec.ts:9:7 › 小程序·登入会员 › US-5.1.2.2 查看消费记录"
+      }
+    ],
+    "runId": "20260918-093125-99w2",
+    "command": "npx playwright test --project=admin --workers=1 tests/story/us-5-1-2-2.story.spec.ts -g US-5\\.1\\.2\\.2",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  }
+}

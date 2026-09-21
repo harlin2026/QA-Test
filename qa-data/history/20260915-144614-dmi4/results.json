@@ -1,0 +1,728 @@
+{
+  "smoke:/": {
+    "id": "smoke:/",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/",
+        "status": "passed",
+        "title": "開啟 / 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6ex0-950f4c64b42e.png",
+        "url": "http://192.168.30.55:5174/",
+        "duration": 1583,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 首页 / 主页 › 開啟 / 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/shop/stores": {
+    "id": "smoke:/shop/stores",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/shop/stores",
+        "status": "passed",
+        "title": "開啟 /shop/stores 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6gzs-55be7dd0989c.png",
+        "url": "http://192.168.30.55:5174/shop/stores",
+        "duration": 1407,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商城设置 / 门店管理 › 開啟 /shop/stores 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/shop/page-design": {
+    "id": "smoke:/shop/page-design",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/shop/page-design",
+        "status": "passed",
+        "title": "開啟 /shop/page-design 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6j1e-e49c15bab04a.png",
+        "url": "http://192.168.30.55:5174/shop/page-design",
+        "duration": 1481,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商城设置 / 页面设计 › 開啟 /shop/page-design 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/goods/categories": {
+    "id": "smoke:/goods/categories",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/goods/categories",
+        "status": "passed",
+        "title": "開啟 /goods/categories 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6l11-3f76f6ec2ccc.png",
+        "url": "http://192.168.30.55:5174/goods/categories?storeId=290",
+        "duration": 1408,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商品管理 / 商品分类 › 開啟 /goods/categories 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/goods/list": {
+    "id": "smoke:/goods/list",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/goods/list",
+        "status": "passed",
+        "title": "開啟 /goods/list 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6n5v-e29672356467.png",
+        "url": "http://192.168.30.55:5174/goods/list?storeId=290",
+        "duration": 1607,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商品管理 / 商品列表 › 開啟 /goods/list 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/goods/product-units": {
+    "id": "smoke:/goods/product-units",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/goods/product-units",
+        "status": "passed",
+        "title": "開啟 /goods/product-units 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6p7v-6ee404639f17.png",
+        "url": "http://192.168.30.55:5174/goods/product-units",
+        "duration": 1385,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商品管理 / 商品单位设置 › 開啟 /goods/product-units 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/goods/filter-models": {
+    "id": "smoke:/goods/filter-models",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/goods/filter-models",
+        "status": "passed",
+        "title": "開啟 /goods/filter-models 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6r86-15d794a43a8b.png",
+        "url": "http://192.168.30.55:5174/goods/filter-models",
+        "duration": 1433,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商品管理 / 筛选模型 › 開啟 /goods/filter-models 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/orders/list": {
+    "id": "smoke:/orders/list",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/orders/list",
+        "status": "passed",
+        "title": "開啟 /orders/list 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6tch-a48b2bdf6171.png",
+        "url": "http://192.168.30.55:5174/orders/list?storeId=290",
+        "duration": 1555,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 订单管理 / 订单列表 › 開啟 /orders/list 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/orders/refund": {
+    "id": "smoke:/orders/refund",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/orders/refund",
+        "status": "passed",
+        "title": "開啟 /orders/refund 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6vgt-76b94f7b40ff.png",
+        "url": "http://192.168.30.55:5174/orders/refund?storeId=290",
+        "duration": 1597,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 订单管理 / 退货/售后订单 › 開啟 /orders/refund 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/vip/list": {
+    "id": "smoke:/vip/list",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/vip/list",
+        "status": "passed",
+        "title": "開啟 /vip/list 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6xh8-c571dacc4b12.png",
+        "url": "http://192.168.30.55:5174/vip/list",
+        "duration": 1435,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 会员列表 / 会员列表 › 開啟 /vip/list 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/promotion/coupons": {
+    "id": "smoke:/promotion/coupons",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/promotion/coupons",
+        "status": "passed",
+        "title": "開啟 /promotion/coupons 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6zj9-7ca2aad42a60.png",
+        "url": "http://192.168.30.55:5174/promotion/coupons",
+        "duration": 1476,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 促销中心 / 优惠券列表 › 開啟 /promotion/coupons 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/points/list": {
+    "id": "smoke:/points/list",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/points/list",
+        "status": "passed",
+        "title": "開啟 /points/list 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b71jc-6a32e917ab98.png",
+        "url": "http://192.168.30.55:5174/points/list",
+        "duration": 1391,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 积分管理 / 积分列表 › 開啟 /points/list 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/points/setting": {
+    "id": "smoke:/points/setting",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/points/setting",
+        "status": "passed",
+        "title": "開啟 /points/setting 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b73ir-afa9e151b85a.png",
+        "url": "http://192.168.30.55:5174/points/setting",
+        "duration": 1440,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 积分管理 / 积分设置 › 開啟 /points/setting 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/inventory/query": {
+    "id": "smoke:/inventory/query",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/inventory/query",
+        "status": "passed",
+        "title": "開啟 /inventory/query 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b75kk-630dd48a1230.png",
+        "url": "http://192.168.30.55:5174/inventory/query?storeId=290",
+        "duration": 1488,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 库存管理 / 库存查询 › 開啟 /inventory/query 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/inventory/stock": {
+    "id": "smoke:/inventory/stock",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/inventory/stock",
+        "status": "passed",
+        "title": "開啟 /inventory/stock 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b77o9-b5ce88f41adc.png",
+        "url": "http://192.168.30.55:5174/inventory/stock?storeId=290",
+        "duration": 1569,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 库存管理 / 出库入库 › 開啟 /inventory/stock 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/inventory/check": {
+    "id": "smoke:/inventory/check",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/inventory/check",
+        "status": "passed",
+        "title": "開啟 /inventory/check 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b79ru-a1d1a0fe382d.png",
+        "url": "http://192.168.30.55:5174/inventory/check",
+        "duration": 1572,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 库存管理 / 库存盘点 › 開啟 /inventory/check 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/inventory/record": {
+    "id": "smoke:/inventory/record",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/inventory/record",
+        "status": "passed",
+        "title": "開啟 /inventory/record 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7buj-b9ee9db7fc29.png",
+        "url": "http://192.168.30.55:5174/inventory/record",
+        "duration": 1507,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 库存管理 / 库存记录 › 開啟 /inventory/record 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/wine-storage/list": {
+    "id": "smoke:/wine-storage/list",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/wine-storage/list",
+        "status": "passed",
+        "title": "開啟 /wine-storage/list 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7e0e-18273ea91574.png",
+        "url": "http://192.168.30.55:5174/wine-storage/list?storeId=290",
+        "duration": 1552,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 存酒管理 / 存酒列表 › 開啟 /wine-storage/list 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/wine-storage/setting": {
+    "id": "smoke:/wine-storage/setting",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/wine-storage/setting",
+        "status": "passed",
+        "title": "開啟 /wine-storage/setting 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7g4h-78cf713b0b68.png",
+        "url": "http://192.168.30.55:5174/wine-storage/setting?storeId=290",
+        "duration": 1590,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 存酒管理 / 存酒设置 › 開啟 /wine-storage/setting 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/report/coupon-stats": {
+    "id": "smoke:/report/coupon-stats",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/report/coupon-stats",
+        "status": "passed",
+        "title": "開啟 /report/coupon-stats 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7i7i-d9ca9e93eae5.png",
+        "url": "http://192.168.30.55:5174/report/coupon-stats",
+        "duration": 1566,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 优惠券统计 › 開啟 /report/coupon-stats 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/inventory/report/stock": {
+    "id": "smoke:/inventory/report/stock",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/inventory/report/stock",
+        "status": "passed",
+        "title": "開啟 /inventory/report/stock 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7k92-be3bb762b344.png",
+        "url": "http://192.168.30.55:5174/inventory/report/stock?storeId=0",
+        "duration": 1497,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 库存统计 › 開啟 /inventory/report/stock 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/inventory/report/order-sales": {
+    "id": "smoke:/inventory/report/order-sales",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/inventory/report/order-sales",
+        "status": "passed",
+        "title": "開啟 /inventory/report/order-sales 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7mge-82eab2db452c.png",
+        "url": "http://192.168.30.55:5174/inventory/report/order-sales?storeId=0",
+        "duration": 1686,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 订单销量 › 開啟 /inventory/report/order-sales 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/report/product-sales": {
+    "id": "smoke:/report/product-sales",
+    "status": "failed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": "tests\\smoke\\modules.spec.ts:29:9 › 报表统计 / 商品销量 › 開啟 /report/product-sales 功能可用",
+    "steps": [
+      {
+        "id": "smoke:/report/product-sales",
+        "status": "failed",
+        "title": "開啟 /report/product-sales 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7olj-77742a74bd5e.png",
+        "url": "http://192.168.30.55:5174/report/product-sales?storeId=0",
+        "duration": 1580,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 商品销量 › 開啟 /report/product-sales 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+  },
+  "smoke:/inventory/report/finance-receipts": {
+    "id": "smoke:/inventory/report/finance-receipts",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/inventory/report/finance-receipts",
+        "status": "passed",
+        "title": "開啟 /inventory/report/finance-receipts 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7s8t-b76a4c17402a.png",
+        "url": "http://192.168.30.55:5174/inventory/report/finance-receipts?storeId=0",
+        "duration": 1662,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 财务收款 › 開啟 /inventory/report/finance-receipts 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/report/cashier-stats": {
+    "id": "smoke:/report/cashier-stats",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/report/cashier-stats",
+        "status": "passed",
+        "title": "開啟 /report/cashier-stats 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7uay-9123ccae5c65.png",
+        "url": "http://192.168.30.55:5174/report/cashier-stats?storeId=0",
+        "duration": 1476,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 收银统计 › 開啟 /report/cashier-stats 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/inventory/report/product-sales": {
+    "id": "smoke:/inventory/report/product-sales",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/inventory/report/product-sales",
+        "status": "passed",
+        "title": "開啟 /inventory/report/product-sales 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7wfv-43de885ff3eb.png",
+        "url": "http://192.168.30.55:5174/inventory/report/product-sales?storeId=0",
+        "duration": 1594,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 商品进销存统计 › 開啟 /inventory/report/product-sales 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/report/member-balance-stats": {
+    "id": "smoke:/report/member-balance-stats",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/report/member-balance-stats",
+        "status": "passed",
+        "title": "開啟 /report/member-balance-stats 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7ygd-e9f0601eb893.png",
+        "url": "http://192.168.30.55:5174/report/member-balance-stats",
+        "duration": 1423,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 会员余额统计 › 開啟 /report/member-balance-stats 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/shop/printers": {
+    "id": "smoke:/shop/printers",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/shop/printers",
+        "status": "passed",
+        "title": "開啟 /shop/printers 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b80gf-df61fa7f40c8.png",
+        "url": "http://192.168.30.55:5174/shop/printers?storeId=290",
+        "duration": 1414,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 小票机管理 › 開啟 /shop/printers 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/system/receipt-template": {
+    "id": "smoke:/system/receipt-template",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/system/receipt-template",
+        "status": "passed",
+        "title": "開啟 /system/receipt-template 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b82h0-f16198923fe3.png",
+        "url": "http://192.168.30.55:5174/system/receipt-template",
+        "duration": 1409,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 单据模板 › 開啟 /system/receipt-template 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/system/notifications": {
+    "id": "smoke:/system/notifications",
+    "status": "failed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": "tests\\smoke\\modules.spec.ts:29:9 › 设置 / 通知管理 › 開啟 /system/notifications 功能可用",
+    "steps": [
+      {
+        "id": "smoke:/system/notifications",
+        "status": "failed",
+        "title": "開啟 /system/notifications 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b84kx-4dcae9301d52.png",
+        "url": "http://192.168.30.55:5174/system/notifications",
+        "duration": 1485,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 通知管理 › 開啟 /system/notifications 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+  },
+  "smoke:/system/users": {
+    "id": "smoke:/system/users",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/system/users",
+        "status": "passed",
+        "title": "開啟 /system/users 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b887o-ef95a2559cdb.png",
+        "url": "http://192.168.30.55:5174/system/users",
+        "duration": 1530,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 用户管理 › 開啟 /system/users 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/system/roles": {
+    "id": "smoke:/system/roles",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "smoke:/system/roles",
+        "status": "passed",
+        "title": "開啟 /system/roles 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b8adc-8d40a3b79e33.png",
+        "url": "http://192.168.30.55:5174/system/roles",
+        "duration": 1409,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 角色管理 › 開啟 /system/roles 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "smoke:/system/logs": {
+    "id": "smoke:/system/logs",
+    "status": "failed",
+    "startedAt": "2026-09-15T06:46:14.880Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "error": "tests\\smoke\\modules.spec.ts:29:9 › 设置 / 登录日志 › 開啟 /system/logs 功能可用",
+    "steps": [
+      {
+        "id": "smoke:/system/logs",
+        "status": "failed",
+        "title": "開啟 /system/logs 功能可用",
+        "screenshot": "/api/shots/20260915-144614-dmi4/mu2b8cg3-67854257a1a9.png",
+        "url": "http://192.168.30.55:5174/system/logs",
+        "duration": 1480,
+        "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 登录日志 › 開啟 /system/logs 功能可用"
+      }
+    ],
+    "runId": "20260915-144614-dmi4",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+  }
+}

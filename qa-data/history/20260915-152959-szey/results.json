@@ -1,0 +1,25 @@
+{
+  "e2e:admin-vip-create-by-phone": {
+    "id": "e2e:admin-vip-create-by-phone",
+    "status": "failed",
+    "startedAt": "2026-09-15T07:29:59.194Z",
+    "finishedAt": "2026-09-15T07:30:30.383Z",
+    "error": "tests\\e2e\\vip-create-by-phone-journey.spec.ts:10:7 › E2E｜会员｜仅凭手机号新增会员 › 店品仅凭手机号新增会员，并能在会员列表检索到",
+    "steps": [
+      {
+        "id": "e2e:admin-vip-create-by-phone",
+        "status": "failed",
+        "title": "店品仅凭手机号新增会员，并能在会员列表检索到",
+        "screenshot": "/api/shots/20260915-152959-szey/mu2cr0iw-4d91f8776516.png",
+        "url": "http://192.168.30.55:5174/vip/list",
+        "duration": 18453,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/页面不存在|404|系统错误|Internal Server Error/i)\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByText(/页面不存在|404|系统错误|Internal Server Error/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/页面不存在|404|系统错误|Internal Server Error/i)\u001b[22m\n\u001b[2m    33 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+        "how": "Playwright 執行 tests/e2e/vip-create-by-phone-journey.spec.ts → e2e\\vip-create-by-phone-journey.spec.ts › E2E｜会员｜仅凭手机号新增会员 › 店品仅凭手机号新增会员，并能在会员列表检索到"
+      }
+    ],
+    "runId": "20260915-152959-szey",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-create-by-phone-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+  }
+}

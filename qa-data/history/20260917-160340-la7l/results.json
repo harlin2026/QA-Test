@@ -1,0 +1,40 @@
+{
+  "e2e:pos-member-search-detail": {
+    "id": "e2e:pos-member-search-detail",
+    "status": "failed",
+    "startedAt": "2026-09-17T08:03:40.712Z",
+    "finishedAt": "2026-09-17T08:04:05.389Z",
+    "error": "tests\\pos\\e2e\\member-search-detail-journey.spec.ts:42:7 › E2E POS 會員搜尋新增與詳情閉環 › 1. 右上角添加会员（若已存在則略過）",
+    "steps": [
+      {
+        "id": "e2e:pos-member-search-detail",
+        "status": "failed",
+        "title": "1. 右上角添加会员（若已存在則略過）",
+        "screenshot": "/api/shots/20260917-160340-la7l/mu58twzq-c8a57b157498.png",
+        "url": "http://192.168.30.55:8090/pages/members/index",
+        "duration": 13416,
+        "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first() with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first()\u001b[22m\n\u001b[2m    23 × locator resolved to <div data-v-2de814bd=\"\" data-v-09157457=\"\" class=\"uni-input-placeholder input-placeholder\">请输入手机号查询</div>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+        "how": "Playwright 執行 tests/pos/e2e/member-search-detail-journey.spec.ts → pos\\e2e\\member-search-detail-journey.spec.ts › E2E POS 會員搜尋新增與詳情閉環 › 1. 右上角添加会员（若已存在則略過）"
+      },
+      {
+        "id": "e2e:pos-member-search-detail",
+        "status": "skipped",
+        "title": "tests\\pos\\e2e\\member-search-detail-journey.spec.ts:72:7 › E2E POS 會員搜尋新增與詳情閉環 › 2. 输入手机号 → 搜索会员"
+      },
+      {
+        "id": "e2e:pos-member-search-detail",
+        "status": "skipped",
+        "title": "tests\\pos\\e2e\\member-search-detail-journey.spec.ts:81:7 › E2E POS 會員搜尋新增與詳情閉環 › 3. 进入会员详情可查看优惠券数量"
+      },
+      {
+        "id": "e2e:pos-member-search-detail",
+        "status": "skipped",
+        "title": "tests\\pos\\e2e\\member-search-detail-journey.spec.ts:96:7 › E2E POS 會員搜尋新增與詳情閉環 › 4. 会员详情可查看消费记录"
+      }
+    ],
+    "runId": "20260917-160340-la7l",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/member-search-detail-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 4（通過 0 · 失敗 1 · 跳過 3）"
+  }
+}

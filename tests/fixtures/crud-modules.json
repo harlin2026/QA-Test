@@ -1,0 +1,130 @@
+[
+  {
+    "id": "crud:stores",
+    "module": "商城设置",
+    "name": "门店管理",
+    "path": "/shop/stores",
+    "file": "tests/crud/stores.crud.spec.ts",
+    "description": "打開创建门店表單並驗證可填寫"
+  },
+  {
+    "id": "crud:categories",
+    "module": "商品管理",
+    "name": "商品分类",
+    "path": "/goods/categories",
+    "file": "tests/crud/categories.crud.spec.ts",
+    "description": "打開新增分类表單並驗證可填寫"
+  },
+  {
+    "id": "crud:filter-models",
+    "module": "商品管理",
+    "name": "筛选模型",
+    "path": "/goods/filter-models",
+    "file": "tests/crud/filter-models.crud.spec.ts",
+    "description": "新增 → 更新 → 查詢 → 刪除篩選模型"
+  },
+  {
+    "id": "crud:product-units",
+    "module": "商品管理",
+    "name": "商品单位",
+    "path": "/goods/product-units",
+    "file": "tests/crud/product-units.crud.spec.ts",
+    "description": "新增 → 更新 → 查詢 → 刪除商品單位"
+  },
+  {
+    "id": "crud:coupons",
+    "module": "促销中心",
+    "name": "优惠券",
+    "path": "/promotion/coupons",
+    "file": "tests/crud/coupons.crud.spec.ts",
+    "description": "打開創建頁並驗證可填寫"
+  },
+  {
+    "id": "crud:printers",
+    "module": "设置",
+    "name": "小票机管理",
+    "path": "/shop/printers",
+    "file": "tests/crud/printers.crud.spec.ts",
+    "description": "打開新增小票机表單並驗證可填寫"
+  },
+  {
+    "id": "crud:receipt-templates",
+    "module": "设置",
+    "name": "单据模板",
+    "path": "/system/receipt-template",
+    "file": "tests/crud/receipt-templates.crud.spec.ts",
+    "description": "新增模板並進入編輯"
+  },
+  {
+    "id": "crud:users",
+    "module": "设置",
+    "name": "用户管理",
+    "path": "/system/users",
+    "file": "tests/crud/users.crud.spec.ts",
+    "description": "新增 → 更新 → 查詢 → 刪除用户"
+  },
+  {
+    "id": "crud:roles",
+    "module": "设置",
+    "name": "角色管理",
+    "path": "/system/roles",
+    "file": "tests/crud/roles.crud.spec.ts",
+    "description": "新增 → 更新 → 查詢 → 刪除角色"
+  },
+  {
+    "id": "crud:settings-entries",
+    "module": "其他可寫入口",
+    "name": "設定與複雜表單入口",
+    "path": "/system/notifications",
+    "file": "tests/crud/settings-and-entries.crud.spec.ts",
+    "description": "通知/存酒設置/積分/商品新增入口/庫存入口/頁面設計"
+  },
+  {
+    "id": "crud:goods",
+    "module": "商品管理",
+    "name": "商品列表",
+    "path": "/goods/list",
+    "file": "tests/crud/goods.crud.spec.ts",
+    "description": "添加商品填寫 → 排序/批量入口 → 名稱篩選"
+  },
+  {
+    "id": "crud:inventory-docs",
+    "module": "库存管理",
+    "name": "出入庫與盤點",
+    "path": "/inventory/stock",
+    "file": "tests/crud/inventory-docs.crud.spec.ts",
+    "description": "添加出入庫表單 → 新增盤點/導出導入入口"
+  },
+  {
+    "id": "crud:members",
+    "module": "会员列表",
+    "name": "會員查看",
+    "path": "/vip/list",
+    "file": "tests/crud/members.crud.spec.ts",
+    "description": "篩選會員並打開詳情"
+  },
+  {
+    "id": "crud:orders",
+    "module": "订单管理",
+    "name": "訂單列表",
+    "path": "/orders/list",
+    "file": "tests/crud/orders.crud.spec.ts",
+    "description": "訂單篩選並打開詳情"
+  },
+  {
+    "id": "crud:points",
+    "module": "积分管理",
+    "name": "積分列表",
+    "path": "/points/list",
+    "file": "tests/crud/points.crud.spec.ts",
+    "description": "積分列表搜尋篩選"
+  },
+  {
+    "id": "crud:wine-storage",
+    "module": "存酒管理",
+    "name": "存酒列表",
+    "path": "/wine-storage/list",
+    "file": "tests/crud/wine-storage.crud.spec.ts",
+    "description": "存酒搜尋、重置與導出入口"
+  }
+]

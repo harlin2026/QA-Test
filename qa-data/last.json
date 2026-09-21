@@ -1,0 +1,4561 @@
+{
+  "system": "admin",
+  "target": "story:US-5.1.2.2",
+  "runId": "20260918-093125-99w2",
+  "command": "npx playwright test --project=admin --workers=1 tests/story/us-5-1-2-2.story.spec.ts -g US-5\\.1\\.2\\.2",
+  "exitCode": 0,
+  "startedAt": "2026-09-18T01:31:25.130Z",
+  "finishedAt": "2026-09-18T01:31:35.337Z",
+  "lastRunIds": [
+    "story:US-5.1.2.2"
+  ],
+  "results": {
+    "smoke:/": {
+      "id": "smoke:/",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/",
+          "status": "passed",
+          "title": "開啟 / 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6ex0-950f4c64b42e.png",
+          "url": "http://192.168.30.55:5174/",
+          "duration": 1583,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 首页 / 主页 › 開啟 / 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/shop/stores": {
+      "id": "smoke:/shop/stores",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/shop/stores",
+          "status": "passed",
+          "title": "開啟 /shop/stores 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6gzs-55be7dd0989c.png",
+          "url": "http://192.168.30.55:5174/shop/stores",
+          "duration": 1407,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商城设置 / 门店管理 › 開啟 /shop/stores 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/shop/page-design": {
+      "id": "smoke:/shop/page-design",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/shop/page-design",
+          "status": "passed",
+          "title": "開啟 /shop/page-design 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6j1e-e49c15bab04a.png",
+          "url": "http://192.168.30.55:5174/shop/page-design",
+          "duration": 1481,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商城设置 / 页面设计 › 開啟 /shop/page-design 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/goods/categories": {
+      "id": "smoke:/goods/categories",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/goods/categories",
+          "status": "passed",
+          "title": "開啟 /goods/categories 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6l11-3f76f6ec2ccc.png",
+          "url": "http://192.168.30.55:5174/goods/categories?storeId=290",
+          "duration": 1408,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商品管理 / 商品分类 › 開啟 /goods/categories 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/goods/list": {
+      "id": "smoke:/goods/list",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/goods/list",
+          "status": "passed",
+          "title": "開啟 /goods/list 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6n5v-e29672356467.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=290",
+          "duration": 1607,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商品管理 / 商品列表 › 開啟 /goods/list 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/goods/product-units": {
+      "id": "smoke:/goods/product-units",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/goods/product-units",
+          "status": "passed",
+          "title": "開啟 /goods/product-units 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6p7v-6ee404639f17.png",
+          "url": "http://192.168.30.55:5174/goods/product-units",
+          "duration": 1385,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商品管理 / 商品单位设置 › 開啟 /goods/product-units 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/goods/filter-models": {
+      "id": "smoke:/goods/filter-models",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/goods/filter-models",
+          "status": "passed",
+          "title": "開啟 /goods/filter-models 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6r86-15d794a43a8b.png",
+          "url": "http://192.168.30.55:5174/goods/filter-models",
+          "duration": 1433,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 商品管理 / 筛选模型 › 開啟 /goods/filter-models 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/orders/list": {
+      "id": "smoke:/orders/list",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/orders/list",
+          "status": "passed",
+          "title": "開啟 /orders/list 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6tch-a48b2bdf6171.png",
+          "url": "http://192.168.30.55:5174/orders/list?storeId=290",
+          "duration": 1555,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 订单管理 / 订单列表 › 開啟 /orders/list 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/orders/refund": {
+      "id": "smoke:/orders/refund",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/orders/refund",
+          "status": "passed",
+          "title": "開啟 /orders/refund 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6vgt-76b94f7b40ff.png",
+          "url": "http://192.168.30.55:5174/orders/refund?storeId=290",
+          "duration": 1597,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 订单管理 / 退货/售后订单 › 開啟 /orders/refund 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/vip/list": {
+      "id": "smoke:/vip/list",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/vip/list",
+          "status": "passed",
+          "title": "開啟 /vip/list 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6xh8-c571dacc4b12.png",
+          "url": "http://192.168.30.55:5174/vip/list",
+          "duration": 1435,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 会员列表 / 会员列表 › 開啟 /vip/list 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/promotion/coupons": {
+      "id": "smoke:/promotion/coupons",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/promotion/coupons",
+          "status": "passed",
+          "title": "開啟 /promotion/coupons 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b6zj9-7ca2aad42a60.png",
+          "url": "http://192.168.30.55:5174/promotion/coupons",
+          "duration": 1476,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 促销中心 / 优惠券列表 › 開啟 /promotion/coupons 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/points/list": {
+      "id": "smoke:/points/list",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/points/list",
+          "status": "passed",
+          "title": "開啟 /points/list 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b71jc-6a32e917ab98.png",
+          "url": "http://192.168.30.55:5174/points/list",
+          "duration": 1391,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 积分管理 / 积分列表 › 開啟 /points/list 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/points/setting": {
+      "id": "smoke:/points/setting",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/points/setting",
+          "status": "passed",
+          "title": "開啟 /points/setting 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b73ir-afa9e151b85a.png",
+          "url": "http://192.168.30.55:5174/points/setting",
+          "duration": 1440,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 积分管理 / 积分设置 › 開啟 /points/setting 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/inventory/query": {
+      "id": "smoke:/inventory/query",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/inventory/query",
+          "status": "passed",
+          "title": "開啟 /inventory/query 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b75kk-630dd48a1230.png",
+          "url": "http://192.168.30.55:5174/inventory/query?storeId=290",
+          "duration": 1488,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 库存管理 / 库存查询 › 開啟 /inventory/query 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/inventory/stock": {
+      "id": "smoke:/inventory/stock",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/inventory/stock",
+          "status": "passed",
+          "title": "開啟 /inventory/stock 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b77o9-b5ce88f41adc.png",
+          "url": "http://192.168.30.55:5174/inventory/stock?storeId=290",
+          "duration": 1569,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 库存管理 / 出库入库 › 開啟 /inventory/stock 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/inventory/check": {
+      "id": "smoke:/inventory/check",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/inventory/check",
+          "status": "passed",
+          "title": "開啟 /inventory/check 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b79ru-a1d1a0fe382d.png",
+          "url": "http://192.168.30.55:5174/inventory/check",
+          "duration": 1572,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 库存管理 / 库存盘点 › 開啟 /inventory/check 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/inventory/record": {
+      "id": "smoke:/inventory/record",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/inventory/record",
+          "status": "passed",
+          "title": "開啟 /inventory/record 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7buj-b9ee9db7fc29.png",
+          "url": "http://192.168.30.55:5174/inventory/record",
+          "duration": 1507,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 库存管理 / 库存记录 › 開啟 /inventory/record 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/wine-storage/list": {
+      "id": "smoke:/wine-storage/list",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.879Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/wine-storage/list",
+          "status": "passed",
+          "title": "開啟 /wine-storage/list 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7e0e-18273ea91574.png",
+          "url": "http://192.168.30.55:5174/wine-storage/list?storeId=290",
+          "duration": 1552,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 存酒管理 / 存酒列表 › 開啟 /wine-storage/list 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/wine-storage/setting": {
+      "id": "smoke:/wine-storage/setting",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/wine-storage/setting",
+          "status": "passed",
+          "title": "開啟 /wine-storage/setting 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7g4h-78cf713b0b68.png",
+          "url": "http://192.168.30.55:5174/wine-storage/setting?storeId=290",
+          "duration": 1590,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 存酒管理 / 存酒设置 › 開啟 /wine-storage/setting 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/report/coupon-stats": {
+      "id": "smoke:/report/coupon-stats",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/report/coupon-stats",
+          "status": "passed",
+          "title": "開啟 /report/coupon-stats 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7i7i-d9ca9e93eae5.png",
+          "url": "http://192.168.30.55:5174/report/coupon-stats",
+          "duration": 1566,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 优惠券统计 › 開啟 /report/coupon-stats 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/inventory/report/stock": {
+      "id": "smoke:/inventory/report/stock",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/inventory/report/stock",
+          "status": "passed",
+          "title": "開啟 /inventory/report/stock 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7k92-be3bb762b344.png",
+          "url": "http://192.168.30.55:5174/inventory/report/stock?storeId=0",
+          "duration": 1497,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 库存统计 › 開啟 /inventory/report/stock 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/inventory/report/order-sales": {
+      "id": "smoke:/inventory/report/order-sales",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/inventory/report/order-sales",
+          "status": "passed",
+          "title": "開啟 /inventory/report/order-sales 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7mge-82eab2db452c.png",
+          "url": "http://192.168.30.55:5174/inventory/report/order-sales?storeId=0",
+          "duration": 1686,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 订单销量 › 開啟 /inventory/report/order-sales 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/report/product-sales": {
+      "id": "smoke:/report/product-sales",
+      "status": "failed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": "tests\\smoke\\modules.spec.ts:29:9 › 报表统计 / 商品销量 › 開啟 /report/product-sales 功能可用",
+      "steps": [
+        {
+          "id": "smoke:/report/product-sales",
+          "status": "failed",
+          "title": "開啟 /report/product-sales 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7olj-77742a74bd5e.png",
+          "url": "http://192.168.30.55:5174/report/product-sales?storeId=0",
+          "duration": 1580,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 商品销量 › 開啟 /report/product-sales 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+    },
+    "smoke:/inventory/report/finance-receipts": {
+      "id": "smoke:/inventory/report/finance-receipts",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/inventory/report/finance-receipts",
+          "status": "passed",
+          "title": "開啟 /inventory/report/finance-receipts 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7s8t-b76a4c17402a.png",
+          "url": "http://192.168.30.55:5174/inventory/report/finance-receipts?storeId=0",
+          "duration": 1662,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 财务收款 › 開啟 /inventory/report/finance-receipts 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/report/cashier-stats": {
+      "id": "smoke:/report/cashier-stats",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/report/cashier-stats",
+          "status": "passed",
+          "title": "開啟 /report/cashier-stats 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7uay-9123ccae5c65.png",
+          "url": "http://192.168.30.55:5174/report/cashier-stats?storeId=0",
+          "duration": 1476,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 收银统计 › 開啟 /report/cashier-stats 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/inventory/report/product-sales": {
+      "id": "smoke:/inventory/report/product-sales",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/inventory/report/product-sales",
+          "status": "passed",
+          "title": "開啟 /inventory/report/product-sales 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7wfv-43de885ff3eb.png",
+          "url": "http://192.168.30.55:5174/inventory/report/product-sales?storeId=0",
+          "duration": 1594,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 商品进销存统计 › 開啟 /inventory/report/product-sales 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/report/member-balance-stats": {
+      "id": "smoke:/report/member-balance-stats",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/report/member-balance-stats",
+          "status": "passed",
+          "title": "開啟 /report/member-balance-stats 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b7ygd-e9f0601eb893.png",
+          "url": "http://192.168.30.55:5174/report/member-balance-stats",
+          "duration": 1423,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 报表统计 / 会员余额统计 › 開啟 /report/member-balance-stats 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/shop/printers": {
+      "id": "smoke:/shop/printers",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/shop/printers",
+          "status": "passed",
+          "title": "開啟 /shop/printers 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b80gf-df61fa7f40c8.png",
+          "url": "http://192.168.30.55:5174/shop/printers?storeId=290",
+          "duration": 1414,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 小票机管理 › 開啟 /shop/printers 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/system/receipt-template": {
+      "id": "smoke:/system/receipt-template",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/system/receipt-template",
+          "status": "passed",
+          "title": "開啟 /system/receipt-template 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b82h0-f16198923fe3.png",
+          "url": "http://192.168.30.55:5174/system/receipt-template",
+          "duration": 1409,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 单据模板 › 開啟 /system/receipt-template 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/system/notifications": {
+      "id": "smoke:/system/notifications",
+      "status": "failed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": "tests\\smoke\\modules.spec.ts:29:9 › 设置 / 通知管理 › 開啟 /system/notifications 功能可用",
+      "steps": [
+        {
+          "id": "smoke:/system/notifications",
+          "status": "failed",
+          "title": "開啟 /system/notifications 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b84kx-4dcae9301d52.png",
+          "url": "http://192.168.30.55:5174/system/notifications",
+          "duration": 1485,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 通知管理 › 開啟 /system/notifications 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+    },
+    "smoke:/system/users": {
+      "id": "smoke:/system/users",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/system/users",
+          "status": "passed",
+          "title": "開啟 /system/users 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b887o-ef95a2559cdb.png",
+          "url": "http://192.168.30.55:5174/system/users",
+          "duration": 1530,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 用户管理 › 開啟 /system/users 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/system/roles": {
+      "id": "smoke:/system/roles",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/system/roles",
+          "status": "passed",
+          "title": "開啟 /system/roles 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b8adc-8d40a3b79e33.png",
+          "url": "http://192.168.30.55:5174/system/roles",
+          "duration": 1409,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 角色管理 › 開啟 /system/roles 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/system/logs": {
+      "id": "smoke:/system/logs",
+      "status": "failed",
+      "startedAt": "2026-09-15T06:46:14.880Z",
+      "finishedAt": "2026-09-15T06:47:59.040Z",
+      "error": "tests\\smoke\\modules.spec.ts:29:9 › 设置 / 登录日志 › 開啟 /system/logs 功能可用",
+      "steps": [
+        {
+          "id": "smoke:/system/logs",
+          "status": "failed",
+          "title": "開啟 /system/logs 功能可用",
+          "screenshot": "/api/shots/20260915-144614-dmi4/mu2b8cg3-67854257a1a9.png",
+          "url": "http://192.168.30.55:5174/system/logs",
+          "duration": 1480,
+          "how": "Playwright 執行 tests/smoke/modules.spec.ts → smoke\\modules.spec.ts › 设置 / 登录日志 › 開啟 /system/logs 功能可用"
+        }
+      ],
+      "runId": "20260915-144614-dmi4",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+    },
+    "crud:stores": {
+      "id": "crud:stores",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:categories": {
+      "id": "crud:categories",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:categories",
+          "status": "passed",
+          "title": "打開新增一级分类表單並可填寫後取消",
+          "screenshot": "/api/shots/20260915-144842-7zj5/mu2b9jly-33f0e9c026e5.png",
+          "url": "http://192.168.30.55:5174/goods/categories?storeId=133",
+          "duration": 2819,
+          "how": "Playwright 執行 tests/crud/categories.crud.spec.ts → crud\\categories.crud.spec.ts › CRUD 商品分类 › 打開新增一级分类表單並可填寫後取消"
+        },
+        {
+          "id": "crud:categories",
+          "status": "passed",
+          "title": "打開新增二级分类入口",
+          "screenshot": "/api/shots/20260915-144842-7zj5/mu2b9m5x-a915779c6755.png",
+          "url": "http://192.168.30.55:5174/goods/categories?storeId=133",
+          "duration": 2079,
+          "how": "Playwright 執行 tests/crud/categories.crud.spec.ts → crud\\categories.crud.spec.ts › CRUD 商品分类 › 打開新增二级分类入口"
+        }
+      ],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "crud:filter-models": {
+      "id": "crud:filter-models",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:product-units": {
+      "id": "crud:product-units",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:coupons": {
+      "id": "crud:coupons",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:printers": {
+      "id": "crud:printers",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:receipt-templates": {
+      "id": "crud:receipt-templates",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:users": {
+      "id": "crud:users",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:roles": {
+      "id": "crud:roles",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:settings-entries": {
+      "id": "crud:settings-entries",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:goods": {
+      "id": "crud:goods",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:inventory-docs": {
+      "id": "crud:inventory-docs",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:members": {
+      "id": "crud:members",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:orders": {
+      "id": "crud:orders",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:points": {
+      "id": "crud:points",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "crud:wine-storage": {
+      "id": "crud:wine-storage",
+      "status": "idle",
+      "startedAt": "2026-09-15T06:48:42.615Z",
+      "finishedAt": "2026-09-15T06:48:58.895Z",
+      "error": null,
+      "steps": [],
+      "runId": "20260915-144842-7zj5",
+      "command": "npx playwright test --project=admin --workers=1 tests/crud",
+      "hasShots": false
+    },
+    "e2e:dashboard-home": {
+      "id": "e2e:dashboard-home",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:dashboard-home",
+          "status": "passed",
+          "title": "1. 首頁數據總覽可載入",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z92og-016a611c5137.png",
+          "url": "http://192.168.30.55:5174/",
+          "duration": 1656,
+          "how": "Playwright 執行 tests/e2e/dashboard-home-journey.spec.ts → e2e\\dashboard-home-journey.spec.ts › E2E 數據總覽閉環 › 1. 首頁數據總覽可載入"
+        },
+        {
+          "id": "e2e:dashboard-home",
+          "status": "passed",
+          "title": "2. 從側邊欄進入商品列表",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z95bh-13aceb0c1361.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=317",
+          "duration": 2238,
+          "how": "Playwright 執行 tests/e2e/dashboard-home-journey.spec.ts → e2e\\dashboard-home-journey.spec.ts › E2E 數據總覽閉環 › 2. 從側邊欄進入商品列表"
+        },
+        {
+          "id": "e2e:dashboard-home",
+          "status": "passed",
+          "title": "3. 從首頁進入訂單列表仍可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z97z9-fb389c89e213.png",
+          "url": "http://192.168.30.55:5174/orders/list?storeId=317",
+          "duration": 2258,
+          "how": "Playwright 執行 tests/e2e/dashboard-home-journey.spec.ts → e2e\\dashboard-home-journey.spec.ts › E2E 數據總覽閉環 › 3. 從首頁進入訂單列表仍可用"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:shop-config": {
+      "id": "e2e:shop-config",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:shop-config",
+          "status": "passed",
+          "title": "1. 門店管理列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zcme7-bed6e6d37dd4.png",
+          "url": "http://192.168.30.55:5174/shop/stores",
+          "duration": 1549,
+          "how": "Playwright 執行 tests/e2e/shop-config-journey.spec.ts → e2e\\shop-config-journey.spec.ts › E2E 商城配置閉環 › 1. 門店管理列表可用"
+        },
+        {
+          "id": "e2e:shop-config",
+          "status": "passed",
+          "title": "2. 進入頁面設計可編輯",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zcomm-30d2affe831d.png",
+          "url": "http://192.168.30.55:5174/shop/page-design",
+          "duration": 1671,
+          "how": "Playwright 執行 tests/e2e/shop-config-journey.spec.ts → e2e\\shop-config-journey.spec.ts › E2E 商城配置閉環 › 2. 進入頁面設計可編輯"
+        },
+        {
+          "id": "e2e:shop-config",
+          "status": "passed",
+          "title": "3. 小票機管理頁可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zcqq2-1c9ebc194c05.png",
+          "url": "http://192.168.30.55:5174/shop/printers?storeId=317",
+          "duration": 1472,
+          "how": "Playwright 執行 tests/e2e/shop-config-journey.spec.ts → e2e\\shop-config-journey.spec.ts › E2E 商城配置閉環 › 3. 小票機管理頁可用"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:goods-catalog": {
+      "id": "e2e:goods-catalog",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:goods-catalog",
+          "status": "passed",
+          "title": "1. 商品分類列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z9a60-5ca386b0f32a.png",
+          "url": "http://192.168.30.55:5174/goods/categories?storeId=317",
+          "duration": 1627,
+          "how": "Playwright 執行 tests/e2e/goods-catalog-journey.spec.ts → e2e\\goods-catalog-journey.spec.ts › E2E 商品目錄閉環 › 1. 商品分類列表可用"
+        },
+        {
+          "id": "e2e:goods-catalog",
+          "status": "passed",
+          "title": "2. 篩選模型列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z9ch2-c00a73d4b3b3.png",
+          "url": "http://192.168.30.55:5174/goods/filter-models",
+          "duration": 1818,
+          "how": "Playwright 執行 tests/e2e/goods-catalog-journey.spec.ts → e2e\\goods-catalog-journey.spec.ts › E2E 商品目錄閉環 › 2. 篩選模型列表可用"
+        },
+        {
+          "id": "e2e:goods-catalog",
+          "status": "passed",
+          "title": "3. 商品單位設置可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z9erd-63f5b7fbbf8f.png",
+          "url": "http://192.168.30.55:5174/goods/product-units",
+          "duration": 1772,
+          "how": "Playwright 執行 tests/e2e/goods-catalog-journey.spec.ts → e2e\\goods-catalog-journey.spec.ts › E2E 商品目錄閉環 › 3. 商品單位設置可開啟"
+        },
+        {
+          "id": "e2e:goods-catalog",
+          "status": "passed",
+          "title": "4. 選門店後商品列表有資料或空狀態",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z9het-46eb7d0bf550.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2215,
+          "how": "Playwright 執行 tests/e2e/goods-catalog-journey.spec.ts → e2e\\goods-catalog-journey.spec.ts › E2E 商品目錄閉環 › 4. 選門店後商品列表有資料或空狀態"
+        },
+        {
+          "id": "e2e:goods-catalog",
+          "status": "passed",
+          "title": "5. 可進入添加商品頁並返回",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z9kiz-662119e833a5.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2856,
+          "how": "Playwright 執行 tests/e2e/goods-catalog-journey.spec.ts → e2e\\goods-catalog-journey.spec.ts › E2E 商品目錄閉環 › 5. 可進入添加商品頁並返回"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 5（通過 5 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:product-publish": {
+      "id": "e2e:product-publish",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:product-publish",
+          "status": "passed",
+          "title": "1. 進入添加商品並填寫名稱",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zbwrx-805113fba30e.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2598,
+          "how": "Playwright 執行 tests/e2e/product-publish-journey.spec.ts → e2e\\product-publish-journey.spec.ts › E2E 商品上架寫入閉環 › 1. 進入添加商品並填寫名稱"
+        },
+        {
+          "id": "e2e:product-publish",
+          "status": "passed",
+          "title": "2. 列表可按關鍵字篩選並保持可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zbzgy-52fdda206f95.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2249,
+          "how": "Playwright 執行 tests/e2e/product-publish-journey.spec.ts → e2e\\product-publish-journey.spec.ts › E2E 商品上架寫入閉環 › 2. 列表可按關鍵字篩選並保持可用"
+        },
+        {
+          "id": "e2e:product-publish",
+          "status": "skipped",
+          "title": "3. 可打開商品詳情/編輯入口",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zc1cj-82c12ab1b2d5.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2026,
+          "how": "Playwright 執行 tests/e2e/product-publish-journey.spec.ts → e2e\\product-publish-journey.spec.ts › E2E 商品上架寫入閉環 › 3. 可打開商品詳情/編輯入口"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 2 · 失敗 0 · 跳過 1）"
+    },
+    "e2e:store-ops": {
+      "id": "e2e:store-ops",
+      "status": "failed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": "tests\\e2e\\store-ops-journey.spec.ts:82:7 › E2E 門店經營閉環 › 5. 報表模組可正常開啟",
+      "steps": [
+        {
+          "id": "e2e:store-ops",
+          "status": "passed",
+          "title": "1. 登入後選擇門店並載入商品",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zd3ho-693297a9f999.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2497,
+          "how": "Playwright 執行 tests/e2e/store-ops-journey.spec.ts → e2e\\store-ops-journey.spec.ts › E2E 門店經營閉環 › 1. 登入後選擇門店並載入商品"
+        },
+        {
+          "id": "e2e:store-ops",
+          "status": "passed",
+          "title": "2. 用商品名稱篩選，結果仍包含該商品",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zd6ej-1aea582efcb9.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2587,
+          "how": "Playwright 執行 tests/e2e/store-ops-journey.spec.ts → e2e\\store-ops-journey.spec.ts › E2E 門店經營閉環 › 2. 用商品名稱篩選，結果仍包含該商品"
+        },
+        {
+          "id": "e2e:store-ops",
+          "status": "passed",
+          "title": "3. 同一門店下查看訂單列表並可篩選",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zd9am-1cf6f26bd4e9.png",
+          "url": "http://192.168.30.55:5174/orders/list?storeId=133",
+          "duration": 2605,
+          "how": "Playwright 執行 tests/e2e/store-ops-journey.spec.ts → e2e\\store-ops-journey.spec.ts › E2E 門店經營閉環 › 3. 同一門店下查看訂單列表並可篩選"
+        },
+        {
+          "id": "e2e:store-ops",
+          "status": "passed",
+          "title": "4. 會員列表搜尋並進入詳情",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zdbuu-fa6cc4a3ecc2.png",
+          "url": "http://192.168.30.55:5174/vip/detail/b64be10a-651e-4489-9130-30ad709ee41e",
+          "duration": 2153,
+          "how": "Playwright 執行 tests/e2e/store-ops-journey.spec.ts → e2e\\store-ops-journey.spec.ts › E2E 門店經營閉環 › 4. 會員列表搜尋並進入詳情"
+        },
+        {
+          "id": "e2e:store-ops",
+          "status": "failed",
+          "title": "5. 報表模組可正常開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zde00-41c47f17e3e4.png",
+          "url": "http://192.168.30.55:5174/report/product-sales?storeId=0",
+          "duration": 1572,
+          "how": "Playwright 執行 tests/e2e/store-ops-journey.spec.ts → e2e\\store-ops-journey.spec.ts › E2E 門店經營閉環 › 5. 報表模組可正常開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 5（通過 4 · 失敗 1 · 跳過 0）"
+    },
+    "e2e:order-lifecycle": {
+      "id": "e2e:order-lifecycle",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:order-lifecycle",
+          "status": "passed",
+          "title": "1. 訂單列表選門店後可篩選",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zbp7u-c901fb6b26b7.png",
+          "url": "http://192.168.30.55:5174/orders/list?storeId=133",
+          "duration": 2408,
+          "how": "Playwright 執行 tests/e2e/order-lifecycle-journey.spec.ts → e2e\\order-lifecycle-journey.spec.ts › E2E 訂單與售後閉環 › 1. 訂單列表選門店後可篩選"
+        },
+        {
+          "id": "e2e:order-lifecycle",
+          "status": "passed",
+          "title": "2. 退貨/售後訂單列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zbrqd-18c20ec2dd70.png",
+          "url": "http://192.168.30.55:5174/orders/refund?storeId=133",
+          "duration": 2120,
+          "how": "Playwright 執行 tests/e2e/order-lifecycle-journey.spec.ts → e2e\\order-lifecycle-journey.spec.ts › E2E 訂單與售後閉環 › 2. 退貨/售後訂單列表可用"
+        },
+        {
+          "id": "e2e:order-lifecycle",
+          "status": "passed",
+          "title": "3. 訂單銷量報表可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zbtux-4b42741fe1b0.png",
+          "url": "http://192.168.30.55:5174/inventory/report/order-sales?storeId=0",
+          "duration": 1616,
+          "how": "Playwright 執行 tests/e2e/order-lifecycle-journey.spec.ts → e2e\\order-lifecycle-journey.spec.ts › E2E 訂單與售後閉環 › 3. 訂單銷量報表可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:order-detail-aftersale": {
+      "id": "e2e:order-detail-aftersale",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:order-detail-aftersale",
+          "status": "passed",
+          "title": "1. 訂單列表篩選並打開詳情",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zbgu6-88afda3a32e1.png",
+          "url": "http://192.168.30.55:5174/orders/detail/bbfdbece-06a3-4710-bb62-8f71c7f80608?storeId=133",
+          "duration": 3442,
+          "how": "Playwright 執行 tests/e2e/order-detail-aftersale-journey.spec.ts → e2e\\order-detail-aftersale-journey.spec.ts › E2E 訂單詳情與售後閉環 › 1. 訂單列表篩選並打開詳情"
+        },
+        {
+          "id": "e2e:order-detail-aftersale",
+          "status": "passed",
+          "title": "2. 售後/退貨列表可按關鍵字篩選",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zbjqk-0b5a5033f8c4.png",
+          "url": "http://192.168.30.55:5174/orders/refund?storeId=133",
+          "duration": 2300,
+          "how": "Playwright 執行 tests/e2e/order-detail-aftersale-journey.spec.ts → e2e\\order-detail-aftersale-journey.spec.ts › E2E 訂單詳情與售後閉環 › 2. 售後/退貨列表可按關鍵字篩選"
+        },
+        {
+          "id": "e2e:order-detail-aftersale",
+          "status": "passed",
+          "title": "3. 訂單銷量與財務類報表可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zbmgk-934164525dbe.png",
+          "url": "http://192.168.30.55:5174/report/cashier-stats?storeId=0",
+          "duration": 2396,
+          "how": "Playwright 執行 tests/e2e/order-detail-aftersale-journey.spec.ts → e2e\\order-detail-aftersale-journey.spec.ts › E2E 訂單詳情與售後閉環 › 3. 訂單銷量與財務類報表可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:vip-points-promo": {
+      "id": "e2e:vip-points-promo",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:vip-points-promo",
+          "status": "passed",
+          "title": "1. 會員列表可搜尋並進入詳情",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zdyeh-a2a39cb2a40c.png",
+          "url": "http://192.168.30.55:5174/vip/list",
+          "duration": 1651,
+          "how": "Playwright 執行 tests/e2e/vip-points-promo-journey.spec.ts → e2e\\vip-points-promo-journey.spec.ts › E2E 會員積分促銷閉環 › 1. 會員列表可搜尋並進入詳情"
+        },
+        {
+          "id": "e2e:vip-points-promo",
+          "status": "passed",
+          "title": "2. 積分列表可篩選",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0ze0za-cbe518e367e9.png",
+          "url": "http://192.168.30.55:5174/points/list",
+          "duration": 2115,
+          "how": "Playwright 執行 tests/e2e/vip-points-promo-journey.spec.ts → e2e\\vip-points-promo-journey.spec.ts › E2E 會員積分促銷閉環 › 2. 積分列表可篩選"
+        },
+        {
+          "id": "e2e:vip-points-promo",
+          "status": "passed",
+          "title": "3. 積分設置頁可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0ze32b-7cec2c04e69b.png",
+          "url": "http://192.168.30.55:5174/points/setting",
+          "duration": 1550,
+          "how": "Playwright 執行 tests/e2e/vip-points-promo-journey.spec.ts → e2e\\vip-points-promo-journey.spec.ts › E2E 會員積分促銷閉環 › 3. 積分設置頁可開啟"
+        },
+        {
+          "id": "e2e:vip-points-promo",
+          "status": "passed",
+          "title": "4. 優惠券列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0ze5bq-d5e6d61e0ea2.png",
+          "url": "http://192.168.30.55:5174/promotion/coupons",
+          "duration": 1740,
+          "how": "Playwright 執行 tests/e2e/vip-points-promo-journey.spec.ts → e2e\\vip-points-promo-journey.spec.ts › E2E 會員積分促銷閉環 › 4. 優惠券列表可用"
+        },
+        {
+          "id": "e2e:vip-points-promo",
+          "status": "passed",
+          "title": "5. 優惠券統計與會員餘額統計可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0ze85f-5dfd80d57016.png",
+          "url": "http://192.168.30.55:5174/report/member-balance-stats",
+          "duration": 2433,
+          "how": "Playwright 執行 tests/e2e/vip-points-promo-journey.spec.ts → e2e\\vip-points-promo-journey.spec.ts › E2E 會員積分促銷閉環 › 5. 優惠券統計與會員餘額統計可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 5（通過 5 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:vip-promo-write": {
+      "id": "e2e:vip-promo-write",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:vip-promo-write",
+          "status": "skipped",
+          "title": "1. 會員列表搜尋並進入詳情",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0ze9sq-688e0f065f6f.png",
+          "url": "http://192.168.30.55:5174/vip/list",
+          "duration": 1648,
+          "how": "Playwright 執行 tests/e2e/vip-promo-write-journey.spec.ts → e2e\\vip-promo-write-journey.spec.ts › E2E 會員積分促銷寫入閉環 › 1. 會員列表搜尋並進入詳情"
+        },
+        {
+          "id": "e2e:vip-promo-write",
+          "status": "passed",
+          "title": "2. 積分列表與設置可操作並還原",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zecky-48164691d095.png",
+          "url": "http://192.168.30.55:5174/points/setting",
+          "duration": 2315,
+          "how": "Playwright 執行 tests/e2e/vip-promo-write-journey.spec.ts → e2e\\vip-promo-write-journey.spec.ts › E2E 會員積分促銷寫入閉環 › 2. 積分列表與設置可操作並還原"
+        },
+        {
+          "id": "e2e:vip-promo-write",
+          "status": "passed",
+          "title": "3. 優惠券創建入口可填寫後返回，列表可篩選",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zefe5-41be3ad101ab.png",
+          "url": "http://192.168.30.55:5174/promotion/coupons",
+          "duration": 2451,
+          "how": "Playwright 執行 tests/e2e/vip-promo-write-journey.spec.ts → e2e\\vip-promo-write-journey.spec.ts › E2E 會員積分促銷寫入閉環 › 3. 優惠券創建入口可填寫後返回，列表可篩選"
+        },
+        {
+          "id": "e2e:vip-promo-write",
+          "status": "passed",
+          "title": "4. 會員餘額／優惠券統計可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zei2j-562ccc39f3a0.png",
+          "url": "http://192.168.30.55:5174/report/coupon-stats",
+          "duration": 2238,
+          "how": "Playwright 執行 tests/e2e/vip-promo-write-journey.spec.ts → e2e\\vip-promo-write-journey.spec.ts › E2E 會員積分促銷寫入閉環 › 4. 會員餘額／優惠券統計可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 4（通過 3 · 失敗 0 · 跳過 1）"
+    },
+    "e2e:inventory-ops": {
+      "id": "e2e:inventory-ops",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:inventory-ops",
+          "status": "passed",
+          "title": "1. 庫存查詢選門店後可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zai1u-03d03441d42e.png",
+          "url": "http://192.168.30.55:5174/inventory/query?storeId=133",
+          "duration": 1903,
+          "how": "Playwright 執行 tests/e2e/inventory-ops-journey.spec.ts → e2e\\inventory-ops-journey.spec.ts › E2E 庫存運營閉環 › 1. 庫存查詢選門店後可用"
+        },
+        {
+          "id": "e2e:inventory-ops",
+          "status": "passed",
+          "title": "2. 出庫入庫列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zakdr-07f9a748e177.png",
+          "url": "http://192.168.30.55:5174/inventory/stock?storeId=133",
+          "duration": 1921,
+          "how": "Playwright 執行 tests/e2e/inventory-ops-journey.spec.ts → e2e\\inventory-ops-journey.spec.ts › E2E 庫存運營閉環 › 2. 出庫入庫列表可用"
+        },
+        {
+          "id": "e2e:inventory-ops",
+          "status": "passed",
+          "title": "3. 庫存盤點列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zamuy-da48ecf0814d.png",
+          "url": "http://192.168.30.55:5174/inventory/check?storeId=133",
+          "duration": 2071,
+          "how": "Playwright 執行 tests/e2e/inventory-ops-journey.spec.ts → e2e\\inventory-ops-journey.spec.ts › E2E 庫存運營閉環 › 3. 庫存盤點列表可用"
+        },
+        {
+          "id": "e2e:inventory-ops",
+          "status": "passed",
+          "title": "4. 庫存記錄列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zap85-266341a0fc5d.png",
+          "url": "http://192.168.30.55:5174/inventory/record?storeId=133",
+          "duration": 1940,
+          "how": "Playwright 執行 tests/e2e/inventory-ops-journey.spec.ts → e2e\\inventory-ops-journey.spec.ts › E2E 庫存運營閉環 › 4. 庫存記錄列表可用"
+        },
+        {
+          "id": "e2e:inventory-ops",
+          "status": "passed",
+          "title": "5. 庫存相關報表可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zas9f-f864c02bfa3a.png",
+          "url": "http://192.168.30.55:5174/inventory/report/finance-receipts?storeId=0",
+          "duration": 2807,
+          "how": "Playwright 執行 tests/e2e/inventory-ops-journey.spec.ts → e2e\\inventory-ops-journey.spec.ts › E2E 庫存運營閉環 › 5. 庫存相關報表可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 5（通過 5 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:inventory-document": {
+      "id": "e2e:inventory-document",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:inventory-document",
+          "status": "passed",
+          "title": "1. 出入庫列表可進入新建/詳情入口",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0za6uy-e76340f4efcb.png",
+          "url": "about:blank",
+          "duration": 3818,
+          "how": "Playwright 執行 tests/e2e/inventory-document-journey.spec.ts → e2e\\inventory-document-journey.spec.ts › E2E 庫存單據寫入閉環 › 1. 出入庫列表可進入新建/詳情入口"
+        },
+        {
+          "id": "e2e:inventory-document",
+          "status": "passed",
+          "title": "2. 盤點列表可進入新建入口並取消",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zaa69-aa00eaae838e.png",
+          "url": "http://192.168.30.55:5174/inventory/check?storeId=133",
+          "duration": 2968,
+          "how": "Playwright 執行 tests/e2e/inventory-document-journey.spec.ts → e2e\\inventory-document-journey.spec.ts › E2E 庫存單據寫入閉環 › 2. 盤點列表可進入新建入口並取消"
+        },
+        {
+          "id": "e2e:inventory-document",
+          "status": "passed",
+          "title": "3. 庫存記錄可篩選，庫存查詢可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zadew-08c0b0709b27.png",
+          "url": "http://192.168.30.55:5174/inventory/query?storeId=133",
+          "duration": 2986,
+          "how": "Playwright 執行 tests/e2e/inventory-document-journey.spec.ts → e2e\\inventory-document-journey.spec.ts › E2E 庫存單據寫入閉環 › 3. 庫存記錄可篩選，庫存查詢可用"
+        },
+        {
+          "id": "e2e:inventory-document",
+          "status": "passed",
+          "title": "4. 庫存報表可開啟核對",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zafpt-accf4c415ef9.png",
+          "url": "http://192.168.30.55:5174/inventory/report/stock?storeId=0",
+          "duration": 1809,
+          "how": "Playwright 執行 tests/e2e/inventory-document-journey.spec.ts → e2e\\inventory-document-journey.spec.ts › E2E 庫存單據寫入閉環 › 4. 庫存報表可開啟核對"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 4（通過 4 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:wine-storage": {
+      "id": "e2e:wine-storage",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:wine-storage",
+          "status": "passed",
+          "title": "1. 存酒列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zekdf-d037cb75a39e.png",
+          "url": "http://192.168.30.55:5174/wine-storage/list?storeId=317",
+          "duration": 1804,
+          "how": "Playwright 執行 tests/e2e/wine-storage-journey.spec.ts → e2e\\wine-storage-journey.spec.ts › E2E 存酒管理閉環 › 1. 存酒列表可用"
+        },
+        {
+          "id": "e2e:wine-storage",
+          "status": "passed",
+          "title": "2. 存酒設置可選門店並看到保存",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zemj4-ee5274412abf.png",
+          "url": "http://192.168.30.55:5174/wine-storage/setting?storeId=317",
+          "duration": 1641,
+          "how": "Playwright 執行 tests/e2e/wine-storage-journey.spec.ts → e2e\\wine-storage-journey.spec.ts › E2E 存酒管理閉環 › 2. 存酒設置可選門店並看到保存"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:store-receipt-wine": {
+      "id": "e2e:store-receipt-wine",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:store-receipt-wine",
+          "status": "passed",
+          "title": "1. 門店管理列表可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zdhq5-01c1a25c327c.png",
+          "url": "http://192.168.30.55:5174/shop/stores",
+          "duration": 1746,
+          "how": "Playwright 執行 tests/e2e/store-receipt-wine-config-journey.spec.ts → e2e\\store-receipt-wine-config-journey.spec.ts › E2E 門店出票與存酒配置閉環 › 1. 門店管理列表可用"
+        },
+        {
+          "id": "e2e:store-receipt-wine",
+          "status": "passed",
+          "title": "2. 小票機頁可開啟配置入口",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zdktl-1c52850735f6.png",
+          "url": "http://192.168.30.55:5174/shop/printers?storeId=317",
+          "duration": 2773,
+          "how": "Playwright 執行 tests/e2e/store-receipt-wine-config-journey.spec.ts → e2e\\store-receipt-wine-config-journey.spec.ts › E2E 門店出票與存酒配置閉環 › 2. 小票機頁可開啟配置入口"
+        },
+        {
+          "id": "e2e:store-receipt-wine",
+          "status": "passed",
+          "title": "3. 單據模板頁可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zdmtk-204d84bdf39c.png",
+          "url": "http://192.168.30.55:5174/system/receipt-template",
+          "duration": 1401,
+          "how": "Playwright 執行 tests/e2e/store-receipt-wine-config-journey.spec.ts → e2e\\store-receipt-wine-config-journey.spec.ts › E2E 門店出票與存酒配置閉環 › 3. 單據模板頁可用"
+        },
+        {
+          "id": "e2e:store-receipt-wine",
+          "status": "passed",
+          "title": "4. 存酒設置與列表可互通",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zdq2q-b76beef4d690.png",
+          "url": "http://192.168.30.55:5174/wine-storage/list?storeId=133",
+          "duration": 2961,
+          "how": "Playwright 執行 tests/e2e/store-receipt-wine-config-journey.spec.ts → e2e\\store-receipt-wine-config-journey.spec.ts › E2E 門店出票與存酒配置閉環 › 4. 存酒設置與列表可互通"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 4（通過 4 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:reports-tour": {
+      "id": "e2e:reports-tour",
+      "status": "failed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": "tests\\e2e\\reports-tour-journey.spec.ts:26:9 › E2E 報表巡覽閉環 › 4. 報表 /report/product-sales 可開啟",
+      "steps": [
+        {
+          "id": "e2e:reports-tour",
+          "status": "passed",
+          "title": "1. 報表 /report/coupon-stats 可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zcc91-6aa128c7e47a.png",
+          "url": "http://192.168.30.55:5174/report/coupon-stats",
+          "duration": 1628,
+          "how": "Playwright 執行 tests/e2e/reports-tour-journey.spec.ts → e2e\\reports-tour-journey.spec.ts › E2E 報表巡覽閉環 › 1. 報表 /report/coupon-stats 可開啟"
+        },
+        {
+          "id": "e2e:reports-tour",
+          "status": "passed",
+          "title": "2. 報表 /inventory/report/stock 可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zceew-8a81a6aaa68f.png",
+          "url": "http://192.168.30.55:5174/inventory/report/stock?storeId=0",
+          "duration": 1634,
+          "how": "Playwright 執行 tests/e2e/reports-tour-journey.spec.ts → e2e\\reports-tour-journey.spec.ts › E2E 報表巡覽閉環 › 2. 報表 /inventory/report/stock 可開啟"
+        },
+        {
+          "id": "e2e:reports-tour",
+          "status": "passed",
+          "title": "3. 報表 /inventory/report/order-sales 可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zcgm2-334630a47710.png",
+          "url": "http://192.168.30.55:5174/inventory/report/order-sales?storeId=0",
+          "duration": 1698,
+          "how": "Playwright 執行 tests/e2e/reports-tour-journey.spec.ts → e2e\\reports-tour-journey.spec.ts › E2E 報表巡覽閉環 › 3. 報表 /inventory/report/order-sales 可開啟"
+        },
+        {
+          "id": "e2e:reports-tour",
+          "status": "failed",
+          "title": "4. 報表 /report/product-sales 可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zciuc-32d7cf90d2ff.png",
+          "url": "http://192.168.30.55:5174/report/product-sales?storeId=0",
+          "duration": 1712,
+          "how": "Playwright 執行 tests/e2e/reports-tour-journey.spec.ts → e2e\\reports-tour-journey.spec.ts › E2E 報表巡覽閉環 › 4. 報表 /report/product-sales 可開啟"
+        },
+        {
+          "id": "e2e:reports-tour",
+          "status": "skipped",
+          "title": "tests\\e2e\\reports-tour-journey.spec.ts:26:9 › E2E 報表巡覽閉環 › 5. 報表 /inventory/report/finance-receipts 可開啟"
+        },
+        {
+          "id": "e2e:reports-tour",
+          "status": "skipped",
+          "title": "tests\\e2e\\reports-tour-journey.spec.ts:26:9 › E2E 報表巡覽閉環 › 6. 報表 /report/cashier-stats 可開啟"
+        },
+        {
+          "id": "e2e:reports-tour",
+          "status": "skipped",
+          "title": "tests\\e2e\\reports-tour-journey.spec.ts:26:9 › E2E 報表巡覽閉環 › 7. 報表 /inventory/report/product-sales 可開啟"
+        },
+        {
+          "id": "e2e:reports-tour",
+          "status": "skipped",
+          "title": "tests\\e2e\\reports-tour-journey.spec.ts:26:9 › E2E 報表巡覽閉環 › 8. 報表 /report/member-balance-stats 可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 8（通過 3 · 失敗 1 · 跳過 4）"
+    },
+    "e2e:system-admin": {
+      "id": "e2e:system-admin",
+      "status": "failed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": "tests\\e2e\\system-admin-journey.spec.ts:21:7 › E2E 系統管理閉環 › 2. 通知管理可切換開關",
+      "steps": [
+        {
+          "id": "e2e:system-admin",
+          "status": "passed",
+          "title": "1. 單據模板頁可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zds66-c95d0da532ef.png",
+          "url": "http://192.168.30.55:5174/system/receipt-template",
+          "duration": 1493,
+          "how": "Playwright 執行 tests/e2e/system-admin-journey.spec.ts → e2e\\system-admin-journey.spec.ts › E2E 系統管理閉環 › 1. 單據模板頁可用"
+        },
+        {
+          "id": "e2e:system-admin",
+          "status": "failed",
+          "title": "2. 通知管理可切換開關",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zdumx-ebfffc745eae.png",
+          "url": "http://192.168.30.55:5174/system/notifications",
+          "duration": 1936,
+          "how": "Playwright 執行 tests/e2e/system-admin-journey.spec.ts → e2e\\system-admin-journey.spec.ts › E2E 系統管理閉環 › 2. 通知管理可切換開關"
+        },
+        {
+          "id": "e2e:system-admin",
+          "status": "skipped",
+          "title": "tests\\e2e\\system-admin-journey.spec.ts:32:7 › E2E 系統管理閉環 › 3. 用戶管理列表可篩選"
+        },
+        {
+          "id": "e2e:system-admin",
+          "status": "skipped",
+          "title": "tests\\e2e\\system-admin-journey.spec.ts:39:7 › E2E 系統管理閉環 › 4. 角色管理列表可用"
+        },
+        {
+          "id": "e2e:system-admin",
+          "status": "skipped",
+          "title": "tests\\e2e\\system-admin-journey.spec.ts:44:7 › E2E 系統管理閉環 › 5. 登錄日誌列表可用"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 5（通過 1 · 失敗 1 · 跳過 3）"
+    },
+    "e2e:access-lifecycle": {
+      "id": "e2e:access-lifecycle",
+      "status": "failed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": "tests\\e2e\\access-lifecycle-journey.spec.ts:27:7 › E2E 帳號權限生命週期閉環 › 2. 新增臨時用戶並可搜尋",
+      "steps": [
+        {
+          "id": "e2e:access-lifecycle",
+          "status": "passed",
+          "title": "1. 角色列表可用，作為權限基底",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z7lzi-8185dd43b240.png",
+          "url": "http://192.168.30.55:5174/system/roles",
+          "duration": 1445,
+          "how": "Playwright 執行 tests/e2e/access-lifecycle-journey.spec.ts → e2e\\access-lifecycle-journey.spec.ts › E2E 帳號權限生命週期閉環 › 1. 角色列表可用，作為權限基底"
+        },
+        {
+          "id": "e2e:access-lifecycle",
+          "status": "failed",
+          "title": "2. 新增臨時用戶並可搜尋",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z8wn0-628b3fbfdc47.png",
+          "url": "http://192.168.30.55:5174/system/users",
+          "duration": 60011,
+          "error": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+          "how": "Playwright 執行 tests/e2e/access-lifecycle-journey.spec.ts → e2e\\access-lifecycle-journey.spec.ts › E2E 帳號權限生命週期閉環 › 2. 新增臨時用戶並可搜尋"
+        },
+        {
+          "id": "e2e:access-lifecycle",
+          "status": "skipped",
+          "title": "tests\\e2e\\access-lifecycle-journey.spec.ts:46:7 › E2E 帳號權限生命週期閉環 › 3. 刪除臨時用戶並確認消失"
+        },
+        {
+          "id": "e2e:access-lifecycle",
+          "status": "skipped",
+          "title": "tests\\e2e\\access-lifecycle-journey.spec.ts:60:7 › E2E 帳號權限生命週期閉環 › 4. 登錄日誌可查詢"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 4（通過 1 · 失敗 1 · 跳過 2）"
+    },
+    "e2e:bridge-seed-product": {
+      "id": "e2e:bridge-seed-product",
+      "status": "skipped",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:bridge-seed-product",
+          "status": "skipped",
+          "title": "選門店讀取商品關鍵字並寫入 bridge",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z8zxg-2434d8e2b0a5.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2044,
+          "how": "Playwright 執行 tests/e2e/bridge-seed-product.spec.ts → e2e\\bridge-seed-product.spec.ts › E2E 跨端種子｜後台商品標記 › 選門店讀取商品關鍵字並寫入 bridge"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "e2e:bridge-verify-pos-member": {
+      "id": "e2e:bridge-verify-pos-member",
+      "status": "skipped",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:bridge-verify-pos-member",
+          "status": "skipped",
+          "title": "後台會員列表可搜到 bridge 手機號",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z90hd-575ec1e5001b.png",
+          "url": "about:blank",
+          "duration": 304,
+          "how": "Playwright 執行 tests/e2e/bridge-verify-pos-member.spec.ts → e2e\\bridge-verify-pos-member.spec.ts › E2E 跨端驗證｜後台可見 POS 會員 › 後台會員列表可搜到 bridge 手機號"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "e2e:goods-ops": {
+      "id": "e2e:goods-ops",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:goods-ops",
+          "status": "passed",
+          "title": "1. 列表具備添加、排序、批量入口",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z9n4s-538772de7fed.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2205,
+          "how": "Playwright 執行 tests/e2e/goods-ops-journey.spec.ts → e2e\\goods-ops-journey.spec.ts › E2E 商品列表運營閉環 › 1. 列表具備添加、排序、批量入口"
+        },
+        {
+          "id": "e2e:goods-ops",
+          "status": "passed",
+          "title": "2. 打開排序或批量複製入口後關閉",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z9qke-07122baa3850.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 3239,
+          "how": "Playwright 執行 tests/e2e/goods-ops-journey.spec.ts → e2e\\goods-ops-journey.spec.ts › E2E 商品列表運營閉環 › 2. 打開排序或批量複製入口後關閉"
+        },
+        {
+          "id": "e2e:goods-ops",
+          "status": "passed",
+          "title": "3. 添加商品頁可開啟並返回列表篩選",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z9tw8-d29658987ba0.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 3167,
+          "how": "Playwright 執行 tests/e2e/goods-ops-journey.spec.ts → e2e\\goods-ops-journey.spec.ts › E2E 商品列表運營閉環 › 3. 添加商品頁可開啟並返回列表篩選"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:inventory-check-write": {
+      "id": "e2e:inventory-check-write",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:inventory-check-write",
+          "status": "passed",
+          "title": "1. 盤點列表可見新增、導出、導入",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0z9whl-ea25ed56adc8.png",
+          "url": "http://192.168.30.55:5174/inventory/check?storeId=133",
+          "duration": 2189,
+          "how": "Playwright 執行 tests/e2e/inventory-check-write-journey.spec.ts → e2e\\inventory-check-write-journey.spec.ts › E2E 庫存盤點寫入閉環 › 1. 盤點列表可見新增、導出、導入"
+        },
+        {
+          "id": "e2e:inventory-check-write",
+          "status": "passed",
+          "title": "2. 打開新增盤點後關閉，並可篩選",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0za02r-a9cc54b2747d.png",
+          "url": "http://192.168.30.55:5174/inventory/check?storeId=133",
+          "duration": 3511,
+          "how": "Playwright 執行 tests/e2e/inventory-check-write-journey.spec.ts → e2e\\inventory-check-write-journey.spec.ts › E2E 庫存盤點寫入閉環 › 2. 打開新增盤點後關閉，並可篩選"
+        },
+        {
+          "id": "e2e:inventory-check-write",
+          "status": "passed",
+          "title": "3. 出入庫添加入口仍可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0za31n-f133a5000ec3.png",
+          "url": "http://192.168.30.55:5174/inventory/stock?storeId=133",
+          "duration": 2713,
+          "how": "Playwright 執行 tests/e2e/inventory-check-write-journey.spec.ts → e2e\\inventory-check-write-journey.spec.ts › E2E 庫存盤點寫入閉環 › 3. 出入庫添加入口仍可用"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:member-order-points": {
+      "id": "e2e:member-order-points",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:member-order-points",
+          "status": "skipped",
+          "title": "1. 會員列表可進入詳情",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zatpy-17cc80e5fb83.png",
+          "url": "http://192.168.30.55:5174/vip/list",
+          "duration": 1434,
+          "how": "Playwright 執行 tests/e2e/member-order-points-journey.spec.ts → e2e\\member-order-points-journey.spec.ts › E2E 會員訂單積分聯動閉環 › 1. 會員列表可進入詳情"
+        },
+        {
+          "id": "e2e:member-order-points",
+          "status": "passed",
+          "title": "2. 訂單列表可篩選該門店資料",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zawj3-21a3c829388e.png",
+          "url": "http://192.168.30.55:5174/orders/list?storeId=133",
+          "duration": 2431,
+          "how": "Playwright 執行 tests/e2e/member-order-points-journey.spec.ts → e2e\\member-order-points-journey.spec.ts › E2E 會員訂單積分聯動閉環 › 2. 訂單列表可篩選該門店資料"
+        },
+        {
+          "id": "e2e:member-order-points",
+          "status": "passed",
+          "title": "3. 積分列表與積分設置可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zayyn-cfa2e02ea8cc.png",
+          "url": "http://192.168.30.55:5174/points/setting",
+          "duration": 2011,
+          "how": "Playwright 執行 tests/e2e/member-order-points-journey.spec.ts → e2e\\member-order-points-journey.spec.ts › E2E 會員訂單積分聯動閉環 › 3. 積分列表與積分設置可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 2 · 失敗 0 · 跳過 1）"
+    },
+    "e2e:multi-store-switch": {
+      "id": "e2e:multi-store-switch",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:multi-store-switch",
+          "status": "skipped",
+          "title": "1. 讀取可切換的門店清單",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zb0eb-70bca89a1a8b.png",
+          "url": "http://192.168.30.55:5174/goods/list",
+          "duration": 1580,
+          "how": "Playwright 執行 tests/e2e/multi-store-switch-journey.spec.ts → e2e\\multi-store-switch-journey.spec.ts › E2E 多門店切換聯動閉環 › 1. 讀取可切換的門店清單"
+        },
+        {
+          "id": "e2e:multi-store-switch",
+          "status": "passed",
+          "title": "2. 門店 A 讀商品關鍵字並可篩選",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zb2zs-ea9519699be1.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 2051,
+          "how": "Playwright 執行 tests/e2e/multi-store-switch-journey.spec.ts → e2e\\multi-store-switch-journey.spec.ts › E2E 多門店切換聯動閉環 › 2. 門店 A 讀商品關鍵字並可篩選"
+        },
+        {
+          "id": "e2e:multi-store-switch",
+          "status": "passed",
+          "title": "3. 切到門店 B 後訂單列表仍可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zb5ji-f8d796dd4ceb.png",
+          "url": "http://192.168.30.55:5174/orders/list?storeId=133",
+          "duration": 2148,
+          "how": "Playwright 執行 tests/e2e/multi-store-switch-journey.spec.ts → e2e\\multi-store-switch-journey.spec.ts › E2E 多門店切換聯動閉環 › 3. 切到門店 B 後訂單列表仍可用"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 2 · 失敗 0 · 跳過 1）"
+    },
+    "e2e:promo-order-report": {
+      "id": "e2e:promo-order-report",
+      "status": "passed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:promo-order-report",
+          "status": "passed",
+          "title": "1. 優惠券列表可篩選並進入創建入口",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zc4am-dced6e409984.png",
+          "url": "http://192.168.30.55:5174/promotion/coupons",
+          "duration": 2593,
+          "how": "Playwright 執行 tests/e2e/promo-order-report-journey.spec.ts → e2e\\promo-order-report-journey.spec.ts › E2E 促銷訂單報表聯動閉環 › 1. 優惠券列表可篩選並進入創建入口"
+        },
+        {
+          "id": "e2e:promo-order-report",
+          "status": "passed",
+          "title": "2. 訂單列表可篩選，作為核銷側入口",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zc770-8e5de219cd08.png",
+          "url": "http://192.168.30.55:5174/orders/list?storeId=133",
+          "duration": 2592,
+          "how": "Playwright 執行 tests/e2e/promo-order-report-journey.spec.ts → e2e\\promo-order-report-journey.spec.ts › E2E 促銷訂單報表聯動閉環 › 2. 訂單列表可篩選，作為核銷側入口"
+        },
+        {
+          "id": "e2e:promo-order-report",
+          "status": "passed",
+          "title": "3. 優惠券統計與收銀統計可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zca36-a16b88a81907.png",
+          "url": "http://192.168.30.55:5174/report/cashier-stats?storeId=0",
+          "duration": 2488,
+          "how": "Playwright 執行 tests/e2e/promo-order-report-journey.spec.ts → e2e\\promo-order-report-journey.spec.ts › E2E 促銷訂單報表聯動閉環 › 3. 優惠券統計與收銀統計可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:stock-to-sales-report": {
+      "id": "e2e:stock-to-sales-report",
+      "status": "failed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": "tests\\e2e\\stock-to-sales-report-journey.spec.ts:34:7 › E2E 庫存到銷售報表聯動閉環 › 3. 進銷存與商品銷量報表可開啟",
+      "steps": [
+        {
+          "id": "e2e:stock-to-sales-report",
+          "status": "passed",
+          "title": "1. 庫存查詢選門店後可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zct54-48b5306caaec.png",
+          "url": "http://192.168.30.55:5174/inventory/query?storeId=133",
+          "duration": 2005,
+          "how": "Playwright 執行 tests/e2e/stock-to-sales-report-journey.spec.ts → e2e\\stock-to-sales-report-journey.spec.ts › E2E 庫存到銷售報表聯動閉環 › 1. 庫存查詢選門店後可用"
+        },
+        {
+          "id": "e2e:stock-to-sales-report",
+          "status": "passed",
+          "title": "2. 出入庫寫入入口可打開並取消",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zcwbp-a7546298ff6a.png",
+          "url": "http://192.168.30.55:5174/inventory/stock?storeId=133",
+          "duration": 2969,
+          "how": "Playwright 執行 tests/e2e/stock-to-sales-report-journey.spec.ts → e2e\\stock-to-sales-report-journey.spec.ts › E2E 庫存到銷售報表聯動閉環 › 2. 出入庫寫入入口可打開並取消"
+        },
+        {
+          "id": "e2e:stock-to-sales-report",
+          "status": "failed",
+          "title": "3. 進銷存與商品銷量報表可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zcz2h-cfbc2e243d1f.png",
+          "url": "http://192.168.30.55:5174/report/product-sales?storeId=0",
+          "duration": 2374,
+          "how": "Playwright 執行 tests/e2e/stock-to-sales-report-journey.spec.ts → e2e\\stock-to-sales-report-journey.spec.ts › E2E 庫存到銷售報表聯動閉環 › 3. 進銷存與商品銷量報表可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 2 · 失敗 1 · 跳過 0）"
+    },
+    "e2e:notification-audit": {
+      "id": "e2e:notification-audit",
+      "status": "failed",
+      "startedAt": "2026-09-14T08:20:10.749Z",
+      "finishedAt": "2026-09-14T08:30:48.974Z",
+      "error": "tests\\e2e\\notification-audit-journey.spec.ts:27:7 › E2E 用戶稽核聯動閉環 › 3. 角色與登錄日誌可開啟",
+      "steps": [
+        {
+          "id": "e2e:notification-audit",
+          "status": "passed",
+          "title": "1. 單據模板頁可用",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zb7eg-073c964f5163.png",
+          "url": "http://192.168.30.55:5174/system/receipt-template",
+          "duration": 1289,
+          "how": "Playwright 執行 tests/e2e/notification-audit-journey.spec.ts → e2e\\notification-audit-journey.spec.ts › E2E 用戶稽核聯動閉環 › 1. 單據模板頁可用"
+        },
+        {
+          "id": "e2e:notification-audit",
+          "status": "passed",
+          "title": "2. 用戶管理可篩選",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zb9ls-dfe43be47c3d.png",
+          "url": "http://192.168.30.55:5174/system/users",
+          "duration": 1706,
+          "how": "Playwright 執行 tests/e2e/notification-audit-journey.spec.ts → e2e\\notification-audit-journey.spec.ts › E2E 用戶稽核聯動閉環 › 2. 用戶管理可篩選"
+        },
+        {
+          "id": "e2e:notification-audit",
+          "status": "failed",
+          "title": "3. 角色與登錄日誌可開啟",
+          "screenshot": "/api/shots/20260914-162010-fcqn/mu0zbc27-2e2eddc3e655.png",
+          "url": "http://192.168.30.55:5174/system/logs",
+          "duration": 1984,
+          "how": "Playwright 執行 tests/e2e/notification-audit-journey.spec.ts → e2e\\notification-audit-journey.spec.ts › E2E 用戶稽核聯動閉環 › 3. 角色與登錄日誌可開啟"
+        }
+      ],
+      "runId": "20260914-162010-fcqn",
+      "command": "npx playwright test --project=admin --workers=1 tests/smoke tests/e2e tests/crud",
+      "hasShots": true,
+      "stepSummary": "步驟 3（通過 2 · 失敗 1 · 跳過 0）"
+    },
+    "smoke:/pages/pos/index": {
+      "id": "smoke:/pages/pos/index",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:43:49.543Z",
+      "finishedAt": "2026-09-14T03:44:29.766Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/pages/pos/index",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 點單 / 點單頁 › 開啟 /pages/pos/index 功能可用"
+        },
+        {
+          "id": "smoke:/pages/pos/index",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 掃碼 / 掃碼入口 › 開啟 /pages/pos/index 功能可用"
+        }
+      ],
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/pages/kitchen/index": {
+      "id": "smoke:/pages/kitchen/index",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:43:49.543Z",
+      "finishedAt": "2026-09-14T03:44:29.766Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/pages/kitchen/index",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 廚房 / 制作进度 › 開啟 /pages/kitchen/index 功能可用"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/pages/orders/index": {
+      "id": "smoke:/pages/orders/index",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:43:49.543Z",
+      "finishedAt": "2026-09-14T03:44:29.766Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/pages/orders/index",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 訂單 / 訂單列表 › 開啟 /pages/orders/index 功能可用"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/pages/members/index": {
+      "id": "smoke:/pages/members/index",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:43:49.543Z",
+      "finishedAt": "2026-09-14T03:44:29.766Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/pages/members/index",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 會員 / 會員查詢 › 開啟 /pages/members/index 功能可用"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/pages/inventory/index": {
+      "id": "smoke:/pages/inventory/index",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:43:49.543Z",
+      "finishedAt": "2026-09-14T03:44:29.766Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/pages/inventory/index",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 存酒 / 存酒列表 › 開啟 /pages/inventory/index 功能可用"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/pages/inventory/create": {
+      "id": "smoke:/pages/inventory/create",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:43:49.543Z",
+      "finishedAt": "2026-09-14T03:44:29.766Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/pages/inventory/create",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 存酒 / 新建存酒 › 開啟 /pages/inventory/create 功能可用"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/pages/cleaning/index": {
+      "id": "smoke:/pages/cleaning/index",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:43:49.543Z",
+      "finishedAt": "2026-09-14T03:44:29.766Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/pages/cleaning/index",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 沽清 / 商品沽清 › 開啟 /pages/cleaning/index 功能可用"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/pages/dashboard/index": {
+      "id": "smoke:/pages/dashboard/index",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:43:49.543Z",
+      "finishedAt": "2026-09-14T03:44:29.766Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/pages/dashboard/index",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 總覽 / 營收總覽 › 開啟 /pages/dashboard/index 功能可用"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "smoke:/pages/inventory/overview": {
+      "id": "smoke:/pages/inventory/overview",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:43:49.543Z",
+      "finishedAt": "2026-09-14T03:44:29.766Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "smoke:/pages/inventory/overview",
+          "status": "passed",
+          "title": "tests\\pos\\smoke\\modules.spec.ts:19:9 › 總覽 / 即時庫存總覽 › 開啟 /pages/inventory/overview 功能可用"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-members": {
+      "id": "crud:pos-members",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.921Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-members",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\members.crud.spec.ts:20:7 › POS CRUD 會員 › 新增會員並可搜尋到"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-wine": {
+      "id": "crud:pos-wine",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.921Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-wine",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\wine-storage.crud.spec.ts:23:7 › POS CRUD 存酒 › 打開新建存酒並完整填寫表單"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-cart": {
+      "id": "crud:pos-cart",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.921Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-cart",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\cart.crud.spec.ts:11:7 › POS CRUD 購物車 › 加購商品、改數量後清空"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-kitchen": {
+      "id": "crud:pos-kitchen",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.921Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-kitchen",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\kitchen.crud.spec.ts:9:7 › POS CRUD 廚房製作進度 › 可切換待製作／製作中／已完成等狀態分頁"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-orders": {
+      "id": "crud:pos-orders",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.921Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-orders",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\orders.crud.spec.ts:9:7 › POS CRUD 訂單 › 訂單列表可切換狀態並嘗試打開詳情"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-inventory-overview": {
+      "id": "crud:pos-inventory-overview",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.921Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-inventory-overview",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\inventory-overview.crud.spec.ts:9:7 › POS CRUD 即時庫存總覽 › 可從總覽進入庫存總覽並看到同步入口"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-extras": {
+      "id": "crud:pos-extras",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.922Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-extras",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\pos-extras.crud.spec.ts:9:7 › POS CRUD 點單備註與會員登錄 › 會員登錄入口可填手機號，備註入口可打開"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-ordering": {
+      "id": "e2e:pos-ordering",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-ordering",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\ordering-journey.spec.ts:11:7 › E2E POS 點單閉環 › 1. 搜尋分類並加入購物車"
+        },
+        {
+          "id": "e2e:pos-ordering",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\ordering-journey.spec.ts:17:7 › E2E POS 點單閉環 › 2. 切換外帶並可進入結帳/掛單流程"
+        }
+      ],
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-member-checkout": {
+      "id": "e2e:pos-member-checkout",
+      "status": "passed",
+      "startedAt": "2026-09-14T06:56:09.706Z",
+      "finishedAt": "2026-09-14T06:56:31.917Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-member-checkout",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\member-checkout-journey.spec.ts:24:7 › E2E POS 會員點單結帳閉環 › 1. 新增會員並可搜尋"
+        },
+        {
+          "id": "e2e:pos-member-checkout",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\member-checkout-journey.spec.ts:39:7 › E2E POS 會員點單結帳閉環 › 2. 點單頁搜尋會員並加購"
+        },
+        {
+          "id": "e2e:pos-member-checkout",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\member-checkout-journey.spec.ts:58:7 › E2E POS 會員點單結帳閉環 › 3. 打開結帳入口（不完成支付）"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-hangbill": {
+      "id": "e2e:pos-hangbill",
+      "status": "failed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": "tests\\pos\\e2e\\hangbill-closed-loop.spec.ts:27:7 › E2E POS 掛單取單閉環 › 2. 執行掛單",
+      "steps": [
+        {
+          "id": "e2e:pos-hangbill",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\hangbill-closed-loop.spec.ts:20:7 › E2E POS 掛單取單閉環 › 1. 清空後加購商品"
+        },
+        {
+          "id": "e2e:pos-hangbill",
+          "status": "failed",
+          "title": "tests\\pos\\e2e\\hangbill-closed-loop.spec.ts:27:7 › E2E POS 掛單取單閉環 › 2. 執行掛單"
+        },
+        {
+          "id": "e2e:pos-hangbill",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\hangbill-closed-loop.spec.ts:39:7 › E2E POS 掛單取單閉環 › 3. 打開取單/掛單列表並返回點單"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 1 · 失敗 1 · 跳過 1）"
+    },
+    "e2e:pos-orders-kitchen": {
+      "id": "e2e:pos-orders-kitchen",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-orders-kitchen",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\orders-kitchen-journey.spec.ts:11:7 › E2E POS 訂單與廚房 › 1. 訂單列表可篩選狀態"
+        },
+        {
+          "id": "e2e:pos-orders-kitchen",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\orders-kitchen-journey.spec.ts:32:7 › E2E POS 訂單與廚房 › 2. 制作进度頁可查看出餐入口"
+        }
+      ],
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-order-kitchen-handoff": {
+      "id": "e2e:pos-order-kitchen-handoff",
+      "status": "failed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": "tests\\pos\\e2e\\order-kitchen-handoff-journey.spec.ts:21:7 › E2E POS 點單到廚房交接閉環 › 1. 點單加購並嘗試結帳/掛單",
+      "steps": [
+        {
+          "id": "e2e:pos-order-kitchen-handoff",
+          "status": "failed",
+          "title": "tests\\pos\\e2e\\order-kitchen-handoff-journey.spec.ts:21:7 › E2E POS 點單到廚房交接閉環 › 1. 點單加購並嘗試結帳/掛單"
+        },
+        {
+          "id": "e2e:pos-order-kitchen-handoff",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\order-kitchen-handoff-journey.spec.ts:34:7 › E2E POS 點單到廚房交接閉環 › 2. 訂單列表可切換狀態並看到列表殼"
+        },
+        {
+          "id": "e2e:pos-order-kitchen-handoff",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\order-kitchen-handoff-journey.spec.ts:49:7 › E2E POS 點單到廚房交接閉環 › 3. 制作进度可切換並看到出餐操作入口"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 0 · 失敗 1 · 跳過 2）"
+    },
+    "e2e:pos-member-wine": {
+      "id": "e2e:pos-member-wine",
+      "status": "failed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": "tests\\pos\\e2e\\member-wine-journey.spec.ts:19:7 › E2E POS 會員與存酒 › 2. 新建存酒頁可填寫並取消",
+      "steps": [
+        {
+          "id": "e2e:pos-member-wine",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\member-wine-journey.spec.ts:11:7 › E2E POS 會員與存酒 › 1. 會員頁可開啟新增表單"
+        },
+        {
+          "id": "e2e:pos-member-wine",
+          "status": "failed",
+          "title": "tests\\pos\\e2e\\member-wine-journey.spec.ts:19:7 › E2E POS 會員與存酒 › 2. 新建存酒頁可填寫並取消"
+        },
+        {
+          "id": "e2e:pos-member-wine",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\member-wine-journey.spec.ts:32:7 › E2E POS 會員與存酒 › 3. 存酒列表狀態篩選可用"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 1 · 失敗 1 · 跳過 1）"
+    },
+    "e2e:pos-wine-register": {
+      "id": "e2e:pos-wine-register",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-wine-register",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\wine-register-closed-loop.spec.ts:26:7 › E2E POS 會員存酒登記閉環 › 1. 新建存酒並完整填寫"
+        },
+        {
+          "id": "e2e:pos-wine-register",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\wine-register-closed-loop.spec.ts:47:7 › E2E POS 會員存酒登記閉環 › 2. 列表搜尋剛登記的標記（或確認已安全返回）"
+        }
+      ],
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-overview": {
+      "id": "e2e:pos-overview",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-overview",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\overview-cleaning-journey.spec.ts:11:7 › E2E POS 總覽與沽清 › 1. 營收總覽可切換時段"
+        },
+        {
+          "id": "e2e:pos-overview",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\overview-cleaning-journey.spec.ts:25:7 › E2E POS 總覽與沽清 › 2. 沽清頁可瀏覽分類"
+        }
+      ],
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-cleaning-order": {
+      "id": "e2e:pos-cleaning-order",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-cleaning-order",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\cleaning-order-link-journey.spec.ts:14:7 › E2E POS 沽清與點單聯動閉環 › 1. 沽清頁切換未沽清/已沽清"
+        },
+        {
+          "id": "e2e:pos-cleaning-order",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\cleaning-order-link-journey.spec.ts:35:7 › E2E POS 沽清與點單聯動閉環 › 2. 點單頁仍可瀏覽商品（售罄商品不可誤加時至少頁面可用）"
+        },
+        {
+          "id": "e2e:pos-cleaning-order",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\cleaning-order-link-journey.spec.ts:44:7 › E2E POS 沽清與點單聯動閉環 › 3. 回到沽清確認頁面仍可用"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-shift-ops": {
+      "id": "e2e:pos-shift-ops",
+      "status": "failed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": "tests\\pos\\e2e\\shift-ops-closed-loop.spec.ts:26:7 › E2E POS 班次運營全鏈路閉環 › 2. 點單加購並打開結帳/掛單",
+      "steps": [
+        {
+          "id": "e2e:pos-shift-ops",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\shift-ops-closed-loop.spec.ts:21:7 › E2E POS 班次運營全鏈路閉環 › 1. 總覽確認營收殼層"
+        },
+        {
+          "id": "e2e:pos-shift-ops",
+          "status": "failed",
+          "title": "tests\\pos\\e2e\\shift-ops-closed-loop.spec.ts:26:7 › E2E POS 班次運營全鏈路閉環 › 2. 點單加購並打開結帳/掛單"
+        },
+        {
+          "id": "e2e:pos-shift-ops",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\shift-ops-closed-loop.spec.ts:34:7 › E2E POS 班次運營全鏈路閉環 › 3. 訂單與制作进度可切換"
+        },
+        {
+          "id": "e2e:pos-shift-ops",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\shift-ops-closed-loop.spec.ts:41:7 › E2E POS 班次運營全鏈路閉環 › 4. 會員／存酒／沽清頁面可用"
+        }
+      ],
+      "stepSummary": "步驟 4（通過 1 · 失敗 1 · 跳過 2）"
+    },
+    "e2e:pos-bridge-seed-member": {
+      "id": "e2e:pos-bridge-seed-member",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-bridge-seed-member",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\bridge-seed-member.spec.ts:22:7 › E2E 跨端種子｜POS 會員 › 新增會員並寫入 bridge"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-bridge-verify-product": {
+      "id": "e2e:pos-bridge-verify-product",
+      "status": "skipped",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-bridge-verify-product",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\bridge-verify-admin-product.spec.ts:16:7 › E2E 跨端驗證｜POS 可見後台商品 › POS 可用 bridge 關鍵字搜尋並嘗試加購"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "e2e:pos-inventory-overview": {
+      "id": "e2e:pos-inventory-overview",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-inventory-overview",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\inventory-overview-journey.spec.ts:11:7 › E2E POS 即時庫存總覽閉環 › 1. 總覽可見庫存快捷工具"
+        },
+        {
+          "id": "e2e:pos-inventory-overview",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\inventory-overview-journey.spec.ts:17:7 › E2E POS 即時庫存總覽閉環 › 2. 進入庫存總覽並看到庫存狀態"
+        },
+        {
+          "id": "e2e:pos-inventory-overview",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\inventory-overview-journey.spec.ts:24:7 › E2E POS 即時庫存總覽閉環 › 3. 回到總覽仍可用"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-order-detail": {
+      "id": "e2e:pos-order-detail",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-order-detail",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\order-detail-journey.spec.ts:11:7 › E2E POS 訂單詳情閉環 › 1. 訂單列表可篩選"
+        },
+        {
+          "id": "e2e:pos-order-detail",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\order-detail-journey.spec.ts:18:7 › E2E POS 訂單詳情閉環 › 2. 打開訂單詳情或確認列表仍可用"
+        }
+      ],
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-wine-status": {
+      "id": "e2e:pos-wine-status",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-wine-status",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\wine-status-detail-journey.spec.ts:11:7 › E2E POS 存酒狀態與詳情閉環 › 1. 存酒列表可切換寄存中／即將到期／已取出"
+        },
+        {
+          "id": "e2e:pos-wine-status",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\wine-status-detail-journey.spec.ts:25:7 › E2E POS 存酒狀態與詳情閉環 › 2. 嘗試打開存酒詳情（含取酒入口）"
+        }
+      ],
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-kitchen-ops": {
+      "id": "e2e:pos-kitchen-ops",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-kitchen-ops",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\kitchen-ops-journey.spec.ts:11:7 › E2E POS 廚房操作閉環 › 1. 製作進度可見待製作／製作中／已完成"
+        },
+        {
+          "id": "e2e:pos-kitchen-ops",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\kitchen-ops-journey.spec.ts:16:7 › E2E POS 廚房操作閉環 › 2. 切換分頁並確認出餐／完成製作入口"
+        }
+      ],
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-remark-member-login": {
+      "id": "e2e:pos-remark-member-login",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-remark-member-login",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\pos-remark-member-login-journey.spec.ts:11:7 › E2E POS 備註與會員登錄閉環 › 1. 點單頁會員登錄入口可用"
+        },
+        {
+          "id": "e2e:pos-remark-member-login",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\pos-remark-member-login-journey.spec.ts:23:7 › E2E POS 備註與會員登錄閉環 › 2. 加購後備註入口可打開並關閉"
+        }
+      ],
+      "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-member-order-link": {
+      "id": "e2e:pos-member-order-link",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-member-order-link",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\member-order-link-journey.spec.ts:25:7 › E2E POS 會員訂單聯動閉環 › 1. 新建會員"
+        },
+        {
+          "id": "e2e:pos-member-order-link",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\member-order-link-journey.spec.ts:39:7 › E2E POS 會員訂單聯動閉環 › 2. 點單加購並打開結帳後取消"
+        },
+        {
+          "id": "e2e:pos-member-order-link",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\member-order-link-journey.spec.ts:49:7 › E2E POS 會員訂單聯動閉環 › 3. 訂單列表可切換狀態並搜尋"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-dining-checkout": {
+      "id": "e2e:pos-dining-checkout",
+      "status": "failed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": "tests\\pos\\e2e\\dining-checkout-journey.spec.ts:34:7 › E2E POS 用餐方式與結帳閉環 › 2. 加購後進入結帳或掛單",
+      "steps": [
+        {
+          "id": "e2e:pos-dining-checkout",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\dining-checkout-journey.spec.ts:21:7 › E2E POS 用餐方式與結帳閉環 › 1. 切換堂食/外帶語意"
+        },
+        {
+          "id": "e2e:pos-dining-checkout",
+          "status": "failed",
+          "title": "tests\\pos\\e2e\\dining-checkout-journey.spec.ts:34:7 › E2E POS 用餐方式與結帳閉環 › 2. 加購後進入結帳或掛單"
+        },
+        {
+          "id": "e2e:pos-dining-checkout",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\dining-checkout-journey.spec.ts:47:7 › E2E POS 用餐方式與結帳閉環 › 3. 取單入口仍可用"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 1 · 失敗 1 · 跳過 1）"
+    },
+    "e2e:pos-overview-kitchen-cruise": {
+      "id": "e2e:pos-overview-kitchen-cruise",
+      "status": "failed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": "tests\\pos\\e2e\\overview-kitchen-cruise-journey.spec.ts:31:7 › E2E POS 總覽到出餐巡航閉環 › 3. 制作进度後回到總覽",
+      "steps": [
+        {
+          "id": "e2e:pos-overview-kitchen-cruise",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\overview-kitchen-cruise-journey.spec.ts:14:7 › E2E POS 總覽到出餐巡航閉環 › 1. 總覽切換時段並看到核心指標"
+        },
+        {
+          "id": "e2e:pos-overview-kitchen-cruise",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\overview-kitchen-cruise-journey.spec.ts:26:7 › E2E POS 總覽到出餐巡航閉環 › 2. 前往點單確認商品區可用"
+        },
+        {
+          "id": "e2e:pos-overview-kitchen-cruise",
+          "status": "failed",
+          "title": "tests\\pos\\e2e\\overview-kitchen-cruise-journey.spec.ts:31:7 › E2E POS 總覽到出餐巡航閉環 › 3. 制作进度後回到總覽"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 2 · 失敗 1 · 跳過 0）"
+    },
+    "crud:pos-product-search": {
+      "id": "crud:pos-product-search",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.922Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-product-search",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\product-search.crud.spec.ts:9:7 › POS CRUD 商品搜尋與分類 › 可切換分類並搜尋商品"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-cleaning": {
+      "id": "crud:pos-cleaning",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.922Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-cleaning",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\cleaning.crud.spec.ts:9:7 › POS CRUD 沽清 › 可切換未沽清/已沽清與分類"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-orders-filter": {
+      "id": "crud:pos-orders-filter",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.922Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-orders-filter",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\orders-filter.crud.spec.ts:9:7 › POS CRUD 訂單進階篩選 › 可切換售後與日期快捷篩選"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "crud:pos-scan": {
+      "id": "crud:pos-scan",
+      "status": "failed",
+      "startedAt": "2026-09-14T03:44:34.922Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": "tests\\pos\\crud\\scan.crud.spec.ts:9:7 › POS CRUD 掃碼入口 › 掃碼按鈕可點擊且頁面保持可用",
+      "steps": [
+        {
+          "id": "crud:pos-scan",
+          "status": "failed",
+          "title": "tests\\pos\\crud\\scan.crud.spec.ts:9:7 › POS CRUD 掃碼入口 › 掃碼按鈕可點擊且頁面保持可用"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+    },
+    "crud:pos-dashboard-periods": {
+      "id": "crud:pos-dashboard-periods",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:44:34.922Z",
+      "finishedAt": "2026-09-14T03:45:42.324Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "crud:pos-dashboard-periods",
+          "status": "passed",
+          "title": "tests\\pos\\crud\\dashboard-periods.crud.spec.ts:9:7 › POS CRUD 總覽時段 › 可切換更多營收時段"
+        }
+      ],
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-category-search-cart": {
+      "id": "e2e:pos-category-search-cart",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-category-search-cart",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\category-search-cart-journey.spec.ts:18:7 › E2E POS 分類搜尋加購閉環 › 1. 切換分類並看到商品"
+        },
+        {
+          "id": "e2e:pos-category-search-cart",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\category-search-cart-journey.spec.ts:26:7 › E2E POS 分類搜尋加購閉環 › 2. 搜尋後加購或確認售罄語意"
+        },
+        {
+          "id": "e2e:pos-category-search-cart",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\category-search-cart-journey.spec.ts:38:7 › E2E POS 分類搜尋加購閉環 › 3. 清空購物車回到零狀態"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-orders-aftersale": {
+      "id": "e2e:pos-orders-aftersale",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-orders-aftersale",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\orders-aftersale-journey.spec.ts:14:7 › E2E POS 訂單售後篩選閉環 › 1. 巡覽訂單全狀態分頁"
+        },
+        {
+          "id": "e2e:pos-orders-aftersale",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\orders-aftersale-journey.spec.ts:26:7 › E2E POS 訂單售後篩選閉環 › 2. 日期快捷今天/昨天可用"
+        },
+        {
+          "id": "e2e:pos-orders-aftersale",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\orders-aftersale-journey.spec.ts:38:7 › E2E POS 訂單售後篩選閉環 › 3. 回到全部分頁確認列表殼"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-kitchen-full-status": {
+      "id": "e2e:pos-kitchen-full-status",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-kitchen-full-status",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\kitchen-full-status-journey.spec.ts:14:7 › E2E POS 廚房完整狀態閉環 › 1. 巡覽全部狀態分頁"
+        },
+        {
+          "id": "e2e:pos-kitchen-full-status",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\kitchen-full-status-journey.spec.ts:26:7 › E2E POS 廚房完整狀態閉環 › 2. 制作中可見出餐或重打入口"
+        },
+        {
+          "id": "e2e:pos-kitchen-full-status",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\kitchen-full-status-journey.spec.ts:36:7 › E2E POS 廚房完整狀態閉環 › 3. 平均出餐時長指標可見"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:pos-scan-entry": {
+      "id": "e2e:pos-scan-entry",
+      "status": "failed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": "tests\\pos\\e2e\\scan-entry-journey.spec.ts:21:7 › E2E POS 掃碼入口閉環 › 2. 點擊掃碼後頁面仍可用",
+      "steps": [
+        {
+          "id": "e2e:pos-scan-entry",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\scan-entry-journey.spec.ts:14:7 › E2E POS 掃碼入口閉環 › 1. 點單頁可見掃碼入口"
+        },
+        {
+          "id": "e2e:pos-scan-entry",
+          "status": "failed",
+          "title": "tests\\pos\\e2e\\scan-entry-journey.spec.ts:21:7 › E2E POS 掃碼入口閉環 › 2. 點擊掃碼後頁面仍可用"
+        },
+        {
+          "id": "e2e:pos-scan-entry",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\scan-entry-journey.spec.ts:30:7 › E2E POS 掃碼入口閉環 › 3. 會員頁亦有掃碼語意可回到點單"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 1 · 失敗 1 · 跳過 1）"
+    },
+    "e2e:pos-dashboard-inventory-deep": {
+      "id": "e2e:pos-dashboard-inventory-deep",
+      "status": "passed",
+      "startedAt": "2026-09-14T03:45:53.156Z",
+      "finishedAt": "2026-09-14T03:54:02.960Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:pos-dashboard-inventory-deep",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\dashboard-inventory-deep-journey.spec.ts:14:7 › E2E POS 總覽時段與庫存閉環 › 1. 總覽切換擴展時段"
+        },
+        {
+          "id": "e2e:pos-dashboard-inventory-deep",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\dashboard-inventory-deep-journey.spec.ts:28:7 › E2E POS 總覽時段與庫存閉環 › 2. 進入即時庫存總覽"
+        },
+        {
+          "id": "e2e:pos-dashboard-inventory-deep",
+          "status": "passed",
+          "title": "tests\\pos\\e2e\\dashboard-inventory-deep-journey.spec.ts:34:7 › E2E POS 總覽時段與庫存閉環 › 3. 回到總覽確認營收殼"
+        }
+      ],
+      "stepSummary": "步驟 3（通過 3 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:case-mu25y38u": {
+      "id": "e2e:case-mu25y38u",
+      "status": "passed",
+      "startedAt": "2026-09-15T04:29:19.118Z",
+      "finishedAt": "2026-09-15T04:29:29.913Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:case-mu25y38u",
+          "status": "passed",
+          "title": "查看門店商品列表",
+          "screenshot": "/api/shots/20260915-122919-wqn3/mu26a9fh-f3aab3397af8.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=133",
+          "duration": 1901,
+          "how": "Playwright 執行 tests/e2e/inventory-store-products-journey.spec.ts → e2e\\inventory-store-products-journey.spec.ts › E2E｜庫存／門店商品 › 查看門店商品列表"
+        }
+      ],
+      "runId": "20260915-122919-wqn3",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-store-products-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:admin-member-search": {
+      "id": "e2e:admin-member-search",
+      "status": "failed",
+      "startedAt": "2026-09-15T04:41:15.081Z",
+      "finishedAt": "2026-09-15T04:41:41.019Z",
+      "error": "tests\\e2e\\member-search-journey.spec.ts:7:7 › 會員搜索與詳情 › 通過手機號搜索會員並查看詳情",
+      "steps": [
+        {
+          "id": "e2e:admin-member-search",
+          "status": "failed",
+          "title": "tests\\e2e\\member-search-journey.spec.ts:7:7 › 會員搜索與詳情 › 通過手機號搜索會員並查看詳情"
+        }
+      ],
+      "runId": "20260915-124115-vcs0",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/member-search-journey.spec.ts",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+    },
+    "e2e:admin-vip-search": {
+      "id": "e2e:admin-vip-search",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:03:18.556Z",
+      "finishedAt": "2026-09-15T06:03:30.361Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:admin-vip-search",
+          "status": "passed",
+          "title": "搜索并查看详情",
+          "screenshot": "/api/shots/20260915-140318-jk66/mu29n5mh-4729c1c94bf2.png",
+          "url": "http://192.168.30.55:5174/vip/detail/8c09668e-d782-4961-b920-9540526080de",
+          "duration": 2218,
+          "how": "Playwright 執行 tests/e2e/vip-search-journey.spec.ts → e2e\\vip-search-journey.spec.ts › E2E｜会员 › 搜索并查看详情"
+        }
+      ],
+      "runId": "20260915-140318-jk66",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:case-mu28xe1u": {
+      "id": "e2e:case-mu28xe1u",
+      "status": "failed",
+      "startedAt": "2026-09-15T05:47:37.574Z",
+      "finishedAt": "2026-09-15T05:48:49.785Z",
+      "error": "tests\\e2e\\vip-search-detail-journey.spec.ts:5:7 › 會員搜索與詳情查看 › 通過手機號搜索會員並查看詳情",
+      "steps": [
+        {
+          "id": "e2e:case-mu28xe1u",
+          "status": "failed",
+          "title": "通過手機號搜索會員並查看詳情",
+          "screenshot": "/api/shots/20260915-134737-cy1b/mu2946wn-dad844b34033.png",
+          "url": "http://192.168.30.55:5174/vip/list",
+          "duration": 60007,
+          "error": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+          "how": "Playwright 執行 tests/e2e/vip-search-detail-journey.spec.ts → e2e\\vip-search-detail-journey.spec.ts › 會員搜索與詳情查看 › 通過手機號搜索會員並查看詳情"
+        }
+      ],
+      "runId": "20260915-134737-cy1b",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+    },
+    "e2e:case-mu2a643y": {
+      "id": "e2e:case-mu2a643y",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:19:13.743Z",
+      "finishedAt": "2026-09-15T06:19:28.122Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:case-mu2a643y",
+          "status": "passed",
+          "title": "搜索并查看详情",
+          "screenshot": "/api/shots/20260915-141913-3gsd/mu2a7ogu-6dfcecb567de.png",
+          "url": "http://192.168.30.55:5174/vip/detail/8c09668e-d782-4961-b920-9540526080de",
+          "duration": 2241,
+          "how": "Playwright 執行 tests/e2e/vip-search-detail-journey.spec.ts → e2e\\vip-search-detail-journey.spec.ts › E2E｜会员 › 搜索并查看详情"
+        }
+      ],
+      "runId": "20260915-141913-3gsd",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:admin-vip-detail": {
+      "id": "e2e:admin-vip-detail",
+      "status": "passed",
+      "startedAt": "2026-09-15T06:53:35.231Z",
+      "finishedAt": "2026-09-15T06:53:46.297Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:admin-vip-detail",
+          "status": "passed",
+          "title": "搜索并查看详情",
+          "screenshot": "/api/shots/20260915-145335-01wd/mu2bfsr2-64e89481b0a6.png",
+          "url": "http://192.168.30.55:5174/vip/detail/8c09668e-d782-4961-b920-9540526080de",
+          "duration": 2152,
+          "how": "Playwright 執行 tests/e2e/vip-detail-journey.spec.ts → e2e\\vip-detail-journey.spec.ts › E2E｜会员 › 搜索并查看详情"
+        }
+      ],
+      "runId": "20260915-145335-01wd",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-detail-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:admin-vip-phone-search": {
+      "id": "e2e:admin-vip-phone-search",
+      "status": "passed",
+      "startedAt": "2026-09-15T07:05:24.001Z",
+      "finishedAt": "2026-09-15T07:05:38.093Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:admin-vip-phone-search",
+          "status": "passed",
+          "title": "用手机号搜索会员并查看详情、积分、优惠券与消费记录",
+          "screenshot": "/api/shots/20260915-150524-pogt/mu2bv241-93f16b9a66c9.png",
+          "url": "http://192.168.30.55:5174/vip/detail/8c09668e-d782-4961-b920-9540526080de",
+          "duration": 3140,
+          "how": "Playwright 執行 tests/e2e/vip-phone-search-journey.spec.ts → e2e\\vip-phone-search-journey.spec.ts › E2E｜会员｜手机号搜索与详情查看 › 用手机号搜索会员并查看详情、积分、优惠券与消费记录"
+        }
+      ],
+      "runId": "20260915-150524-pogt",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-phone-search-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:admin-vip-search-detail": {
+      "id": "e2e:admin-vip-search-detail",
+      "status": "passed",
+      "startedAt": "2026-09-15T07:41:10.178Z",
+      "finishedAt": "2026-09-15T07:41:22.232Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:admin-vip-search-detail",
+          "status": "passed",
+          "title": "手机号搜索会员并查看详情",
+          "screenshot": "/api/shots/20260915-154110-r1ru/mu2d50dd-6cef14298c53.png",
+          "url": "http://192.168.30.55:5174/vip/detail/a06100e1-7f1d-40d7-99a4-0eedcc63fe42",
+          "duration": 2658,
+          "how": "Playwright 執行 tests/e2e/vip-search-detail-journey.spec.ts → e2e\\vip-search-detail-journey.spec.ts › E2E｜手机号搜索会员并查看详情 › 手机号搜索会员并查看详情"
+        }
+      ],
+      "runId": "20260915-154110-r1ru",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:admin-vip-create-by-phone": {
+      "id": "e2e:admin-vip-create-by-phone",
+      "status": "failed",
+      "startedAt": "2026-09-15T07:35:59.669Z",
+      "finishedAt": "2026-09-15T07:36:27.705Z",
+      "error": "tests\\e2e\\vip-create-by-phone-journey.spec.ts:10:7 › E2E｜会员｜仅凭手机号新增会员 › 店品仅凭手机号新增会员，并能在会员列表检索到",
+      "steps": [
+        {
+          "id": "e2e:admin-vip-create-by-phone",
+          "status": "failed",
+          "title": "店品仅凭手机号新增会员，并能在会员列表检索到",
+          "screenshot": "/api/shots/20260915-153559-s1ot/mu2cyo97-4d91f8776516.png",
+          "url": "http://192.168.30.55:5174/vip/list",
+          "duration": 18399,
+          "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/页面不存在|404|系统错误|Internal Server Error/i)\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByText(/页面不存在|404|系统错误|Internal Server Error/i) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/页面不存在|404|系统错误|Internal Server Error/i)\u001b[22m\n\u001b[2m    33 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+          "how": "Playwright 執行 tests/e2e/vip-create-by-phone-journey.spec.ts → e2e\\vip-create-by-phone-journey.spec.ts › E2E｜会员｜仅凭手机号新增会员 › 店品仅凭手机号新增会员，并能在会员列表检索到"
+        }
+      ],
+      "runId": "20260915-153559-s1ot",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-create-by-phone-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+    },
+    "e2e:admin-vip-phone-journey": {
+      "id": "e2e:admin-vip-phone-journey",
+      "status": "passed",
+      "startedAt": "2026-09-15T07:51:06.581Z",
+      "finishedAt": "2026-09-15T07:51:22.053Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:admin-vip-phone-journey",
+          "status": "passed",
+          "title": "手机号搜索会员并查看详情/积分/优惠券/消费记录",
+          "screenshot": "/api/shots/20260915-155106-u62q/mu2dhv2u-76c68aa37eb3.png",
+          "url": "http://192.168.30.55:5174/vip/detail/cf497984-1966-4f61-9a05-65e495de5b39",
+          "duration": 2837,
+          "how": "Playwright 執行 tests/e2e/vip-phone-journey.spec.ts → e2e\\vip-phone-journey.spec.ts › E2E｜手机号搜索会员并查看详情/积分/优惠券/消费记录 › 手机号搜索会员并查看详情/积分/优惠券/消费记录"
+        }
+      ],
+      "runId": "20260915-155106-u62q",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-phone-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:admin-vip-phone-search-detail": {
+      "id": "e2e:admin-vip-phone-search-detail",
+      "status": "passed",
+      "startedAt": "2026-09-15T07:54:31.674Z",
+      "finishedAt": "2026-09-15T07:54:44.059Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:admin-vip-phone-search-detail",
+          "status": "passed",
+          "title": "手机号搜索会员并查看详情闭环",
+          "screenshot": "/api/shots/20260915-155431-ligi/mu2dm70z-9da93e1e7b02.png",
+          "url": "http://192.168.30.55:5174/vip/detail/cf497984-1966-4f61-9a05-65e495de5b39",
+          "duration": 2728,
+          "how": "Playwright 執行 tests/e2e/vip-phone-search-detail-journey.spec.ts → e2e\\vip-phone-search-detail-journey.spec.ts › E2E｜手机号搜索会员并查看详情闭环 › 手机号搜索会员并查看详情闭环"
+        }
+      ],
+      "runId": "20260915-155431-ligi",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-phone-search-detail-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "e2e:admin-vip-detail-journey": {
+      "id": "e2e:admin-vip-detail-journey",
+      "status": "passed",
+      "startedAt": "2026-09-15T07:57:05.745Z",
+      "finishedAt": "2026-09-15T07:57:17.833Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:admin-vip-detail-journey",
+          "status": "passed",
+          "title": "手机号搜索会员并查看详情积分优惠券消费记录",
+          "screenshot": "/api/shots/20260915-155705-dpr4/mu2dphog-806cc4310544.png",
+          "url": "http://192.168.30.55:5174/vip/detail/cf497984-1966-4f61-9a05-65e495de5b39",
+          "duration": 2718,
+          "how": "Playwright 執行 tests/e2e/vip-detail-journey.spec.ts → e2e\\vip-detail-journey.spec.ts › E2E｜手机号搜索会员并查看详情积分优惠券消费记录 › 手机号搜索会员并查看详情积分优惠券消费记录"
+        }
+      ],
+      "runId": "20260915-155705-dpr4",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-detail-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.1.1": {
+      "id": "story:US-7.7.1.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.1.1",
+          "status": "passed",
+          "title": "US-7.7.1.1 新增店员并为其分配一个门店",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu51010v-615bbaa469a7.png",
+          "url": "http://192.168.30.55:5174/system/users",
+          "duration": 1649,
+          "how": "Playwright 執行 tests/story/us-7-7-1-1.story.spec.ts → story\\us-7-7-1-1.story.spec.ts › 後台·店員門店 › US-7.7.1.1 新增店员并为其分配一个门店"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.2.1": {
+      "id": "story:US-7.7.2.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.2.1",
+          "status": "passed",
+          "title": "US-7.7.2.1 管理四类优惠券、查看核销明细与使用记录并精准发放",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu5109a4-f3ff79365878.png",
+          "url": "http://192.168.30.55:5174/promotion/coupons",
+          "duration": 1526,
+          "how": "Playwright 執行 tests/story/us-7-7-2-1.story.spec.ts → story\\us-7-7-2-1.story.spec.ts › 後台·優惠券 › US-7.7.2.1 管理四类优惠券、查看核销明细与使用记录并精准发放"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.3.1": {
+      "id": "story:US-7.7.3.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.3.1",
+          "status": "passed",
+          "title": "US-7.7.3.1 查看会员积分列表",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510b8x-65fc2f70bacb.png",
+          "url": "http://192.168.30.55:5174/points/list",
+          "duration": 1397,
+          "how": "Playwright 執行 tests/story/us-7-7-3-1.story.spec.ts → story\\us-7-7-3-1.story.spec.ts › 後台·積分 › US-7.7.3.1 查看会员积分列表"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.3.2": {
+      "id": "story:US-7.7.3.2",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.3.2",
+          "status": "passed",
+          "title": "US-7.7.3.2 配置积分累计规则",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510d55-483c7b95e9ec.png",
+          "url": "http://192.168.30.55:5174/points/setting",
+          "duration": 1324,
+          "how": "Playwright 執行 tests/story/us-7-7-3-2.story.spec.ts → story\\us-7-7-3-2.story.spec.ts › 後台·積分 › US-7.7.3.2 配置积分累计规则"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.4.1": {
+      "id": "story:US-7.7.4.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.4.1",
+          "status": "passed",
+          "title": "US-7.7.4.1 添加/修改/预览厨打与收银小票机",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510f9d-a2bc3ad52113.png",
+          "url": "http://192.168.30.55:5174/shop/printers?storeId=310",
+          "duration": 1572,
+          "how": "Playwright 執行 tests/story/us-7-7-4-1.story.spec.ts → story\\us-7-7-4-1.story.spec.ts › 後台·小票機 › US-7.7.4.1 添加/修改/预览厨打与收银小票机"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.4.2": {
+      "id": "story:US-7.7.4.2",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.4.2",
+          "status": "passed",
+          "title": "US-7.7.4.2 把商品绑定到厨房小票机（一个商品绑一台厨打机）",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510hfh-b6bbbb105084.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=310",
+          "duration": 1633,
+          "how": "Playwright 執行 tests/story/us-7-7-4-2.story.spec.ts → story\\us-7-7-4-2.story.spec.ts › 後台·小票機 › US-7.7.4.2 把商品绑定到厨房小票机（一个商品绑一台厨打机）"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.5.1": {
+      "id": "story:US-7.7.5.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.5.1",
+          "status": "passed",
+          "title": "US-7.7.5.1 分别设置厨打与收银小票模板的基本/商品/结算/文本区块",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510jf3-4e4b3058b3ff.png",
+          "url": "http://192.168.30.55:5174/system/receipt-template",
+          "duration": 1417,
+          "how": "Playwright 執行 tests/story/us-7-7-5-1.story.spec.ts → story\\us-7-7-5-1.story.spec.ts › 後台·票據模板 › US-7.7.5.1 分别设置厨打与收银小票模板的基本/商品/结算/文本区块"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.6.1": {
+      "id": "story:US-7.7.6.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.6.1",
+          "status": "passed",
+          "title": "US-7.7.6.1 在商品上设置点餐端显示渠道与小票机设置",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510lic-a899fd0d4ce9.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=310",
+          "duration": 1513,
+          "how": "Playwright 執行 tests/story/us-7-7-6-1.story.spec.ts → story\\us-7-7-6-1.story.spec.ts › 後台·商品 › US-7.7.6.1 在商品上设置点餐端显示渠道与小票机设置"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.6.2": {
+      "id": "story:US-7.7.6.2",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.6.2",
+          "status": "passed",
+          "title": "US-7.7.6.2 维护商品单位、批量上下架、规格属性排序。",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510nhf-1dd02cfb5bfd.png",
+          "url": "http://192.168.30.55:5174/goods/product-units",
+          "duration": 1382,
+          "how": "Playwright 執行 tests/story/us-7-7-6-2.story.spec.ts → story\\us-7-7-6-2.story.spec.ts › 後台·商品 › US-7.7.6.2 维护商品单位、批量上下架、规格属性排序。"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.6.3": {
+      "id": "story:US-7.7.6.3",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.6.3",
+          "status": "passed",
+          "title": "US-7.7.6.3 能在一级分类或其二级分类下创建商品。",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510pnv-8fbd314bbf57.png",
+          "url": "http://192.168.30.55:5174/goods/categories?storeId=310",
+          "duration": 1605,
+          "how": "Playwright 執行 tests/story/us-7-7-6-3.story.spec.ts → story\\us-7-7-6-3.story.spec.ts › 後台·商品 › US-7.7.6.3 能在一级分类或其二级分类下创建商品。"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.6.4": {
+      "id": "story:US-7.7.6.4",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.6.4",
+          "status": "passed",
+          "title": "US-7.7.6.4 新增/编辑商品时不能直接修改库存",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510rr7-750787728167.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=310",
+          "duration": 1532,
+          "how": "Playwright 執行 tests/story/us-7-7-6-4.story.spec.ts → story\\us-7-7-6-4.story.spec.ts › 後台·商品 › US-7.7.6.4 新增/编辑商品时不能直接修改库存"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.7.1": {
+      "id": "story:US-7.7.7.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.7.1",
+          "status": "passed",
+          "title": "US-7.7.7.1 订单详情新增优惠金额、抹零、应收、实收、商品销售实收、售后与订单Flow",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510tvb-df874507890a.png",
+          "url": "http://192.168.30.55:5174/orders/list?storeId=310",
+          "duration": 1575,
+          "how": "Playwright 執行 tests/story/us-7-7-7-1.story.spec.ts → story\\us-7-7-7-1.story.spec.ts › 後台·訂單 › US-7.7.7.1 订单详情新增优惠金额、抹零、应收、实收、商品销售实收、售后与订单Flow"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.7.2": {
+      "id": "story:US-7.7.7.2",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.7.2",
+          "status": "passed",
+          "title": "US-7.7.7.2 订单列表新增商品总价/优惠/抹零/应收/实收列，并查询退货/售后单。",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510vzn-bacf6e084c66.png",
+          "url": "http://192.168.30.55:5174/orders/refund?storeId=310",
+          "duration": 1607,
+          "how": "Playwright 執行 tests/story/us-7-7-7-2.story.spec.ts → story\\us-7-7-7-2.story.spec.ts › 後台·訂單 › US-7.7.7.2 订单列表新增商品总价/优惠/抹零/应收/实收列，并查询退货/售后单。"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.8.1": {
+      "id": "story:US-7.7.8.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.8.1",
+          "status": "passed",
+          "title": "US-7.7.8.1 会员详情展示积分与优惠券、消费记录显示订单类型",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510y2i-bd3ffcf3a4d7.png",
+          "url": "http://192.168.30.55:5174/vip/list",
+          "duration": 1558,
+          "how": "Playwright 執行 tests/story/us-7-7-8-1.story.spec.ts → story\\us-7-7-8-1.story.spec.ts › 後台·會員 › US-7.7.8.1 会员详情展示积分与优惠券、消费记录显示订单类型"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.9.1": {
+      "id": "story:US-7.7.9.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.9.1",
+          "status": "passed",
+          "title": "US-7.7.9.1 搜索/统计存酒并导出Excel",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu51104x-359fd90828e4.png",
+          "url": "http://192.168.30.55:5174/wine-storage/list?storeId=310",
+          "duration": 1513,
+          "how": "Playwright 執行 tests/story/us-7-7-9-1.story.spec.ts → story\\us-7-7-9-1.story.spec.ts › 後台·存酒 › US-7.7.9.1 搜索/统计存酒并导出Excel"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.9.2": {
+      "id": "story:US-7.7.9.2",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.9.2",
+          "status": "passed",
+          "title": "US-7.7.9.2 配置存酒推送、有效期、临期提醒与凭证规则",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu51125m-174248068262.png",
+          "url": "http://192.168.30.55:5174/wine-storage/setting?storeId=310",
+          "duration": 1471,
+          "how": "Playwright 執行 tests/story/us-7-7-9-2.story.spec.ts → story\\us-7-7-9-2.story.spec.ts › 後台·存酒 › US-7.7.9.2 配置存酒推送、有效期、临期提醒与凭证规则"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.10.1": {
+      "id": "story:US-7.7.10.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.10.1",
+          "status": "passed",
+          "title": "US-7.7.10.1 流水新增销售出库与退单入库",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu51035d-7f589c2a1bf5.png",
+          "url": "http://192.168.30.55:5174/inventory/record?storeId=310",
+          "duration": 1548,
+          "how": "Playwright 執行 tests/story/us-7-7-10-1.story.spec.ts → story\\us-7-7-10-1.story.spec.ts › 後台·庫存 › US-7.7.10.1 流水新增销售出库与退单入库"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.10.2": {
+      "id": "story:US-7.7.10.2",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.10.2",
+          "status": "passed",
+          "title": "US-7.7.10.2 通过盘点修改商品库存",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510587-b9192b20dc59.png",
+          "url": "http://192.168.30.55:5174/inventory/check?storeId=310",
+          "duration": 1528,
+          "how": "Playwright 執行 tests/story/us-7-7-10-2.story.spec.ts → story\\us-7-7-10-2.story.spec.ts › 後台·庫存 › US-7.7.10.2 通过盘点修改商品库存"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.7.11.1": {
+      "id": "story:US-7.7.11.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.7.11.1",
+          "status": "passed",
+          "title": "US-7.7.11.1 为门店配置一天多个营业时间段（含按周）",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu510771-98a96b87b1e6.png",
+          "url": "http://192.168.30.55:5174/shop/stores",
+          "duration": 1392,
+          "how": "Playwright 執行 tests/story/us-7-7-11-1.story.spec.ts → story\\us-7-7-11-1.story.spec.ts › 後台·營業時段 › US-7.7.11.1 为门店配置一天多个营业时间段（含按周）"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.1.1": {
+      "id": "story:US-7.8.1.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.1.1",
+          "status": "passed",
+          "title": "US-7.8.1.1 系统提供一张正方形的优惠券默认图片",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu51148d-c6726830d976.png",
+          "url": "http://192.168.30.55:5174/promotion/coupons",
+          "duration": 1560,
+          "how": "Playwright 執行 tests/story/us-7-8-1-1.story.spec.ts → story\\us-7-8-1-1.story.spec.ts › 後台·券圖 › US-7.8.1.1 系统提供一张正方形的优惠券默认图片"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.2.1": {
+      "id": "story:US-7.8.2.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.2.1",
+          "status": "passed",
+          "title": "US-7.8.2.1 配置套餐促销、打折特价、满减活动",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu511aas-f5ba193ac5ba.png",
+          "url": "http://192.168.30.55:5174/promotion/coupons",
+          "duration": 1481,
+          "how": "Playwright 執行 tests/story/us-7-8-2-1.story.spec.ts → story\\us-7-8-2-1.story.spec.ts › 後台·促銷活動 › US-7.8.2.1 配置套餐促销、打折特价、满减活动"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.3.1": {
+      "id": "story:US-7.8.3.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.3.1",
+          "status": "passed",
+          "title": "US-7.8.3.1 为收银端账号设置挂账、反结账权限，并限制免单仅店长可用",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu511cal-333f73a556e0.png",
+          "url": "http://192.168.30.55:5174/system/roles",
+          "duration": 1407,
+          "how": "Playwright 執行 tests/story/us-7-8-3-1.story.spec.ts → story\\us-7-8-3-1.story.spec.ts › 後台·權限 › US-7.8.3.1 为收银端账号设置挂账、反结账权限，并限制免单仅店长可用"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.4.1": {
+      "id": "story:US-7.8.4.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.4.1",
+          "status": "passed",
+          "title": "US-7.8.4.1 维护门店全局的商品属性列表，编辑商品属性时从列表中选择（类似筛选模型）",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu511eae-6288002a0850.png",
+          "url": "http://192.168.30.55:5174/goods/filter-models",
+          "duration": 1446,
+          "how": "Playwright 執行 tests/story/us-7-8-4-1.story.spec.ts → story\\us-7-8-4-1.story.spec.ts › 後台·商品屬性 › US-7.8.4.1 维护门店全局的商品属性列表，编辑商品属性时从列表中选择（类似筛选模型）"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.5.1": {
+      "id": "story:US-7.8.5.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.5.1",
+          "status": "passed",
+          "title": "US-7.8.5.1 新的商品表单支持商品类型、固价、副单位、条码、定位tab、参数排序、图集…",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu511gg4-60eee371c7ec.png",
+          "url": "http://192.168.30.55:5174/goods/list?storeId=310",
+          "duration": 1652,
+          "how": "Playwright 執行 tests/story/us-7-8-5-1.story.spec.ts → story\\us-7-8-5-1.story.spec.ts › 後台·商品表單 › US-7.8.5.1 新的商品表单支持商品类型、固价、副单位、条码、定位tab、参数排序、图集…"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.6.1": {
+      "id": "story:US-7.8.6.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.6.1",
+          "status": "passed",
+          "title": "US-7.8.6.1 统一管理全局分类并同步下发到门店",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu511iht-91790c3bf378.png",
+          "url": "http://192.168.30.55:5174/goods/categories?storeId=310",
+          "duration": 1521,
+          "how": "Playwright 執行 tests/story/us-7-8-6-1.story.spec.ts → story\\us-7-8-6-1.story.spec.ts › 後台·全域分類 › US-7.8.6.1 统一管理全局分类并同步下发到门店"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.6.2": {
+      "id": "story:US-7.8.6.2",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.6.2",
+          "status": "passed",
+          "title": "US-7.8.6.2 系统保留唯一的「套餐」系统分类",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu511khr-ec28c34b66f1.png",
+          "url": "http://192.168.30.55:5174/goods/categories?storeId=310",
+          "duration": 1470,
+          "how": "Playwright 執行 tests/story/us-7-8-6-2.story.spec.ts → story\\us-7-8-6-2.story.spec.ts › 後台·全域分類 › US-7.8.6.2 系统保留唯一的「套餐」系统分类"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.7.1": {
+      "id": "story:US-7.8.7.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.7.1",
+          "status": "passed",
+          "title": "US-7.8.7.1 配置服务费与打包费规则",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu511mif-a2533b7cef11.png",
+          "url": "http://192.168.30.55:5174/shop/stores",
+          "duration": 1465,
+          "how": "Playwright 執行 tests/story/us-7-8-7-1.story.spec.ts → story\\us-7-8-7-1.story.spec.ts › 後台·服務費打包費 › US-7.8.7.1 配置服务费与打包费规则"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.8.1": {
+      "id": "story:US-7.8.8.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.8.1",
+          "status": "passed",
+          "title": "US-7.8.8.1 会员档案含消费次数、累计金额、来源、首充金额，并有会员ID与会员卡号两个…",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu511oiu-48d34f2f9ea4.png",
+          "url": "http://192.168.30.55:5174/vip/list",
+          "duration": 1472,
+          "how": "Playwright 執行 tests/story/us-7-8-8-1.story.spec.ts → story\\us-7-8-8-1.story.spec.ts › 後台·會員檔案 › US-7.8.8.1 会员档案含消费次数、累计金额、来源、首充金额，并有会员ID与会员卡号两个…"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.9.1": {
+      "id": "story:US-7.8.9.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.9.1",
+          "status": "passed",
+          "title": "US-7.8.9.1 库存查询、出入库、盘点与库存记录都支持副单位计量",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu511qmg-309a4adfc3ed.png",
+          "url": "http://192.168.30.55:5174/inventory/query?storeId=310",
+          "duration": 1507,
+          "how": "Playwright 執行 tests/story/us-7-8-9-1.story.spec.ts → story\\us-7-8-9-1.story.spec.ts › 後台·副單位庫存 › US-7.8.9.1 库存查询、出入库、盘点与库存记录都支持副单位计量"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.10.1": {
+      "id": "story:US-7.8.10.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.10.1",
+          "status": "passed",
+          "title": "US-7.8.10.1 维护取酒凭证、退单凭证（退单小票）与收银小票优惠明细模板",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu51165a-b08355cbe499.png",
+          "url": "http://192.168.30.55:5174/system/receipt-template",
+          "duration": 1329,
+          "how": "Playwright 執行 tests/story/us-7-8-10-1.story.spec.ts → story\\us-7-8-10-1.story.spec.ts › 後台·憑證模板 › US-7.8.10.1 维护取酒凭证、退单凭证（退单小票）与收银小票优惠明细模板"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-7.8.11.1": {
+      "id": "story:US-7.8.11.1",
+      "status": "passed",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-7.8.11.1",
+          "status": "passed",
+          "title": "US-7.8.11.1 订单列表/详情展示促销优惠、优惠券、服务费、打包费、折后价与套餐构成，并…",
+          "screenshot": "/api/shots/20260917-122441-o2yj/mu5118a0-955937c67fe9.png",
+          "url": "http://192.168.30.55:5174/orders/list?storeId=310",
+          "duration": 1574,
+          "how": "Playwright 執行 tests/story/us-7-8-11-1.story.spec.ts → story\\us-7-8-11-1.story.spec.ts › 後台·訂單核賬 › US-7.8.11.1 订单列表/详情展示促销优惠、优惠券、服务费、打包费、折后价与套餐构成，并…"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    },
+    "story:US-5.1.1.1": {
+      "id": "story:US-5.1.1.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T10:02:25.867Z",
+      "finishedAt": "2026-09-17T10:02:33.393Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.1.1.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-1-1-1.story.spec.ts:9:7 › 小程序·登入会员 › US-5.1.1.1 用微信一键登录"
+        }
+      ],
+      "runId": "20260917-180225-l3v2",
+      "command": "npx playwright test --project=admin --workers=1 tests/story/us-5-1-1-1.story.spec.ts -g US-5\\.1\\.1\\.1",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.1.1.2": {
+      "id": "story:US-5.1.1.2",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.1.1.2",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-1-1-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.1.2 再次访问时自动登录"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.1.2.1": {
+      "id": "story:US-5.1.2.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.1.2.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-1-2-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.2.1 查看我的积分和等级"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.1.2.2": {
+      "id": "story:US-5.1.2.2",
+      "status": "skipped",
+      "startedAt": "2026-09-18T01:31:25.130Z",
+      "finishedAt": "2026-09-18T01:31:35.337Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.1.2.2",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-1-2-2.story.spec.ts:9:7 › 小程序·登入会员 › US-5.1.2.2 查看消费记录"
+        }
+      ],
+      "runId": "20260918-093125-99w2",
+      "command": "npx playwright test --project=admin --workers=1 tests/story/us-5-1-2-2.story.spec.ts -g US-5\\.1\\.2\\.2",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.2.1.1": {
+      "id": "story:US-5.2.1.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.2.1.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-2-1-1.story.spec.ts:9:7 › 小程序·商品瀏覽 › US-5.2.1.1 按分类浏览商品"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.2.1.2": {
+      "id": "story:US-5.2.1.2",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.2.1.2",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-2-1-2.story.spec.ts:9:7 › 小程序·商品瀏覽 › US-5.2.1.2 看到商品的主图和价格"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.4.1.1": {
+      "id": "story:US-5.4.1.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.4.1.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-4-1-1.story.spec.ts:9:7 › 小程序·下單 › US-5.4.1.1 快速完成下单"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.8.1": {
+      "id": "story:US-5.8.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.8.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-8-1.story.spec.ts:9:7 › 小程序·授權 › US-5.8.1 登录小程序时授权手机号"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.9.1": {
+      "id": "story:US-5.9.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.9.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-9-1.story.spec.ts:9:7 › 小程序·營業時段 › US-5.9.1 门店支持一天多个营业时间段"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.10.1": {
+      "id": "story:US-5.10.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.10.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-10-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.10.1 商品列表对沽清与库存（含预扣）进行校验"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.10.2": {
+      "id": "story:US-5.10.2",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.10.2",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-10-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.10.2 按「一级分类名+其下商品」「二级分类名+其下商品」层级浏览。"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.10.3": {
+      "id": "story:US-5.10.3",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.10.3",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-10-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.10.3 在商品列表/详情看到我可用的最优优惠券名称。"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.11.1": {
+      "id": "story:US-5.11.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.11.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-11-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.11.1 确认订单时看到可用与不可用券列表及不可用原因"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.11.2": {
+      "id": "story:US-5.11.2",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.11.2",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-11-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.11.2 在个人中心查看有效、历史与过期优惠券。"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.12.1": {
+      "id": "story:US-5.12.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.12.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-12-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.12.1 生成代表我会员身份的二维码"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.13.1": {
+      "id": "story:US-5.13.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.13.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-13-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.1 确认订单/购物车再次校验沽清与预扣库存"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.13.2": {
+      "id": "story:US-5.13.2",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.13.2",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-13-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.2 查看结账详情并完成微信付款；支付失败时生成待支付订单，15分钟未付自动超…"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.13.3": {
+      "id": "story:US-5.13.3",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.13.3",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-13-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.3 支付成功后订单进入待制作、清预扣并扣减真实库存"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.13.4": {
+      "id": "story:US-5.13.4",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.13.4",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-13-4.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.4 待取订单随制作/出餐进度显示状态文案与超时提示"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.13.5": {
+      "id": "story:US-5.13.5",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.13.5",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-13-5.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.5 取消待支付订单或订单超时取消时库存被退回"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.13.6": {
+      "id": "story:US-5.13.6",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.13.6",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-13-6.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.6 出餐后满48小时未取的订单自动完成收口。"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.14.1": {
+      "id": "story:US-5.14.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.14.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-14-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.14.1 在优惠券列表看到每张券的适用门店信息"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.15.1": {
+      "id": "story:US-5.15.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.15.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-15-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.15.1 看到分类图标、富文本和标签（后台可开关）"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.15.2": {
+      "id": "story:US-5.15.2",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.15.2",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-15-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.15.2 商品列表的最优券推荐按「优惠金额→最快到期→券类型」规则排序"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.15.3": {
+      "id": "story:US-5.15.3",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.15.3",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-15-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.15.3 在系统套餐分类下看到各套餐促销活动及其套餐组/商品明细"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.16.1": {
+      "id": "story:US-5.16.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.16.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-16-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.16.1 在购物车/确认订单里按套餐组选购套餐"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.16.2": {
+      "id": "story:US-5.16.2",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.16.2",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-16-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.16.2 确认订单自动计算促销活动优惠、打包费（自提无服务费），并看到优惠金额与应…"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.16.3": {
+      "id": "story:US-5.16.3",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.16.3",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-16-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.16.3 固价商品不被任何优惠影响"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.17.1": {
+      "id": "story:US-5.17.1",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.17.1",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-17-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.17.1 订单列表按全部/自提/外卖/门店/其他分类查看，并看到分类标签"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "story:US-5.17.2": {
+      "id": "story:US-5.17.2",
+      "status": "skipped",
+      "startedAt": "2026-09-17T04:24:41.649Z",
+      "finishedAt": "2026-09-17T04:26:13.055Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "story:US-5.17.2",
+          "status": "skipped",
+          "title": "tests\\story\\us-5-17-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.17.2 订单详情菜单默认收起、超过2个商品时展开查看，并清楚看到套餐构成与各项费…"
+        }
+      ],
+      "runId": "20260917-122441-o2yj",
+      "command": "npx playwright test --project=admin --workers=1 tests/story",
+      "hasShots": false,
+      "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+    },
+    "e2e:pos-member-search-detail": {
+      "id": "e2e:pos-member-search-detail",
+      "status": "failed",
+      "startedAt": "2026-09-17T08:03:40.712Z",
+      "finishedAt": "2026-09-17T08:04:05.389Z",
+      "error": "tests\\pos\\e2e\\member-search-detail-journey.spec.ts:42:7 › E2E POS 會員搜尋新增與詳情閉環 › 1. 右上角添加会员（若已存在則略過）",
+      "steps": [
+        {
+          "id": "e2e:pos-member-search-detail",
+          "status": "failed",
+          "title": "1. 右上角添加会员（若已存在則略過）",
+          "screenshot": "/api/shots/20260917-160340-la7l/mu58twzq-c8a57b157498.png",
+          "url": "http://192.168.30.55:8090/pages/members/index",
+          "duration": 13416,
+          "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first()\nExpected: visible\nReceived: hidden\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first() with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first()\u001b[22m\n\u001b[2m    23 × locator resolved to <div data-v-2de814bd=\"\" data-v-09157457=\"\" class=\"uni-input-placeholder input-placeholder\">请输入手机号查询</div>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+          "how": "Playwright 執行 tests/pos/e2e/member-search-detail-journey.spec.ts → pos\\e2e\\member-search-detail-journey.spec.ts › E2E POS 會員搜尋新增與詳情閉環 › 1. 右上角添加会员（若已存在則略過）"
+        },
+        {
+          "id": "e2e:pos-member-search-detail",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\member-search-detail-journey.spec.ts:72:7 › E2E POS 會員搜尋新增與詳情閉環 › 2. 输入手机号 → 搜索会员"
+        },
+        {
+          "id": "e2e:pos-member-search-detail",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\member-search-detail-journey.spec.ts:81:7 › E2E POS 會員搜尋新增與詳情閉環 › 3. 进入会员详情可查看优惠券数量"
+        },
+        {
+          "id": "e2e:pos-member-search-detail",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\member-search-detail-journey.spec.ts:96:7 › E2E POS 會員搜尋新增與詳情閉環 › 4. 会员详情可查看消费记录"
+        }
+      ],
+      "runId": "20260917-160340-la7l",
+      "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/member-search-detail-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 4（通過 0 · 失敗 1 · 跳過 3）"
+    },
+    "e2e:pos-dine-pay-kitchen-pickup": {
+      "id": "e2e:pos-dine-pay-kitchen-pickup",
+      "status": "failed",
+      "startedAt": "2026-09-17T08:06:36.144Z",
+      "finishedAt": "2026-09-17T08:07:57.398Z",
+      "error": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:44:7 › E2E POS 進店點單支付到取餐閉環 › 3. 選擇支付方式並完成支付",
+      "steps": [
+        {
+          "id": "e2e:pos-dine-pay-kitchen-pickup",
+          "status": "passed",
+          "title": "1. 進店：打開 POS 點單並選用餐方式",
+          "screenshot": "/api/shots/20260917-160636-4m57/mu58xdn1-3a3bd4f2c8d3.png",
+          "url": "http://192.168.30.55:8090/pages/pos/index",
+          "duration": 2172,
+          "how": "Playwright 執行 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts → pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts › E2E POS 進店點單支付到取餐閉環 › 1. 進店：打開 POS 點單並選用餐方式"
+        },
+        {
+          "id": "e2e:pos-dine-pay-kitchen-pickup",
+          "status": "passed",
+          "title": "2. 選購商品加入購物車",
+          "screenshot": "/api/shots/20260917-160636-4m57/mu58xi84-d894bb74bec3.png",
+          "url": "http://192.168.30.55:8090/pages/pos/index",
+          "duration": 4627,
+          "how": "Playwright 執行 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts → pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts › E2E POS 進店點單支付到取餐閉環 › 2. 選購商品加入購物車"
+        },
+        {
+          "id": "e2e:pos-dine-pay-kitchen-pickup",
+          "status": "failed",
+          "title": "3. 選擇支付方式並完成支付",
+          "screenshot": "/api/shots/20260917-160636-4m57/mu58ysyx-24cc3767ba94.png",
+          "url": "http://192.168.30.55:8090/pages/pos/index",
+          "duration": 60002,
+          "error": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+          "how": "Playwright 執行 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts → pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts › E2E POS 進店點單支付到取餐閉環 › 3. 選擇支付方式並完成支付"
+        },
+        {
+          "id": "e2e:pos-dine-pay-kitchen-pickup",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:59:7 › E2E POS 進店點單支付到取餐閉環 › 4. 支付後可見列印／小票相關語意（前廳／後廚）"
+        },
+        {
+          "id": "e2e:pos-dine-pay-kitchen-pickup",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:66:7 › E2E POS 進店點單支付到取餐閉環 › 5. 訂單進入制作进度且可見制作中"
+        },
+        {
+          "id": "e2e:pos-dine-pay-kitchen-pickup",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:86:7 › E2E POS 進店點單支付到取餐閉環 › 6. 後廚完成制作 → 狀態待取单"
+        },
+        {
+          "id": "e2e:pos-dine-pay-kitchen-pickup",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:107:7 › E2E POS 進店點單支付到取餐閉環 › 7. 顧客取单 → 已取单 → 已完成"
+        },
+        {
+          "id": "e2e:pos-dine-pay-kitchen-pickup",
+          "status": "skipped",
+          "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:118:7 › E2E POS 進店點單支付到取餐閉環 › 8. 訂單列表可見已完成（訂單結束）"
+        }
+      ],
+      "runId": "20260917-160636-4m57",
+      "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 8（通過 2 · 失敗 1 · 跳過 5）"
+    },
+    "e2e:admin-store-create": {
+      "id": "e2e:admin-store-create",
+      "status": "failed",
+      "startedAt": "2026-09-17T08:22:20.507Z",
+      "finishedAt": "2026-09-17T08:22:46.759Z",
+      "error": "tests\\e2e\\store-create-journey.spec.ts:51:5 › 新增门店后可在门店列表中查询到",
+      "steps": [
+        {
+          "id": "e2e:admin-store-create",
+          "status": "failed",
+          "title": "新增门店后可在门店列表中查询到",
+          "screenshot": "/api/shots/20260917-162220-lzy9/mu59hxb0-65a1b8e0122c.png",
+          "url": "http://192.168.30.55:5174/store/list",
+          "duration": 16193,
+          "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoBeEmpty\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('body')\nExpected: not empty\nReceived: empty\nTimeout:  15000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeEmpty\" locator('body') with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('body')\u001b[22m\n\u001b[2m    33 × locator resolved to <body>…</body>\u001b[22m\n\u001b[2m       - unexpected value \"empty\"\u001b[22m\n",
+          "how": "Playwright 執行 tests/e2e/store-create-journey.spec.ts → e2e\\store-create-journey.spec.ts › 新增门店后可在门店列表中查询到"
+        }
+      ],
+      "runId": "20260917-162220-lzy9",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/store-create-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+    },
+    "e2e:admin-inventory-query": {
+      "id": "e2e:admin-inventory-query",
+      "status": "passed",
+      "startedAt": "2026-09-17T08:25:26.691Z",
+      "finishedAt": "2026-09-17T08:25:38.903Z",
+      "error": null,
+      "steps": [
+        {
+          "id": "e2e:admin-inventory-query",
+          "status": "passed",
+          "title": "登录后台管理系统并查看库存查询列表",
+          "screenshot": "/api/shots/20260917-162526-fy47/mu59lnl2-dceefbf7a861.png",
+          "url": "http://192.168.30.55:5174/inventory/query?storeId=310",
+          "duration": 2377,
+          "how": "Playwright 執行 tests/e2e/inventory-query-journey.spec.ts → e2e\\inventory-query-journey.spec.ts › 库存查询 - 登录后查看库存数据 › 登录后台管理系统并查看库存查询列表"
+        }
+      ],
+      "runId": "20260917-162526-fy47",
+      "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-query-journey.spec.ts",
+      "hasShots": true,
+      "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+    }
+  },
+  "log": [
+    "Running 2 tests using 1 worker",
+    "(node:41028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+    "(Use `node --trace-warnings ...` to show where the warning was created)",
+    "  ok 1 [admin-setup] › tests\\auth\\login.setup.ts:14:6 › admin login (5.9s)",
+    "(node:4240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.",
+    "(Use `node --trace-warnings ...` to show where the warning was created)",
+    "  -  2 [admin] › tests\\story\\us-5-1-2-2.story.spec.ts:9:7 › 小程序·登入会员 › US-5.1.2.2 查看消费记录",
+    "  1 skipped",
+    "  1 passed (9.0s)"
+  ]
+}

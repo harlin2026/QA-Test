@@ -1,0 +1,295 @@
+{
+  "runId": "stress-mu592quq",
+  "system": "admin",
+  "apiBase": "https://peterson-gw.weprogram.site",
+  "vus": 100,
+  "durationSec": 60,
+  "rampUpSec": 10,
+  "timeoutMs": 15000,
+  "withUi": false,
+  "uiWorkers": 0,
+  "scenarios": [
+    {
+      "id": "admin-stores",
+      "name": "門店列表",
+      "method": "GET",
+      "path": "/api/system/settings/stores?pageIndex=1&pageSize=100",
+      "weight": 2
+    },
+    {
+      "id": "admin-categories",
+      "name": "商品分類",
+      "method": "GET",
+      "path": "/api/admin/products/all-categories?storeId=317",
+      "weight": 2
+    },
+    {
+      "id": "admin-order-stats",
+      "name": "訂單統計",
+      "method": "GET",
+      "path": "/api/admin/orders/stats?storeId=317",
+      "weight": 2
+    },
+    {
+      "id": "admin-orders",
+      "name": "訂單列表",
+      "method": "GET",
+      "path": "/api/admin/orders?storeId=317&pageIndex=1&pageSize=15",
+      "weight": 3
+    },
+    {
+      "id": "admin-refunds",
+      "name": "售後訂單",
+      "method": "GET",
+      "path": "/api/admin/orders/refunds?StoreId=317&PageIndex=1&PageSize=15",
+      "weight": 1
+    },
+    {
+      "id": "admin-order-report",
+      "name": "訂單報表",
+      "method": "GET",
+      "path": "/api/admin/reports/order-report?storeId=0&timeRange=today",
+      "weight": 1
+    },
+    {
+      "id": "admin-order-trend",
+      "name": "訂單趨勢",
+      "method": "GET",
+      "path": "/api/admin/reports/order-trend?storeId=0&timeRange=today",
+      "weight": 1
+    },
+    {
+      "id": "admin-member-stats",
+      "name": "會員統計",
+      "method": "GET",
+      "path": "/api/admin/member-stats?period=30days",
+      "weight": 1
+    }
+  ],
+  "startedAt": "2026-09-17T08:10:55.903Z",
+  "finishedAt": "2026-09-17T08:12:10.901Z",
+  "stopped": false,
+  "metrics": {
+    "vus": 100,
+    "elapsedSec": 74.99,
+    "total": 2644,
+    "ok": 2254,
+    "fail": 390,
+    "errorRate": 14.75,
+    "rps": 35.26,
+    "p50": 82,
+    "p95": 15007,
+    "p99": 15013,
+    "byStatus": {
+      "0": 390,
+      "200": 2254
+    },
+    "byScenario": {
+      "admin-stores": {
+        "total": 403,
+        "ok": 403,
+        "fail": 0,
+        "p50": 66,
+        "p95": 1796,
+        "p99": 3647
+      },
+      "admin-order-trend": {
+        "total": 205,
+        "ok": 205,
+        "fail": 0,
+        "p50": 62,
+        "p95": 227,
+        "p99": 342
+      },
+      "admin-categories": {
+        "total": 428,
+        "ok": 38,
+        "fail": 390,
+        "p50": 15004,
+        "p95": 15013,
+        "p99": 15016
+      },
+      "admin-orders": {
+        "total": 588,
+        "ok": 588,
+        "fail": 0,
+        "p50": 56,
+        "p95": 264,
+        "p99": 461
+      },
+      "admin-order-stats": {
+        "total": 405,
+        "ok": 405,
+        "fail": 0,
+        "p50": 61,
+        "p95": 315,
+        "p99": 416
+      },
+      "admin-refunds": {
+        "total": 184,
+        "ok": 184,
+        "fail": 0,
+        "p50": 56,
+        "p95": 343,
+        "p99": 637
+      },
+      "admin-order-report": {
+        "total": 222,
+        "ok": 222,
+        "fail": 0,
+        "p50": 67,
+        "p95": 374,
+        "p99": 682
+      },
+      "admin-member-stats": {
+        "total": 209,
+        "ok": 209,
+        "fail": 0,
+        "p50": 336,
+        "p95": 2686,
+        "p99": 3503
+      }
+    },
+    "failByScenario": [
+      {
+        "scenarioId": "admin-categories",
+        "fail": 390,
+        "total": 428,
+        "ok": 38,
+        "failRate": 91.12
+      }
+    ],
+    "errorGroups": [
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "count": 390,
+        "lastMs": 15007
+      }
+    ],
+    "errors": [
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15003
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 14999
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15001
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15002
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15005
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15001
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15003
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15007
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15001
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15001
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15001
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15001
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15006
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15001
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15002
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15007
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15000
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15006
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15006
+      },
+      {
+        "scenarioId": "admin-categories",
+        "status": 0,
+        "error": "timeout",
+        "ms": 15003
+      }
+    ]
+  },
+  "ui": null
+}

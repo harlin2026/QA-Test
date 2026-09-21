@@ -1,0 +1,145 @@
+{
+  "runId": "stress-mu592quq",
+  "system": "admin",
+  "fail": 390,
+  "failByScenario": [
+    {
+      "scenarioId": "admin-categories",
+      "fail": 390,
+      "total": 428,
+      "ok": 38,
+      "failRate": 91.12
+    }
+  ],
+  "errorGroups": [
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "count": 390,
+      "lastMs": 15007
+    }
+  ],
+  "errors": [
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15003
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 14999
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15001
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15002
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15005
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15001
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15003
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15007
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15001
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15001
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15001
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15001
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15006
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15001
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15002
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15007
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15000
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15006
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15006
+    },
+    {
+      "scenarioId": "admin-categories",
+      "status": 0,
+      "error": "timeout",
+      "ms": 15003
+    }
+  ]
+}

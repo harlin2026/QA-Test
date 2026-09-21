@@ -1,0 +1,182 @@
+[
+  {
+    "path": "/orders/list",
+    "name": "order-list",
+    "title": "订单列表"
+  },
+  {
+    "path": "/orders/refund",
+    "name": "refund-order",
+    "title": "退货/售后订单"
+  },
+  {
+    "path": "/orders/refund/detail/:orderId/:productId",
+    "name": "refund-order-detail",
+    "title": "退貨詳情"
+  },
+  {
+    "path": "/orders/detail/:id",
+    "name": "order-detail",
+    "title": "订单详情"
+  },
+  {
+    "path": "/goods/categories",
+    "name": "goods-category",
+    "title": "商品分类"
+  },
+  {
+    "path": "/goods/list",
+    "name": "goods-list",
+    "title": "商品列表"
+  },
+  {
+    "path": "/goods/good",
+    "name": "goods-good",
+    "title": "添加商品"
+  },
+  {
+    "path": "/goods/filter-models",
+    "name": "filter-model",
+    "title": "筛选模型"
+  },
+  {
+    "path": "/goods/product-units",
+    "name": "product-unit",
+    "title": "商品单位设置"
+  },
+  {
+    "path": "/shop/stores",
+    "name": "store-list",
+    "title": "门店管理"
+  },
+  {
+    "path": "/shop/page-design",
+    "name": "page-design",
+    "title": "页面设计"
+  },
+  {
+    "path": "/shop/printers",
+    "name": "printer-management",
+    "title": "小票机管理"
+  },
+  {
+    "path": "/system/receipt-template",
+    "name": "receipt-template",
+    "title": "单据模板"
+  },
+  {
+    "path": "/system/receipt-template-editor/:id?",
+    "name": "receipt-template-editor",
+    "title": "单据模板编辑"
+  },
+  {
+    "path": "/vip/list",
+    "name": "vip-list",
+    "title": "会员列表"
+  },
+  {
+    "path": "/vip/detail/:id",
+    "name": "vip-detail",
+    "title": "会员详情"
+  },
+  {
+    "path": "/points/list",
+    "name": "points-list",
+    "title": "积分列表"
+  },
+  {
+    "path": "/points/setting",
+    "name": "points-setting",
+    "title": "积分规则"
+  },
+  {
+    "path": "/system/users",
+    "name": "user-management",
+    "title": "用户管理"
+  },
+  {
+    "path": "/system/roles",
+    "name": "role-management",
+    "title": "角色管理"
+  },
+  {
+    "path": "/system/logs",
+    "name": "system-logs",
+    "title": "日志管理"
+  },
+  {
+    "path": "/inventory/query",
+    "name": "inventory-query",
+    "title": "库存查询"
+  },
+  {
+    "path": "/inventory/stock",
+    "name": "inventory-stock",
+    "title": "出库入库"
+  },
+  {
+    "path": "/inventory/check",
+    "name": "inventory-check",
+    "title": "库存盘点"
+  },
+  {
+    "path": "/inventory/record",
+    "name": "inventory-record",
+    "title": "库存记录"
+  },
+  {
+    "path": "/report/coupon-stats",
+    "name": "coupon-stats",
+    "title": "优惠券统计"
+  },
+  {
+    "path": "/promotion/coupons",
+    "name": "coupon-list",
+    "title": "优惠券列表"
+  },
+  {
+    "path": "/promotion/coupons/create",
+    "name": "coupon-create",
+    "title": "创建优惠券"
+  },
+  {
+    "path": "/inventory/report/stock",
+    "name": "inventory-report-stock",
+    "title": "库存统计"
+  },
+  {
+    "path": "/inventory/report/order-sales",
+    "name": "inventory-report-order-sales",
+    "title": "订单销量"
+  },
+  {
+    "path": "/report/product-sales",
+    "name": "product-sales",
+    "title": "商品销量"
+  },
+  {
+    "path": "/report/cashier-stats",
+    "name": "cashier-stats",
+    "title": "收银统计"
+  },
+  {
+    "path": "/report/member-balance-stats",
+    "name": "member-balance-stats",
+    "title": "会员余额统计"
+  },
+  {
+    "path": "/inventory/report/product-sales",
+    "name": "inventory-report-product-sales",
+    "title": "商品进销存统计"
+  },
+  {
+    "path": "/system/notifications",
+    "name": "notification-management",
+    "title": "通知管理"
+  },
+  {
+    "path": "/wine-storage/list",
+    "name": "wine-storage-list",
+    "title": "存酒列表"
+  }
+]

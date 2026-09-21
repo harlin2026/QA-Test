@@ -1,0 +1,18 @@
+{
+  "runId": "20260915-140318-jk66",
+  "system": "admin",
+  "target": "e2e:admin-vip-search",
+  "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-journey.spec.ts",
+  "exitCode": 0,
+  "startedAt": "2026-09-15T06:03:18.556Z",
+  "finishedAt": "2026-09-15T06:03:30.361Z",
+  "ids": [
+    "e2e:admin-vip-search"
+  ],
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  }
+}

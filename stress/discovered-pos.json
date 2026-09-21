@@ -1,0 +1,171 @@
+{
+  "system": "pos",
+  "capturedAt": "2026-09-14T09:43:11.651Z",
+  "baseURL": "http://192.168.30.55:8090",
+  "apiBase": "https://peterson-gw.weprogram.site",
+  "originCounts": {
+    "https://peterson-gw.weprogram.site": 65
+  },
+  "endpoints": [
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/auth/staff-ordering/me?storeId=2",
+      "pathname": "/api/auth/staff-ordering/me",
+      "resourceType": "xhr",
+      "count": 10
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/products/hold-count?storeId=2",
+      "pathname": "/api/staff-ordering/products/hold-count",
+      "resourceType": "xhr",
+      "count": 10
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/products/categories?storeId=2",
+      "pathname": "/api/staff-ordering/products/categories",
+      "resourceType": "xhr",
+      "count": 10
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/products/carts-pos?storeId=2",
+      "pathname": "/api/staff-ordering/products/carts-pos",
+      "resourceType": "xhr",
+      "count": 9
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/products?storeId=2&pageIndex=1&pageSize=200&tab=0",
+      "pathname": "/api/staff-ordering/products",
+      "resourceType": "xhr",
+      "count": 9
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/orders/status-counts/2?storeId=2",
+      "pathname": "/api/staff-ordering/orders/status-counts/2",
+      "resourceType": "xhr",
+      "count": 2
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/wine-storage/settings/stores/2",
+      "pathname": "/api/admin/wine-storage/settings/stores/2",
+      "resourceType": "xhr",
+      "count": 2
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/orders/progress/count?storeId=2",
+      "pathname": "/api/staff-ordering/orders/progress/count",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/orders/progress/average-prepared-duration?storeId=2",
+      "pathname": "/api/staff-ordering/orders/progress/average-prepared-duration",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "POST",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/orders/progress?tab=0&storeId=2&pageIndex=1&pageSize=15",
+      "pathname": "/api/staff-ordering/orders/progress",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/orders?storeId=2&pageIndex=1&pageSize=20&tab=0&dateType=1",
+      "pathname": "/api/staff-ordering/orders",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/wine-storage/statistics?storeId=2",
+      "pathname": "/api/staff-ordering/wine-storage/statistics",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/wine-storage?storeId=2&tab=0&pageIndex=1&pageSize=20",
+      "pathname": "/api/staff-ordering/wine-storage",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/admin/wine-storage/settings/95124fe2-3adb-4c36-8fcb-6716ff3ab7a7",
+      "pathname": "/api/admin/wine-storage/settings/95124fe2-3adb-4c36-8fcb-6716ff3ab7a7",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/products/backend/sales-cancellations/store/2/summary",
+      "pathname": "/api/products/backend/sales-cancellations/store/2/summary",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/products/backend/sales-cancellations/product-groups/not-cancelled?storeId=2&keyword=",
+      "pathname": "/api/products/backend/sales-cancellations/product-groups/not-cancelled",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/orders/realtime-revenue?StoreId=2&StartDate=2026-09-14&EndDate=2026-09-14",
+      "pathname": "/api/staff-ordering/orders/realtime-revenue",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/marketing/coupons/staff-ordering/stats?storeId=2&startDate=2026-09-14&endDate=2026-09-14",
+      "pathname": "/api/marketing/coupons/staff-ordering/stats",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/products/stock-overviews/alerts?storeId=2",
+      "pathname": "/api/staff-ordering/products/stock-overviews/alerts",
+      "resourceType": "xhr",
+      "count": 1
+    },
+    {
+      "method": "GET",
+      "origin": "https://peterson-gw.weprogram.site",
+      "path": "/api/staff-ordering/products/stock-overviews?storeId=2&pageIndex=1&pageSize=20",
+      "pathname": "/api/staff-ordering/products/stock-overviews",
+      "resourceType": "xhr",
+      "count": 1
+    }
+  ]
+}

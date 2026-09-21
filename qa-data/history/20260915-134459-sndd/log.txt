@@ -1,0 +1,33 @@
+Running 2 tests using 1 worker
+(node:26224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [admin-setup] › tests\auth\login.setup.ts:14:6 › admin login (2.8s)
+(node:43692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 [admin] › tests\e2e\vip-search-detail-journey.spec.ts:5:7 › 會員搜索與詳情查看 › 通過手機號搜索會員並查看詳情 (1.1m)
+  1) [admin] › tests\e2e\vip-search-detail-journey.spec.ts:5:7 › 會員搜索與詳情查看 › 通過手機號搜索會員並查看詳情 ────────
+    Test timeout of 60000ms exceeded.
+    Error: locator.fill: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for getByPlaceholder('請輸入手機號')
+       9 |     // 搜索會員
+      10 |     const phoneInput = page.getByPlaceholder('請輸入手機號');
+    > 11 |     await phoneInput.fill('13939882731');
+         |                      ^
+      12 |     await page.getByRole('button', { name: '搜索' }).click();
+      13 |     
+      14 |     // 等待表格加載
+        at F:\Test\tests\e2e\vip-search-detail-journey.spec.ts:11:22
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-search-detail-journey-會員搜索與詳情查看-通過手機號搜索會員並查看詳情-admin\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #2: dashboard-shot (image/png) ──────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-search-detail-journey-會員搜索與詳情查看-通過手機號搜索會員並查看詳情-admin\attachments\dashboard-shot-ae33aa51c5ec092483cec2b6bfcd5d84fef78ea3.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-search-detail-journey-會員搜索與詳情查看-通過手機號搜索會員並查看詳情-admin\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: test-results\pw-output\e2e-vip-search-detail-journey-會員搜索與詳情查看-通過手機號搜索會員並查看詳情-admin\error-context.md
+  1 failed
+    [admin] › tests\e2e\vip-search-detail-journey.spec.ts:5:7 › 會員搜索與詳情查看 › 通過手機號搜索會員並查看詳情 ─────────
+  1 passed (1.2m)

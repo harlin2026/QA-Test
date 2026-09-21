@@ -1,0 +1,48 @@
+{
+  "admin": {
+    "id": "admin",
+    "name": "後台管理",
+    "subtitle": "Peterson Admin",
+    "baseURL": "http://192.168.30.55:5174",
+    "loginUser": "admin@peterson.com",
+    "loginPass": "Admin@123",
+    "authFile": "playwright/.auth/user.json",
+    "project": "admin",
+    "setupProject": "admin-setup",
+    "fixtures": {
+      "smoke": "tests/fixtures/modules.json",
+      "crud": "tests/fixtures/crud-modules.json",
+      "e2e": "tests/fixtures/e2e-suites.json",
+      "story": "tests/fixtures/story-suites.json"
+    },
+    "dirs": {
+      "smoke": "tests/smoke",
+      "crud": "tests/crud",
+      "e2e": "tests/e2e",
+      "story": "tests/story"
+    }
+  },
+  "pos": {
+    "id": "pos",
+    "name": "POS 收銀",
+    "subtitle": "@Chill POS",
+    "baseURL": "http://192.168.30.55:8090",
+    "loginUser": "teresa",
+    "loginPass": "teresa",
+    "authFile": "playwright/.auth/pos.json",
+    "project": "pos",
+    "setupProject": "pos-setup",
+    "fixtures": {
+      "smoke": "tests/pos/fixtures/modules.json",
+      "crud": "tests/pos/fixtures/crud-modules.json",
+      "e2e": "tests/pos/fixtures/e2e-suites.json",
+      "story": "tests/pos/fixtures/story-suites.json"
+    },
+    "dirs": {
+      "smoke": "tests/pos/smoke",
+      "crud": "tests/pos/crud",
+      "e2e": "tests/pos/e2e",
+      "story": "tests/pos/story"
+    }
+  }
+}

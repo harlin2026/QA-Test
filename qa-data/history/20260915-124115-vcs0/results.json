@@ -1,0 +1,20 @@
+{
+  "e2e:admin-member-search": {
+    "id": "e2e:admin-member-search",
+    "status": "failed",
+    "startedAt": "2026-09-15T04:41:15.081Z",
+    "finishedAt": "2026-09-15T04:41:41.019Z",
+    "error": "tests\\e2e\\member-search-journey.spec.ts:7:7 › 會員搜索與詳情 › 通過手機號搜索會員並查看詳情",
+    "steps": [
+      {
+        "id": "e2e:admin-member-search",
+        "status": "failed",
+        "title": "tests\\e2e\\member-search-journey.spec.ts:7:7 › 會員搜索與詳情 › 通過手機號搜索會員並查看詳情"
+      }
+    ],
+    "runId": "20260915-124115-vcs0",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/member-search-journey.spec.ts",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+  }
+}

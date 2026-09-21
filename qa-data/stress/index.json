@@ -1,0 +1,23 @@
+[
+  {
+    "runId": "stress-mu592quq",
+    "system": "admin",
+    "startedAt": "2026-09-17T08:10:55.903Z",
+    "finishedAt": "2026-09-17T08:12:10.901Z",
+    "vus": 100,
+    "durationSec": 60,
+    "total": 2644,
+    "ok": 2254,
+    "fail": 390,
+    "rps": 35.26,
+    "p95": 15007,
+    "errorRate": 14.75,
+    "stopped": false,
+    "topFails": [
+      {
+        "scenarioId": "admin-categories",
+        "fail": 390
+      }
+    ]
+  }
+]

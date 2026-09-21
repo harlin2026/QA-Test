@@ -1,0 +1,18 @@
+{
+  "runId": "20260917-162526-fy47",
+  "system": "admin",
+  "target": "e2e:admin-inventory-query",
+  "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-query-journey.spec.ts",
+  "exitCode": 0,
+  "startedAt": "2026-09-17T08:25:26.691Z",
+  "finishedAt": "2026-09-17T08:25:38.903Z",
+  "ids": [
+    "e2e:admin-inventory-query"
+  ],
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  }
+}

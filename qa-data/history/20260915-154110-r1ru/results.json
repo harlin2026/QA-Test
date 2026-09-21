@@ -1,0 +1,24 @@
+{
+  "e2e:admin-vip-search-detail": {
+    "id": "e2e:admin-vip-search-detail",
+    "status": "passed",
+    "startedAt": "2026-09-15T07:41:10.178Z",
+    "finishedAt": "2026-09-15T07:41:22.232Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "e2e:admin-vip-search-detail",
+        "status": "passed",
+        "title": "手机号搜索会员并查看详情",
+        "screenshot": "/api/shots/20260915-154110-r1ru/mu2d50dd-6cef14298c53.png",
+        "url": "http://192.168.30.55:5174/vip/detail/a06100e1-7f1d-40d7-99a4-0eedcc63fe42",
+        "duration": 2658,
+        "how": "Playwright 執行 tests/e2e/vip-search-detail-journey.spec.ts → e2e\\vip-search-detail-journey.spec.ts › E2E｜手机号搜索会员并查看详情 › 手机号搜索会员并查看详情"
+      }
+    ],
+    "runId": "20260915-154110-r1ru",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  }
+}

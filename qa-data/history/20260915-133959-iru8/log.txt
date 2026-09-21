@@ -1,0 +1,43 @@
+Running 2 tests using 1 worker
+(node:24772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [admin-setup] › tests\auth\login.setup.ts:14:6 › admin login (5.7s)
+(node:43444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 [admin] › tests\e2e\vip-search-detail-journey.spec.ts:6:5 › 會員搜索與詳情查看 (18.5s)
+  1) [admin] › tests\e2e\vip-search-detail-journey.spec.ts:6:5 › 會員搜索與詳情查看 ─────────────────────────
+    Error: expect(locator).not.toBeEmpty() failed
+    Locator:  locator('body')
+    Expected: not empty
+    Received: empty
+    Timeout:  15000ms
+    Call log:
+      - Expect "not toBeEmpty" locator('body') with timeout 15000ms
+      - waiting for locator('body')
+        33 × locator resolved to <body>…</body>
+           - unexpected value "empty"
+       at helpers\page-checks.ts:12
+      10 | export async function expectAuthenticated(page: Page) {
+      11 |   await expect(page).not.toHaveURL(/\/login/);
+    > 12 |   await expect(page.locator('body')).not.toBeEmpty();
+         |                                          ^
+      13 | }
+      14 |
+      15 | /** 頁面已渲染出側邊欄（已進入後台殼層） */
+        at expectAuthenticated (F:\Test\tests\helpers\page-checks.ts:12:42)
+        at openAppPage (F:\Test\tests\helpers\e2e.ts:19:3)
+        at openWithStore (F:\Test\tests\helpers\e2e.ts:26:3)
+        at F:\Test\tests\e2e\vip-search-detail-journey.spec.ts:7:3
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-search-detail-journey-會員搜索與詳情查看-admin\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #2: dashboard-shot (image/png) ──────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-search-detail-journey-會員搜索與詳情查看-admin\attachments\dashboard-shot-6df5092b0a11902405a542a136b3ed3de6083c59.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-search-detail-journey-會員搜索與詳情查看-admin\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: test-results\pw-output\e2e-vip-search-detail-journey-會員搜索與詳情查看-admin\error-context.md
+  1 failed
+    [admin] › tests\e2e\vip-search-detail-journey.spec.ts:6:5 › 會員搜索與詳情查看 ──────────────────────────
+  1 passed (27.4s)

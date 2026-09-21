@@ -1,0 +1,205 @@
+[
+  {
+    "id": "e2e:pos-ordering",
+    "module": "點單閉環",
+    "name": "點單到結帳入口",
+    "file": "tests/pos/e2e/ordering-journey.spec.ts",
+    "description": "搜尋商品 → 加入購物車 → 切換外帶 → 打開結帳入口（不完成支付）"
+  },
+  {
+    "id": "e2e:pos-member-checkout",
+    "module": "點單閉環",
+    "name": "會員點單結帳閉環",
+    "file": "tests/pos/e2e/member-checkout-journey.spec.ts",
+    "description": "新增會員 → 點單掛會員/加購 → 打開結帳入口（不完成支付）"
+  },
+  {
+    "id": "e2e:pos-member-search-detail",
+    "module": "會員存酒",
+    "name": "會員搜尋新增與詳情閉環",
+    "file": "tests/pos/e2e/member-search-detail-journey.spec.ts",
+    "description": "輸入手機號搜尋／右上角添加會員 → 會員詳情查看優惠券數量與消費記錄。可用 POS_MEMBER_PHONE"
+  },
+  {
+    "id": "e2e:pos-hangbill",
+    "module": "點單閉環",
+    "name": "掛單取單閉環",
+    "file": "tests/pos/e2e/hangbill-closed-loop.spec.ts",
+    "description": "加購 → 掛單 → 打開取單列表 → 返回點單"
+  },
+  {
+    "id": "e2e:pos-dine-pay-kitchen-pickup",
+    "module": "訂單廚房",
+    "name": "進店點單支付到取餐閉環",
+    "file": "tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts",
+    "description": "進店→POS下單選購→支付完成→小票語意→制作中→完成制作(待取单)→已取单(已完成)。會真實下單，請用測試門店；支付方式可用 POS_PAY_METHOD（預設現金）"
+  },
+  {
+    "id": "e2e:pos-member-dine-pay-kitchen-pickup",
+    "module": "訂單廚房",
+    "name": "會員進店點單支付到取餐閉環",
+    "file": "tests/pos/e2e/member-dine-pay-kitchen-pickup-journey.spec.ts",
+    "description": "進店→選購→登入會員→優惠券(可選)→支付→小票→制作中→完成制作→已取单→已完成。可用 POS_MEMBER_PHONE／POS_PAY_METHOD；無券時自動略過優惠券"
+  },
+  {
+    "id": "e2e:pos-kitchen-refund",
+    "module": "訂單廚房",
+    "name": "制作进度退單閉環",
+    "file": "tests/pos/e2e/kitchen-refund-journey.spec.ts",
+    "description": "制作进度→訂單詳情→選商品→仅退款(部分/库存不返回)與退货退款(全额/库存返回)→確認退單。會真實下單與退款，請用測試門店"
+  },
+  {
+    "id": "e2e:pos-orders-kitchen",
+    "module": "訂單廚房",
+    "name": "訂單與制作进度",
+    "file": "tests/pos/e2e/orders-kitchen-journey.spec.ts",
+    "description": "訂單列表篩選 → 制作进度查看"
+  },
+  {
+    "id": "e2e:pos-order-kitchen-handoff",
+    "module": "訂單廚房",
+    "name": "點單到廚房交接閉環",
+    "file": "tests/pos/e2e/order-kitchen-handoff-journey.spec.ts",
+    "description": "點單結帳/掛單 → 訂單狀態切換 → 制作进度切換"
+  },
+  {
+    "id": "e2e:pos-member-wine",
+    "module": "會員存酒",
+    "name": "會員與存酒閉環",
+    "file": "tests/pos/e2e/member-wine-journey.spec.ts",
+    "description": "搜尋/新增會員能力 → 新建存酒頁填寫 → 存酒列表"
+  },
+  {
+    "id": "e2e:pos-wine-register",
+    "module": "會員存酒",
+    "name": "會員存酒登記閉環",
+    "file": "tests/pos/e2e/wine-register-closed-loop.spec.ts",
+    "description": "存酒完整填寫提交/取消 → 列表搜尋標記"
+  },
+  {
+    "id": "e2e:pos-overview",
+    "module": "總覽沽清",
+    "name": "總覽與沽清巡覽",
+    "file": "tests/pos/e2e/overview-cleaning-journey.spec.ts",
+    "description": "營收總覽切換時段 → 沽清分類瀏覽"
+  },
+  {
+    "id": "e2e:pos-cleaning-order",
+    "module": "總覽沽清",
+    "name": "沽清與點單聯動閉環",
+    "file": "tests/pos/e2e/cleaning-order-link-journey.spec.ts",
+    "description": "沽清狀態切換 → 點單核對 → 回沽清"
+  },
+  {
+    "id": "e2e:pos-shift-ops",
+    "module": "班次運營",
+    "name": "班次運營全鏈路閉環",
+    "file": "tests/pos/e2e/shift-ops-closed-loop.spec.ts",
+    "description": "總覽 → 點單 → 訂單 → 廚房 → 會員 → 存酒 → 沽清"
+  },
+  {
+    "id": "e2e:pos-bridge-seed-member",
+    "module": "跨端閉環",
+    "name": "跨端種子｜POS 會員",
+    "file": "tests/pos/e2e/bridge-seed-member.spec.ts",
+    "description": "POS 新增會員寫入 bridge，供後台驗證"
+  },
+  {
+    "id": "e2e:pos-bridge-verify-product",
+    "module": "跨端閉環",
+    "name": "跨端驗證｜POS 可見後台商品",
+    "file": "tests/pos/e2e/bridge-verify-admin-product.spec.ts",
+    "description": "需先跑後台跨端種子；POS 依關鍵字搜尋/加購"
+  },
+  {
+    "id": "e2e:pos-inventory-overview",
+    "module": "總覽沽清",
+    "name": "即時庫存總覽閉環",
+    "file": "tests/pos/e2e/inventory-overview-journey.spec.ts",
+    "description": "總覽快捷工具 → 庫存總覽 → 回到總覽"
+  },
+  {
+    "id": "e2e:pos-order-detail",
+    "module": "訂單廚房",
+    "name": "訂單詳情閉環",
+    "file": "tests/pos/e2e/order-detail-journey.spec.ts",
+    "description": "訂單列表篩選 → 打開訂單詳情"
+  },
+  {
+    "id": "e2e:pos-wine-status",
+    "module": "會員存酒",
+    "name": "存酒狀態與詳情閉環",
+    "file": "tests/pos/e2e/wine-status-detail-journey.spec.ts",
+    "description": "存酒狀態分頁 → 嘗試打開詳情/取酒"
+  },
+  {
+    "id": "e2e:pos-kitchen-ops",
+    "module": "訂單廚房",
+    "name": "廚房操作閉環",
+    "file": "tests/pos/e2e/kitchen-ops-journey.spec.ts",
+    "description": "製作進度分頁切換並核對出餐入口"
+  },
+  {
+    "id": "e2e:pos-remark-member-login",
+    "module": "點單閉環",
+    "name": "備註與會員登錄閉環",
+    "file": "tests/pos/e2e/pos-remark-member-login-journey.spec.ts",
+    "description": "點單頁會員登錄入口 → 備註彈層"
+  },
+  {
+    "id": "e2e:pos-member-order-link",
+    "module": "點單閉環",
+    "name": "會員訂單聯動閉環",
+    "file": "tests/pos/e2e/member-order-link-journey.spec.ts",
+    "description": "新建會員 → 點單結帳入口 → 訂單列表搜尋"
+  },
+  {
+    "id": "e2e:pos-dining-checkout",
+    "module": "點單閉環",
+    "name": "用餐方式與結帳閉環",
+    "file": "tests/pos/e2e/dining-checkout-journey.spec.ts",
+    "description": "堂食/外帶切換 → 加購結帳/掛單 → 取單入口"
+  },
+  {
+    "id": "e2e:pos-overview-kitchen-cruise",
+    "module": "班次運營",
+    "name": "總覽到出餐巡航閉環",
+    "file": "tests/pos/e2e/overview-kitchen-cruise-journey.spec.ts",
+    "description": "總覽時段 → 點單 → 廚房 → 回總覽"
+  },
+  {
+    "id": "e2e:pos-category-search-cart",
+    "module": "點單閉環",
+    "name": "分類搜尋加購閉環",
+    "file": "tests/pos/e2e/category-search-cart-journey.spec.ts",
+    "description": "分類瀏覽 → 搜尋加購 → 清空購物車"
+  },
+  {
+    "id": "e2e:pos-orders-aftersale",
+    "module": "訂單廚房",
+    "name": "訂單售後篩選閉環",
+    "file": "tests/pos/e2e/orders-aftersale-journey.spec.ts",
+    "description": "全狀態分頁 → 日期快捷 → 回全部"
+  },
+  {
+    "id": "e2e:pos-kitchen-full-status",
+    "module": "訂單廚房",
+    "name": "廚房完整狀態閉環",
+    "file": "tests/pos/e2e/kitchen-full-status-journey.spec.ts",
+    "description": "全部狀態分頁 → 出餐/重打入口 → 出餐時長"
+  },
+  {
+    "id": "e2e:pos-scan-entry",
+    "module": "點單閉環",
+    "name": "掃碼入口閉環",
+    "file": "tests/pos/e2e/scan-entry-journey.spec.ts",
+    "description": "掃碼入口 → 會員頁掃碼語意 → 回點單"
+  },
+  {
+    "id": "e2e:pos-dashboard-inventory-deep",
+    "module": "班次運營",
+    "name": "總覽時段與庫存閉環",
+    "file": "tests/pos/e2e/dashboard-inventory-deep-journey.spec.ts",
+    "description": "多時段 → 即時庫存 → 回總覽"
+  }
+]

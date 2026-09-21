@@ -1,0 +1,43 @@
+Running 5 tests using 1 worker
+(node:47252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [pos-setup] › tests\pos\auth\login.setup.ts:14:6 › pos login (4.5s)
+(node:43048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 [pos] › tests\pos\e2e\member-search-detail-journey.spec.ts:42:7 › E2E POS 會員搜尋新增與詳情閉環 › 1. 右上角添加会员（若已存在則略過） (14.5s)
+  -  3 [pos] › tests\pos\e2e\member-search-detail-journey.spec.ts:72:7 › E2E POS 會員搜尋新增與詳情閉環 › 2. 输入手机号 → 搜索会员
+  -  4 [pos] › tests\pos\e2e\member-search-detail-journey.spec.ts:81:7 › E2E POS 會員搜尋新增與詳情閉環 › 3. 进入会员详情可查看优惠券数量
+  -  5 [pos] › tests\pos\e2e\member-search-detail-journey.spec.ts:96:7 › E2E POS 會員搜尋新增與詳情閉環 › 4. 会员详情可查看消费记录
+  1) [pos] › tests\pos\e2e\member-search-detail-journey.spec.ts:42:7 › E2E POS 會員搜尋新增與詳情閉環 › 1. 右上角添加会员（若已存在則略過） 
+    Error: expect(locator).toBeVisible() failed
+    Locator:  getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first()
+    Expected: visible
+    Received: hidden
+    Timeout:  10000ms
+    Call log:
+      - Expect "toBeVisible" getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first() with timeout 10000ms
+      - waiting for getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first()
+        23 × locator resolved to <div data-v-2de814bd="" data-v-09157457="" class="uni-input-placeholder input-placeholder">请输入手机号查询</div>
+           - unexpected value "hidden"
+      59 |     await expect(addBtn).toBeVisible({ timeout: 10_000 });
+      60 |     await addBtn.click();
+    > 61 |     await expect(page.getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first()).toBeVisible({
+         |                                                                    ^
+      62 |       timeout: 10_000,
+      63 |     });
+      64 |
+        at f:\Test\tests\pos\e2e\member-search-detail-journey.spec.ts:61:68
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\pw-output\pos-e2e-member-search-deta-8924a-尋新增與詳情閉環-1-右上角添加会员（若已存在則略過）-pos\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #2: dashboard-shot (image/png) ──────────────────────────────────────────────────────
+    test-results\pw-output\pos-e2e-member-search-deta-8924a-尋新增與詳情閉環-1-右上角添加会员（若已存在則略過）-pos\attachments\dashboard-shot-37928d6aaf0d7c9e09a4d75c2c9eba2b9289e798.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\pw-output\pos-e2e-member-search-deta-8924a-尋新增與詳情閉環-1-右上角添加会员（若已存在則略過）-pos\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: test-results\pw-output\pos-e2e-member-search-deta-8924a-尋新增與詳情閉環-1-右上角添加会员（若已存在則略過）-pos\error-context.md
+  1 failed
+    [pos] › tests\pos\e2e\member-search-detail-journey.spec.ts:42:7 › E2E POS 會員搜尋新增與詳情閉環 › 1. 右上角添加会员（若已存在則略過） 
+  3 did not run
+  1 passed (23.3s)

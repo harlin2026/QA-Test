@@ -1,0 +1,18 @@
+{
+  "runId": "20260915-141913-3gsd",
+  "system": "admin",
+  "target": "e2e:case-mu2a643y",
+  "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+  "exitCode": 0,
+  "startedAt": "2026-09-15T06:19:13.743Z",
+  "finishedAt": "2026-09-15T06:19:28.122Z",
+  "ids": [
+    "e2e:case-mu2a643y"
+  ],
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  }
+}

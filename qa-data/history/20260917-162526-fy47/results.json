@@ -1,0 +1,24 @@
+{
+  "e2e:admin-inventory-query": {
+    "id": "e2e:admin-inventory-query",
+    "status": "passed",
+    "startedAt": "2026-09-17T08:25:26.691Z",
+    "finishedAt": "2026-09-17T08:25:38.903Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "e2e:admin-inventory-query",
+        "status": "passed",
+        "title": "登录后台管理系统并查看库存查询列表",
+        "screenshot": "/api/shots/20260917-162526-fy47/mu59lnl2-dceefbf7a861.png",
+        "url": "http://192.168.30.55:5174/inventory/query?storeId=310",
+        "duration": 2377,
+        "how": "Playwright 執行 tests/e2e/inventory-query-journey.spec.ts → e2e\\inventory-query-journey.spec.ts › 库存查询 - 登录后查看库存数据 › 登录后台管理系统并查看库存查询列表"
+      }
+    ],
+    "runId": "20260917-162526-fy47",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-query-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  }
+}

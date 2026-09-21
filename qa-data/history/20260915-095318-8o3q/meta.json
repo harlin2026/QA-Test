@@ -1,0 +1,18 @@
+{
+  "runId": "20260915-095318-8o3q",
+  "system": "admin",
+  "target": "smoke:/",
+  "command": "npx playwright test --project=admin --workers=1 tests/smoke -g 開啟 / 功能可用",
+  "exitCode": 0,
+  "startedAt": "2026-09-15T01:53:18.001Z",
+  "finishedAt": "2026-09-15T01:53:33.138Z",
+  "ids": [
+    "smoke:/"
+  ],
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  }
+}

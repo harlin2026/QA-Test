@@ -1,0 +1,18 @@
+{
+  "runId": "20260917-162127-1z02",
+  "system": "admin",
+  "target": "e2e:admin-store-create",
+  "command": "npx playwright test --project=admin --workers=1 tests/e2e/store-create-journey.spec.ts",
+  "exitCode": 1,
+  "startedAt": "2026-09-17T08:21:27.670Z",
+  "finishedAt": "2026-09-17T08:21:57.709Z",
+  "ids": [
+    "e2e:admin-store-create"
+  ],
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0
+  }
+}

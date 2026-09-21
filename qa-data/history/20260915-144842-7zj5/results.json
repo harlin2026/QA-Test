@@ -1,0 +1,198 @@
+{
+  "crud:stores": {
+    "id": "crud:stores",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:categories": {
+    "id": "crud:categories",
+    "status": "passed",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "crud:categories",
+        "status": "passed",
+        "title": "打開新增一级分类表單並可填寫後取消",
+        "screenshot": "/api/shots/20260915-144842-7zj5/mu2b9jly-33f0e9c026e5.png",
+        "url": "http://192.168.30.55:5174/goods/categories?storeId=133",
+        "duration": 2819,
+        "how": "Playwright 執行 tests/crud/categories.crud.spec.ts → crud\\categories.crud.spec.ts › CRUD 商品分类 › 打開新增一级分类表單並可填寫後取消"
+      },
+      {
+        "id": "crud:categories",
+        "status": "passed",
+        "title": "打開新增二级分类入口",
+        "screenshot": "/api/shots/20260915-144842-7zj5/mu2b9m5x-a915779c6755.png",
+        "url": "http://192.168.30.55:5174/goods/categories?storeId=133",
+        "duration": 2079,
+        "how": "Playwright 執行 tests/crud/categories.crud.spec.ts → crud\\categories.crud.spec.ts › CRUD 商品分类 › 打開新增二级分类入口"
+      }
+    ],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": true,
+    "stepSummary": "步驟 2（通過 2 · 失敗 0 · 跳過 0）"
+  },
+  "crud:filter-models": {
+    "id": "crud:filter-models",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:product-units": {
+    "id": "crud:product-units",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:coupons": {
+    "id": "crud:coupons",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:printers": {
+    "id": "crud:printers",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:receipt-templates": {
+    "id": "crud:receipt-templates",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:users": {
+    "id": "crud:users",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:roles": {
+    "id": "crud:roles",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:settings-entries": {
+    "id": "crud:settings-entries",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:goods": {
+    "id": "crud:goods",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:inventory-docs": {
+    "id": "crud:inventory-docs",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:members": {
+    "id": "crud:members",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:orders": {
+    "id": "crud:orders",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:points": {
+    "id": "crud:points",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  },
+  "crud:wine-storage": {
+    "id": "crud:wine-storage",
+    "status": "idle",
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "error": null,
+    "steps": [],
+    "runId": "20260915-144842-7zj5",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "hasShots": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "login": "node scripts/auto-login.js",
+    "login:pos": "node scripts/auto-login-pos.js",
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/smoke --project=admin",
+    "test:e2e": "playwright test tests/e2e --project=admin",
+    "test:crud": "playwright test tests/crud --project=admin --workers=1",
+    "test:story": "playwright test tests/story --project=admin --workers=1",
+    "test:pos:smoke": "playwright test tests/pos/smoke --project=pos",
+    "test:pos:crud": "playwright test tests/pos/crud --project=pos --workers=1",
+    "test:pos:e2e": "playwright test tests/pos/e2e --project=pos --workers=1",
+    "test:pos:story": "playwright test tests/pos/story --project=pos --workers=1",
+    "xuqiu:generate": "node xuqiu/generate-story-tests.js",
+    "test:e2e:bridge:product": "playwright test tests/e2e/bridge-seed-product.spec.ts --project=admin --workers=1 && playwright test tests/pos/e2e/bridge-verify-admin-product.spec.ts --project=pos --workers=1",
+    "test:e2e:bridge:member": "playwright test tests/pos/e2e/bridge-seed-member.spec.ts --project=pos --workers=1 && playwright test tests/e2e/bridge-verify-pos-member.spec.ts --project=admin --workers=1",
+    "test:headed": "playwright test tests/smoke --project=admin --headed",
+    "test:e2e:headed": "playwright test tests/e2e --project=admin --headed",
+    "test:crud:headed": "playwright test tests/crud --project=admin --workers=1 --headed",
+    "test:report": "playwright show-report",
+    "dashboard": "node dashboard/server.js",
+    "stress": "node stress/runner.js",
+    "stress:capture": "node stress/capture-apis.js"
+  },
+  "keywords": [],
+  "author": "harlin",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "e2e:case-mu28xe1u": {
+    "id": "e2e:case-mu28xe1u",
+    "status": "failed",
+    "startedAt": "2026-09-15T05:44:59.024Z",
+    "finishedAt": "2026-09-15T05:46:11.920Z",
+    "error": "tests\\e2e\\vip-search-detail-journey.spec.ts:5:7 › 會員搜索與詳情查看 › 通過手機號搜索會員並查看詳情",
+    "steps": [
+      {
+        "id": "e2e:case-mu28xe1u",
+        "status": "failed",
+        "title": "通過手機號搜索會員並查看詳情",
+        "screenshot": "/api/shots/20260915-134459-sndd/mu290t0j-dad844b34033.png",
+        "url": "http://192.168.30.55:5174/vip/list",
+        "duration": 60011,
+        "error": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+        "how": "Playwright 執行 tests/e2e/vip-search-detail-journey.spec.ts → e2e\\vip-search-detail-journey.spec.ts › 會員搜索與詳情查看 › 通過手機號搜索會員並查看詳情"
+      }
+    ],
+    "runId": "20260915-134459-sndd",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 0 · 失敗 1 · 跳過 0）"
+  }
+}

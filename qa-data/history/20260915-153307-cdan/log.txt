@@ -1,0 +1,42 @@
+Running 2 tests using 1 worker
+(node:44136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [admin-setup] › tests\auth\login.setup.ts:14:6 › admin login (2.9s)
+(node:44680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 [admin] › tests\e2e\vip-create-by-phone-journey.spec.ts:10:7 › E2E｜会员｜仅凭手机号新增会员 › 店品仅凭手机号新增会员，并能在会员列表检索到 (20.0s)
+  1) [admin] › tests\e2e\vip-create-by-phone-journey.spec.ts:10:7 › E2E｜会员｜仅凭手机号新增会员 › 店品仅凭手机号新增会员，并能在会员列表检索到 
+    Error: expect(locator).toHaveCount(expected) failed
+    Locator:  getByText(/页面不存在|404|系统错误|Internal Server Error/i)
+    Expected: 0
+    Received: 1
+    Timeout:  15000ms
+    Call log:
+      - Expect "toHaveCount" getByText(/页面不存在|404|系统错误|Internal Server Error/i) with timeout 15000ms
+      - waiting for getByText(/页面不存在|404|系统错误|Internal Server Error/i)
+        33 × locator resolved to 1 element
+           - unexpected value "1"
+       at helpers\page-checks.ts:40
+      38 |   });
+      39 |   // 常見錯誤態
+    > 40 |   await expect(page.getByText(/页面不存在|404|系统错误|Internal Server Error/i)).toHaveCount(0);
+         |                                                                         ^
+      41 | }
+      42 |
+      43 | export async function expectDashboard(page: Page) {
+        at expectPageReady (F:\Test\tests\helpers\page-checks.ts:40:73)
+        at openAppPage (F:\Test\tests\helpers\e2e.ts:24:3)
+        at F:\Test\tests\e2e\vip-create-by-phone-journey.spec.ts:24:5
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-create-by-phone-jo-a476c-新增会员-店品仅凭手机号新增会员，并能在会员列表检索到-admin\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #2: dashboard-shot (image/png) ──────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-create-by-phone-jo-a476c-新增会员-店品仅凭手机号新增会员，并能在会员列表检索到-admin\attachments\dashboard-shot-257fd94dbf668201ce9913c37c14c3200abc1dad.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-vip-create-by-phone-jo-a476c-新增会员-店品仅凭手机号新增会员，并能在会员列表检索到-admin\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: test-results\pw-output\e2e-vip-create-by-phone-jo-a476c-新增会员-店品仅凭手机号新增会员，并能在会员列表检索到-admin\error-context.md
+  1 failed
+    [admin] › tests\e2e\vip-create-by-phone-journey.spec.ts:10:7 › E2E｜会员｜仅凭手机号新增会员 › 店品仅凭手机号新增会员，并能在会员列表检索到 
+  1 passed (26.8s)

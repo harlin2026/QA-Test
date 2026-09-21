@@ -1,0 +1,33 @@
+{
+  "runId": "20260915-144842-7zj5",
+  "system": "admin",
+  "target": "crud",
+  "command": "npx playwright test --project=admin --workers=1 tests/crud",
+  "exitCode": 1,
+  "startedAt": "2026-09-15T06:48:42.615Z",
+  "finishedAt": "2026-09-15T06:48:58.895Z",
+  "ids": [
+    "crud:stores",
+    "crud:categories",
+    "crud:filter-models",
+    "crud:product-units",
+    "crud:coupons",
+    "crud:printers",
+    "crud:receipt-templates",
+    "crud:users",
+    "crud:roles",
+    "crud:settings-entries",
+    "crud:goods",
+    "crud:inventory-docs",
+    "crud:members",
+    "crud:orders",
+    "crud:points",
+    "crud:wine-storage"
+  ],
+  "counts": {
+    "total": 16,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  }
+}

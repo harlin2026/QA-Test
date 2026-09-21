@@ -1,0 +1,70 @@
+{
+  "runId": "stress-mu592quq",
+  "system": "admin",
+  "apiBase": "https://peterson-gw.weprogram.site",
+  "vus": 100,
+  "durationSec": 60,
+  "rampUpSec": 10,
+  "timeoutMs": 15000,
+  "withUi": false,
+  "uiWorkers": 0,
+  "scenarios": [
+    {
+      "id": "admin-stores",
+      "name": "門店列表",
+      "method": "GET",
+      "path": "/api/system/settings/stores?pageIndex=1&pageSize=100",
+      "weight": 2
+    },
+    {
+      "id": "admin-categories",
+      "name": "商品分類",
+      "method": "GET",
+      "path": "/api/admin/products/all-categories?storeId=317",
+      "weight": 2
+    },
+    {
+      "id": "admin-order-stats",
+      "name": "訂單統計",
+      "method": "GET",
+      "path": "/api/admin/orders/stats?storeId=317",
+      "weight": 2
+    },
+    {
+      "id": "admin-orders",
+      "name": "訂單列表",
+      "method": "GET",
+      "path": "/api/admin/orders?storeId=317&pageIndex=1&pageSize=15",
+      "weight": 3
+    },
+    {
+      "id": "admin-refunds",
+      "name": "售後訂單",
+      "method": "GET",
+      "path": "/api/admin/orders/refunds?StoreId=317&PageIndex=1&PageSize=15",
+      "weight": 1
+    },
+    {
+      "id": "admin-order-report",
+      "name": "訂單報表",
+      "method": "GET",
+      "path": "/api/admin/reports/order-report?storeId=0&timeRange=today",
+      "weight": 1
+    },
+    {
+      "id": "admin-order-trend",
+      "name": "訂單趨勢",
+      "method": "GET",
+      "path": "/api/admin/reports/order-trend?storeId=0&timeRange=today",
+      "weight": 1
+    },
+    {
+      "id": "admin-member-stats",
+      "name": "會員統計",
+      "method": "GET",
+      "path": "/api/admin/member-stats?period=30days",
+      "weight": 1
+    }
+  ],
+  "startedAt": "2026-09-17T08:10:55.903Z"
+}

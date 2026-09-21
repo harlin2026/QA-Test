@@ -1,0 +1,20 @@
+{
+  "story:US-5.1.1.1": {
+    "id": "story:US-5.1.1.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T10:02:25.867Z",
+    "finishedAt": "2026-09-17T10:02:33.393Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.1.1.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-1-1-1.story.spec.ts:9:7 › 小程序·登入会员 › US-5.1.1.1 用微信一键登录"
+      }
+    ],
+    "runId": "20260917-180225-l3v2",
+    "command": "npx playwright test --project=admin --workers=1 tests/story/us-5-1-1-1.story.spec.ts -g US-5\\.1\\.1\\.1",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  }
+}

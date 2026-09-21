@@ -1,0 +1,68 @@
+{
+  "e2e:pos-dine-pay-kitchen-pickup": {
+    "id": "e2e:pos-dine-pay-kitchen-pickup",
+    "status": "failed",
+    "startedAt": "2026-09-17T08:06:36.144Z",
+    "finishedAt": "2026-09-17T08:07:57.398Z",
+    "error": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:44:7 › E2E POS 進店點單支付到取餐閉環 › 3. 選擇支付方式並完成支付",
+    "steps": [
+      {
+        "id": "e2e:pos-dine-pay-kitchen-pickup",
+        "status": "passed",
+        "title": "1. 進店：打開 POS 點單並選用餐方式",
+        "screenshot": "/api/shots/20260917-160636-4m57/mu58xdn1-3a3bd4f2c8d3.png",
+        "url": "http://192.168.30.55:8090/pages/pos/index",
+        "duration": 2172,
+        "how": "Playwright 執行 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts → pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts › E2E POS 進店點單支付到取餐閉環 › 1. 進店：打開 POS 點單並選用餐方式"
+      },
+      {
+        "id": "e2e:pos-dine-pay-kitchen-pickup",
+        "status": "passed",
+        "title": "2. 選購商品加入購物車",
+        "screenshot": "/api/shots/20260917-160636-4m57/mu58xi84-d894bb74bec3.png",
+        "url": "http://192.168.30.55:8090/pages/pos/index",
+        "duration": 4627,
+        "how": "Playwright 執行 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts → pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts › E2E POS 進店點單支付到取餐閉環 › 2. 選購商品加入購物車"
+      },
+      {
+        "id": "e2e:pos-dine-pay-kitchen-pickup",
+        "status": "failed",
+        "title": "3. 選擇支付方式並完成支付",
+        "screenshot": "/api/shots/20260917-160636-4m57/mu58ysyx-24cc3767ba94.png",
+        "url": "http://192.168.30.55:8090/pages/pos/index",
+        "duration": 60002,
+        "error": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+        "how": "Playwright 執行 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts → pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts › E2E POS 進店點單支付到取餐閉環 › 3. 選擇支付方式並完成支付"
+      },
+      {
+        "id": "e2e:pos-dine-pay-kitchen-pickup",
+        "status": "skipped",
+        "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:59:7 › E2E POS 進店點單支付到取餐閉環 › 4. 支付後可見列印／小票相關語意（前廳／後廚）"
+      },
+      {
+        "id": "e2e:pos-dine-pay-kitchen-pickup",
+        "status": "skipped",
+        "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:66:7 › E2E POS 進店點單支付到取餐閉環 › 5. 訂單進入制作进度且可見制作中"
+      },
+      {
+        "id": "e2e:pos-dine-pay-kitchen-pickup",
+        "status": "skipped",
+        "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:86:7 › E2E POS 進店點單支付到取餐閉環 › 6. 後廚完成制作 → 狀態待取单"
+      },
+      {
+        "id": "e2e:pos-dine-pay-kitchen-pickup",
+        "status": "skipped",
+        "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:107:7 › E2E POS 進店點單支付到取餐閉環 › 7. 顧客取单 → 已取单 → 已完成"
+      },
+      {
+        "id": "e2e:pos-dine-pay-kitchen-pickup",
+        "status": "skipped",
+        "title": "tests\\pos\\e2e\\dine-pay-kitchen-pickup-journey.spec.ts:118:7 › E2E POS 進店點單支付到取餐閉環 › 8. 訂單列表可見已完成（訂單結束）"
+      }
+    ],
+    "runId": "20260917-160636-4m57",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 8（通過 2 · 失敗 1 · 跳過 5）"
+  }
+}

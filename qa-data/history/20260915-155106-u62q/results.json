@@ -1,0 +1,24 @@
+{
+  "e2e:admin-vip-phone-journey": {
+    "id": "e2e:admin-vip-phone-journey",
+    "status": "passed",
+    "startedAt": "2026-09-15T07:51:06.581Z",
+    "finishedAt": "2026-09-15T07:51:22.053Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "e2e:admin-vip-phone-journey",
+        "status": "passed",
+        "title": "手机号搜索会员并查看详情/积分/优惠券/消费记录",
+        "screenshot": "/api/shots/20260915-155106-u62q/mu2dhv2u-76c68aa37eb3.png",
+        "url": "http://192.168.30.55:5174/vip/detail/cf497984-1966-4f61-9a05-65e495de5b39",
+        "duration": 2837,
+        "how": "Playwright 執行 tests/e2e/vip-phone-journey.spec.ts → e2e\\vip-phone-journey.spec.ts › E2E｜手机号搜索会员并查看详情/积分/优惠券/消费记录 › 手机号搜索会员并查看详情/积分/优惠券/消费记录"
+      }
+    ],
+    "runId": "20260915-155106-u62q",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-phone-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  }
+}

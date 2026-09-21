@@ -1,0 +1,158 @@
+{
+  "defaults": {
+    "vus": 100,
+    "durationSec": 60,
+    "rampUpSec": 10,
+    "timeoutMs": 15000
+  },
+  "ui": {
+    "maxWorkers": 10,
+    "defaultWorkers": 5
+  },
+  "systems": {
+    "admin": {
+      "apiBase": "https://peterson-gw.weprogram.site",
+      "authFile": "playwright/.auth/user.json",
+      "tokenKey": "admin_token",
+      "uiPaths": ["/", "/orders/list", "/goods/list", "/vip/list"],
+      "scenarios": [
+        {
+          "id": "admin-stores",
+          "name": "門店列表",
+          "weight": 2,
+          "method": "GET",
+          "path": "/api/system/settings/stores?pageIndex=1&pageSize=100",
+          "readOnly": true
+        },
+        {
+          "id": "admin-categories",
+          "name": "商品分類",
+          "weight": 2,
+          "method": "GET",
+          "path": "/api/admin/products/all-categories?storeId=317",
+          "readOnly": true
+        },
+        {
+          "id": "admin-order-stats",
+          "name": "訂單統計",
+          "weight": 2,
+          "method": "GET",
+          "path": "/api/admin/orders/stats?storeId=317",
+          "readOnly": true
+        },
+        {
+          "id": "admin-orders",
+          "name": "訂單列表",
+          "weight": 3,
+          "method": "GET",
+          "path": "/api/admin/orders?storeId=317&pageIndex=1&pageSize=15",
+          "readOnly": true
+        },
+        {
+          "id": "admin-refunds",
+          "name": "售後訂單",
+          "weight": 1,
+          "method": "GET",
+          "path": "/api/admin/orders/refunds?StoreId=317&PageIndex=1&PageSize=15",
+          "readOnly": true
+        },
+        {
+          "id": "admin-order-report",
+          "name": "訂單報表",
+          "weight": 1,
+          "method": "GET",
+          "path": "/api/admin/reports/order-report?storeId=0&timeRange=today",
+          "readOnly": true
+        },
+        {
+          "id": "admin-order-trend",
+          "name": "訂單趨勢",
+          "weight": 1,
+          "method": "GET",
+          "path": "/api/admin/reports/order-trend?storeId=0&timeRange=today",
+          "readOnly": true
+        },
+        {
+          "id": "admin-member-stats",
+          "name": "會員統計",
+          "weight": 1,
+          "method": "GET",
+          "path": "/api/admin/member-stats?period=30days",
+          "readOnly": true
+        }
+      ]
+    },
+    "pos": {
+      "apiBase": "https://peterson-gw.weprogram.site",
+      "authFile": "playwright/.auth/pos.json",
+      "tokenKey": "token",
+      "uiPaths": ["/pages/pos/index", "/pages/orders/index", "/pages/dashboard/index"],
+      "scenarios": [
+        {
+          "id": "pos-me",
+          "name": "收銀員資訊",
+          "weight": 2,
+          "method": "GET",
+          "path": "/api/auth/staff-ordering/me?storeId=2",
+          "readOnly": true
+        },
+        {
+          "id": "pos-hold-count",
+          "name": "掛單數量",
+          "weight": 2,
+          "method": "GET",
+          "path": "/api/staff-ordering/products/hold-count?storeId=2",
+          "readOnly": true
+        },
+        {
+          "id": "pos-categories",
+          "name": "商品分類",
+          "weight": 2,
+          "method": "GET",
+          "path": "/api/staff-ordering/products/categories?storeId=2",
+          "readOnly": true
+        },
+        {
+          "id": "pos-cart",
+          "name": "購物車",
+          "weight": 2,
+          "method": "GET",
+          "path": "/api/staff-ordering/products/carts-pos?storeId=2",
+          "readOnly": true
+        },
+        {
+          "id": "pos-products",
+          "name": "商品列表",
+          "weight": 3,
+          "method": "GET",
+          "path": "/api/staff-ordering/products?storeId=2&pageIndex=1&pageSize=200&tab=0",
+          "readOnly": true
+        },
+        {
+          "id": "pos-status-counts",
+          "name": "訂單狀態計數",
+          "weight": 2,
+          "method": "GET",
+          "path": "/api/staff-ordering/orders/status-counts/2?storeId=2",
+          "readOnly": true
+        },
+        {
+          "id": "pos-progress-count",
+          "name": "廚房進度計數",
+          "weight": 1,
+          "method": "GET",
+          "path": "/api/staff-ordering/orders/progress/count?storeId=2",
+          "readOnly": true
+        },
+        {
+          "id": "pos-wine-settings",
+          "name": "存酒設定",
+          "weight": 1,
+          "method": "GET",
+          "path": "/api/admin/wine-storage/settings/stores/2",
+          "readOnly": true
+        }
+      ]
+    }
+  }
+}

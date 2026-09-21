@@ -1,0 +1,18 @@
+{
+  "runId": "20260917-160340-la7l",
+  "system": "pos",
+  "target": "e2e:pos-member-search-detail",
+  "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/member-search-detail-journey.spec.ts",
+  "exitCode": 1,
+  "startedAt": "2026-09-17T08:03:40.711Z",
+  "finishedAt": "2026-09-17T08:04:05.389Z",
+  "ids": [
+    "e2e:pos-member-search-detail"
+  ],
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0
+  }
+}

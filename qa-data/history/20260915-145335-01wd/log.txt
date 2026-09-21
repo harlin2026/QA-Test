@@ -1,0 +1,8 @@
+Running 2 tests using 1 worker
+(node:40792) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [admin-setup] › tests\auth\login.setup.ts:14:6 › admin login (2.9s)
+(node:41168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [admin] › tests\e2e\vip-detail-journey.spec.ts:7:7 › E2E｜会员 › 搜索并查看详情 (3.3s)
+  2 passed (9.8s)

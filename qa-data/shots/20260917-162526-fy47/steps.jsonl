@@ -1,0 +1,1 @@
+{"file":"tests/e2e/inventory-query-journey.spec.ts","title":"登录后台管理系统并查看库存查询列表","titlePath":["e2e\\inventory-query-journey.spec.ts","库存查询 - 登录后查看库存数据","登录后台管理系统并查看库存查询列表"],"status":"passed","duration":2377,"url":"http://192.168.30.55:5174/inventory/query?storeId=310","screenshot":"mu59lnl2-dceefbf7a861.png","error":null}

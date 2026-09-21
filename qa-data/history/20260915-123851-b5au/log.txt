@@ -1,0 +1,39 @@
+Running 2 tests using 1 worker
+(node:42400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [admin-setup] › tests\auth\login.setup.ts:14:6 › admin login (2.8s)
+(node:42088) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  2 [admin] › tests\e2e\member-search-journey.spec.ts:6:7 › 会员搜索流程 › 通过手机号搜索会员并查看详情 (18.3s)
+  1) [admin] › tests\e2e\member-search-journey.spec.ts:6:7 › 会员搜索流程 › 通过手机号搜索会员并查看详情 ───────────────
+    Error: expect(locator).not.toBeEmpty() failed
+    Locator:  locator('body')
+    Expected: not empty
+    Received: empty
+    Timeout:  15000ms
+    Call log:
+      - Expect "not toBeEmpty" locator('body') with timeout 15000ms
+      - waiting for locator('body')
+        33 × locator resolved to <body>…</body>
+           - unexpected value "empty"
+       at helpers\page-checks.ts:12
+      10 | export async function expectAuthenticated(page: Page) {
+      11 |   await expect(page).not.toHaveURL(/\/login/);
+    > 12 |   await expect(page.locator('body')).not.toBeEmpty();
+         |                                          ^
+      13 | }
+      14 |
+      15 | /** 頁面已渲染出側邊欄（已進入後台殼層） */
+        at expectAuthenticated (F:\Test\tests\helpers\page-checks.ts:12:42)
+        at openAppPage (F:\Test\tests\helpers\e2e.ts:19:3)
+        at F:\Test\tests\e2e\member-search-journey.spec.ts:7:5
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-member-search-journey-会员搜索流程-通过手机号搜索会员并查看详情-admin\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\pw-output\e2e-member-search-journey-会员搜索流程-通过手机号搜索会员并查看详情-admin\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: test-results\pw-output\e2e-member-search-journey-会员搜索流程-通过手机号搜索会员并查看详情-admin\error-context.md
+  1 failed
+    [admin] › tests\e2e\member-search-journey.spec.ts:6:7 › 会员搜索流程 › 通过手机号搜索会员并查看详情 ────────────────
+  1 passed (24.8s)

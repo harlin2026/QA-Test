@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peterson QA Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css?v=20260918a" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="app shell">
+      <aside class="sidebar" aria-label="系統選單">
+        <div class="sidebar-brand">
+          <div class="brand-mark">QA</div>
+          <div>
+            <p class="brand-kicker">Peterson QA Lab</p>
+            <h1>測試控制台</h1>
+          </div>
+        </div>
+        <p class="sidebar-label">選擇系統</p>
+        <nav class="system-menu" id="systemBar" aria-label="系統與工具"></nav>
+      </aside>
+
+      <div class="workspace">
+        <div class="workspace-scroll">
+          <header class="topbar">
+            <div class="workspace-title">
+              <p class="eyebrow" id="brandKicker">目前系統</p>
+              <h2 id="workspaceSystemName">後台管理</h2>
+            </div>
+            <div class="top-actions">
+              <button class="btn ghost" id="btnSystemConfig" type="button">系統配置</button>
+              <button class="btn ghost" id="btnManagePaths" type="button">路徑管理</button>
+              <div class="all-run-group">
+                <span class="type-totals" id="typeTotals" title="目前系統各類型測試項數量">
+                  冒煙 <strong id="totalSmoke">0</strong>
+                  · CRUD <strong id="totalCrud">0</strong>
+                  · E2E <strong id="totalE2e">0</strong>
+                  · 用戶故事 <strong id="totalStory">0</strong>
+                  · 合計 <strong id="totalAll">0</strong>
+                </span>
+                <button class="btn primary" id="btnAll" type="button">全部執行</button>
+              </div>
+            </div>
+          </header>
+
+          <section class="mode-bar" id="modeBar" aria-label="測試類型">
+            <button class="mode-tab active" type="button" data-mode="smoke">冒煙測試</button>
+            <button class="mode-tab" type="button" data-mode="crud">CRUD 測試</button>
+            <button class="mode-tab" type="button" data-mode="e2e">E2E 測試</button>
+            <button class="mode-tab" type="button" data-mode="story">用戶故事</button>
+            <button class="mode-tab" type="button" data-mode="stress">壓力測試</button>
+          </section>
+
+          <section class="summary" id="summary">
+            <article class="stat">
+              <span class="stat-label">通過</span>
+              <strong id="statPassed">0</strong>
+            </article>
+            <article class="stat">
+              <span class="stat-label">失敗</span>
+              <strong id="statFailed">0</strong>
+            </article>
+            <article class="stat">
+              <span class="stat-label">跳過</span>
+              <strong id="statSkipped">0</strong>
+            </article>
+            <article class="stat">
+              <span class="stat-label">未跑</span>
+              <strong id="statIdle">0</strong>
+            </article>
+          </section>
+
+          <main class="layout single">
+            <section class="stage full" id="functionalStage">
+              <div class="stage-head">
+                <div>
+                  <p class="eyebrow" id="modeEyebrow">目前類型</p>
+                  <h2 id="modeTitle">冒煙測試</h2>
+                  <p class="detail-desc" id="modeDesc">先選擇要測的項目，可單項執行，或一次跑完本類型全部。</p>
+                </div>
+                <div class="stage-actions">
+                  <button class="btn ghost danger" id="btnStopRun" type="button" hidden>停止執行</button>
+                  <button class="btn primary" id="btnRunType" type="button">跑本類型全部</button>
+                  <button class="btn ghost" id="btnRunSelected" type="button" disabled>執行選中項</button>
+                  <button class="btn ghost" id="btnEditSpec" type="button" disabled>編輯腳本</button>
+                </div>
+              </div>
+
+              <div class="split-row">
+                <div class="suite-panel">
+                  <div class="suite-head">
+                    <h3 id="suiteTitle">測試項目</h3>
+                    <span id="suiteCount">0 項</span>
+                  </div>
+                  <div id="suiteList" class="suite-list"></div>
+                </div>
+
+                <div class="log-panel">
+                  <div class="log-head">
+                    <h3>即時日誌</h3>
+                    <button class="btn tiny" id="btnClearLog" type="button">清空</button>
+                  </div>
+                  <pre id="logView" class="log-view" aria-live="polite"></pre>
+                </div>
+              </div>
+
+              <div class="detail-strip" id="detailStrip">
+                <div class="result-status idle" id="resultBadge">IDLE</div>
+                <div class="result-meta">
+                  <div><span>選中</span><strong id="detailTitle">尚未選擇</strong></div>
+                  <div><span>路徑</span><code id="detailPath">—</code></div>
+                  <div><span>說明</span><em id="detailDesc">—</em></div>
+                  <div><span>結果</span><em id="detailError">—</em></div>
+                  <div class="detail-edit-row">
+                    <button class="btn tiny primary" id="btnEditSpecDetail" type="button" disabled>編輯腳本</button>
+                  </div>
+                </div>
+                <div class="detail-steps-wrap">
+                  <div class="detail-steps-head">
+                    <span>測試步驟</span>
+                    <em id="detailStepsHint">未選擇</em>
+                  </div>
+                  <ol id="detailSteps" class="detail-steps">
+                    <li class="detail-step idle">先從左側選取測試項目</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="batch-panel">
+                <div class="batch-head">
+                  <h3>本次執行結果</h3>
+                  <span id="batchProgress">尚未執行</span>
+                </div>
+                <div class="batch-toolbar" id="batchToolbar" hidden>
+                  <label class="batch-check-all"><input type="checkbox" id="chkSelectAllBatch" /> 全選</label>
+                  <button class="btn tiny ghost" id="btnSelectPassed" type="button">只選通過</button>
+                  <button class="btn tiny ghost" id="btnSelectFailed" type="button">只選失敗</button>
+                  <button class="btn tiny ghost" id="btnSelectSkipped" type="button">只選跳過</button>
+                  <button class="btn tiny ghost" id="btnClearBatchSel" type="button">清空</button>
+                  <button class="btn tiny" id="btnExportSelectedPdf" type="button">匯出選中 PDF</button>
+                  <button class="btn tiny primary" id="btnExportRunPdf" type="button">一鍵匯出本輪 PDF</button>
+                  <span class="batch-sel-hint" id="batchSelHint">已選 0 項</span>
+                </div>
+                <div class="batch-list" id="batchList">
+                  <p class="batch-empty">選擇類型後執行測試，結果會顯示在這裡。</p>
+                </div>
+              </div>
+
+              <div class="batch-panel history-panel">
+                <div class="batch-head">
+                  <h3>歷史執行紀錄</h3>
+                  <span id="historyHint">每次執行都會存檔，可隨時載入查看與匯出 PDF</span>
+                </div>
+                <div class="batch-list" id="historyList">
+                  <p class="batch-empty">尚無歷史紀錄。</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="stage full stress-stage" id="stressStage" hidden>
+              <div class="stage-head">
+                <div>
+                  <p class="eyebrow">壓力測試</p>
+                  <h2>API 壓測 + 可選 UI 並發</h2>
+                  <p class="detail-desc">
+                    對後台／POS 後端 API 模擬並發（預設 100 VU）。場景可配置於
+                    <code>stress/config.json</code>。共用環境請先小並發試跑。
+                  </p>
+                </div>
+                <div class="stage-actions">
+                  <button class="btn ghost danger" id="btnStressStop" type="button" disabled>停止</button>
+                  <button class="btn primary" id="btnStressStart" type="button">開始壓測</button>
+                </div>
+              </div>
+
+              <div class="stress-warn">
+                目標為共用環境，100 並發可能影響他人。建議先用 10～20 VU 確認，再拉高。預設僅打唯讀 GET。
+              </div>
+
+              <div class="stress-form" id="stressForm">
+                <label>
+                  並發 VU
+                  <input type="number" id="stressVus" min="1" max="500" value="100" />
+                </label>
+                <label>
+                  時長（秒）
+                  <input type="number" id="stressDuration" min="5" max="3600" value="60" />
+                </label>
+                <label>
+                  爬坡（秒）
+                  <input type="number" id="stressRamp" min="0" max="600" value="10" />
+                </label>
+                <label class="stress-check">
+                  <input type="checkbox" id="stressWithUi" />
+                  同時 UI 並發
+                </label>
+                <label>
+                  UI workers
+                  <input type="number" id="stressUiWorkers" min="1" max="10" value="5" />
+                </label>
+              </div>
+
+              <div class="split-row">
+                <div class="suite-panel">
+                  <div class="suite-head">
+                    <h3>壓測場景</h3>
+                    <span id="stressScenarioCount">0 項</span>
+                  </div>
+                  <p class="path-note" id="stressApiBase">apiBase：—</p>
+                  <div id="stressScenarioList" class="suite-list stress-scenario-list"></div>
+                </div>
+                <div class="log-panel">
+                  <div class="log-head">
+                    <h3>壓測日誌</h3>
+                    <button class="btn tiny" id="btnClearStressLog" type="button">清空</button>
+                  </div>
+                  <pre id="stressLogView" class="log-view" aria-live="polite"></pre>
+                </div>
+              </div>
+
+              <div class="stress-metrics" id="stressMetrics">
+                <article class="stat"><span class="stat-label">RPS</span><strong id="mRps">—</strong></article>
+                <article class="stat"><span class="stat-label">總請求</span><strong id="mTotal">—</strong></article>
+                <article class="stat"><span class="stat-label">成功</span><strong id="mOk">—</strong></article>
+                <article class="stat stat-clickable" id="statFailCard" title="點擊查看失敗明細">
+                  <span class="stat-label">失敗</span>
+                  <strong id="mFail">—</strong>
+                  <em class="stat-hint" id="mFailHint">點擊查看</em>
+                </article>
+                <article class="stat"><span class="stat-label">錯誤率</span><strong id="mErrRate">—</strong></article>
+                <article class="stat"><span class="stat-label">p50</span><strong id="mP50">—</strong></article>
+                <article class="stat"><span class="stat-label">p95</span><strong id="mP95">—</strong></article>
+                <article class="stat"><span class="stat-label">p99</span><strong id="mP99">—</strong></article>
+              </div>
+
+              <div class="batch-panel" id="stressFailPanel" hidden>
+                <div class="batch-head">
+                  <h3>失敗明細</h3>
+                  <span id="stressFailHint">—</span>
+                </div>
+                <div class="batch-list" id="stressFailList">
+                  <p class="batch-empty">尚無失敗。</p>
+                </div>
+              </div>
+
+              <div class="batch-panel">
+                <div class="batch-head">
+                  <h3>場景延遲明細</h3>
+                  <span id="stressDetailHint">尚未執行</span>
+                </div>
+                <div class="batch-list" id="stressDetailList">
+                  <p class="batch-empty">開始壓測後會顯示各場景 p50／p95。</p>
+                </div>
+              </div>
+
+              <div class="batch-panel history-panel">
+                <div class="batch-head">
+                  <h3>壓測歷史</h3>
+                  <span>最近 100 次</span>
+                </div>
+                <div class="batch-list" id="stressHistoryList">
+                  <p class="batch-empty">尚無壓測紀錄。</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="stage full aigen-stage" id="aiGenStage" hidden>
+              <div class="stage-head">
+                <div>
+                  <p class="eyebrow">AI 助手</p>
+                  <h2>用自然語言生成測試腳本</h2>
+                  <p class="detail-desc">
+                    描述需求後生成 Playwright 腳本／冒煙路徑，確認後寫入
+                    <code>tests/</code> 與 fixture，即可在對應類型中執行。
+                  </p>
+                </div>
+                <div class="stage-actions">
+                  <button class="btn ghost" id="btnAiConfig" type="button">AI 配置</button>
+                  <button class="btn ghost" id="btnAiReloadStatus" type="button">重新檢查</button>
+                  <button class="btn primary" id="btnAiGenerate" type="button">生成草稿</button>
+                </div>
+              </div>
+
+              <div class="stress-warn" id="aiStatusBanner">正在檢查 AI 配置…</div>
+
+              <div class="aigen-form">
+                <label>
+                  目標系統
+                  <select id="aiSystem">
+                    <option value="pos">POS 收銀</option>
+                    <option value="admin">後台管理</option>
+                  </select>
+                </label>
+                <label>
+                  測試類型
+                  <select id="aiKind">
+                    <option value="e2e">E2E 閉環</option>
+                    <option value="crud">CRUD</option>
+                    <option value="smoke">冒煙（寫入路徑目錄）</option>
+                  </select>
+                </label>
+                <label>
+                  模組名（可選）
+                  <input id="aiModule" placeholder="例如：訂單廚房" autocomplete="off" />
+                </label>
+                <label>
+                  用例名（可選）
+                  <input id="aiName" placeholder="例如：掃碼取餐閉環" autocomplete="off" />
+                </label>
+                <label class="aigen-grow">
+                  測試需求
+                  <textarea id="aiRequirement" rows="8" placeholder="用中文描述步驟，例如：&#10;1. 打開 POS 點單&#10;2. 加購商品&#10;3. 登入會員並結帳…"></textarea>
+                </label>
+              </div>
+
+              <div class="aigen-preview" id="aiPreviewWrap" hidden>
+                <div class="batch-head">
+                  <h3>生成預覽</h3>
+                  <span id="aiPreviewMeta">—</span>
+                </div>
+                <div class="aigen-meta-grid" id="aiPreviewFields"></div>
+                <label class="aigen-code-label">
+                  腳本內容（可手動修改後再儲存；冒煙類型可為空）
+                  <textarea id="aiSpecSource" rows="18" spellcheck="false"></textarea>
+                </label>
+                <div class="aigen-save-row">
+                  <label class="stress-check">
+                    <input type="checkbox" id="aiOverwrite" />
+                    若檔案／目錄項已存在則覆寫
+                  </label>
+                  <div class="aigen-save-actions">
+                    <button class="btn ghost" id="btnAiSave" type="button">確認寫入系統</button>
+                    <button class="btn primary" id="btnAiRun" type="button">寫入並立即執行</button>
+                  </div>
+                </div>
+                <p class="path-note" id="aiSaveHint"></p>
+                <div class="aigen-run-result" id="aiRunResult" hidden>
+                  <div class="batch-head">
+                    <h3>最近執行結果</h3>
+                    <button class="btn ghost" id="btnAiViewResult" type="button" hidden>查看步驟詳情</button>
+                  </div>
+                  <div class="aigen-run-status" id="aiRunStatus">—</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="stage full xuqiu-stage" id="xuqiuStage" hidden>
+              <div class="stage-head">
+                <div>
+                  <p class="eyebrow">需求庫</p>
+                  <h2>用戶故事 × 功能任務</h2>
+                  <p class="detail-desc">
+                    資料來自 <code>xuqiu/*.csv</code>，存入本機 SQLite（<code>qa-data/xuqiu.db</code>）。
+                    以 feature_key（如 5.1.1.1）關聯 US 與任務。
+                  </p>
+                </div>
+                <div class="stage-actions">
+                  <button class="btn ghost" id="btnXuqiuImport" type="button">重新匯入 CSV</button>
+                  <button class="btn primary" id="btnXuqiuCreate" type="button">新增</button>
+                </div>
+              </div>
+
+              <div class="stress-warn xuqiu-ok" id="xuqiuStatusBanner">載入中…</div>
+
+              <div class="path-kind-bar" id="xuqiuTabBar">
+                <button class="mode-tab active" type="button" data-xuqiu-tab="stories">用戶故事</button>
+                <button class="mode-tab" type="button" data-xuqiu-tab="tasks">功能任務</button>
+              </div>
+
+              <div class="xuqiu-toolbar">
+                <input id="xuqiuSearch" type="search" placeholder="搜尋編號／描述／負責人…" />
+                <button class="btn ghost" id="btnXuqiuSearch" type="button">搜尋</button>
+              </div>
+
+              <div class="xuqiu-layout">
+                <div class="xuqiu-list-panel">
+                  <div class="suite-head">
+                    <h3 id="xuqiuListTitle">用戶故事</h3>
+                    <span id="xuqiuListCount">0</span>
+                  </div>
+                  <div class="xuqiu-list" id="xuqiuList"></div>
+                </div>
+                <div class="xuqiu-editor-panel">
+                  <div class="suite-head">
+                    <h3 id="xuqiuEditorTitle">編輯</h3>
+                    <div class="xuqiu-editor-actions">
+                      <button class="btn ghost" id="btnXuqiuGenTest" type="button" disabled>生成測試</button>
+                      <button class="btn ghost danger" id="btnXuqiuDelete" type="button" disabled>刪除</button>
+                      <button class="btn primary" id="btnXuqiuSave" type="button" disabled>儲存</button>
+                    </div>
+                  </div>
+                  <form class="system-form xuqiu-form" id="xuqiuForm"></form>
+
+                  <div class="xuqiu-related-panel" id="xuqiuRelated">
+                    <div class="suite-head">
+                      <h3 id="xuqiuRelatedTitle">關聯資料</h3>
+                      <div class="xuqiu-editor-actions">
+                        <span class="path-file" id="xuqiuRelatedHint">選擇左側項目後顯示</span>
+                        <button class="btn tiny ghost" id="btnXuqiuAddTaskRow" type="button" hidden>＋ 新增任務</button>
+                        <button class="btn tiny ghost" id="btnXuqiuShowRelated2" type="button" disabled>放大查看</button>
+                      </div>
+                    </div>
+                    <div id="xuqiuRelatedList" class="xuqiu-related-list">尚未選擇項目</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="pathModal" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="pathModalTitle">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">配置</p>
+            <h2 id="pathModalTitle">路徑管理</h2>
+            <p class="detail-desc" id="pathModalHint">新增 / 修改路徑；刪除會立即儲存，無引用的腳本會一併移除</p>
+          </div>
+          <button class="btn ghost" id="btnClosePathModal" type="button">關閉</button>
+        </div>
+        <div class="path-kind-bar" id="pathKindBar">
+          <button class="mode-tab active" type="button" data-path-kind="smoke">冒煙</button>
+          <button class="mode-tab" type="button" data-path-kind="crud">CRUD</button>
+          <button class="mode-tab" type="button" data-path-kind="e2e">E2E</button>
+          <button class="mode-tab" type="button" data-path-kind="story">用戶故事</button>
+        </div>
+        <div class="path-toolbar">
+          <button class="btn primary" id="btnAddPath" type="button">新增一項</button>
+          <button class="btn ghost" id="btnReloadPaths" type="button">重新載入</button>
+          <button class="btn primary" id="btnSavePaths" type="button">儲存</button>
+          <span class="path-file" id="pathFileLabel"></span>
+        </div>
+        <p class="path-note" id="pathNote"></p>
+        <div class="path-editor" id="pathEditor"></div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="systemModal" hidden>
+      <div class="modal-card modal-card-sm" role="dialog" aria-modal="true" aria-labelledby="systemModalTitle">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">配置</p>
+            <h2 id="systemModalTitle">系統配置</h2>
+            <p class="detail-desc" id="systemModalHint">修改目前系統的訪問地址與登入帳密</p>
+          </div>
+          <button class="btn ghost" id="btnCloseSystemModal" type="button">關閉</button>
+        </div>
+        <p class="path-note">儲存後寫入 systems.json；下次執行測試會使用新地址與帳密（並清除舊登入狀態）。</p>
+        <form class="system-form" id="systemForm">
+          <label>顯示名稱<input name="name" autocomplete="off" /></label>
+          <label>副標題<input name="subtitle" autocomplete="off" /></label>
+          <label>系統地址（baseURL）<input name="baseURL" placeholder="http://192.168.30.55:5174" autocomplete="off" /></label>
+          <label>登入帳號<input name="loginUser" autocomplete="username" /></label>
+          <label>登入密碼<input name="loginPass" type="password" autocomplete="current-password" /></label>
+          <div class="path-toolbar">
+            <button class="btn ghost" id="btnReloadSystem" type="button">重新載入</button>
+            <button class="btn primary" id="btnSaveSystem" type="submit">儲存</button>
+            <span class="path-file" id="systemFileLabel">systems.json</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="aiConfigModal" hidden>
+      <div class="modal-card modal-card-sm" role="dialog" aria-modal="true" aria-labelledby="aiConfigModalTitle">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">配置</p>
+            <h2 id="aiConfigModalTitle">AI 模型配置</h2>
+            <p class="detail-desc" id="aiConfigModalHint">選擇廠商並填寫 Key，儲存至 qa-data/ai-config.json</p>
+          </div>
+          <button class="btn ghost" id="btnCloseAiConfigModal" type="button">關閉</button>
+        </div>
+        <p class="path-note">
+          支援 OpenAI 相容協議：GPT、DeepSeek、千問、Kimi、智譜、SiliconFlow、Ollama 等。API Key
+          僅保存在本機，不會寫入 git（qa-data 已忽略）。留空 Key 表示不變更已存金鑰。
+        </p>
+        <form class="system-form aigen-config-form" id="aiConfigForm">
+          <label>
+            廠商 / 工具
+            <select name="provider" id="aiCfgProvider"></select>
+          </label>
+          <label>
+            API Base URL
+            <input name="baseURL" id="aiCfgBaseURL" placeholder="https://openrouter.ai/api/v1" autocomplete="off" />
+            <span class="path-file">只填到 /v1，不要帶 /chat/completions</span>
+          </label>
+          <label>
+            模型
+            <input name="model" id="aiCfgModel" list="aiCfgModelList" placeholder="deepseek-chat" autocomplete="off" />
+            <datalist id="aiCfgModelList"></datalist>
+          </label>
+          <label>
+            API Key
+            <input name="apiKey" id="aiCfgApiKey" type="password" placeholder="留空則保留原 Key" autocomplete="new-password" />
+          </label>
+          <p class="path-file" id="aiCfgKeyHint">尚未設定 Key</p>
+          <label>
+            Temperature
+            <input name="temperature" id="aiCfgTemperature" type="number" min="0" max="2" step="0.1" value="0.2" />
+          </label>
+          <label class="stress-check aigen-json-check">
+            <input type="checkbox" name="jsonMode" id="aiCfgJsonMode" checked />
+            啟用 JSON Mode（部分本地模型請關閉）
+          </label>
+          <div class="path-toolbar">
+            <button class="btn ghost" id="btnReloadAiConfig" type="button">重新載入</button>
+            <button class="btn primary" type="submit">儲存</button>
+            <span class="path-file" id="aiCfgFileLabel">qa-data/ai-config.json</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="stepsModal" hidden>
+      <div class="modal-card modal-card-steps" role="dialog" aria-modal="true" aria-labelledby="stepsModalTitle">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow" id="stepsModalEyebrow">測試步驟</p>
+            <h2 id="stepsModalTitle">任務步驟</h2>
+            <p class="detail-desc" id="stepsModalDesc">—</p>
+            <p class="path-file" id="stepsModalPath"></p>
+          </div>
+          <div class="modal-head-actions">
+            <button class="btn ghost" id="btnEditSpecFromSteps" type="button" hidden>編輯腳本</button>
+            <button class="btn ghost" id="btnExportPdf" type="button">匯出 PDF</button>
+            <button class="btn primary" id="btnRunFromStepsModal" type="button">執行此項</button>
+            <button class="btn ghost" id="btnCloseStepsModal" type="button">關閉</button>
+          </div>
+        </div>
+        <dl class="exec-meta" id="stepsModalMeta" hidden></dl>
+        <div class="shot-gallery-wrap" id="stepsModalShotsWrap" hidden>
+          <div class="detail-steps-head">
+            <span>執行畫面</span>
+            <em id="stepsModalShotsHint">點圖放大</em>
+          </div>
+          <div class="shot-gallery" id="stepsModalShots"></div>
+        </div>
+        <div class="detail-steps-head">
+          <span>具體步驟</span>
+          <em id="stepsModalHint">—</em>
+        </div>
+        <ol id="stepsModalList" class="detail-steps detail-steps-modal">
+          <li class="detail-step idle">尚無步驟</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="specEditModal" hidden>
+      <div class="modal-card modal-card-spec" role="dialog" aria-modal="true" aria-labelledby="specEditModalTitle">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">腳本</p>
+            <h2 id="specEditModalTitle">編輯測試腳本</h2>
+            <p class="detail-desc" id="specEditModalHint">修改後儲存即寫入本機 tests/ 檔案，下次執行生效</p>
+            <p class="path-file" id="specEditFileLabel">—</p>
+          </div>
+          <div class="modal-head-actions">
+            <button class="btn ghost" id="btnReloadSpec" type="button">重新載入</button>
+            <button class="btn primary" id="btnSaveSpec" type="button">儲存</button>
+            <button class="btn ghost" id="btnCloseSpecEditModal" type="button">關閉</button>
+          </div>
+        </div>
+        <p class="path-note" id="specEditNote">冒煙／CRUD／E2E／用戶故事均可編輯對應腳本。</p>
+        <label class="spec-edit-label">
+          腳本內容
+          <textarea id="specEditSource" rows="22" spellcheck="false" autocomplete="off"></textarea>
+        </label>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="xuqiuRelatedModal" hidden>
+      <div class="modal-card modal-card-spec" role="dialog" aria-modal="true" aria-labelledby="xuqiuRelatedModalTitle">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">關聯</p>
+            <h2 id="xuqiuRelatedModalTitle">關聯資料詳情</h2>
+            <p class="detail-desc" id="xuqiuRelatedModalHint">—</p>
+          </div>
+          <button class="btn ghost" id="btnCloseXuqiuRelatedModal" type="button">關閉</button>
+        </div>
+        <div id="xuqiuRelatedModalBody" class="xuqiu-related-modal-body"></div>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="xuqiuGenTestModal" hidden>
+      <div class="modal-card modal-card-xuqiu-gen" role="dialog" aria-modal="true" aria-labelledby="xuqiuGenTestModalTitle">
+        <div class="modal-head xuqiu-gen-head">
+          <div>
+            <p class="eyebrow">用戶故事 · AI 測試</p>
+            <h2 id="xuqiuGenTestModalTitle">生成測試腳本</h2>
+            <p class="detail-desc" id="xuqiuGenTestModalHint">沿用「AI 生成測試」模型配置；可先改需求再生成，腳本可編輯後寫入或立即執行</p>
+          </div>
+          <button class="btn ghost" id="btnCloseXuqiuGenTestModal" type="button">關閉</button>
+        </div>
+
+        <div class="xuqiu-gen-body">
+          <section class="xuqiu-gen-panel xuqiu-gen-panel-brief">
+            <div class="xuqiu-gen-panel-head">
+              <div>
+                <h3>生成條件</h3>
+                <p>系統與模組影響腳本路徑與 helper；需求文字會送給模型。</p>
+              </div>
+            </div>
+
+            <div class="xuqiu-gen-fields">
+              <label class="xuqiu-gen-field">
+                <span class="xuqiu-gen-label">目標系統</span>
+                <select id="xuqiuGenSystem">
+                  <option value="admin">後台管理</option>
+                  <option value="pos">POS 收銀</option>
+                </select>
+                <span class="xuqiu-gen-help">US-6 預設 POS，其餘預設後台</span>
+              </label>
+              <label class="xuqiu-gen-field">
+                <span class="xuqiu-gen-label">模組名</span>
+                <input id="xuqiuGenModule" placeholder="例如：後台·優惠券" autocomplete="off" />
+                <span class="xuqiu-gen-help">寫入 fixture 的 module 欄位，可留空</span>
+              </label>
+              <label class="xuqiu-gen-field xuqiu-gen-field-wide">
+                <span class="xuqiu-gen-label">測試需求</span>
+                <textarea id="xuqiuGenRequirement" rows="7" spellcheck="false" placeholder="描述驗收步驟，可依關聯任務調整…"></textarea>
+                <span class="xuqiu-gen-help">已帶入用戶故事與關聯任務，可直接改</span>
+              </label>
+            </div>
+
+            <div class="xuqiu-gen-actions">
+              <button class="btn primary" id="btnXuqiuDoGenTest" type="button">生成腳本</button>
+            </div>
+          </section>
+
+          <section class="xuqiu-gen-panel xuqiu-gen-panel-code">
+            <div class="xuqiu-gen-panel-head">
+              <div>
+                <h3>腳本預覽</h3>
+                <p id="xuqiuGenMeta">尚未生成</p>
+              </div>
+            </div>
+
+            <label class="xuqiu-gen-code-wrap">
+              <span class="xuqiu-gen-label">TypeScript（可手動修改）</span>
+              <textarea id="xuqiuGenSpecSource" rows="14" spellcheck="false" placeholder="點上方「生成腳本」後顯示內容…"></textarea>
+            </label>
+
+            <div class="xuqiu-gen-footer">
+              <label class="xuqiu-gen-overwrite">
+                <input type="checkbox" id="xuqiuGenOverwrite" checked />
+                <span>若腳本已存在則覆寫</span>
+              </label>
+              <div class="xuqiu-gen-footer-actions">
+                <button class="btn ghost" id="btnXuqiuSaveGenTest" type="button" disabled>寫入系統</button>
+                <button class="btn primary" id="btnXuqiuRunGenTest" type="button" disabled>寫入並立即執行</button>
+              </div>
+            </div>
+            <p class="xuqiu-gen-hint" id="xuqiuGenSaveHint"></p>
+
+            <div class="xuqiu-gen-run" id="xuqiuGenRunResult" hidden>
+              <div class="xuqiu-gen-run-head">
+                <h4>最近執行結果</h4>
+                <button class="btn tiny ghost" id="btnXuqiuGenViewResult" type="button" hidden>查看步驟詳情</button>
+              </div>
+              <div class="aigen-run-status" id="xuqiuGenRunStatus">—</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="lightbox" id="shotLightbox" hidden>
+      <button class="lightbox-close" id="btnCloseLightbox" type="button" aria-label="關閉放大">關閉</button>
+      <img id="shotLightboxImg" alt="步驟截圖" />
+      <p id="shotLightboxCap"></p>
+    </div>
+
+    <div class="modal-backdrop" id="stressFailModal" hidden>
+      <div class="modal-card modal-card-steps" role="dialog" aria-modal="true" aria-labelledby="stressFailModalTitle">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">壓力測試</p>
+            <h2 id="stressFailModalTitle">失敗明細</h2>
+            <p class="detail-desc" id="stressFailModalDesc">依場景與錯誤類型彙總</p>
+          </div>
+          <button class="btn ghost" id="btnCloseStressFailModal" type="button">關閉</button>
+        </div>
+        <div id="stressFailModalBody" class="stress-fail-modal-body"></div>
+      </div>
+    </div>
+
+    <div id="globalLoading" class="global-loading" hidden aria-live="polite" aria-busy="true">
+      <div class="global-loading-card">
+        <div class="global-loading-spinner" aria-hidden="true"></div>
+        <p id="globalLoadingText">正在處理任務…</p>
+      </div>
+    </div>
+
+    <script src="/app.js?v=20260918c"></script>
+  </body>
+</html>

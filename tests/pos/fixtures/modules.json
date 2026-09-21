@@ -1,0 +1,12 @@
+[
+  { "module": "點單", "name": "點單頁", "path": "/pages/pos/index", "nav": "点单", "checks": ["posShell", "productGrid"] },
+  { "module": "廚房", "name": "制作进度", "path": "/pages/kitchen/index", "nav": "制作进度", "checks": ["posShell", "statusTabs"] },
+  { "module": "訂單", "name": "訂單列表", "path": "/pages/orders/index", "nav": "订单", "checks": ["posShell", "orderList"] },
+  { "module": "會員", "name": "會員查詢", "path": "/pages/members/index", "nav": "会员", "checks": ["posShell", "memberSearch"] },
+  { "module": "存酒", "name": "存酒列表", "path": "/pages/inventory/index", "nav": "存酒", "checks": ["posShell", "wineList"] },
+  { "module": "存酒", "name": "新建存酒", "path": "/pages/inventory/create", "nav": "存酒", "checks": ["posShell", "wineCreate"] },
+  { "module": "沽清", "name": "商品沽清", "path": "/pages/cleaning/index", "nav": "沽清", "checks": ["posShell", "cleaning"] },
+  { "module": "總覽", "name": "營收總覽", "path": "/pages/dashboard/index", "nav": "总览", "checks": ["posShell", "dashboard"] },
+  { "module": "總覽", "name": "即時庫存總覽", "path": "/pages/inventory/overview", "checks": ["posShell", "inventoryOverview"] },
+  { "module": "掃碼", "name": "掃碼入口", "path": "/pages/pos/index", "nav": "点单", "checks": ["posShell", "scanEntry"] }
+]

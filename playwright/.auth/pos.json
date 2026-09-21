@@ -1,0 +1,26 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://192.168.30.55:8090",
+      "localStorage": [
+        {
+          "name": "token",
+          "value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJFZE1odmc3c3FmcW9sSzdwX2lfRzhITnpSbWE2LTlScFNsRkRZemVLVi1NIn0.eyJleHAiOjE3ODk2MzQxOTksImlhdCI6MTc4OTYzMjM5OSwianRpIjoiYzk5ZjZhYWUtNDFkNy00ZGFlLTg4ZDgtZDM5YzNmNmZkZGU2IiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMzAuNTU6ODA4MC9yZWFsbXMvcGV0ZXJzb24iLCJhdWQiOlsicGV0ZXJzb24tc2VydmljZXMiLCJhY2NvdW50Il0sInN1YiI6ImI0ZjcyNDc1LTk4ZjAtNGY4Yy1hOGM3LTJkNTFkMzhkNmFhNCIsInR5cCI6IkJlYXJlciIsImF6cCI6InBldGVyc29uLWFkbWluIiwic2Vzc2lvbl9zdGF0ZSI6IjhjMGRkMjZhLTY5OWMtNDMwMy1hYmY0LWFhMjlhMTY2OWI3NyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo1MTczIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLXBldGVyc29uIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiI4YzBkZDI2YS02OTljLTQzMDMtYWJmNC1hYTI5YTE2NjliNzciLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlRlcmVzYSIsInByZWZlcnJlZF91c2VybmFtZSI6InRlcmVzYSIsImdpdmVuX25hbWUiOiJUZXJlc2EiLCJlbWFpbCI6InRlcmVzYUB0ZXN0LmNvbSJ9.tbICF9O4BkyhcYefTMRFnGIBjV2GgLnY4tnLxvX8gaTl0_RRGE8uXi5kZsT2e4sU3Gi7GRaaPcKs_iD59BrXGxvoEdF65wTE_g2f9v11vO4b-8dPSnI9o8xIKp9HR8YYaamp5mGErCpGgGUE6T3hSe-knjze3a_2z8dda5szH3G6wCiNiae-IoQkvwWnIo8wRq4XogsxvndBsSmk_sGvNbV4WU-xBGcK4yKVhHEoA7kLcIOd2m1yI1yY8YnA5ueQZnyURhN_U0B53GpWGgDhM43A90E8-_dVqfqsLgqonKSg1M2RlqvoiJjNIDchtH7iQoOjib2bAuqAcfaDSfjUbg"
+        },
+        {
+          "name": "refreshToken",
+          "value": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzYjU0ZTE3Yi0yYTUxLTRjMzAtOTE0ZC1hYjZlNzFmZjg1NWMifQ.eyJleHAiOjE3ODk2MzU5OTksImlhdCI6MTc4OTYzMjM5OSwianRpIjoiMzJiZDZjNDMtNWYxMi00NWJhLTgyYTMtYzY1YWNkY2I1ZjcwIiwiaXNzIjoiaHR0cDovLzE5Mi4xNjguMzAuNTU6ODA4MC9yZWFsbXMvcGV0ZXJzb24iLCJhdWQiOiJodHRwOi8vMTkyLjE2OC4zMC41NTo4MDgwL3JlYWxtcy9wZXRlcnNvbiIsInN1YiI6ImI0ZjcyNDc1LTk4ZjAtNGY4Yy1hOGM3LTJkNTFkMzhkNmFhNCIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJwZXRlcnNvbi1hZG1pbiIsInNlc3Npb25fc3RhdGUiOiI4YzBkZDI2YS02OTljLTQzMDMtYWJmNC1hYTI5YTE2NjliNzciLCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwic2lkIjoiOGMwZGQyNmEtNjk5Yy00MzAzLWFiZjQtYWEyOWExNjY5Yjc3In0.qdeXtGI_pssnFU3s7qAd4DUxLt1I7H4anSYlPmdtYoacslXS12HIhKaGO5qW41xZ3xsGOPZTlxVz9EIWUxieHw"
+        },
+        {
+          "name": "userInfo",
+          "value": "{\"type\":\"object\",\"data\":{\"id\":\"cfbca5d3-0ebf-4c88-a562-a3de5a17814b\",\"username\":\"teresa\",\"email\":\"teresa@test.com\",\"displayName\":\"Teresa\",\"storeId\":2,\"storeName\":\"aChill Club澳门体验店\",\"keycloak_user_id\":\"b4f72475-98f0-4f8c-a8c7-2d51d38d6aa4\",\"roles\":[]}}"
+        },
+        {
+          "name": "storeId",
+          "value": "{\"type\":\"number\",\"data\":2}"
+        }
+      ]
+    }
+  ]
+}

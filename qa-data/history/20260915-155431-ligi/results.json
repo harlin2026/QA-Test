@@ -1,0 +1,24 @@
+{
+  "e2e:admin-vip-phone-search-detail": {
+    "id": "e2e:admin-vip-phone-search-detail",
+    "status": "passed",
+    "startedAt": "2026-09-15T07:54:31.674Z",
+    "finishedAt": "2026-09-15T07:54:44.059Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "e2e:admin-vip-phone-search-detail",
+        "status": "passed",
+        "title": "手机号搜索会员并查看详情闭环",
+        "screenshot": "/api/shots/20260915-155431-ligi/mu2dm70z-9da93e1e7b02.png",
+        "url": "http://192.168.30.55:5174/vip/detail/cf497984-1966-4f61-9a05-65e495de5b39",
+        "duration": 2728,
+        "how": "Playwright 執行 tests/e2e/vip-phone-search-detail-journey.spec.ts → e2e\\vip-phone-search-detail-journey.spec.ts › E2E｜手机号搜索会员并查看详情闭环 › 手机号搜索会员并查看详情闭环"
+      }
+    ],
+    "runId": "20260915-155431-ligi",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-phone-search-detail-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  }
+}

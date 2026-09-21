@@ -1,0 +1,18 @@
+{
+  "runId": "20260915-122919-wqn3",
+  "system": "admin",
+  "target": "e2e:case-mu25y38u",
+  "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-store-products-journey.spec.ts",
+  "exitCode": 0,
+  "startedAt": "2026-09-15T04:29:19.118Z",
+  "finishedAt": "2026-09-15T04:29:29.913Z",
+  "ids": [
+    "e2e:case-mu25y38u"
+  ],
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  }
+}

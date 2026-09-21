@@ -1,0 +1,24 @@
+{
+  "e2e:admin-vip-detail-journey": {
+    "id": "e2e:admin-vip-detail-journey",
+    "status": "passed",
+    "startedAt": "2026-09-15T07:57:05.745Z",
+    "finishedAt": "2026-09-15T07:57:17.833Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "e2e:admin-vip-detail-journey",
+        "status": "passed",
+        "title": "手机号搜索会员并查看详情积分优惠券消费记录",
+        "screenshot": "/api/shots/20260915-155705-dpr4/mu2dphog-806cc4310544.png",
+        "url": "http://192.168.30.55:5174/vip/detail/cf497984-1966-4f61-9a05-65e495de5b39",
+        "duration": 2718,
+        "how": "Playwright 執行 tests/e2e/vip-detail-journey.spec.ts → e2e\\vip-detail-journey.spec.ts › E2E｜手机号搜索会员并查看详情积分优惠券消费记录 › 手机号搜索会员并查看详情积分优惠券消费记录"
+      }
+    ],
+    "runId": "20260915-155705-dpr4",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-detail-journey.spec.ts",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  }
+}

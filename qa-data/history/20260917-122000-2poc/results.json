@@ -1,0 +1,1224 @@
+{
+  "story:US-7.7.1.1": {
+    "id": "story:US-7.7.1.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.1.1",
+        "status": "passed",
+        "title": "US-7.7.1.1 新增店员并为其分配一个门店",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50u4if-615bbaa469a7.png",
+        "url": "http://192.168.30.55:5174/system/users",
+        "duration": 1772,
+        "how": "Playwright 執行 tests/story/us-7-7-1-1.story.spec.ts → story\\us-7-7-1-1.story.spec.ts › 後台·店員門店 › US-7.7.1.1 新增店员并为其分配一个门店"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.2.1": {
+    "id": "story:US-7.7.2.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.2.1",
+        "status": "passed",
+        "title": "US-7.7.2.1 管理四类优惠券、查看核销明细与使用记录并精准发放",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50ud53-f3ff79365878.png",
+        "url": "http://192.168.30.55:5174/promotion/coupons",
+        "duration": 1493,
+        "how": "Playwright 執行 tests/story/us-7-7-2-1.story.spec.ts → story\\us-7-7-2-1.story.spec.ts › 後台·優惠券 › US-7.7.2.1 管理四类优惠券、查看核销明细与使用记录并精准发放"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.3.1": {
+    "id": "story:US-7.7.3.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.3.1",
+        "status": "passed",
+        "title": "US-7.7.3.1 查看会员积分列表",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50uf9i-65fc2f70bacb.png",
+        "url": "http://192.168.30.55:5174/points/list",
+        "duration": 1542,
+        "how": "Playwright 執行 tests/story/us-7-7-3-1.story.spec.ts → story\\us-7-7-3-1.story.spec.ts › 後台·積分 › US-7.7.3.1 查看会员积分列表"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.3.2": {
+    "id": "story:US-7.7.3.2",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.3.2",
+        "status": "passed",
+        "title": "US-7.7.3.2 配置积分累计规则",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50uh6w-483c7b95e9ec.png",
+        "url": "http://192.168.30.55:5174/points/setting",
+        "duration": 1365,
+        "how": "Playwright 執行 tests/story/us-7-7-3-2.story.spec.ts → story\\us-7-7-3-2.story.spec.ts › 後台·積分 › US-7.7.3.2 配置积分累计规则"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.4.1": {
+    "id": "story:US-7.7.4.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.4.1",
+        "status": "passed",
+        "title": "US-7.7.4.1 添加/修改/预览厨打与收银小票机",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50uj5q-a2bc3ad52113.png",
+        "url": "http://192.168.30.55:5174/shop/printers?storeId=310",
+        "duration": 1371,
+        "how": "Playwright 執行 tests/story/us-7-7-4-1.story.spec.ts → story\\us-7-7-4-1.story.spec.ts › 後台·小票機 › US-7.7.4.1 添加/修改/预览厨打与收银小票机"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.4.2": {
+    "id": "story:US-7.7.4.2",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.4.2",
+        "status": "passed",
+        "title": "US-7.7.4.2 把商品绑定到厨房小票机（一个商品绑一台厨打机）",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50ul9k-b6bbbb105084.png",
+        "url": "http://192.168.30.55:5174/goods/list?storeId=310",
+        "duration": 1554,
+        "how": "Playwright 執行 tests/story/us-7-7-4-2.story.spec.ts → story\\us-7-7-4-2.story.spec.ts › 後台·小票機 › US-7.7.4.2 把商品绑定到厨房小票机（一个商品绑一台厨打机）"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.5.1": {
+    "id": "story:US-7.7.5.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.5.1",
+        "status": "passed",
+        "title": "US-7.7.5.1 分别设置厨打与收银小票模板的基本/商品/结算/文本区块",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50un4u-4e4b3058b3ff.png",
+        "url": "http://192.168.30.55:5174/system/receipt-template",
+        "duration": 1295,
+        "how": "Playwright 執行 tests/story/us-7-7-5-1.story.spec.ts → story\\us-7-7-5-1.story.spec.ts › 後台·票據模板 › US-7.7.5.1 分别设置厨打与收银小票模板的基本/商品/结算/文本区块"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.6.1": {
+    "id": "story:US-7.7.6.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.6.1",
+        "status": "passed",
+        "title": "US-7.7.6.1 在商品上设置点餐端显示渠道与小票机设置",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50up94-a899fd0d4ce9.png",
+        "url": "http://192.168.30.55:5174/goods/list?storeId=310",
+        "duration": 1518,
+        "how": "Playwright 執行 tests/story/us-7-7-6-1.story.spec.ts → story\\us-7-7-6-1.story.spec.ts › 後台·商品 › US-7.7.6.1 在商品上设置点餐端显示渠道与小票机设置"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.6.2": {
+    "id": "story:US-7.7.6.2",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.6.2",
+        "status": "passed",
+        "title": "US-7.7.6.2 维护商品单位、批量上下架、规格属性排序。",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50ur7b-1dd02cfb5bfd.png",
+        "url": "http://192.168.30.55:5174/goods/product-units",
+        "duration": 1392,
+        "how": "Playwright 執行 tests/story/us-7-7-6-2.story.spec.ts → story\\us-7-7-6-2.story.spec.ts › 後台·商品 › US-7.7.6.2 维护商品单位、批量上下架、规格属性排序。"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.6.3": {
+    "id": "story:US-7.7.6.3",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.6.3",
+        "status": "passed",
+        "title": "US-7.7.6.3 能在一级分类或其二级分类下创建商品。",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50ut7d-8fbd314bbf57.png",
+        "url": "http://192.168.30.55:5174/goods/categories?storeId=310",
+        "duration": 1438,
+        "how": "Playwright 執行 tests/story/us-7-7-6-3.story.spec.ts → story\\us-7-7-6-3.story.spec.ts › 後台·商品 › US-7.7.6.3 能在一级分类或其二级分类下创建商品。"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.6.4": {
+    "id": "story:US-7.7.6.4",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.6.4",
+        "status": "passed",
+        "title": "US-7.7.6.4 新增/编辑商品时不能直接修改库存",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50uv7w-750787728167.png",
+        "url": "http://192.168.30.55:5174/goods/list?storeId=310",
+        "duration": 1476,
+        "how": "Playwright 執行 tests/story/us-7-7-6-4.story.spec.ts → story\\us-7-7-6-4.story.spec.ts › 後台·商品 › US-7.7.6.4 新增/编辑商品时不能直接修改库存"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.7.1": {
+    "id": "story:US-7.7.7.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.7.1",
+        "status": "passed",
+        "title": "US-7.7.7.1 订单详情新增优惠金额、抹零、应收、实收、商品销售实收、售后与订单Flow",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50uxc2-df874507890a.png",
+        "url": "http://192.168.30.55:5174/orders/list?storeId=310",
+        "duration": 1571,
+        "how": "Playwright 執行 tests/story/us-7-7-7-1.story.spec.ts → story\\us-7-7-7-1.story.spec.ts › 後台·訂單 › US-7.7.7.1 订单详情新增优惠金额、抹零、应收、实收、商品销售实收、售后与订单Flow"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.7.2": {
+    "id": "story:US-7.7.7.2",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.7.2",
+        "status": "passed",
+        "title": "US-7.7.7.2 订单列表新增商品总价/优惠/抹零/应收/实收列，并查询退货/售后单。",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50uzmc-bacf6e084c66.png",
+        "url": "http://192.168.30.55:5174/orders/refund?storeId=310",
+        "duration": 1754,
+        "how": "Playwright 執行 tests/story/us-7-7-7-2.story.spec.ts → story\\us-7-7-7-2.story.spec.ts › 後台·訂單 › US-7.7.7.2 订单列表新增商品总价/优惠/抹零/应收/实收列，并查询退货/售后单。"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.8.1": {
+    "id": "story:US-7.7.8.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.8.1",
+        "status": "passed",
+        "title": "US-7.7.8.1 会员详情展示积分与优惠券、消费记录显示订单类型",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50v1jb-bd3ffcf3a4d7.png",
+        "url": "http://192.168.30.55:5174/vip/list",
+        "duration": 1349,
+        "how": "Playwright 執行 tests/story/us-7-7-8-1.story.spec.ts → story\\us-7-7-8-1.story.spec.ts › 後台·會員 › US-7.7.8.1 会员详情展示积分与优惠券、消费记录显示订单类型"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.9.1": {
+    "id": "story:US-7.7.9.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.9.1",
+        "status": "passed",
+        "title": "US-7.7.9.1 搜索/统计存酒并导出Excel",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50v3o0-359fd90828e4.png",
+        "url": "http://192.168.30.55:5174/wine-storage/list?storeId=310",
+        "duration": 1596,
+        "how": "Playwright 執行 tests/story/us-7-7-9-1.story.spec.ts → story\\us-7-7-9-1.story.spec.ts › 後台·存酒 › US-7.7.9.1 搜索/统计存酒并导出Excel"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.9.2": {
+    "id": "story:US-7.7.9.2",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.9.2",
+        "status": "passed",
+        "title": "US-7.7.9.2 配置存酒推送、有效期、临期提醒与凭证规则",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50v5ml-174248068262.png",
+        "url": "http://192.168.30.55:5174/wine-storage/setting?storeId=310",
+        "duration": 1413,
+        "how": "Playwright 執行 tests/story/us-7-7-9-2.story.spec.ts → story\\us-7-7-9-2.story.spec.ts › 後台·存酒 › US-7.7.9.2 配置存酒推送、有效期、临期提醒与凭证规则"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.10.1": {
+    "id": "story:US-7.7.10.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.10.1",
+        "status": "passed",
+        "title": "US-7.7.10.1 流水新增销售出库与退单入库",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50u6t8-7f589c2a1bf5.png",
+        "url": "http://192.168.30.55:5174/inventory/record?storeId=310",
+        "duration": 1694,
+        "how": "Playwright 執行 tests/story/us-7-7-10-1.story.spec.ts → story\\us-7-7-10-1.story.spec.ts › 後台·庫存 › US-7.7.10.1 流水新增销售出库与退单入库"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.10.2": {
+    "id": "story:US-7.7.10.2",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.10.2",
+        "status": "passed",
+        "title": "US-7.7.10.2 通过盘点修改商品库存",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50u8zm-b9192b20dc59.png",
+        "url": "http://192.168.30.55:5174/inventory/check?storeId=310",
+        "duration": 1672,
+        "how": "Playwright 執行 tests/story/us-7-7-10-2.story.spec.ts → story\\us-7-7-10-2.story.spec.ts › 後台·庫存 › US-7.7.10.2 通过盘点修改商品库存"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.7.11.1": {
+    "id": "story:US-7.7.11.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.7.11.1",
+        "status": "passed",
+        "title": "US-7.7.11.1 为门店配置一天多个营业时间段（含按周）",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50ub2b-98a96b87b1e6.png",
+        "url": "http://192.168.30.55:5174/shop/stores",
+        "duration": 1547,
+        "how": "Playwright 執行 tests/story/us-7-7-11-1.story.spec.ts → story\\us-7-7-11-1.story.spec.ts › 後台·營業時段 › US-7.7.11.1 为门店配置一天多个营业时间段（含按周）"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.1.1": {
+    "id": "story:US-7.8.1.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.1.1",
+        "status": "passed",
+        "title": "US-7.8.1.1 系统提供一张正方形的优惠券默认图片",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50v7of-c6726830d976.png",
+        "url": "http://192.168.30.55:5174/promotion/coupons",
+        "duration": 1514,
+        "how": "Playwright 執行 tests/story/us-7-8-1-1.story.spec.ts → story\\us-7-8-1-1.story.spec.ts › 後台·券圖 › US-7.8.1.1 系统提供一张正方形的优惠券默认图片"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.2.1": {
+    "id": "story:US-7.8.2.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.2.1",
+        "status": "passed",
+        "title": "US-7.8.2.1 配置套餐促销、打折特价、满减活动",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50ve54-f5ba193ac5ba.png",
+        "url": "http://192.168.30.55:5174/promotion/coupons",
+        "duration": 1720,
+        "how": "Playwright 執行 tests/story/us-7-8-2-1.story.spec.ts → story\\us-7-8-2-1.story.spec.ts › 後台·促銷活動 › US-7.8.2.1 配置套餐促销、打折特价、满减活动"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.3.1": {
+    "id": "story:US-7.8.3.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.3.1",
+        "status": "passed",
+        "title": "US-7.8.3.1 为收银端账号设置挂账、反结账权限，并限制免单仅店长可用",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50vg7j-333f73a556e0.png",
+        "url": "http://192.168.30.55:5174/system/roles",
+        "duration": 1508,
+        "how": "Playwright 執行 tests/story/us-7-8-3-1.story.spec.ts → story\\us-7-8-3-1.story.spec.ts › 後台·權限 › US-7.8.3.1 为收银端账号设置挂账、反结账权限，并限制免单仅店长可用"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.4.1": {
+    "id": "story:US-7.8.4.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.4.1",
+        "status": "passed",
+        "title": "US-7.8.4.1 维护门店全局的商品属性列表，编辑商品属性时从列表中选择（类似筛选模型）",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50vi9i-6288002a0850.png",
+        "url": "http://192.168.30.55:5174/goods/filter-models",
+        "duration": 1517,
+        "how": "Playwright 執行 tests/story/us-7-8-4-1.story.spec.ts → story\\us-7-8-4-1.story.spec.ts › 後台·商品屬性 › US-7.8.4.1 维护门店全局的商品属性列表，编辑商品属性时从列表中选择（类似筛选模型）"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.5.1": {
+    "id": "story:US-7.8.5.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.5.1",
+        "status": "passed",
+        "title": "US-7.8.5.1 新的商品表单支持商品类型、固价、副单位、条码、定位tab、参数排序、图集…",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50vkgk-60eee371c7ec.png",
+        "url": "http://192.168.30.55:5174/goods/list?storeId=310",
+        "duration": 1581,
+        "how": "Playwright 執行 tests/story/us-7-8-5-1.story.spec.ts → story\\us-7-8-5-1.story.spec.ts › 後台·商品表單 › US-7.8.5.1 新的商品表单支持商品类型、固价、副单位、条码、定位tab、参数排序、图集…"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.6.1": {
+    "id": "story:US-7.8.6.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.6.1",
+        "status": "passed",
+        "title": "US-7.8.6.1 统一管理全局分类并同步下发到门店",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50vmgj-91790c3bf378.png",
+        "url": "http://192.168.30.55:5174/goods/categories?storeId=310",
+        "duration": 1439,
+        "how": "Playwright 執行 tests/story/us-7-8-6-1.story.spec.ts → story\\us-7-8-6-1.story.spec.ts › 後台·全域分類 › US-7.8.6.1 统一管理全局分类并同步下发到门店"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.6.2": {
+    "id": "story:US-7.8.6.2",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.6.2",
+        "status": "passed",
+        "title": "US-7.8.6.2 系统保留唯一的「套餐」系统分类",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50vof4-ec28c34b66f1.png",
+        "url": "http://192.168.30.55:5174/goods/categories?storeId=310",
+        "duration": 1424,
+        "how": "Playwright 執行 tests/story/us-7-8-6-2.story.spec.ts → story\\us-7-8-6-2.story.spec.ts › 後台·全域分類 › US-7.8.6.2 系统保留唯一的「套餐」系统分类"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.7.1": {
+    "id": "story:US-7.8.7.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.7.1",
+        "status": "passed",
+        "title": "US-7.8.7.1 配置服务费与打包费规则",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50vqfy-a2533b7cef11.png",
+        "url": "http://192.168.30.55:5174/shop/stores",
+        "duration": 1480,
+        "how": "Playwright 執行 tests/story/us-7-8-7-1.story.spec.ts → story\\us-7-8-7-1.story.spec.ts › 後台·服務費打包費 › US-7.8.7.1 配置服务费与打包费规则"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.8.1": {
+    "id": "story:US-7.8.8.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.8.1",
+        "status": "passed",
+        "title": "US-7.8.8.1 会员档案含消费次数、累计金额、来源、首充金额，并有会员ID与会员卡号两个…",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50vsj4-48d34f2f9ea4.png",
+        "url": "http://192.168.30.55:5174/vip/list",
+        "duration": 1568,
+        "how": "Playwright 執行 tests/story/us-7-8-8-1.story.spec.ts → story\\us-7-8-8-1.story.spec.ts › 後台·會員檔案 › US-7.8.8.1 会员档案含消费次数、累计金额、来源、首充金额，并有会员ID与会员卡号两个…"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.9.1": {
+    "id": "story:US-7.8.9.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.9.1",
+        "status": "passed",
+        "title": "US-7.8.9.1 库存查询、出入库、盘点与库存记录都支持副单位计量",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50vuks-309a4adfc3ed.png",
+        "url": "http://192.168.30.55:5174/inventory/query?storeId=310",
+        "duration": 1497,
+        "how": "Playwright 執行 tests/story/us-7-8-9-1.story.spec.ts → story\\us-7-8-9-1.story.spec.ts › 後台·副單位庫存 › US-7.8.9.1 库存查询、出入库、盘点与库存记录都支持副单位计量"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.10.1": {
+    "id": "story:US-7.8.10.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.10.1",
+        "status": "passed",
+        "title": "US-7.8.10.1 维护取酒凭证、退单凭证（退单小票）与收银小票优惠明细模板",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50v9pa-b08355cbe499.png",
+        "url": "http://192.168.30.55:5174/system/receipt-template",
+        "duration": 1473,
+        "how": "Playwright 執行 tests/story/us-7-8-10-1.story.spec.ts → story\\us-7-8-10-1.story.spec.ts › 後台·憑證模板 › US-7.8.10.1 维护取酒凭证、退单凭证（退单小票）与收银小票优惠明细模板"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-7.8.11.1": {
+    "id": "story:US-7.8.11.1",
+    "status": "passed",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-7.8.11.1",
+        "status": "passed",
+        "title": "US-7.8.11.1 订单列表/详情展示促销优惠、优惠券、服务费、打包费、折后价与套餐构成，并…",
+        "screenshot": "/api/shots/20260917-122000-2poc/mu50vbvh-955937c67fe9.png",
+        "url": "http://192.168.30.55:5174/orders/list?storeId=310",
+        "duration": 1505,
+        "how": "Playwright 執行 tests/story/us-7-8-11-1.story.spec.ts → story\\us-7-8-11-1.story.spec.ts › 後台·訂單核賬 › US-7.8.11.1 订单列表/详情展示促销优惠、优惠券、服务费、打包费、折后价与套餐构成，并…"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": true,
+    "stepSummary": "步驟 1（通過 1 · 失敗 0 · 跳過 0）"
+  },
+  "story:US-5.1.1.1": {
+    "id": "story:US-5.1.1.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.1.1.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-1-1-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.1.1 用微信一键登录"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.1.1.2": {
+    "id": "story:US-5.1.1.2",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.1.1.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-1-1-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.1.2 再次访问时自动登录"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.1.2.1": {
+    "id": "story:US-5.1.2.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.1.2.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-1-2-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.2.1 查看我的积分和等级"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.1.2.2": {
+    "id": "story:US-5.1.2.2",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.1.2.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-1-2-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.1.2.2 查看消费记录"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.2.1.1": {
+    "id": "story:US-5.2.1.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.2.1.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-2-1-1.story.spec.ts:9:7 › 小程序·商品瀏覽 › US-5.2.1.1 按分类浏览商品"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.2.1.2": {
+    "id": "story:US-5.2.1.2",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.2.1.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-2-1-2.story.spec.ts:9:7 › 小程序·商品瀏覽 › US-5.2.1.2 看到商品的主图和价格"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.4.1.1": {
+    "id": "story:US-5.4.1.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.4.1.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-4-1-1.story.spec.ts:9:7 › 小程序·下單 › US-5.4.1.1 快速完成下单"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.8.1": {
+    "id": "story:US-5.8.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.8.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-8-1.story.spec.ts:9:7 › 小程序·授權 › US-5.8.1 登录小程序时授权手机号"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.9.1": {
+    "id": "story:US-5.9.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.9.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-9-1.story.spec.ts:9:7 › 小程序·營業時段 › US-5.9.1 门店支持一天多个营业时间段"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.10.1": {
+    "id": "story:US-5.10.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.10.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-10-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.10.1 商品列表对沽清与库存（含预扣）进行校验"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.10.2": {
+    "id": "story:US-5.10.2",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.10.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-10-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.10.2 按「一级分类名+其下商品」「二级分类名+其下商品」层级浏览。"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.10.3": {
+    "id": "story:US-5.10.3",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.10.3",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-10-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.10.3 在商品列表/详情看到我可用的最优优惠券名称。"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.11.1": {
+    "id": "story:US-5.11.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.11.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-11-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.11.1 确认订单时看到可用与不可用券列表及不可用原因"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.11.2": {
+    "id": "story:US-5.11.2",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.11.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-11-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.11.2 在个人中心查看有效、历史与过期优惠券。"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.12.1": {
+    "id": "story:US-5.12.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.12.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-12-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.12.1 生成代表我会员身份的二维码"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.13.1": {
+    "id": "story:US-5.13.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.13.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-13-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.1 确认订单/购物车再次校验沽清与预扣库存"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.13.2": {
+    "id": "story:US-5.13.2",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.13.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-13-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.2 查看结账详情并完成微信付款；支付失败时生成待支付订单，15分钟未付自动超…"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.13.3": {
+    "id": "story:US-5.13.3",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.13.3",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-13-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.3 支付成功后订单进入待制作、清预扣并扣减真实库存"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.13.4": {
+    "id": "story:US-5.13.4",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.13.4",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-13-4.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.4 待取订单随制作/出餐进度显示状态文案与超时提示"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.13.5": {
+    "id": "story:US-5.13.5",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.13.5",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-13-5.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.5 取消待支付订单或订单超时取消时库存被退回"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.13.6": {
+    "id": "story:US-5.13.6",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.13.6",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-13-6.story.spec.ts:9:7 › 小程序·登入會員 › US-5.13.6 出餐后满48小时未取的订单自动完成收口。"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.14.1": {
+    "id": "story:US-5.14.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.14.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-14-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.14.1 在优惠券列表看到每张券的适用门店信息"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.15.1": {
+    "id": "story:US-5.15.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.15.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-15-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.15.1 看到分类图标、富文本和标签（后台可开关）"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.15.2": {
+    "id": "story:US-5.15.2",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.15.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-15-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.15.2 商品列表的最优券推荐按「优惠金额→最快到期→券类型」规则排序"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.15.3": {
+    "id": "story:US-5.15.3",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.15.3",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-15-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.15.3 在系统套餐分类下看到各套餐促销活动及其套餐组/商品明细"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.16.1": {
+    "id": "story:US-5.16.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.16.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-16-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.16.1 在购物车/确认订单里按套餐组选购套餐"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.16.2": {
+    "id": "story:US-5.16.2",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.16.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-16-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.16.2 确认订单自动计算促销活动优惠、打包费（自提无服务费），并看到优惠金额与应…"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.16.3": {
+    "id": "story:US-5.16.3",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.16.3",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-16-3.story.spec.ts:9:7 › 小程序·登入會員 › US-5.16.3 固价商品不被任何优惠影响"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.17.1": {
+    "id": "story:US-5.17.1",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.17.1",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-17-1.story.spec.ts:9:7 › 小程序·登入會員 › US-5.17.1 订单列表按全部/自提/外卖/门店/其他分类查看，并看到分类标签"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  },
+  "story:US-5.17.2": {
+    "id": "story:US-5.17.2",
+    "status": "skipped",
+    "startedAt": "2026-09-17T04:20:00.299Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "error": null,
+    "steps": [
+      {
+        "id": "story:US-5.17.2",
+        "status": "skipped",
+        "title": "tests\\story\\us-5-17-2.story.spec.ts:9:7 › 小程序·登入會員 › US-5.17.2 订单详情菜单默认收起、超过2个商品时展开查看，并清楚看到套餐构成与各项费…"
+      }
+    ],
+    "runId": "20260917-122000-2poc",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "hasShots": false,
+    "stepSummary": "步驟 1（通過 0 · 失敗 0 · 跳過 1）"
+  }
+}

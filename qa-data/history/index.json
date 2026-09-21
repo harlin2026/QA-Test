@@ -1,0 +1,835 @@
+[
+  {
+    "runId": "20260918-093125-99w2",
+    "system": "admin",
+    "target": "story:US-5.1.2.2",
+    "command": "npx playwright test --project=admin --workers=1 tests/story/us-5-1-2-2.story.spec.ts -g US-5\\.1\\.2\\.2",
+    "exitCode": 0,
+    "startedAt": "2026-09-18T01:31:25.130Z",
+    "finishedAt": "2026-09-18T01:31:35.337Z",
+    "ids": [
+      "story:US-5.1.2.2"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  {
+    "runId": "20260917-180225-l3v2",
+    "system": "admin",
+    "target": "story:US-5.1.1.1",
+    "command": "npx playwright test --project=admin --workers=1 tests/story/us-5-1-1-1.story.spec.ts -g US-5\\.1\\.1\\.1",
+    "exitCode": 0,
+    "startedAt": "2026-09-17T10:02:25.867Z",
+    "finishedAt": "2026-09-17T10:02:33.393Z",
+    "ids": [
+      "story:US-5.1.1.1"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  {
+    "runId": "20260917-180208-n4qj",
+    "system": "admin",
+    "target": "story:US-5.1.1.1",
+    "command": "npx playwright test --project=admin --workers=1 tests/story/us-5-1-1-1.story.spec.ts -g US-5\\.1\\.1\\.1",
+    "exitCode": 0,
+    "startedAt": "2026-09-17T10:02:08.485Z",
+    "finishedAt": "2026-09-17T10:02:19.332Z",
+    "ids": [
+      "story:US-5.1.1.1"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  {
+    "runId": "20260917-162526-fy47",
+    "system": "admin",
+    "target": "e2e:admin-inventory-query",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-query-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-17T08:25:26.691Z",
+    "finishedAt": "2026-09-17T08:25:38.903Z",
+    "ids": [
+      "e2e:admin-inventory-query"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260917-162220-lzy9",
+    "system": "admin",
+    "target": "e2e:admin-store-create",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/store-create-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-17T08:22:20.507Z",
+    "finishedAt": "2026-09-17T08:22:46.759Z",
+    "ids": [
+      "e2e:admin-store-create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260917-162127-1z02",
+    "system": "admin",
+    "target": "e2e:admin-store-create",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/store-create-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-17T08:21:27.670Z",
+    "finishedAt": "2026-09-17T08:21:57.709Z",
+    "ids": [
+      "e2e:admin-store-create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260917-160636-4m57",
+    "system": "pos",
+    "target": "e2e:pos-dine-pay-kitchen-pickup",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-17T08:06:36.144Z",
+    "finishedAt": "2026-09-17T08:07:57.398Z",
+    "ids": [
+      "e2e:pos-dine-pay-kitchen-pickup"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260917-160340-la7l",
+    "system": "pos",
+    "target": "e2e:pos-member-search-detail",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/member-search-detail-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-17T08:03:40.711Z",
+    "finishedAt": "2026-09-17T08:04:05.389Z",
+    "ids": [
+      "e2e:pos-member-search-detail"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260917-122441-o2yj",
+    "system": "admin",
+    "target": "story",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "exitCode": 0,
+    "startedAt": "2026-09-17T04:24:41.649Z",
+    "finishedAt": "2026-09-17T04:26:13.055Z",
+    "ids": [
+      "story:US-7.7.1.1",
+      "story:US-7.7.2.1",
+      "story:US-7.7.3.1",
+      "story:US-7.7.3.2",
+      "story:US-7.7.4.1",
+      "story:US-7.7.4.2",
+      "story:US-7.7.5.1",
+      "story:US-7.7.6.1",
+      "story:US-7.7.6.2",
+      "story:US-7.7.6.3",
+      "story:US-7.7.6.4",
+      "story:US-7.7.7.1",
+      "story:US-7.7.7.2",
+      "story:US-7.7.8.1",
+      "story:US-7.7.9.1",
+      "story:US-7.7.9.2",
+      "story:US-7.7.10.1",
+      "story:US-7.7.10.2",
+      "story:US-7.7.11.1",
+      "story:US-7.8.1.1",
+      "story:US-7.8.2.1",
+      "story:US-7.8.3.1",
+      "story:US-7.8.4.1",
+      "story:US-7.8.5.1",
+      "story:US-7.8.6.1",
+      "story:US-7.8.6.2",
+      "story:US-7.8.7.1",
+      "story:US-7.8.8.1",
+      "story:US-7.8.9.1",
+      "story:US-7.8.10.1",
+      "story:US-7.8.11.1",
+      "story:US-5.1.1.1",
+      "story:US-5.1.1.2",
+      "story:US-5.1.2.1",
+      "story:US-5.1.2.2",
+      "story:US-5.2.1.1",
+      "story:US-5.2.1.2",
+      "story:US-5.4.1.1",
+      "story:US-5.8.1",
+      "story:US-5.9.1",
+      "story:US-5.10.1",
+      "story:US-5.10.2",
+      "story:US-5.10.3",
+      "story:US-5.11.1",
+      "story:US-5.11.2",
+      "story:US-5.12.1",
+      "story:US-5.13.1",
+      "story:US-5.13.2",
+      "story:US-5.13.3",
+      "story:US-5.13.4",
+      "story:US-5.13.5",
+      "story:US-5.13.6",
+      "story:US-5.14.1",
+      "story:US-5.15.1",
+      "story:US-5.15.2",
+      "story:US-5.15.3",
+      "story:US-5.16.1",
+      "story:US-5.16.2",
+      "story:US-5.16.3",
+      "story:US-5.17.1",
+      "story:US-5.17.2"
+    ],
+    "counts": {
+      "total": 61,
+      "passed": 31,
+      "failed": 0,
+      "skipped": 30
+    }
+  },
+  {
+    "runId": "20260917-122000-2poc",
+    "system": "admin",
+    "target": "story",
+    "command": "npx playwright test --project=admin --workers=1 tests/story",
+    "exitCode": 0,
+    "startedAt": "2026-09-17T04:20:00.298Z",
+    "finishedAt": "2026-09-17T04:21:37.870Z",
+    "ids": [
+      "story:US-7.7.1.1",
+      "story:US-7.7.2.1",
+      "story:US-7.7.3.1",
+      "story:US-7.7.3.2",
+      "story:US-7.7.4.1",
+      "story:US-7.7.4.2",
+      "story:US-7.7.5.1",
+      "story:US-7.7.6.1",
+      "story:US-7.7.6.2",
+      "story:US-7.7.6.3",
+      "story:US-7.7.6.4",
+      "story:US-7.7.7.1",
+      "story:US-7.7.7.2",
+      "story:US-7.7.8.1",
+      "story:US-7.7.9.1",
+      "story:US-7.7.9.2",
+      "story:US-7.7.10.1",
+      "story:US-7.7.10.2",
+      "story:US-7.7.11.1",
+      "story:US-7.8.1.1",
+      "story:US-7.8.2.1",
+      "story:US-7.8.3.1",
+      "story:US-7.8.4.1",
+      "story:US-7.8.5.1",
+      "story:US-7.8.6.1",
+      "story:US-7.8.6.2",
+      "story:US-7.8.7.1",
+      "story:US-7.8.8.1",
+      "story:US-7.8.9.1",
+      "story:US-7.8.10.1",
+      "story:US-7.8.11.1",
+      "story:US-5.1.1.1",
+      "story:US-5.1.1.2",
+      "story:US-5.1.2.1",
+      "story:US-5.1.2.2",
+      "story:US-5.2.1.1",
+      "story:US-5.2.1.2",
+      "story:US-5.4.1.1",
+      "story:US-5.8.1",
+      "story:US-5.9.1",
+      "story:US-5.10.1",
+      "story:US-5.10.2",
+      "story:US-5.10.3",
+      "story:US-5.11.1",
+      "story:US-5.11.2",
+      "story:US-5.12.1",
+      "story:US-5.13.1",
+      "story:US-5.13.2",
+      "story:US-5.13.3",
+      "story:US-5.13.4",
+      "story:US-5.13.5",
+      "story:US-5.13.6",
+      "story:US-5.14.1",
+      "story:US-5.15.1",
+      "story:US-5.15.2",
+      "story:US-5.15.3",
+      "story:US-5.16.1",
+      "story:US-5.16.2",
+      "story:US-5.16.3",
+      "story:US-5.17.1",
+      "story:US-5.17.2"
+    ],
+    "counts": {
+      "total": 61,
+      "passed": 31,
+      "failed": 0,
+      "skipped": 30
+    }
+  },
+  {
+    "runId": "20260915-155705-dpr4",
+    "system": "admin",
+    "target": "e2e:admin-vip-detail-journey",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-detail-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T07:57:05.745Z",
+    "finishedAt": "2026-09-15T07:57:17.833Z",
+    "ids": [
+      "e2e:admin-vip-detail-journey"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-155431-ligi",
+    "system": "admin",
+    "target": "e2e:admin-vip-phone-search-detail",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-phone-search-detail-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T07:54:31.674Z",
+    "finishedAt": "2026-09-15T07:54:44.059Z",
+    "ids": [
+      "e2e:admin-vip-phone-search-detail"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-155106-u62q",
+    "system": "admin",
+    "target": "e2e:admin-vip-phone-journey",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-phone-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T07:51:06.581Z",
+    "finishedAt": "2026-09-15T07:51:22.053Z",
+    "ids": [
+      "e2e:admin-vip-phone-journey"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-154110-r1ru",
+    "system": "admin",
+    "target": "e2e:admin-vip-search-detail",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T07:41:10.178Z",
+    "finishedAt": "2026-09-15T07:41:22.232Z",
+    "ids": [
+      "e2e:admin-vip-search-detail"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-153559-s1ot",
+    "system": "admin",
+    "target": "e2e:admin-vip-create-by-phone",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-create-by-phone-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T07:35:59.669Z",
+    "finishedAt": "2026-09-15T07:36:27.705Z",
+    "ids": [
+      "e2e:admin-vip-create-by-phone"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-153307-cdan",
+    "system": "admin",
+    "target": "e2e:admin-vip-create-by-phone",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-create-by-phone-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T07:33:07.187Z",
+    "finishedAt": "2026-09-15T07:33:35.364Z",
+    "ids": [
+      "e2e:admin-vip-create-by-phone"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-152959-szey",
+    "system": "admin",
+    "target": "e2e:admin-vip-create-by-phone",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-create-by-phone-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T07:29:59.194Z",
+    "finishedAt": "2026-09-15T07:30:30.383Z",
+    "ids": [
+      "e2e:admin-vip-create-by-phone"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-152124-r2fo",
+    "system": "admin",
+    "target": "e2e:admin-vip-search-detail",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T07:21:24.610Z",
+    "finishedAt": "2026-09-15T07:21:38.090Z",
+    "ids": [
+      "e2e:admin-vip-search-detail"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-150524-pogt",
+    "system": "admin",
+    "target": "e2e:admin-vip-phone-search",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-phone-search-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T07:05:24.001Z",
+    "finishedAt": "2026-09-15T07:05:38.093Z",
+    "ids": [
+      "e2e:admin-vip-phone-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-145335-01wd",
+    "system": "admin",
+    "target": "e2e:admin-vip-detail",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-detail-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T06:53:35.231Z",
+    "finishedAt": "2026-09-15T06:53:46.297Z",
+    "ids": [
+      "e2e:admin-vip-detail"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-144842-7zj5",
+    "system": "admin",
+    "target": "crud",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T06:48:42.615Z",
+    "finishedAt": "2026-09-15T06:48:58.895Z",
+    "ids": [
+      "crud:stores",
+      "crud:categories",
+      "crud:filter-models",
+      "crud:product-units",
+      "crud:coupons",
+      "crud:printers",
+      "crud:receipt-templates",
+      "crud:users",
+      "crud:roles",
+      "crud:settings-entries",
+      "crud:goods",
+      "crud:inventory-docs",
+      "crud:members",
+      "crud:orders",
+      "crud:points",
+      "crud:wine-storage"
+    ],
+    "counts": {
+      "total": 16,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-144614-dmi4",
+    "system": "admin",
+    "target": "smoke",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T06:46:14.879Z",
+    "finishedAt": "2026-09-15T06:47:59.040Z",
+    "ids": [
+      "smoke:/",
+      "smoke:/shop/stores",
+      "smoke:/shop/page-design",
+      "smoke:/goods/categories",
+      "smoke:/goods/list",
+      "smoke:/goods/product-units",
+      "smoke:/goods/filter-models",
+      "smoke:/orders/list",
+      "smoke:/orders/refund",
+      "smoke:/vip/list",
+      "smoke:/promotion/coupons",
+      "smoke:/points/list",
+      "smoke:/points/setting",
+      "smoke:/inventory/query",
+      "smoke:/inventory/stock",
+      "smoke:/inventory/check",
+      "smoke:/inventory/record",
+      "smoke:/wine-storage/list",
+      "smoke:/wine-storage/setting",
+      "smoke:/report/coupon-stats",
+      "smoke:/inventory/report/stock",
+      "smoke:/inventory/report/order-sales",
+      "smoke:/report/product-sales",
+      "smoke:/inventory/report/finance-receipts",
+      "smoke:/report/cashier-stats",
+      "smoke:/inventory/report/product-sales",
+      "smoke:/report/member-balance-stats",
+      "smoke:/shop/printers",
+      "smoke:/system/receipt-template",
+      "smoke:/system/notifications",
+      "smoke:/system/users",
+      "smoke:/system/roles",
+      "smoke:/system/logs"
+    ],
+    "counts": {
+      "total": 33,
+      "passed": 30,
+      "failed": 3,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-142312-bm5h",
+    "system": "admin",
+    "target": "e2e:admin-vip-detail",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-detail-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T06:23:12.902Z",
+    "finishedAt": "2026-09-15T06:23:24.480Z",
+    "ids": [
+      "e2e:admin-vip-detail"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-141913-3gsd",
+    "system": "admin",
+    "target": "e2e:case-mu2a643y",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T06:19:13.743Z",
+    "finishedAt": "2026-09-15T06:19:28.122Z",
+    "ids": [
+      "e2e:case-mu2a643y"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-140318-jk66",
+    "system": "admin",
+    "target": "e2e:admin-vip-search",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T06:03:18.556Z",
+    "finishedAt": "2026-09-15T06:03:30.361Z",
+    "ids": [
+      "e2e:admin-vip-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-134737-cy1b",
+    "system": "admin",
+    "target": "e2e:case-mu28xe1u",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T05:47:37.574Z",
+    "finishedAt": "2026-09-15T05:48:49.785Z",
+    "ids": [
+      "e2e:case-mu28xe1u"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-134459-sndd",
+    "system": "admin",
+    "target": "e2e:case-mu28xe1u",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T05:44:59.019Z",
+    "finishedAt": "2026-09-15T05:46:11.920Z",
+    "ids": [
+      "e2e:case-mu28xe1u"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-133959-iru8",
+    "system": "admin",
+    "target": "e2e:admin-vip-search",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-detail-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T05:39:59.932Z",
+    "finishedAt": "2026-09-15T05:40:28.900Z",
+    "ids": [
+      "e2e:admin-vip-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-124801-0q2w",
+    "system": "admin",
+    "target": "e2e:admin-vip-search",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/vip-search-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T04:48:01.920Z",
+    "finishedAt": "2026-09-15T04:49:14.681Z",
+    "ids": [
+      "e2e:admin-vip-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-124115-vcs0",
+    "system": "admin",
+    "target": "e2e:admin-member-search",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/member-search-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T04:41:15.081Z",
+    "finishedAt": "2026-09-15T04:41:41.019Z",
+    "ids": [
+      "e2e:admin-member-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-123851-b5au",
+    "system": "admin",
+    "target": "e2e:admin-member-search",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/member-search-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T04:38:51.743Z",
+    "finishedAt": "2026-09-15T04:39:17.847Z",
+    "ids": [
+      "e2e:admin-member-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-123201-2stb",
+    "system": "admin",
+    "target": "e2e:admin-member-search",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/member-search-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T04:32:01.948Z",
+    "finishedAt": "2026-09-15T04:32:03.503Z",
+    "ids": [
+      "e2e:admin-member-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-122919-wqn3",
+    "system": "admin",
+    "target": "e2e:case-mu25y38u",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-store-products-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T04:29:19.118Z",
+    "finishedAt": "2026-09-15T04:29:29.913Z",
+    "ids": [
+      "e2e:case-mu25y38u"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-122637-hbow",
+    "system": "admin",
+    "target": "e2e:case-mu25y38u",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-store-products-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T04:26:37.797Z",
+    "finishedAt": "2026-09-15T04:26:39.394Z",
+    "ids": [
+      "e2e:case-mu25y38u"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-122452-0gdu",
+    "system": "admin",
+    "target": "e2e:case-mu25y38u",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-store-products-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T04:24:52.847Z",
+    "finishedAt": "2026-09-15T04:24:54.209Z",
+    "ids": [
+      "e2e:case-mu25y38u"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-122357-r9o7",
+    "system": "admin",
+    "target": "e2e:case-mu25y38u",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/inventory-store-products-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-15T04:23:57.478Z",
+    "finishedAt": "2026-09-15T04:23:59.135Z",
+    "ids": [
+      "e2e:case-mu25y38u"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260915-095318-8o3q",
+    "system": "admin",
+    "target": "smoke:/",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke -g 開啟 / 功能可用",
+    "exitCode": 0,
+    "startedAt": "2026-09-15T01:53:18.001Z",
+    "finishedAt": "2026-09-15T01:53:33.138Z",
+    "ids": [
+      "smoke:/"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "e2e:admin-member-search": {
+    "id": "e2e:admin-member-search",
+    "status": "failed",
+    "startedAt": "2026-09-15T04:32:01.948Z",
+    "finishedAt": "2026-09-15T04:32:03.503Z",
+    "error": "執行失敗（詳見日誌）",
+    "steps": [],
+    "runId": "20260915-123201-2stb",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/member-search-journey.spec.ts",
+    "hasShots": false
+  }
+}

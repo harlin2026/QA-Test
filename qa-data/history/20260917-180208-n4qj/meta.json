@@ -1,0 +1,18 @@
+{
+  "runId": "20260917-180208-n4qj",
+  "system": "admin",
+  "target": "story:US-5.1.1.1",
+  "command": "npx playwright test --project=admin --workers=1 tests/story/us-5-1-1-1.story.spec.ts -g US-5\\.1\\.1\\.1",
+  "exitCode": 0,
+  "startedAt": "2026-09-17T10:02:08.485Z",
+  "finishedAt": "2026-09-17T10:02:19.332Z",
+  "ids": [
+    "story:US-5.1.1.1"
+  ],
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 1
+  }
+}
