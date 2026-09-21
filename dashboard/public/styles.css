@@ -131,6 +131,12 @@ input {
   transition: 0.15s ease;
 }
 
+a.system-menu-item,
+a.system-menu-link {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 .system-menu-item strong {
   font-size: 14px;
   font-weight: 700;
@@ -165,6 +171,36 @@ input {
 
 .system-menu-tool strong {
   letter-spacing: 0.01em;
+}
+
+.system-menu-row {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+}
+
+.system-menu-row .system-menu-item {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.system-menu-config {
+  flex: 0 0 auto;
+  align-self: stretch;
+  border: 0;
+  border-radius: 12px;
+  padding: 8px 10px;
+  background: transparent;
+  color: rgba(232, 238, 245, 0.72);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.system-menu-config:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
 }
 
 .workspace {
@@ -1054,6 +1090,10 @@ input {
   }
 
   .system-menu-item {
+    flex: 1;
+  }
+
+  .system-menu-row {
     flex: 1;
   }
 

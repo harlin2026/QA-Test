@@ -44,5 +44,12 @@
       "e2e": "tests/pos/e2e",
       "story": "tests/pos/story"
     }
+  },
+  "links": {
+    "miniapp": {
+      "name": "小程序測試",
+      "subtitle": "aChill QA",
+      "baseURL": "http://127.0.0.1:3780"
+    }
   }
 }

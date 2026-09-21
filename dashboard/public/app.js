@@ -2,6 +2,12 @@
  * @author harlin
  */
 
+const DEFAULT_MINIAPP = {
+  name: '小程序測試',
+  subtitle: 'aChill QA',
+  baseURL: 'http://127.0.0.1:3780',
+};
+
 const MODE_META = {
   smoke: {
     title: '冒煙測試',
@@ -66,6 +72,7 @@ const state = {
   aiProviders: [],
   aiLastRunId: null,
   loadingDepth: 0,
+  miniapp: { ...DEFAULT_MINIAPP },
 };
 
 const el = {
@@ -162,6 +169,12 @@ const el = {
   btnReloadSystem: document.getElementById('btnReloadSystem'),
   btnSaveSystem: document.getElementById('btnSaveSystem'),
   btnCloseSystemModal: document.getElementById('btnCloseSystemModal'),
+  miniappModal: document.getElementById('miniappModal'),
+  miniappForm: document.getElementById('miniappForm'),
+  miniappFileLabel: document.getElementById('miniappFileLabel'),
+  btnReloadMiniapp: document.getElementById('btnReloadMiniapp'),
+  btnSaveMiniapp: document.getElementById('btnSaveMiniapp'),
+  btnCloseMiniappModal: document.getElementById('btnCloseMiniappModal'),
   modeBar: document.getElementById('modeBar'),
   functionalStage: document.getElementById('functionalStage'),
   stressStage: document.getElementById('stressStage'),
@@ -426,6 +439,10 @@ function renderSystemBar() {
     })
     .join('');
 
+  const miniapp = state.miniapp || DEFAULT_MINIAPP;
+  const miniappUrl = String(miniapp.baseURL || DEFAULT_MINIAPP.baseURL).replace(/\/+$/, '');
+  const miniappHref = `${miniappUrl}/`;
+  const miniappLink = `<div class="system-menu-row"><a class="system-menu-item system-menu-link" href="${escapeHtml(miniappHref)}" target="_blank" rel="noopener noreferrer" title="另開頁面前往小程序測試台"><strong>${escapeHtml(miniapp.name || DEFAULT_MINIAPP.name)}</strong><span>跳轉 ${escapeHtml(miniappUrl)}</span></a><button class="system-menu-config" type="button" data-nav="miniapp-config" title="配置小程序測試地址">配置</button></div>`;
   const aiButton = `<button class="system-menu-item system-menu-tool ${isAi ? 'active' : ''}" type="button" data-nav="aigen" ${
     state.running ? 'disabled' : ''
   }><strong>AI 生成測試</strong><span>自然語言 → 腳本</span></button>`;
@@ -433,7 +450,7 @@ function renderSystemBar() {
     state.running ? 'disabled' : ''
   }><strong>需求庫</strong><span>根據用戶定義生成腳本</span></button>`;
 
-  el.systemBar.innerHTML = `${systemButtons}<div class="system-menu-divider" role="separator"></div>${aiButton}${xuqiuButton}`;
+  el.systemBar.innerHTML = `${systemButtons}${miniappLink}<div class="system-menu-divider" role="separator"></div>${aiButton}${xuqiuButton}`;
   renderTypeTotals();
 }
 
@@ -1275,6 +1292,22 @@ async function loadSystems() {
   state.systems = await res.json();
 }
 
+async function loadMiniappConfig() {
+  try {
+    const res = await fetch('/api/miniapp-config');
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || '載入小程序配置失敗');
+    state.miniapp = {
+      name: data.name || DEFAULT_MINIAPP.name,
+      subtitle: data.subtitle || DEFAULT_MINIAPP.subtitle,
+      baseURL: data.baseURL || DEFAULT_MINIAPP.baseURL,
+    };
+    if (el.miniappFileLabel) el.miniappFileLabel.textContent = data.file || 'systems.json';
+  } catch {
+    state.miniapp = { ...DEFAULT_MINIAPP };
+  }
+}
+
 async function loadCatalog() {
   const res = await fetch(`/api/catalog?system=${encodeURIComponent(state.system)}`);
   state.catalog = await res.json();
@@ -1446,6 +1479,12 @@ el.historyList?.addEventListener('click', async (ev) => {
 });
 
 el.systemBar.addEventListener('click', (ev) => {
+  const miniappCfg = ev.target.closest('[data-nav="miniapp-config"]');
+  if (miniappCfg) {
+    ev.preventDefault();
+    openMiniappModal();
+    return;
+  }
   const aiTab = ev.target.closest('[data-nav="aigen"]');
   if (aiTab) {
     if (state.running) return;
@@ -2012,6 +2051,68 @@ el.btnSystemConfig?.addEventListener('click', () => openSystemModal());
 el.btnCloseSystemModal?.addEventListener('click', () => closeSystemModal());
 el.btnReloadSystem?.addEventListener('click', () => loadSystemConfig());
 el.systemForm?.addEventListener('submit', (ev) => saveSystemConfig(ev));
+
+function fillMiniappForm() {
+  const form = el.miniappForm;
+  if (!form) return;
+  const cfg = state.miniapp || DEFAULT_MINIAPP;
+  form.name.value = cfg.name || DEFAULT_MINIAPP.name;
+  form.subtitle.value = cfg.subtitle || DEFAULT_MINIAPP.subtitle;
+  form.baseURL.value = cfg.baseURL || DEFAULT_MINIAPP.baseURL;
+}
+
+function openMiniappModal() {
+  if (!el.miniappModal) return;
+  el.miniappModal.hidden = false;
+  fillMiniappForm();
+  loadMiniappConfig().then(() => {
+    fillMiniappForm();
+    renderSystemBar();
+  });
+}
+
+function closeMiniappModal() {
+  if (el.miniappModal) el.miniappModal.hidden = true;
+}
+
+async function saveMiniappConfig(ev) {
+  ev?.preventDefault?.();
+  const form = el.miniappForm;
+  if (!form) return;
+  const payload = {
+    name: form.name.value.trim(),
+    subtitle: form.subtitle.value.trim(),
+    baseURL: form.baseURL.value.trim(),
+  };
+  const res = await fetch('/api/miniapp-config', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  const data = await res.json();
+  if (!res.ok) {
+    alert(data.error || '儲存失敗');
+    return;
+  }
+  state.miniapp = {
+    name: data.config?.name || payload.name,
+    subtitle: data.config?.subtitle || payload.subtitle,
+    baseURL: data.config?.baseURL || payload.baseURL,
+  };
+  if (el.miniappFileLabel) el.miniappFileLabel.textContent = data.file || 'systems.json';
+  renderSystemBar();
+  appendLog(`已儲存小程序測試地址 → ${state.miniapp.baseURL}`);
+  alert('小程序測試地址已儲存');
+  closeMiniappModal();
+}
+
+el.btnCloseMiniappModal?.addEventListener('click', () => closeMiniappModal());
+el.btnReloadMiniapp?.addEventListener('click', async () => {
+  await loadMiniappConfig();
+  fillMiniappForm();
+  renderSystemBar();
+});
+el.miniappForm?.addEventListener('submit', (ev) => saveMiniappConfig(ev));
 
 function appendStressLog(line) {
   if (!el.stressLogView) return;
@@ -2893,11 +2994,12 @@ async function runAiDraftNow() {
 }
 
 async function generateAiDraft() {
-  const requirement = String(el.aiRequirement?.value || '').trim();
+  const requirement = stripPlaywrightGenInstruction(String(el.aiRequirement?.value || '').trim());
   if (!requirement) {
     alert('請先填寫測試需求');
     return;
   }
+  if (el.aiRequirement) el.aiRequirement.value = requirement;
   if (el.btnAiGenerate) el.btnAiGenerate.disabled = true;
   showLoading('AI 正在生成草稿…');
   try {
@@ -3259,6 +3361,12 @@ function closeXuqiuRelatedModal() {
   if (el.xuqiuRelatedModal) el.xuqiuRelatedModal.hidden = true;
 }
 
+function stripPlaywrightGenInstruction(text) {
+  return String(text || '')
+    .replace(/(?:\r?\n\s*)*請依上述內容，用 Playwright 產出一份可執行的自動化測試腳本。\s*$/u, '')
+    .trim();
+}
+
 function inferXuqiuTestSystem(storyId) {
   const id = String(storyId || '').toUpperCase();
   if (id.startsWith('US-6') || id.startsWith('6.')) return 'pos';
@@ -3292,8 +3400,6 @@ function buildXuqiuStoryRequirement() {
     lines.push('相關功能：');
     lines.push(...taskLines);
   }
-  if (lines.length) lines.push('');
-  lines.push('請依上述內容，用 Playwright 產出一份可執行的自動化測試腳本。');
   return lines.join('\n').trim();
 }
 
@@ -3357,7 +3463,9 @@ async function openXuqiuGenTestModal() {
   }
   if (el.xuqiuGenSystem) el.xuqiuGenSystem.value = inferXuqiuTestSystem(storyId);
   if (el.xuqiuGenModule) el.xuqiuGenModule.value = '';
-  if (el.xuqiuGenRequirement) el.xuqiuGenRequirement.value = buildXuqiuStoryRequirement();
+  if (el.xuqiuGenRequirement) {
+    el.xuqiuGenRequirement.value = stripPlaywrightGenInstruction(buildXuqiuStoryRequirement());
+  }
   if (el.xuqiuGenSpecSource) el.xuqiuGenSpecSource.value = '';
   if (el.xuqiuGenMeta) el.xuqiuGenMeta.textContent = '尚未生成 — 左側填好條件後點「生成腳本」';
   if (el.xuqiuGenSaveHint) el.xuqiuGenSaveHint.textContent = '';
@@ -3428,11 +3536,12 @@ async function generateXuqiuStoryTest() {
     alert('請先填寫用戶故事編號');
     return;
   }
-  const requirement = String(el.xuqiuGenRequirement?.value || '').trim();
+  const requirement = stripPlaywrightGenInstruction(String(el.xuqiuGenRequirement?.value || '').trim());
   if (!requirement) {
     alert('請填寫測試需求');
     return;
   }
+  if (el.xuqiuGenRequirement) el.xuqiuGenRequirement.value = requirement;
   if (el.btnXuqiuDoGenTest) el.btnXuqiuDoGenTest.disabled = true;
   showLoading('AI 正在生成用戶故事測試…');
   try {
@@ -3750,6 +3859,7 @@ el.btnCloseXuqiuRelatedModal?.addEventListener('click', () => closeXuqiuRelatedM
 
 (async function init() {
   await loadSystems();
+  await loadMiniappConfig();
   await loadState();
   await loadCatalog();
   // 刷新時優先用磁碟上的 current 快照，避免只依賴記憶體

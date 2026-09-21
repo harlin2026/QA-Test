@@ -10,6 +10,22 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { ROOT, PATHS, ensureQaDataDirs } = require('./paths');
 
+const PLAYWRIGHT_GEN_INSTRUCTION =
+  '請依上述內容，用 Playwright 產出一份可執行的自動化測試腳本。';
+
+function stripPlaywrightGenInstruction(text) {
+  const needle = PLAYWRIGHT_GEN_INSTRUCTION.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return String(text || '')
+    .replace(new RegExp(`(?:\\r?\\n\\s*)*${needle}\\s*$`), '')
+    .trim();
+}
+
+function withPlaywrightGenInstruction(text) {
+  const body = stripPlaywrightGenInstruction(text);
+  if (!body) return body;
+  return `${body}\n\n${PLAYWRIGHT_GEN_INSTRUCTION}`;
+}
+
 const AI_CONFIG_FILE = path.join(PATHS.qaData, 'ai-config.json');
 
 /** OpenAI 相容 Chat Completions 常見廠商預設 */
@@ -943,7 +959,7 @@ ${body}
 async function generateTestDraft(input) {
   const systemId = String(input.system || 'pos');
   const kind = String(input.kind || 'e2e');
-  const requirement = String(input.requirement || '').trim();
+  const requirement = stripPlaywrightGenInstruction(String(input.requirement || '').trim());
   const storyId = String(input.storyId || '').trim();
   if (!requirement) throw new Error('請填寫測試需求');
   if (requirement.length > 8000) throw new Error('需求過長（最多 8000 字）');
@@ -985,7 +1001,7 @@ async function generateTestDraft(input) {
     input.module ? `建議模組名：${input.module}` : '',
     input.name ? `建議用例名：${input.name}` : '',
     '測試需求如下：',
-    requirement,
+    withPlaywrightGenInstruction(requirement),
     taskBlock,
     shot ? `\n${shot}` : '',
   ]

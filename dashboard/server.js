@@ -176,8 +176,41 @@ function stopRunningChild() {
   }
 }
 
+const DEFAULT_MINIAPP_LINK = {
+  name: '小程序測試',
+  subtitle: 'aChill QA',
+  baseURL: 'http://127.0.0.1:3780',
+};
+
+function isTestSystem(id) {
+  const s = SYSTEMS[id];
+  return !!(s && typeof s === 'object' && s.id && s.project);
+}
+
 function systemIds() {
-  return Object.keys(SYSTEMS);
+  return Object.keys(SYSTEMS).filter(isTestSystem);
+}
+
+function getMiniappLink() {
+  const saved = SYSTEMS.links && typeof SYSTEMS.links === 'object' ? SYSTEMS.links.miniapp : null;
+  const name = String(saved?.name || DEFAULT_MINIAPP_LINK.name).trim() || DEFAULT_MINIAPP_LINK.name;
+  const subtitle = String(saved?.subtitle || DEFAULT_MINIAPP_LINK.subtitle).trim() || DEFAULT_MINIAPP_LINK.subtitle;
+  const baseURL = String(saved?.baseURL || DEFAULT_MINIAPP_LINK.baseURL).trim().replace(/\/+$/, '') || DEFAULT_MINIAPP_LINK.baseURL;
+  return { name, subtitle, baseURL };
+}
+
+function validateMiniappLink(body) {
+  if (!body || typeof body !== 'object') throw new Error('請求內容無效');
+  const baseURL = String(body.baseURL || '').trim().replace(/\/+$/, '');
+  const name = String(body.name || '').trim();
+  const subtitle = String(body.subtitle || '').trim();
+  if (!baseURL) throw new Error('請填寫小程序測試台地址');
+  if (!/^https?:\/\//i.test(baseURL)) throw new Error('地址需以 http:// 或 https:// 開頭');
+  return {
+    name: name || DEFAULT_MINIAPP_LINK.name,
+    subtitle: subtitle || DEFAULT_MINIAPP_LINK.subtitle,
+    baseURL,
+  };
 }
 
 function getSystem(systemId = state.system) {
@@ -1189,7 +1222,7 @@ function loadPersistedResults() {
   if (!data?.results) {
     try {
       let best = null;
-      for (const id of Object.keys(SYSTEMS)) {
+      for (const id of systemIds()) {
         const cur = loadCurrent(id);
         if (!cur?.results) continue;
         if (!best || String(cur.finishedAt || '') > String(best.finishedAt || '')) best = cur;
@@ -1471,6 +1504,38 @@ const server = http.createServer(async (req, res) => {
             loginPass: s.loginPass,
             authFile: s.authFile,
           },
+        });
+      } catch (err) {
+        return sendJson(res, 400, { error: err.message || String(err) });
+      }
+    }
+
+    return sendJson(res, 405, { error: 'Method Not Allowed' });
+  }
+
+  if (url.pathname === '/api/miniapp-config') {
+    if (req.method === 'GET') {
+      reloadSystems();
+      return sendJson(res, 200, {
+        ...getMiniappLink(),
+        file: 'systems.json',
+      });
+    }
+
+    if (req.method === 'PUT') {
+      try {
+        const body = await readRequestBody(req);
+        const patch = validateMiniappLink(body);
+        reloadSystems();
+        if (!SYSTEMS.links || typeof SYSTEMS.links !== 'object' || Array.isArray(SYSTEMS.links)) {
+          SYSTEMS.links = {};
+        }
+        SYSTEMS.links.miniapp = patch;
+        saveSystems();
+        return sendJson(res, 200, {
+          ok: true,
+          file: 'systems.json',
+          config: getMiniappLink(),
         });
       } catch (err) {
         return sendJson(res, 400, { error: err.message || String(err) });
