@@ -48,6 +48,7 @@ const {
   publicAiConfigPayload,
   saveAiFileConfig,
   generateTestDraft,
+  rewriteSpecSource,
   saveGeneratedDraft,
 } = require('./ai-generate');
 const xuqiuDb = require('./xuqiu-db');
@@ -142,6 +143,7 @@ const state = {
   child: null,
   runKind: null,
   stressSummary: null,
+  abortRun: false,
 };
 
 function readStressConfig() {
@@ -159,6 +161,7 @@ function readStressHistory() {
 }
 
 function stopRunningChild() {
+  state.abortRun = true;
   const child = state.child;
   if (!child || child.killed) return false;
   try {
@@ -363,14 +366,18 @@ function validateFixtureItems(kind, items) {
     }
     const ids = items.map((x) => x.id);
     if (new Set(ids).size !== ids.length) throw new Error('crud id 不可重複');
-    return items.map((item) => ({
-      id: String(item.id).trim(),
-      module: String(item.module).trim(),
-      name: String(item.name).trim(),
-      path: String(item.path).trim(),
-      file: String(item.file).trim().replace(/\\/g, '/'),
-      description: String(item.description || '').trim(),
-    }));
+    return items.map((item) => {
+      const out = {
+        id: String(item.id).trim(),
+        module: String(item.module).trim(),
+        name: String(item.name).trim(),
+        path: String(item.path).trim(),
+        file: String(item.file).trim().replace(/\\/g, '/'),
+        description: String(item.description || '').trim(),
+      };
+      if (item.grep) out.grep = String(item.grep).trim();
+      return out;
+    });
   }
   if (kind === 'e2e') {
     for (const [i, item] of items.entries()) {
@@ -469,10 +476,29 @@ function extractSpecSteps(relFile) {
   return steps;
 }
 
-function withPlannedSteps(item) {
-  const plannedSteps = extractSpecSteps(item.file);
+function inferCrudGrep(suite, crudModules = []) {
+  if (suite?.grep) return suite.grep;
+  const file = suite?.file;
+  if (!file) return null;
+  const siblings = crudModules.filter((m) => m.file === file);
+  if (siblings.length <= 1) return null;
+  const titles = extractSpecSteps(file);
+  const name = String(suite.name || '').trim();
+  if (!name) return null;
+  const hit = titles.find((title) => title.includes(name));
+  return hit || name;
+}
+
+function withPlannedSteps(item, crudModules = []) {
+  let plannedSteps = extractSpecSteps(item.file);
+  const grep = inferCrudGrep(item, crudModules);
+  if (grep) {
+    plannedSteps = plannedSteps.filter((title) => title.includes(grep));
+  }
+  if (!plannedSteps.length && item.name) plannedSteps = [item.name];
   return {
     ...item,
+    grep: grep || item.grep,
     plannedSteps,
     plannedStepSummary: plannedSteps.length ? `預計 ${plannedSteps.length} 步驟` : null,
   };
@@ -507,7 +533,7 @@ function catalog(systemId = state.system) {
     plannedSteps: [`開啟 ${m.path} 功能可用`],
     plannedStepSummary: '預計 1 步驟',
   }));
-  const crud = crudModules.map((m) => withPlannedSteps({ ...m, kind: 'crud' }));
+  const crud = crudModules.map((m) => withPlannedSteps({ ...m, kind: 'crud' }, crudModules));
   const e2e = e2eSuites.map((s) => withPlannedSteps(s));
   const story = storySuites.map((s) => ({
     ...s,
@@ -516,6 +542,62 @@ function catalog(systemId = state.system) {
     plannedStepSummary: '預計 1 步驟',
   }));
   return { system: systemId, smoke, e2e, crud, story };
+}
+
+function findCatalogEntry(systemId, itemId) {
+  const cat = catalog(systemId);
+  for (const kind of ['smoke', 'crud', 'e2e', 'story']) {
+    const item = (cat[kind] || []).find((x) => x.id === itemId);
+    if (item) return { kind, item };
+  }
+  return null;
+}
+
+/** 從 fixture 移除一項；CRUD/E2E/故事若腳本無其他引用則刪檔 */
+function deleteCatalogItem(systemId, itemId) {
+  const hit = findCatalogEntry(systemId, itemId);
+  if (!hit) {
+    const err = new Error('找不到此測試項');
+    err.status = 404;
+    throw err;
+  }
+  const { kind, item } = hit;
+  const rel = fixtureRelPath(systemId, kind);
+  const raw = readJson(rel);
+  const list = Array.isArray(raw) ? raw : [];
+  const next =
+    kind === 'smoke'
+      ? list.filter(
+          (x) =>
+            !(String(x.path) === String(item.path) && String(x.name) === String(item.name)),
+        )
+      : list.filter((x) => String(x.id) !== String(item.id));
+  if (next.length === list.length) {
+    const err = new Error('找不到此測試項');
+    err.status = 404;
+    throw err;
+  }
+  writeJson(rel, next);
+
+  let deletedFile = null;
+  let fileKept = null;
+  if ((kind === 'crud' || kind === 'e2e' || kind === 'story') && item.file) {
+    const still = referencedSpecFiles(systemId, { [kind]: next });
+    const norm = String(item.file).replace(/\\/g, '/');
+    deletedFile = tryDeleteOrphanSpec(norm, still);
+    if (!deletedFile && still.has(norm)) fileKept = norm;
+  }
+
+  return {
+    ok: true,
+    id: itemId,
+    kind,
+    name: item.name,
+    module: item.module,
+    deletedFile,
+    fileKept,
+    catalog: catalog(systemId),
+  };
 }
 
 function sendJson(res, status, data) {
@@ -569,6 +651,12 @@ function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+function grepWithSetup(systemId, pattern) {
+  if (!pattern) return pattern;
+  const login = systemId === 'pos' ? 'pos login' : 'admin login';
+  return `(?:${pattern}|${login})`;
+}
+
 function buildPlaywrightArgs(systemId, target) {
   const sys = getSystem(systemId);
   const { smokeModules, crudModules, e2eSuites, storySuites } = loadFixtures(systemId);
@@ -592,7 +680,7 @@ function buildPlaywrightArgs(systemId, target) {
     const itemPath = target.slice('smoke:'.length);
     const item = smokeModules.find((m) => m.path === itemPath);
     if (!item) throw new Error(`找不到功能：${itemPath}`);
-    return [...base, sys.dirs.smoke, '-g', `開啟 ${escapeRegExp(item.path)} 功能可用`];
+    return [...base, sys.dirs.smoke, '-g', grepWithSetup(systemId, `開啟 ${escapeRegExp(item.path)} 功能可用`)];
   }
   if (target.startsWith('e2e:')) {
     const suite = e2eSuites.find((s) => s.id === target);
@@ -602,13 +690,16 @@ function buildPlaywrightArgs(systemId, target) {
   if (target.startsWith('crud:')) {
     const suite = crudModules.find((s) => s.id === target);
     if (!suite) throw new Error(`找不到 CRUD：${target}`);
-    return [...base, suite.file];
+    const args = [...base, suite.file];
+    const grep = inferCrudGrep(suite, crudModules);
+    if (grep) args.push('-g', grepWithSetup(systemId, grep));
+    return args;
   }
   if (target.startsWith('story:')) {
     const suite = storySuites.find((s) => s.id === target);
     if (!suite) throw new Error(`找不到用戶故事：${target}`);
     const grep = escapeRegExp(suite.storyId || target.slice('story:'.length));
-    return [...base, suite.file, '-g', grep];
+    return [...base, suite.file, '-g', grepWithSetup(systemId, grep)];
   }
   if (target.startsWith('crud-module:')) {
     const moduleName = target.slice('crud-module:'.length);
@@ -628,14 +719,14 @@ function buildPlaywrightArgs(systemId, target) {
     if (!items.length) throw new Error(`找不到用戶故事模組：${moduleName}`);
     const files = [...new Set(items.map((m) => m.file))];
     const pattern = items.map((m) => escapeRegExp(m.storyId || String(m.id).replace(/^story:/, ''))).join('|');
-    return [...base, ...files, '-g', `(${pattern})`];
+    return [...base, ...files, '-g', grepWithSetup(systemId, `(${pattern})`)];
   }
   if (target.startsWith('module:')) {
     const moduleName = target.slice('module:'.length);
     const items = smokeModules.filter((m) => m.module === moduleName);
     if (!items.length) throw new Error(`找不到模組：${moduleName}`);
     const pattern = items.map((m) => escapeRegExp(m.path)).join('|');
-    return [...base, sys.dirs.smoke, '-g', `開啟 (${pattern}) 功能可用`];
+    return [...base, sys.dirs.smoke, '-g', grepWithSetup(systemId, `開啟 (${pattern}) 功能可用`)];
   }
   throw new Error(`未知 target：${target}`);
 }
@@ -718,26 +809,39 @@ function parseLineResults(systemId, logText) {
   return updates;
 }
 
-function matchSuiteByFile(suites, normalizedTitle) {
-  // 長檔名優先，避免短名前綴誤傷
-  const ranked = [...suites].sort((a, b) => {
-    const ka = path.basename(a.file, '.spec.ts').length;
-    const kb = path.basename(b.file, '.spec.ts').length;
-    return kb - ka;
-  });
-  for (const suite of ranked) {
-    const fileKey = path.basename(suite.file, '.spec.ts');
-    const base = path.basename(suite.file);
-    const rel = String(suite.file).replace(/\\/g, '/');
-    if (
-      normalizedTitle.includes(rel) ||
-      normalizedTitle.includes(base) ||
-      normalizedTitle.includes(fileKey)
-    ) {
-      return suite.id;
-    }
+function suiteMatchScore(suite, normalizedTitle) {
+  if (!suite?.file) return 0;
+  const fileKey = path.basename(suite.file, '.spec.ts');
+  const base = path.basename(suite.file);
+  const rel = String(suite.file).replace(/\\/g, '/');
+  let score = 0;
+  // 最長檔名／路徑優先，避免 member-dine-pay-kitchen-pickup-journey
+  // 被較短的 dine-pay-kitchen-pickup-journey 先吃掉
+  if (rel && normalizedTitle.includes(rel)) score = Math.max(score, rel.length + 100);
+  if (base && normalizedTitle.includes(base)) score = Math.max(score, base.length + 50);
+  if (fileKey && normalizedTitle.includes(fileKey)) score = Math.max(score, fileKey.length + 20);
+  // 同檔多個 CRUD（新增/查找/更新/删除）檔名分數相同；grep 必須加在檔名之上
+  // 否則 Math.max(檔名 130, grep 9) 會讓四個動作同分，結果永遠落到第一個（新增）
+  const leaf = String(normalizedTitle.split('›').pop() || '').trim();
+  if (suite.grep && (leaf === suite.grep || normalizedTitle.includes(suite.grep))) {
+    score += String(suite.grep).length + 80;
+  } else if (suite.name && (leaf === suite.name || leaf.includes(String(suite.name)))) {
+    score += String(suite.name).length + 20;
   }
-  return null;
+  return score;
+}
+
+function suiteFileMatchesTitle(suite, normalizedTitle) {
+  return suiteMatchScore(suite, normalizedTitle) > 0;
+}
+
+function matchSuiteByFile(suites, normalizedTitle) {
+  const hits = (suites || [])
+    .map((suite) => ({ suite, score: suiteMatchScore(suite, normalizedTitle) }))
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score);
+  if (!hits.length) return null;
+  return hits[0].suite.id;
 }
 
 function mapTitleToResultId(systemId, title) {
@@ -842,7 +946,7 @@ function serveShot(res, runId, fileName) {
   fs.createReadStream(abs).pipe(res);
 }
 
-function attachArtifacts(systemId, runId) {
+function attachArtifacts(systemId, runId, fallbackIds = []) {
   if (!runId) return;
   const jsonl = path.join(shotsDir(runId), 'steps.jsonl');
   if (!fs.existsSync(jsonl)) return;
@@ -861,7 +965,14 @@ function attachArtifacts(systemId, runId) {
       continue;
     }
     const titleForMap = `${String(rec.file || '').replace(/\\/g, '/')} › ${(rec.titlePath || []).join(' › ')}`;
-    const id = mapTitleToResultId(systemId, titleForMap);
+    let id = mapTitleToResultId(systemId, titleForMap);
+    if (fallbackIds.length === 1 && id !== fallbackIds[0]) {
+      const { crudModules } = loadFixtures(systemId);
+      const want = crudModules.find((s) => s.id === fallbackIds[0]);
+      const got = crudModules.find((s) => s.id === id);
+      if (want && (!id || (got && want.file === got.file))) id = fallbackIds[0];
+    }
+    if (!id && fallbackIds.length === 1) id = fallbackIds[0];
     if (!id) continue;
     const prev = state.results[id] || { id, steps: [] };
     const shotFile = path.basename(String(rec.screenshot || ''));
@@ -942,8 +1053,13 @@ function summarizeSteps(list) {
  */
 function applyParsedUpdates(updates, fallbackIds, exitCode, options = {}) {
   const replaceSteps = !!options.replaceSteps;
+  let incomingUpdates = Array.isArray(updates) ? updates : [];
+  // 單套件執行時，若標題被較短檔名搶走，把步驟收回這次真正跑的 id
+  if (fallbackIds.length === 1 && incomingUpdates.length && !incomingUpdates.some((u) => u.id === fallbackIds[0])) {
+    incomingUpdates = incomingUpdates.map((u) => ({ ...u, id: fallbackIds[0] }));
+  }
   const byId = {};
-  for (const u of updates) {
+  for (const u of incomingUpdates) {
     if (!byId[u.id]) byId[u.id] = [];
     byId[u.id].push(u);
   }
@@ -988,39 +1104,13 @@ function applyParsedUpdates(updates, fallbackIds, exitCode, options = {}) {
   }
 }
 
-function runTests(systemId, target, sse) {
+function shouldIsolateCrud(target, ids) {
+  if (!ids || ids.length <= 1) return false;
+  return target === 'crud' || String(target).startsWith('crud-module:');
+}
+
+function spawnPlaywright(systemId, args, runId, sse, send) {
   return new Promise((resolve, reject) => {
-    let args;
-    try {
-      args = buildPlaywrightArgs(systemId, target);
-    } catch (err) {
-      return reject(err);
-    }
-
-    const ids = idsForTarget(systemId, target);
-    const runId = newRunId();
-    state.running = true;
-    state.current = target;
-    state.system = systemId;
-    state.log = [];
-    state.startedAt = new Date().toISOString();
-    state.finishedAt = null;
-    state.lastExitCode = null;
-    state.runId = runId;
-    state.command = `npx ${args.join(' ')}`;
-    state.lastRunIds = ids;
-    state.lastTarget = target;
-    markRunning(ids);
-
-    const send = (event, data) => {
-      if (!sse || sse.writableEnded) return;
-      sse.write(`event: ${event}\n`);
-      sse.write(`data: ${JSON.stringify(data)}\n\n`);
-      if (typeof sse.flush === 'function') sse.flush();
-    };
-
-    send('status', { running: true, current: target, system: systemId, results: state.results });
-
     const playwrightCli = path.join(ROOT, 'node_modules', '@playwright', 'test', 'cli.js');
     const sys = getSystem(systemId);
     const child = spawn(process.execPath, [playwrightCli, ...args.slice(1)], {
@@ -1041,7 +1131,6 @@ function runTests(systemId, target, sse) {
     });
     state.child = child;
     state.runKind = 'functional';
-    // Windows 下盡量即時吐出 stdout
     if (child.stdout) child.stdout.setEncoding('utf8');
     if (child.stderr) child.stderr.setEncoding('utf8');
 
@@ -1055,14 +1144,14 @@ function runTests(systemId, target, sse) {
       for (const line of parts) {
         if (!line.trim()) continue;
         state.log.push(line);
-        if (state.log.length > 2000) state.log.shift();
+        if (state.log.length > 4000) state.log.shift();
         send('log', { line });
 
         const updates = parseLineResults(systemId, line);
         if (updates.length) {
           applyParsedUpdates(updates, [], null, { replaceSteps: false });
           attachArtifacts(systemId, runId);
-          send('status', { running: true, current: target, system: systemId, results: state.results });
+          send('status', { running: true, current: state.current, system: systemId, results: state.results });
         }
       }
     };
@@ -1071,12 +1160,7 @@ function runTests(systemId, target, sse) {
     child.stderr.on('data', onChunk);
 
     child.on('error', (err) => {
-      state.running = false;
-      state.current = null;
       state.child = null;
-      state.runKind = null;
-      state.finishedAt = new Date().toISOString();
-      send('fail', { message: err.message });
       reject(err);
     });
 
@@ -1084,58 +1168,144 @@ function runTests(systemId, target, sse) {
       if (lineBuf.trim()) {
         state.log.push(lineBuf.trim());
         send('log', { line: lineBuf.trim() });
-        lineBuf = '';
       }
-      const exitCode = code ?? 1;
-      state.lastExitCode = exitCode;
+      state.child = null;
+      resolve(code ?? 1);
+    });
+  });
+}
+
+function finishFunctionalRun(systemId, target, ids, runId, exitCode, sse, send) {
+  state.lastExitCode = exitCode;
+  state.running = false;
+  state.current = null;
+  state.child = null;
+  state.runKind = null;
+  state.finishedAt = new Date().toISOString();
+
+  const updates = parseLineResults(systemId, state.log.join('\n'));
+  applyParsedUpdates(updates, ids, exitCode, { replaceSteps: true });
+  attachArtifacts(systemId, runId, ids);
+  for (const id of ids) {
+    if (!state.results[id]) continue;
+    state.results[id].runId = runId;
+    state.results[id].command = state.results[id].command || state.command;
+    state.results[id].startedAt = state.results[id].startedAt || state.startedAt;
+    state.results[id].finishedAt = state.results[id].finishedAt || state.finishedAt;
+    if (state.abortRun && state.results[id].status === 'running') {
+      state.results[id].status = 'idle';
+      state.results[id].error = '已停止';
+    }
+  }
+
+  try {
+    persistRunArtifacts({
+      runId,
+      systemId,
+      target,
+      command: state.command,
+      exitCode,
+      startedAt: state.startedAt,
+      finishedAt: state.finishedAt,
+      ids,
+      results: state.results,
+      log: state.log,
+    });
+  } catch (err) {
+    console.error('[dashboard] 持久化執行結果失敗：', err);
+    state.log.push(`[persist-error] ${err.message || String(err)}`);
+    send('log', { line: `⚠️ 結果寫入磁碟失敗：${err.message || String(err)}（刷新後可能看不到歷史／截圖）` });
+  }
+
+  send('status', {
+    running: false,
+    current: null,
+    system: systemId,
+    results: state.results,
+    exitCode,
+    finishedAt: state.finishedAt,
+  });
+  send('done', { exitCode, system: systemId });
+}
+
+function runTests(systemId, target, sse) {
+  const ids = idsForTarget(systemId, target);
+  const runId = newRunId();
+  const isolate = shouldIsolateCrud(target, ids);
+
+  let firstArgs;
+  try {
+    firstArgs = buildPlaywrightArgs(systemId, isolate ? ids[0] : target);
+  } catch (err) {
+    return Promise.reject(err);
+  }
+
+  state.abortRun = false;
+  state.running = true;
+  state.current = target;
+  state.system = systemId;
+  state.log = [];
+  state.startedAt = new Date().toISOString();
+  state.finishedAt = null;
+  state.lastExitCode = null;
+  state.runId = runId;
+  state.command = isolate
+    ? `npx playwright test 逐項執行 ${ids.length} 個 CRUD`
+    : `npx ${firstArgs.join(' ')}`;
+  state.lastRunIds = ids;
+  state.lastTarget = target;
+  markRunning(ids);
+
+  const send = (event, data) => {
+    if (!sse || sse.writableEnded) return;
+    sse.write(`event: ${event}\n`);
+    sse.write(`data: ${JSON.stringify(data)}\n\n`);
+    if (typeof sse.flush === 'function') sse.flush();
+  };
+
+  send('status', { running: true, current: target, system: systemId, results: state.results });
+
+  return (async () => {
+    let lastExit = 0;
+    try {
+      if (isolate) {
+        send('log', { line: `CRUD 將逐項獨立執行（共 ${ids.length} 項），互不影響。` });
+        for (let i = 0; i < ids.length; i += 1) {
+          if (state.abortRun) {
+            send('log', { line: '已停止，後續 CRUD 項目不會執行。' });
+            break;
+          }
+          const id = ids[i];
+          const itemArgs = buildPlaywrightArgs(systemId, id);
+          send('log', { line: `\n════ CRUD ${i + 1}/${ids.length}  ${id} ════` });
+          state.current = id;
+          const code = await spawnPlaywright(systemId, itemArgs, runId, sse, send);
+          const updates = parseLineResults(systemId, state.log.join('\n')).filter((u) => u.id === id);
+          applyParsedUpdates(updates, [id], code, { replaceSteps: true });
+          if (state.results[id]) {
+            state.results[id].command = `npx ${itemArgs.join(' ')}`;
+            state.results[id].runId = runId;
+            state.results[id].finishedAt = new Date().toISOString();
+          }
+          send('status', { running: true, current: id, system: systemId, results: state.results });
+          if (code !== 0) lastExit = code;
+        }
+      } else {
+        lastExit = await spawnPlaywright(systemId, firstArgs, runId, sse, send);
+      }
+    } catch (err) {
       state.running = false;
       state.current = null;
       state.child = null;
       state.runKind = null;
       state.finishedAt = new Date().toISOString();
+      send('fail', { message: err.message });
+      throw err;
+    }
 
-      const updates = parseLineResults(systemId, state.log.join('\n'));
-      applyParsedUpdates(updates, ids, exitCode, { replaceSteps: true });
-      attachArtifacts(systemId, runId);
-      for (const id of ids) {
-        if (!state.results[id]) continue;
-        state.results[id].runId = runId;
-        state.results[id].command = state.command;
-        state.results[id].startedAt = state.results[id].startedAt || state.startedAt;
-        state.results[id].finishedAt = state.finishedAt;
-      }
-
-      try {
-        persistRunArtifacts({
-          runId,
-          systemId,
-          target,
-          command: state.command,
-          exitCode,
-          startedAt: state.startedAt,
-          finishedAt: state.finishedAt,
-          ids,
-          results: state.results,
-          log: state.log,
-        });
-      } catch (err) {
-        console.error('[dashboard] 持久化執行結果失敗：', err);
-        state.log.push(`[persist-error] ${err.message || String(err)}`);
-        send('log', { line: `⚠️ 結果寫入磁碟失敗：${err.message || String(err)}（刷新後可能看不到歷史／截圖）` });
-      }
-
-      send('status', {
-        running: false,
-        current: null,
-        system: systemId,
-        results: state.results,
-        exitCode,
-        finishedAt: state.finishedAt,
-      });
-      send('done', { exitCode, system: systemId });
-      resolve(exitCode);
-    });
-  });
+    finishFunctionalRun(systemId, target, ids, runId, lastExit, sse, send);
+    return lastExit;
+  })();
 }
 
 function ensureResultsDirs() {
@@ -1549,6 +1719,20 @@ const server = http.createServer(async (req, res) => {
     const systemId = url.searchParams.get('system') || state.system;
     if (!SYSTEMS[systemId]) return sendJson(res, 400, { error: `未知系統：${systemId}` });
     return sendJson(res, 200, catalog(systemId));
+  }
+
+  if (url.pathname === '/api/catalog-item') {
+    if (req.method !== 'DELETE') return sendJson(res, 405, { error: 'Method Not Allowed' });
+    const systemId = url.searchParams.get('system') || state.system;
+    const itemId = url.searchParams.get('id');
+    if (!SYSTEMS[systemId]) return sendJson(res, 400, { error: `未知系統：${systemId}` });
+    if (!itemId) return sendJson(res, 400, { error: '缺少 id' });
+    if (state.running) return sendJson(res, 409, { error: '測試執行中，暫不可刪腳本' });
+    try {
+      return sendJson(res, 200, deleteCatalogItem(systemId, itemId));
+    } catch (err) {
+      return sendJson(res, err.status || 400, { error: err.message || String(err) });
+    }
   }
 
   if (url.pathname === '/api/spec') {
@@ -2000,6 +2184,23 @@ const server = http.createServer(async (req, res) => {
         relatedTasks: body?.relatedTasks || [],
       });
       return sendJson(res, 200, { ok: true, draft });
+    } catch (err) {
+      return sendJson(res, 400, { error: err.message || String(err) });
+    }
+  }
+
+  if (url.pathname === '/api/ai/rewrite' && req.method === 'POST') {
+    try {
+      const body = await readRequestBody(req);
+      const result = await rewriteSpecSource({
+        source: body?.source || '',
+        instruction: body?.instruction || '',
+        lastError: body?.lastError || '',
+        file: body?.file || '',
+        system: body?.system || state.system,
+        kind: body?.kind || '',
+      });
+      return sendJson(res, 200, { ok: true, ...result });
     } catch (err) {
       return sendJson(res, 400, { error: err.message || String(err) });
     }

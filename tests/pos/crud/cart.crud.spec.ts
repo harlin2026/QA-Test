@@ -3,32 +3,41 @@
  */
 
 import { test, expect } from '../../fixtures/base-test';
-import { addFirstAvailableProduct, clickTextButton, openPosPage } from '../helpers/pos';
+import {
+  addFirstAvailableProduct,
+  clearCartIfAny,
+  expectCartEmpty,
+  expectCartHasItem,
+  expectPosShell,
+  openPosPage,
+  selectDiningMode,
+} from '../helpers/pos';
 
-test.describe.configure({ mode: 'serial' });
+async function openOrderPage(page: import('@playwright/test').Page) {
+  await openPosPage(page, '/pages/pos/index', '点单');
+  await expectPosShell(page);
+  await selectDiningMode(page, '堂食');
+}
 
 test.describe('POS CRUD 購物車', () => {
-  test('加購商品、改數量後清空', async ({ page }) => {
-    await openPosPage(page, '/pages/pos/index', '点单');
+  test('購物車增加', async ({ page }) => {
+    await openOrderPage(page);
+    await clearCartIfAny(page);
+    await expectCartEmpty(page);
 
-    const clearBtn = page.locator('uni-button', { hasText: /^清空$/ }).first();
-    if (await clearBtn.isVisible().catch(() => false)) {
-      await clearBtn.click();
-      const confirm = page.locator('uni-button', { hasText: /确定|確認|确认/ }).last();
-      if (await confirm.isVisible().catch(() => false)) await confirm.click();
-      await page.waitForTimeout(500);
-    }
+    const name = await addFirstAvailableProduct(page);
+    await expectCartHasItem(page, name);
+    // 停在有商品的購物車，Dashboard 截圖才看得到右側列表
+    await expect(page.getByText('暂无商品')).toHaveCount(0);
+  });
 
-    await addFirstAvailableProduct(page);
-    await expect(page.getByText(/总共[1-9]\d*件|商品总价[\s\S]*¥\s*[1-9]/).first()).toBeVisible({
-      timeout: 10_000,
-    });
+  test('購物車刪除', async ({ page }) => {
+    await openOrderPage(page);
+    await clearCartIfAny(page);
+    const name = await addFirstAvailableProduct(page);
+    await expectCartHasItem(page, name);
 
-    await clickTextButton(page, /^清空$/);
-    const confirm = page.locator('uni-button', { hasText: /确定|確認|确认/ }).last();
-    if (await confirm.isVisible().catch(() => false)) await confirm.click();
-    await page.waitForTimeout(600);
-
-    await expect(page.getByText(/总共0件|暂无商品|¥\s*0/).first()).toBeVisible({ timeout: 10_000 });
+    await clearCartIfAny(page);
+    await expectCartEmpty(page);
   });
 });

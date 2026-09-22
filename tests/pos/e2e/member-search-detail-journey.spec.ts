@@ -10,6 +10,7 @@ import { test, expect } from '../../fixtures/base-test';
 import {
   clickTextButton,
   fillByPlaceholder,
+  openMemberAddDialog,
   openPosPage,
   uniquePhone,
 } from '../helpers/pos';
@@ -32,7 +33,7 @@ async function openMemberDetailByPhone(page: import('@playwright/test').Page, mo
   }
 
   // 若仍停在列表，再點一次含手機號的卡片
-  if (!(await page.getByText(/优惠券|消费记录|会员详情|积分|余额/).first().isVisible().catch(() => false))) {
+  if (!(await page.getByText(/好礼券|优惠券|消费笔数|消费记录|会员详情|积分|余额/).first().isVisible().catch(() => false))) {
     await page.getByText(mobile).first().click({ force: true }).catch(() => {});
     await page.waitForTimeout(800);
   }
@@ -52,15 +53,7 @@ test.describe('E2E POS 會員搜尋新增與詳情閉環', () => {
       return;
     }
 
-    // 右上角「添加会员／新增会员」
-    const addBtn = page
-      .locator('uni-button.member-add-button, uni-button, uni-view', { hasText: /添加会员|新增会员|添加會員|新增會員/ })
-      .first();
-    await expect(addBtn).toBeVisible({ timeout: 10_000 });
-    await addBtn.click();
-    await expect(page.getByText(/手机号注册|请输入手机号|添加会员|新增会员/).first()).toBeVisible({
-      timeout: 10_000,
-    });
+    await openMemberAddDialog(page);
 
     await fillByPlaceholder(page, '请输入手机号', phone);
     await page.locator('uni-button', { hasText: /^确定$/ }).last().click();
@@ -86,9 +79,8 @@ test.describe('E2E POS 會員搜尋新增與詳情閉環', () => {
     await clickTextButton(page, /^搜索$/);
     await openMemberDetailByPhone(page, phone);
 
-    await expect(page.getByText(/优惠券|優惠券/).first()).toBeVisible({ timeout: 15_000 });
-    // 數量語意：數字、张、張、或「优惠券(0)」
-    await expect(page.getByText(/优惠券[\s\S]{0,12}\d+|優惠券[\s\S]{0,12}\d+|\d+\s*张|\d+\s*張|暂无优惠券|暫無優惠券/).first()).toBeVisible({
+    await expect(page.getByText(/好礼券|优惠券|優惠券/).first()).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByText(/\d+\s*好礼券|好礼券[\s\S]{0,20}\d+|优惠券[\s\S]{0,12}\d+|Chill卡\s*\(\d+\)|暂无 Chill卡/).first()).toBeVisible({
       timeout: 15_000,
     });
   });
@@ -101,13 +93,13 @@ test.describe('E2E POS 會員搜尋新增與詳情閉環', () => {
     await clickTextButton(page, /^搜索$/);
     await openMemberDetailByPhone(page, phone);
 
-    const recordTab = page.locator('uni-button, uni-view', { hasText: /消费记录|消費記錄|交易记录|订单记录/ }).first();
+    const recordTab = page.locator('uni-button, uni-view', { hasText: /消费笔数|消费记录|消費記錄|交易记录|订单记录/ }).first();
     if (await recordTab.isVisible().catch(() => false)) {
       await recordTab.click();
       await page.waitForTimeout(500);
     }
 
-    await expect(page.getByText(/消费记录|消費記錄|交易记录|订单|暂无记录|暫無記錄|暂无消费|金额|¥/).first()).toBeVisible({
+    await expect(page.getByText(/消费笔数|消费记录|消費記錄|交易记录|订单|暂无记录|暫無記錄|暂无消费|金额|¥/).first()).toBeVisible({
       timeout: 15_000,
     });
   });

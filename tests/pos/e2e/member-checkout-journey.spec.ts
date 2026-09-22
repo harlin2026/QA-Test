@@ -24,7 +24,7 @@ test.describe('E2E POS 會員點單結帳閉環', () => {
   test('1. 新增會員並可搜尋', async ({ page }) => {
     await openPosPage(page, '/pages/members/index', '会员');
     await page.locator('uni-button', { hasText: /新增会员/ }).first().click();
-    await expect(page.getByText(/手机号注册|请输入手机号/).first()).toBeVisible({ timeout: 10_000 });
+    await expect(page.getByText('手机号注册').first()).toBeVisible({ timeout: 10_000 });
     await fillByPlaceholder(page, '请输入手机号', phone);
     await page.locator('uni-button', { hasText: /^确定$/ }).last().click();
     await page.waitForTimeout(1000);

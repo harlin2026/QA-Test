@@ -4,6 +4,7 @@
 
 import { test as base, expect } from '@playwright/test';
 import { captureDashboardShot } from '../helpers/dashboard-shot';
+import { loginAdmin, loginPos, shouldAutoLogin } from '../helpers/login';
 import { attachPageGuards, detectFlavor, expectNoUiErrors } from '../helpers/ui-errors';
 
 /**
@@ -12,10 +13,16 @@ import { attachPageGuards, detectFlavor, expectNoUiErrors } from '../helpers/ui-
  */
 export const test = base.extend({
   page: async ({ page }, use, testInfo) => {
-    const isSetup = /\.setup\.(ts|js)$/.test(testInfo.file.replace(/\\/g, '/'));
+    const file = testInfo.file.replace(/\\/g, '/');
+    const isSetup = /\.setup\.(ts|js)$/.test(file);
     if (isSetup) {
       await use(page);
       return;
+    }
+
+    if (shouldAutoLogin(file, testInfo.title)) {
+      if (detectFlavor(file) === 'pos') await loginPos(page);
+      else await loginAdmin(page);
     }
 
     const guards = attachPageGuards(page);

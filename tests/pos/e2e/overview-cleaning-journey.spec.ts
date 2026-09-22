@@ -3,7 +3,7 @@
  */
 
 import { test, expect } from '../../fixtures/base-test';
-import { openPosPage } from '../helpers/pos';
+import { clickDashboardPeriod, openPosPage } from '../helpers/pos';
 
 test.describe.configure({ mode: 'serial' });
 
@@ -13,11 +13,7 @@ test.describe('E2E POS 總覽與沽清', () => {
     await expect(page.getByText(/实时营收概览|营业实收/).first()).toBeVisible({ timeout: 15_000 });
 
     for (const label of ['昨日', '本周', '今日']) {
-      const btn = page.locator('uni-button, uni-view, button', { hasText: new RegExp(`^${label}$`) }).first();
-      if (await btn.isVisible().catch(() => false)) {
-        await btn.click();
-        await page.waitForTimeout(400);
-      }
+      await clickDashboardPeriod(page, label);
     }
     await expect(page.getByText(/订单数|销售金额|营业实收/).first()).toBeVisible();
   });

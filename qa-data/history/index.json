@@ -1,5 +1,2082 @@
 [
   {
+    "runId": "20260922-155540-iz0h",
+    "system": "admin",
+    "target": "e2e:admin-store-create",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e/store-create-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T07:55:40.641Z",
+    "finishedAt": "2026-09-22T07:55:57.831Z",
+    "ids": [
+      "e2e:admin-store-create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-145558-or54",
+    "system": "admin",
+    "target": "e2e",
+    "command": "npx playwright test --project=admin --workers=1 tests/e2e",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:55:58.945Z",
+    "finishedAt": "2026-09-22T07:02:09.309Z",
+    "ids": [
+      "e2e:dashboard-home",
+      "e2e:shop-config",
+      "e2e:goods-catalog",
+      "e2e:product-publish",
+      "e2e:store-ops",
+      "e2e:order-lifecycle",
+      "e2e:order-detail-aftersale",
+      "e2e:vip-points-promo",
+      "e2e:vip-promo-write",
+      "e2e:inventory-ops",
+      "e2e:inventory-document",
+      "e2e:wine-storage",
+      "e2e:store-receipt-wine",
+      "e2e:reports-tour",
+      "e2e:system-admin",
+      "e2e:access-lifecycle",
+      "e2e:bridge-seed-product",
+      "e2e:bridge-verify-pos-member",
+      "e2e:goods-ops",
+      "e2e:inventory-check-write",
+      "e2e:member-order-points",
+      "e2e:multi-store-switch",
+      "e2e:promo-order-report",
+      "e2e:stock-to-sales-report",
+      "e2e:notification-audit",
+      "e2e:admin-vip-phone-journey",
+      "e2e:admin-vip-phone-search-detail",
+      "e2e:admin-vip-detail-journey",
+      "e2e:admin-store-create",
+      "e2e:admin-inventory-query"
+    ],
+    "counts": {
+      "total": 30,
+      "passed": 25,
+      "failed": 4,
+      "skipped": 1
+    }
+  },
+  {
+    "runId": "20260922-145439-pogb",
+    "system": "admin",
+    "target": "crud:coupons:delete",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/coupons.crud.spec.ts -g (?:删除优惠券|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:54:39.129Z",
+    "finishedAt": "2026-09-22T06:54:54.804Z",
+    "ids": [
+      "crud:coupons:delete"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-145328-qrvr",
+    "system": "admin",
+    "target": "crud:coupons:update",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/coupons.crud.spec.ts -g (?:更新优惠券|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:53:28.295Z",
+    "finishedAt": "2026-09-22T06:53:44.973Z",
+    "ids": [
+      "crud:coupons:update"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-144657-f55k",
+    "system": "admin",
+    "target": "crud:coupons:update",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/coupons.crud.spec.ts -g (?:更新优惠券|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:46:57.211Z",
+    "finishedAt": "2026-09-22T06:50:18.139Z",
+    "ids": [
+      "crud:coupons:update"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-144516-l2wh",
+    "system": "admin",
+    "target": "crud:printers:delete",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:删除小票机|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:45:16.423Z",
+    "finishedAt": "2026-09-22T06:46:14.435Z",
+    "ids": [
+      "crud:printers:delete"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-144411-gca5",
+    "system": "admin",
+    "target": "crud:printers:create",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:新增小票机|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:44:11.935Z",
+    "finishedAt": "2026-09-22T06:44:55.720Z",
+    "ids": [
+      "crud:printers:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-144021-6p02",
+    "system": "admin",
+    "target": "crud:printers:delete",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:删除小票机|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:40:21.975Z",
+    "finishedAt": "2026-09-22T06:41:19.333Z",
+    "ids": [
+      "crud:printers:delete"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-143913-jfkj",
+    "system": "admin",
+    "target": "crud:printers:create",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:新增小票机|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:39:13.001Z",
+    "finishedAt": "2026-09-22T06:39:56.634Z",
+    "ids": [
+      "crud:printers:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-143504-9qvq",
+    "system": "admin",
+    "target": "crud:printers:create",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:新增小票机|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:35:04.496Z",
+    "finishedAt": "2026-09-22T06:35:24.387Z",
+    "ids": [
+      "crud:printers:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-143427-qsfk",
+    "system": "admin",
+    "target": "crud:printers:create",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:新增小票机|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:34:27.696Z",
+    "finishedAt": "2026-09-22T06:34:47.836Z",
+    "ids": [
+      "crud:printers:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-143325-lpks",
+    "system": "admin",
+    "target": "crud:printers:delete",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:删除小票机|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:33:25.796Z",
+    "finishedAt": "2026-09-22T06:33:45.702Z",
+    "ids": [
+      "crud:printers:delete"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-142822-t5te",
+    "system": "admin",
+    "target": "crud:printers:delete",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:删除小票机|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:28:22.070Z",
+    "finishedAt": "2026-09-22T06:29:14.859Z",
+    "ids": [
+      "crud:printers:delete"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-142733-slex",
+    "system": "admin",
+    "target": "crud:coupons:create",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/coupons.crud.spec.ts -g (?:新增优惠券|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:27:33.337Z",
+    "finishedAt": "2026-09-22T06:27:48.044Z",
+    "ids": [
+      "crud:coupons:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-142635-73mp",
+    "system": "admin",
+    "target": "crud:goods:delete",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/goods.crud.spec.ts -g (?:删除商品|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:26:35.454Z",
+    "finishedAt": "2026-09-22T06:27:05.865Z",
+    "ids": [
+      "crud:goods:delete"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-142525-6aqt",
+    "system": "admin",
+    "target": "crud:printers:create",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:新增小票机|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:25:25.041Z",
+    "finishedAt": "2026-09-22T06:26:11.819Z",
+    "ids": [
+      "crud:printers:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-142249-5wlx",
+    "system": "admin",
+    "target": "crud:printers:create",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/printers.crud.spec.ts -g (?:新增小票机|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:22:49.322Z",
+    "finishedAt": "2026-09-22T06:23:00.764Z",
+    "ids": [
+      "crud:printers:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-142133-g0eq",
+    "system": "admin",
+    "target": "crud:goods:update",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/goods.crud.spec.ts -g (?:更新商品|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:21:33.993Z",
+    "finishedAt": "2026-09-22T06:22:04.362Z",
+    "ids": [
+      "crud:goods:update"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-141752-z8zn",
+    "system": "admin",
+    "target": "crud:goods:update",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/goods.crud.spec.ts -g (?:更新商品|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:17:52.529Z",
+    "finishedAt": "2026-09-22T06:18:52.004Z",
+    "ids": [
+      "crud:goods:update"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-141638-bm4i",
+    "system": "admin",
+    "target": "crud:goods:read",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/goods.crud.spec.ts -g (?:查找商品|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T06:16:38.918Z",
+    "finishedAt": "2026-09-22T06:17:07.358Z",
+    "ids": [
+      "crud:goods:read"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-140449-a7kx",
+    "system": "admin",
+    "target": "crud:goods:read",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/goods.crud.spec.ts -g (?:查找商品|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T06:04:49.185Z",
+    "finishedAt": "2026-09-22T06:05:17.198Z",
+    "ids": [
+      "crud:goods:read"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-135811-6mwd",
+    "system": "admin",
+    "target": "crud:goods:read",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/goods.crud.spec.ts -g (?:查找商品|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T05:58:11.910Z",
+    "finishedAt": "2026-09-22T05:58:36.018Z",
+    "ids": [
+      "crud:goods:read"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-135717-9u8l",
+    "system": "admin",
+    "target": "crud:goods:create",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/goods.crud.spec.ts -g (?:新增商品|admin login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T05:57:17.627Z",
+    "finishedAt": "2026-09-22T05:57:41.874Z",
+    "ids": [
+      "crud:goods:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-134144-uznl",
+    "system": "admin",
+    "target": "crud:goods:create",
+    "command": "npx playwright test --project=admin --workers=1 tests/crud/goods.crud.spec.ts -g (?:新增商品|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T05:41:44.848Z",
+    "finishedAt": "2026-09-22T05:44:56.005Z",
+    "ids": [
+      "crud:goods:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-123316-bnc5",
+    "system": "admin",
+    "target": "crud",
+    "command": "npx playwright test 逐項執行 50 個 CRUD",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T04:33:16.081Z",
+    "finishedAt": "2026-09-22T05:05:03.259Z",
+    "ids": [
+      "crud:stores:create",
+      "crud:stores:read",
+      "crud:stores:update",
+      "crud:stores:delete",
+      "crud:page-design:read",
+      "crud:categories:create",
+      "crud:categories:read",
+      "crud:categories:update",
+      "crud:categories:delete",
+      "crud:filter-models:create",
+      "crud:filter-models:read",
+      "crud:filter-models:update",
+      "crud:filter-models:delete",
+      "crud:product-units:create",
+      "crud:product-units:read",
+      "crud:product-units:update",
+      "crud:product-units:delete",
+      "crud:goods:create",
+      "crud:goods:read",
+      "crud:goods:update",
+      "crud:goods:delete",
+      "crud:coupons:create",
+      "crud:coupons:read",
+      "crud:coupons:update",
+      "crud:coupons:delete",
+      "crud:printers:create",
+      "crud:printers:read",
+      "crud:printers:update",
+      "crud:printers:delete",
+      "crud:receipt-templates:create",
+      "crud:receipt-templates:read",
+      "crud:receipt-templates:update",
+      "crud:receipt-templates:delete",
+      "crud:users:create",
+      "crud:users:read",
+      "crud:users:update",
+      "crud:users:delete",
+      "crud:roles:create",
+      "crud:roles:read",
+      "crud:roles:update",
+      "crud:roles:delete",
+      "crud:notifications:update",
+      "crud:inventory-docs:create",
+      "crud:inventory-check:create",
+      "crud:members:read",
+      "crud:orders:read",
+      "crud:points:read",
+      "crud:points-setting:update",
+      "crud:wine-storage:read",
+      "crud:wine-setting:update"
+    ],
+    "counts": {
+      "total": 50,
+      "passed": 41,
+      "failed": 9,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-112502-zbq9",
+    "system": "admin",
+    "target": "crud",
+    "command": "npx playwright test 逐項執行 50 個 CRUD",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T03:25:02.738Z",
+    "finishedAt": "2026-09-22T03:51:05.558Z",
+    "ids": [
+      "crud:stores:create",
+      "crud:stores:read",
+      "crud:stores:update",
+      "crud:stores:delete",
+      "crud:page-design:read",
+      "crud:categories:create",
+      "crud:categories:read",
+      "crud:categories:update",
+      "crud:categories:delete",
+      "crud:filter-models:create",
+      "crud:filter-models:read",
+      "crud:filter-models:update",
+      "crud:filter-models:delete",
+      "crud:product-units:create",
+      "crud:product-units:read",
+      "crud:product-units:update",
+      "crud:product-units:delete",
+      "crud:goods:create",
+      "crud:goods:read",
+      "crud:goods:update",
+      "crud:goods:delete",
+      "crud:coupons:create",
+      "crud:coupons:read",
+      "crud:coupons:update",
+      "crud:coupons:delete",
+      "crud:printers:create",
+      "crud:printers:read",
+      "crud:printers:update",
+      "crud:printers:delete",
+      "crud:receipt-templates:create",
+      "crud:receipt-templates:read",
+      "crud:receipt-templates:update",
+      "crud:receipt-templates:delete",
+      "crud:users:create",
+      "crud:users:read",
+      "crud:users:update",
+      "crud:users:delete",
+      "crud:roles:create",
+      "crud:roles:read",
+      "crud:roles:update",
+      "crud:roles:delete",
+      "crud:notifications:update",
+      "crud:inventory-docs:create",
+      "crud:inventory-check:create",
+      "crud:members:read",
+      "crud:orders:read",
+      "crud:points:read",
+      "crud:points-setting:update",
+      "crud:wine-storage:read",
+      "crud:wine-setting:update"
+    ],
+    "counts": {
+      "total": 50,
+      "passed": 26,
+      "failed": 24,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-112425-jezt",
+    "system": "admin",
+    "target": "smoke:/report/product-sales",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke -g (?:開啟 /report/product-sales 功能可用|admin login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T03:24:25.621Z",
+    "finishedAt": "2026-09-22T03:24:36.965Z",
+    "ids": [
+      "smoke:/report/product-sales"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-112201-22bo",
+    "system": "admin",
+    "target": "smoke",
+    "command": "npx playwright test --project=admin --workers=1 tests/smoke",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T03:22:01.135Z",
+    "finishedAt": "2026-09-22T03:24:00.234Z",
+    "ids": [
+      "smoke:/",
+      "smoke:/shop/stores",
+      "smoke:/shop/page-design",
+      "smoke:/goods/categories",
+      "smoke:/goods/list",
+      "smoke:/goods/product-units",
+      "smoke:/goods/filter-models",
+      "smoke:/orders/list",
+      "smoke:/orders/refund",
+      "smoke:/vip/list",
+      "smoke:/promotion/coupons",
+      "smoke:/points/list",
+      "smoke:/points/setting",
+      "smoke:/inventory/query",
+      "smoke:/inventory/stock",
+      "smoke:/inventory/check",
+      "smoke:/inventory/record",
+      "smoke:/wine-storage/list",
+      "smoke:/wine-storage/setting",
+      "smoke:/report/coupon-stats",
+      "smoke:/inventory/report/stock",
+      "smoke:/inventory/report/order-sales",
+      "smoke:/report/product-sales",
+      "smoke:/inventory/report/finance-receipts",
+      "smoke:/report/cashier-stats",
+      "smoke:/inventory/report/product-sales",
+      "smoke:/report/member-balance-stats",
+      "smoke:/shop/printers",
+      "smoke:/system/receipt-template",
+      "smoke:/system/notifications",
+      "smoke:/system/users",
+      "smoke:/system/roles",
+      "smoke:/system/logs"
+    ],
+    "counts": {
+      "total": 33,
+      "passed": 32,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-112032-htai",
+    "system": "pos",
+    "target": "e2e:pos-member-dine-pay-kitchen-pickup",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/member-dine-pay-kitchen-pickup-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T03:20:32.566Z",
+    "finishedAt": "2026-09-22T03:21:36.309Z",
+    "ids": [
+      "e2e:pos-member-dine-pay-kitchen-pickup"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-111303-uku6",
+    "system": "pos",
+    "target": "e2e:pos-member-dine-pay-kitchen-pickup",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/member-dine-pay-kitchen-pickup-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T03:13:03.115Z",
+    "finishedAt": "2026-09-22T03:14:07.343Z",
+    "ids": [
+      "e2e:pos-member-dine-pay-kitchen-pickup"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-111228-atjj",
+    "system": "pos",
+    "target": "e2e:pos-orders-kitchen",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/orders-kitchen-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T03:12:28.025Z",
+    "finishedAt": "2026-09-22T03:12:43.759Z",
+    "ids": [
+      "e2e:pos-orders-kitchen"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-110846-o0v3",
+    "system": "pos",
+    "target": "e2e:pos-orders-kitchen",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/orders-kitchen-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T03:08:46.117Z",
+    "finishedAt": "2026-09-22T03:09:12.636Z",
+    "ids": [
+      "e2e:pos-orders-kitchen"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-110808-thml",
+    "system": "pos",
+    "target": "e2e:pos-orders-kitchen",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/orders-kitchen-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T03:08:08.356Z",
+    "finishedAt": "2026-09-22T03:08:35.851Z",
+    "ids": [
+      "e2e:pos-orders-kitchen"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-105928-h3ok",
+    "system": "pos",
+    "target": "e2e",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T02:59:28.581Z",
+    "finishedAt": "2026-09-22T03:07:44.871Z",
+    "ids": [
+      "e2e:pos-ordering",
+      "e2e:pos-member-checkout",
+      "e2e:pos-member-search-detail",
+      "e2e:pos-hangbill",
+      "e2e:pos-dine-pay-kitchen-pickup",
+      "e2e:pos-member-dine-pay-kitchen-pickup",
+      "e2e:pos-kitchen-refund",
+      "e2e:pos-orders-kitchen",
+      "e2e:pos-order-kitchen-handoff",
+      "e2e:pos-member-wine",
+      "e2e:pos-wine-register",
+      "e2e:pos-overview",
+      "e2e:pos-cleaning-order",
+      "e2e:pos-shift-ops",
+      "e2e:pos-bridge-seed-member",
+      "e2e:pos-bridge-verify-product",
+      "e2e:pos-inventory-overview",
+      "e2e:pos-order-detail",
+      "e2e:pos-wine-status",
+      "e2e:pos-kitchen-ops",
+      "e2e:pos-remark-member-login",
+      "e2e:pos-member-order-link",
+      "e2e:pos-dining-checkout",
+      "e2e:pos-overview-kitchen-cruise",
+      "e2e:pos-category-search-cart",
+      "e2e:pos-orders-aftersale",
+      "e2e:pos-kitchen-full-status",
+      "e2e:pos-scan-entry",
+      "e2e:pos-dashboard-inventory-deep"
+    ],
+    "counts": {
+      "total": 29,
+      "passed": 27,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-105840-2axx",
+    "system": "pos",
+    "target": "e2e:pos-shift-ops",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/shift-ops-closed-loop.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T02:58:40.388Z",
+    "finishedAt": "2026-09-22T02:59:06.391Z",
+    "ids": [
+      "e2e:pos-shift-ops"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-105747-ye3e",
+    "system": "pos",
+    "target": "e2e:pos-overview-kitchen-cruise",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/overview-kitchen-cruise-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T02:57:47.019Z",
+    "finishedAt": "2026-09-22T02:58:07.676Z",
+    "ids": [
+      "e2e:pos-overview-kitchen-cruise"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-105205-zv1m",
+    "system": "pos",
+    "target": "e2e:pos-kitchen-refund",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/kitchen-refund-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T02:52:05.134Z",
+    "finishedAt": "2026-09-22T02:52:56.437Z",
+    "ids": [
+      "e2e:pos-kitchen-refund"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-105107-53ak",
+    "system": "pos",
+    "target": "e2e:pos-overview",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/overview-cleaning-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T02:51:07.241Z",
+    "finishedAt": "2026-09-22T02:51:23.535Z",
+    "ids": [
+      "e2e:pos-overview"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-104755-5pys",
+    "system": "pos",
+    "target": "e2e:pos-dine-pay-kitchen-pickup",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T02:47:55.674Z",
+    "finishedAt": "2026-09-22T02:48:48.989Z",
+    "ids": [
+      "e2e:pos-dine-pay-kitchen-pickup"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-104211-0kqv",
+    "system": "pos",
+    "target": "e2e:pos-dine-pay-kitchen-pickup",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/dine-pay-kitchen-pickup-journey.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T02:42:11.502Z",
+    "finishedAt": "2026-09-22T02:42:50.865Z",
+    "ids": [
+      "e2e:pos-dine-pay-kitchen-pickup"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-104142-afsz",
+    "system": "pos",
+    "target": "e2e:pos-wine-register",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/wine-register-closed-loop.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T02:41:42.751Z",
+    "finishedAt": "2026-09-22T02:42:01.449Z",
+    "ids": [
+      "e2e:pos-wine-register"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-104105-ster",
+    "system": "pos",
+    "target": "e2e:pos-member-order-link",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e/member-order-link-journey.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T02:41:05.213Z",
+    "finishedAt": "2026-09-22T02:41:27.320Z",
+    "ids": [
+      "e2e:pos-member-order-link"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-101522-si1q",
+    "system": "pos",
+    "target": "e2e",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T02:15:22.057Z",
+    "finishedAt": "2026-09-22T02:22:20.475Z",
+    "ids": [
+      "e2e:pos-ordering",
+      "e2e:pos-member-checkout",
+      "e2e:pos-member-search-detail",
+      "e2e:pos-hangbill",
+      "e2e:pos-dine-pay-kitchen-pickup",
+      "e2e:pos-member-dine-pay-kitchen-pickup",
+      "e2e:pos-kitchen-refund",
+      "e2e:pos-orders-kitchen",
+      "e2e:pos-order-kitchen-handoff",
+      "e2e:pos-member-wine",
+      "e2e:pos-wine-register",
+      "e2e:pos-overview",
+      "e2e:pos-cleaning-order",
+      "e2e:pos-shift-ops",
+      "e2e:pos-bridge-seed-member",
+      "e2e:pos-bridge-verify-product",
+      "e2e:pos-inventory-overview",
+      "e2e:pos-order-detail",
+      "e2e:pos-wine-status",
+      "e2e:pos-kitchen-ops",
+      "e2e:pos-remark-member-login",
+      "e2e:pos-member-order-link",
+      "e2e:pos-dining-checkout",
+      "e2e:pos-overview-kitchen-cruise",
+      "e2e:pos-category-search-cart",
+      "e2e:pos-orders-aftersale",
+      "e2e:pos-kitchen-full-status",
+      "e2e:pos-scan-entry",
+      "e2e:pos-dashboard-inventory-deep"
+    ],
+    "counts": {
+      "total": 29,
+      "passed": 21,
+      "failed": 7,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-094342-avav",
+    "system": "pos",
+    "target": "e2e",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/e2e",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T01:43:42.121Z",
+    "finishedAt": "2026-09-22T01:52:04.138Z",
+    "ids": [
+      "e2e:pos-ordering",
+      "e2e:pos-member-checkout",
+      "e2e:pos-member-search-detail",
+      "e2e:pos-hangbill",
+      "e2e:pos-dine-pay-kitchen-pickup",
+      "e2e:pos-member-dine-pay-kitchen-pickup",
+      "e2e:pos-kitchen-refund",
+      "e2e:pos-orders-kitchen",
+      "e2e:pos-order-kitchen-handoff",
+      "e2e:pos-member-wine",
+      "e2e:pos-wine-register",
+      "e2e:pos-overview",
+      "e2e:pos-cleaning-order",
+      "e2e:pos-shift-ops",
+      "e2e:pos-bridge-seed-member",
+      "e2e:pos-bridge-verify-product",
+      "e2e:pos-inventory-overview",
+      "e2e:pos-order-detail",
+      "e2e:pos-wine-status",
+      "e2e:pos-kitchen-ops",
+      "e2e:pos-remark-member-login",
+      "e2e:pos-member-order-link",
+      "e2e:pos-dining-checkout",
+      "e2e:pos-overview-kitchen-cruise",
+      "e2e:pos-category-search-cart",
+      "e2e:pos-orders-aftersale",
+      "e2e:pos-kitchen-full-status",
+      "e2e:pos-scan-entry",
+      "e2e:pos-dashboard-inventory-deep"
+    ],
+    "counts": {
+      "total": 29,
+      "passed": 12,
+      "failed": 16,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-093933-0qkc",
+    "system": "pos",
+    "target": "smoke:/pages/inventory/overview",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/smoke -g (?:開啟 /pages/inventory/overview 功能可用|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T01:39:33.757Z",
+    "finishedAt": "2026-09-22T01:39:45.569Z",
+    "ids": [
+      "smoke:/pages/inventory/overview"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-093906-yhsd",
+    "system": "pos",
+    "target": "smoke:/pages/inventory/index",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/smoke -g (?:開啟 /pages/inventory/index 功能可用|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T01:39:06.860Z",
+    "finishedAt": "2026-09-22T01:39:17.840Z",
+    "ids": [
+      "smoke:/pages/inventory/index"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-093832-2jue",
+    "system": "pos",
+    "target": "smoke:/pages/inventory/index",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/smoke -g (?:開啟 /pages/inventory/index 功能可用|pos login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T01:38:32.336Z",
+    "finishedAt": "2026-09-22T01:38:56.188Z",
+    "ids": [
+      "smoke:/pages/inventory/index"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-093806-io0b",
+    "system": "pos",
+    "target": "smoke:/pages/orders/index",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/smoke -g (?:開啟 /pages/orders/index 功能可用|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T01:38:06.948Z",
+    "finishedAt": "2026-09-22T01:38:17.635Z",
+    "ids": [
+      "smoke:/pages/orders/index"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-093623-vakj",
+    "system": "pos",
+    "target": "smoke",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/smoke",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T01:36:23.166Z",
+    "finishedAt": "2026-09-22T01:37:54.955Z",
+    "ids": [
+      "smoke:/pages/pos/index",
+      "smoke:/pages/kitchen/index",
+      "smoke:/pages/orders/index",
+      "smoke:/pages/members/index",
+      "smoke:/pages/inventory/index",
+      "smoke:/pages/inventory/create",
+      "smoke:/pages/cleaning/index",
+      "smoke:/pages/dashboard/index",
+      "smoke:/pages/inventory/overview",
+      "smoke:/pages/pos/index"
+    ],
+    "counts": {
+      "total": 10,
+      "passed": 7,
+      "failed": 3,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-092839-gh8t",
+    "system": "pos",
+    "target": "crud",
+    "command": "npx playwright test 逐項執行 14 個 CRUD",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T01:28:39.415Z",
+    "finishedAt": "2026-09-22T01:31:40.650Z",
+    "ids": [
+      "crud:pos-members:create",
+      "crud:pos-members:read",
+      "crud:pos-wine:create",
+      "crud:pos-wine:read",
+      "crud:pos-cart:create",
+      "crud:pos-cart:delete",
+      "crud:pos-kitchen",
+      "crud:pos-orders",
+      "crud:pos-inventory-overview",
+      "crud:pos-product-search",
+      "crud:pos-cleaning",
+      "crud:pos-orders-filter",
+      "crud:pos-scan",
+      "crud:pos-dashboard-periods"
+    ],
+    "counts": {
+      "total": 14,
+      "passed": 13,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-092750-93hr",
+    "system": "pos",
+    "target": "smoke",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/smoke",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T01:27:50.981Z",
+    "finishedAt": "2026-09-22T01:28:15.506Z",
+    "ids": [
+      "smoke:/pages/pos/index",
+      "smoke:/pages/kitchen/index",
+      "smoke:/pages/orders/index",
+      "smoke:/pages/members/index",
+      "smoke:/pages/inventory/index",
+      "smoke:/pages/inventory/create",
+      "smoke:/pages/cleaning/index",
+      "smoke:/pages/dashboard/index",
+      "smoke:/pages/inventory/overview",
+      "smoke:/pages/pos/index"
+    ],
+    "counts": {
+      "total": 10,
+      "passed": 0,
+      "failed": 10,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-092658-f5h4",
+    "system": "pos",
+    "target": "smoke:/pages/cleaning/index",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/smoke -g (?:開啟 /pages/cleaning/index 功能可用|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T01:26:58.932Z",
+    "finishedAt": "2026-09-22T01:27:09.330Z",
+    "ids": [
+      "smoke:/pages/cleaning/index"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-092625-jib9",
+    "system": "pos",
+    "target": "smoke:/pages/inventory/overview",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/smoke -g (?:開啟 /pages/inventory/overview 功能可用|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T01:26:25.243Z",
+    "finishedAt": "2026-09-22T01:26:37.102Z",
+    "ids": [
+      "smoke:/pages/inventory/overview"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-091739-u9ri",
+    "system": "pos",
+    "target": "crud:pos-orders",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/orders.crud.spec.ts -g (?:订单查询|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T01:17:39.008Z",
+    "finishedAt": "2026-09-22T01:17:50.619Z",
+    "ids": [
+      "crud:pos-orders"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-091236-whvs",
+    "system": "pos",
+    "target": "crud:pos-orders",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/orders.crud.spec.ts -g (?:订单查询|pos login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T01:12:36.277Z",
+    "finishedAt": "2026-09-22T01:13:02.539Z",
+    "ids": [
+      "crud:pos-orders"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-090845-jzzt",
+    "system": "pos",
+    "target": "crud:pos-kitchen",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/kitchen.crud.spec.ts -g (?:制作进度|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T01:08:45.183Z",
+    "finishedAt": "2026-09-22T01:08:56.691Z",
+    "ids": [
+      "crud:pos-kitchen"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-090316-lb7t",
+    "system": "pos",
+    "target": "crud:pos-cart:delete",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts -g (?:購物車刪除|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-22T01:03:16.273Z",
+    "finishedAt": "2026-09-22T01:03:28.370Z",
+    "ids": [
+      "crud:pos-cart:delete"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260922-085724-or7o",
+    "system": "pos",
+    "target": "crud",
+    "command": "npx playwright test 逐項執行 14 個 CRUD",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T00:57:24.693Z",
+    "finishedAt": "2026-09-22T01:02:45.870Z",
+    "ids": [
+      "crud:pos-members:create",
+      "crud:pos-members:read",
+      "crud:pos-wine:create",
+      "crud:pos-wine:read",
+      "crud:pos-cart:create",
+      "crud:pos-cart:delete",
+      "crud:pos-kitchen",
+      "crud:pos-orders",
+      "crud:pos-inventory-overview",
+      "crud:pos-product-search",
+      "crud:pos-cleaning",
+      "crud:pos-orders-filter",
+      "crud:pos-scan",
+      "crud:pos-dashboard-periods"
+    ],
+    "counts": {
+      "total": 14,
+      "passed": 9,
+      "failed": 4,
+      "skipped": 1
+    }
+  },
+  {
+    "runId": "20260922-085434-r8se",
+    "system": "admin",
+    "target": "crud",
+    "command": "npx playwright test 逐項執行 50 個 CRUD",
+    "exitCode": 1,
+    "startedAt": "2026-09-22T00:54:34.590Z",
+    "finishedAt": "2026-09-22T00:57:13.670Z",
+    "ids": [
+      "crud:stores:create",
+      "crud:stores:read",
+      "crud:stores:update",
+      "crud:stores:delete",
+      "crud:page-design:read",
+      "crud:categories:create",
+      "crud:categories:read",
+      "crud:categories:update",
+      "crud:categories:delete",
+      "crud:filter-models:create",
+      "crud:filter-models:read",
+      "crud:filter-models:update",
+      "crud:filter-models:delete",
+      "crud:product-units:create",
+      "crud:product-units:read",
+      "crud:product-units:update",
+      "crud:product-units:delete",
+      "crud:goods:create",
+      "crud:goods:read",
+      "crud:goods:update",
+      "crud:goods:delete",
+      "crud:coupons:create",
+      "crud:coupons:read",
+      "crud:coupons:update",
+      "crud:coupons:delete",
+      "crud:printers:create",
+      "crud:printers:read",
+      "crud:printers:update",
+      "crud:printers:delete",
+      "crud:receipt-templates:create",
+      "crud:receipt-templates:read",
+      "crud:receipt-templates:update",
+      "crud:receipt-templates:delete",
+      "crud:users:create",
+      "crud:users:read",
+      "crud:users:update",
+      "crud:users:delete",
+      "crud:roles:create",
+      "crud:roles:read",
+      "crud:roles:update",
+      "crud:roles:delete",
+      "crud:notifications:update",
+      "crud:inventory-docs:create",
+      "crud:inventory-check:create",
+      "crud:members:read",
+      "crud:orders:read",
+      "crud:points:read",
+      "crud:points-setting:update",
+      "crud:wine-storage:read",
+      "crud:wine-setting:update"
+    ],
+    "counts": {
+      "total": 50,
+      "passed": 7,
+      "failed": 5,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-180232-4dhv",
+    "system": "pos",
+    "target": "crud:pos-cart:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts -g (?:購物車增加|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T10:02:32.838Z",
+    "finishedAt": "2026-09-21T10:02:45.150Z",
+    "ids": [
+      "crud:pos-cart:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-175839-ttqg",
+    "system": "pos",
+    "target": "crud",
+    "command": "npx playwright test 逐項執行 14 個 CRUD",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:58:39.927Z",
+    "finishedAt": "2026-09-21T10:01:55.244Z",
+    "ids": [
+      "crud:pos-members:create",
+      "crud:pos-members:read",
+      "crud:pos-wine:create",
+      "crud:pos-wine:read",
+      "crud:pos-cart:create",
+      "crud:pos-cart:delete",
+      "crud:pos-kitchen",
+      "crud:pos-orders",
+      "crud:pos-inventory-overview",
+      "crud:pos-product-search",
+      "crud:pos-cleaning",
+      "crud:pos-orders-filter",
+      "crud:pos-scan",
+      "crud:pos-dashboard-periods"
+    ],
+    "counts": {
+      "total": 14,
+      "passed": 9,
+      "failed": 4,
+      "skipped": 1
+    }
+  },
+  {
+    "runId": "20260921-175757-twem",
+    "system": "pos",
+    "target": "crud:pos-kitchen",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/kitchen.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:57:57.297Z",
+    "finishedAt": "2026-09-21T09:58:09.980Z",
+    "ids": [
+      "crud:pos-kitchen"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-175711-rkum",
+    "system": "pos",
+    "target": "crud:pos-product-search",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/product-search.crud.spec.ts -g (?:查找商品|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T09:57:11.879Z",
+    "finishedAt": "2026-09-21T09:57:22.600Z",
+    "ids": [
+      "crud:pos-product-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-175411-ewk2",
+    "system": "pos",
+    "target": "crud:pos-product-search",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/product-search.crud.spec.ts -g (?:查找商品|pos login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:54:11.863Z",
+    "finishedAt": "2026-09-21T09:54:32.615Z",
+    "ids": [
+      "crud:pos-product-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-174954-kgi5",
+    "system": "pos",
+    "target": "crud:pos-product-search",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/product-search.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:49:54.211Z",
+    "finishedAt": "2026-09-21T09:51:03.266Z",
+    "ids": [
+      "crud:pos-product-search"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-174207-24cu",
+    "system": "pos",
+    "target": "crud:pos-cart:delete",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts -g (?:購物車刪除|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T09:42:07.500Z",
+    "finishedAt": "2026-09-21T09:42:20.046Z",
+    "ids": [
+      "crud:pos-cart:delete"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-174137-8r50",
+    "system": "pos",
+    "target": "crud:pos-cart:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts -g (?:購物車增加|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T09:41:37.645Z",
+    "finishedAt": "2026-09-21T09:41:49.370Z",
+    "ids": [
+      "crud:pos-cart:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-173736-gq9k",
+    "system": "pos",
+    "target": "crud:pos-cart",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T09:37:36.025Z",
+    "finishedAt": "2026-09-21T09:37:48.625Z",
+    "ids": [
+      "crud:pos-cart"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-172704-ib5r",
+    "system": "pos",
+    "target": "crud:pos-cart",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:27:04.195Z",
+    "finishedAt": "2026-09-21T09:27:32.437Z",
+    "ids": [
+      "crud:pos-cart"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-171544-b8k8",
+    "system": "pos",
+    "target": "crud:pos-cart",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:15:44.566Z",
+    "finishedAt": "2026-09-21T09:15:53.658Z",
+    "ids": [
+      "crud:pos-cart"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-171358-bqve",
+    "system": "pos",
+    "target": "crud:pos-cart",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:13:58.947Z",
+    "finishedAt": "2026-09-21T09:14:08.265Z",
+    "ids": [
+      "crud:pos-cart"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-171239-h1co",
+    "system": "pos",
+    "target": "crud:pos-cart",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:12:39.293Z",
+    "finishedAt": "2026-09-21T09:12:48.465Z",
+    "ids": [
+      "crud:pos-cart"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-170944-4e8b",
+    "system": "pos",
+    "target": "crud:pos-cart",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:09:44.866Z",
+    "finishedAt": "2026-09-21T09:09:53.602Z",
+    "ids": [
+      "crud:pos-cart"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-170507-uchy",
+    "system": "pos",
+    "target": "crud:pos-cart",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T09:05:07.407Z",
+    "finishedAt": "2026-09-21T09:05:16.405Z",
+    "ids": [
+      "crud:pos-cart"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-170054-d36b",
+    "system": "pos",
+    "target": "crud:pos-wine:read",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/wine-storage.crud.spec.ts -g (?:查找存酒|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T09:00:54.681Z",
+    "finishedAt": "2026-09-21T09:01:10.458Z",
+    "ids": [
+      "crud:pos-wine:read"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-164935-uwr6",
+    "system": "pos",
+    "target": "crud:pos-wine:read",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/wine-storage.crud.spec.ts -g (?:查找存酒|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T08:49:35.472Z",
+    "finishedAt": "2026-09-21T08:49:50.059Z",
+    "ids": [
+      "crud:pos-wine:read"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-164904-uo8p",
+    "system": "pos",
+    "target": "crud:pos-wine:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/wine-storage.crud.spec.ts -g (?:新增存酒|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T08:49:04.742Z",
+    "finishedAt": "2026-09-21T08:49:18.062Z",
+    "ids": [
+      "crud:pos-wine:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-164823-u90e",
+    "system": "pos",
+    "target": "crud:pos-wine:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/wine-storage.crud.spec.ts -g (?:新增存酒|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T08:48:23.234Z",
+    "finishedAt": "2026-09-21T08:48:36.230Z",
+    "ids": [
+      "crud:pos-wine:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-162752-zc6l",
+    "system": "pos",
+    "target": "crud:pos-wine:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/wine-storage.crud.spec.ts -g (?:新增存酒|pos login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T08:27:52.985Z",
+    "finishedAt": "2026-09-21T08:29:03.811Z",
+    "ids": [
+      "crud:pos-wine:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-162516-jr8s",
+    "system": "pos",
+    "target": "crud:pos-wine:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/wine-storage.crud.spec.ts -g (?:新增存酒|pos login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T08:25:16.433Z",
+    "finishedAt": "2026-09-21T08:26:27.726Z",
+    "ids": [
+      "crud:pos-wine:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-162344-um0m",
+    "system": "pos",
+    "target": "crud:pos-wine:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/wine-storage.crud.spec.ts -g (?:新增存酒|pos login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T08:23:44.724Z",
+    "finishedAt": "2026-09-21T08:24:55.688Z",
+    "ids": [
+      "crud:pos-wine:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-162249-td2t",
+    "system": "pos",
+    "target": "crud:pos-members:read",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:查找会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T08:22:49.627Z",
+    "finishedAt": "2026-09-21T08:23:04.344Z",
+    "ids": [
+      "crud:pos-members:read"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-161639-vtds",
+    "system": "pos",
+    "target": "crud:pos-members:read",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:查找会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T08:16:39.434Z",
+    "finishedAt": "2026-09-21T08:16:50.840Z",
+    "ids": [
+      "crud:pos-members:read"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-161602-ynhz",
+    "system": "pos",
+    "target": "crud:pos-members:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:新增会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T08:16:02.849Z",
+    "finishedAt": "2026-09-21T08:16:17.410Z",
+    "ids": [
+      "crud:pos-members:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-160501-x9g2",
+    "system": "pos",
+    "target": "crud:pos-members:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T08:05:01.147Z",
+    "finishedAt": "2026-09-21T08:05:40.567Z",
+    "ids": [
+      "crud:pos-members:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-160028-pffk",
+    "system": "pos",
+    "target": "crud:pos-members:update",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:更新会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T08:00:28.816Z",
+    "finishedAt": "2026-09-21T08:00:39.430Z",
+    "ids": [
+      "crud:pos-members:update"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  {
+    "runId": "20260921-155956-m8i6",
+    "system": "pos",
+    "target": "crud:pos-members:update",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:更新会员|pos login)",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T07:59:56.824Z",
+    "finishedAt": "2026-09-21T08:00:20.731Z",
+    "ids": [
+      "crud:pos-members:update"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-155918-vyxj",
+    "system": "pos",
+    "target": "crud:pos-members:update",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:更新会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T07:59:18.845Z",
+    "finishedAt": "2026-09-21T07:59:29.597Z",
+    "ids": [
+      "crud:pos-members:update"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  {
+    "runId": "20260921-155845-eprg",
+    "system": "pos",
+    "target": "crud:pos-members:update",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:更新会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T07:58:45.606Z",
+    "finishedAt": "2026-09-21T07:58:56.295Z",
+    "ids": [
+      "crud:pos-members:update"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  {
+    "runId": "20260921-155809-v9m6",
+    "system": "pos",
+    "target": "crud:pos-members:read",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:查找会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T07:58:09.219Z",
+    "finishedAt": "2026-09-21T07:58:20.886Z",
+    "ids": [
+      "crud:pos-members:read"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-155735-s8id",
+    "system": "pos",
+    "target": "crud:pos-members:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:新增会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T07:57:35.355Z",
+    "finishedAt": "2026-09-21T07:57:46.735Z",
+    "ids": [
+      "crud:pos-members:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-155621-iykc",
+    "system": "pos",
+    "target": "crud:pos-members:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:新增会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T07:56:21.397Z",
+    "finishedAt": "2026-09-21T07:56:33.083Z",
+    "ids": [
+      "crud:pos-members:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-155324-35dj",
+    "system": "pos",
+    "target": "crud:pos-members:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g (?:新增会员|pos login)",
+    "exitCode": 0,
+    "startedAt": "2026-09-21T07:53:24.676Z",
+    "finishedAt": "2026-09-21T07:53:40.753Z",
+    "ids": [
+      "crud:pos-members:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-154818-9sa5",
+    "system": "pos",
+    "target": "crud:pos-members:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g 新增会员",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T07:48:18.644Z",
+    "finishedAt": "2026-09-21T07:48:24.637Z",
+    "ids": [
+      "crud:pos-members:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-154802-dhoo",
+    "system": "pos",
+    "target": "crud:pos-members:create",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/members.crud.spec.ts -g 新增会员",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T07:48:02.270Z",
+    "finishedAt": "2026-09-21T07:48:11.427Z",
+    "ids": [
+      "crud:pos-members:create"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
+    "runId": "20260921-145642-poyd",
+    "system": "pos",
+    "target": "crud:pos-cart",
+    "command": "npx playwright test --project=pos --workers=1 tests/pos/crud/cart.crud.spec.ts",
+    "exitCode": 1,
+    "startedAt": "2026-09-21T06:56:42.192Z",
+    "finishedAt": "2026-09-21T06:56:54.159Z",
+    "ids": [
+      "crud:pos-cart"
+    ],
+    "counts": {
+      "total": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0
+    }
+  },
+  {
     "runId": "20260921-123623-grs2",
     "system": "pos",
     "target": "all",

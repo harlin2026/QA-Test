@@ -5,16 +5,15 @@
 import { test, expect } from '../../fixtures/base-test';
 import { writeBridge } from '../../helpers/bridge';
 import {
-  clickTextButton,
-  fillByPlaceholder,
-  fillNthPlaceholder,
+  fillPosFieldRow,
+  fillUniInput,
   openPosPage,
   uniqueLabel,
   uniquePhone,
 } from '../helpers/pos';
 
 /**
- * 閉環：會員手機 → 存酒登記表單完整填寫 → 提交或安全取消 → 列表搜尋。
+ * 閉環：會員手機 → 存酒登記表單完整填寫 → 提交 → 列表搜尋。
  */
 test.describe.configure({ mode: 'serial' });
 
@@ -28,10 +27,12 @@ test.describe('E2E POS 會員存酒登記閉環', () => {
     await page.locator('uni-button', { hasText: /新建存酒/ }).first().click();
     await expect(page).toHaveURL(/\/pages\/inventory\/create/, { timeout: 15_000 });
 
-    await fillByPlaceholder(page, '请输入顾客姓名', customer);
-    await fillByPlaceholder(page, '请输入手机号', phone);
-    await fillNthPlaceholder(page, '请输入', 0, wineName);
-    await fillNthPlaceholder(page, '请输入', 1, '1');
+    // 手機號 watcher 會立刻清空姓名並查會員；原生 fill 寫不進 v-model
+    await fillPosFieldRow(page, '手机号码', phone);
+    await page.waitForTimeout(900);
+    await fillPosFieldRow(page, '顾客姓名', customer);
+    await fillPosFieldRow(page, '酒品名称', wineName);
+    await fillPosFieldRow(page, '存入数量', '1');
 
     writeBridge({
       memberPhone: phone,
@@ -40,8 +41,8 @@ test.describe('E2E POS 會員存酒登記閉環', () => {
       note: 'pos-wine-register',
     });
 
-    await clickTextButton(page, /确认存酒登记/);
-    await page.waitForTimeout(1500);
+    await page.locator('uni-button', { hasText: /确认存酒登记/ }).last().click({ force: true });
+    await expect(page).toHaveURL(/\/pages\/inventory\/index/, { timeout: 15_000 });
   });
 
   test('2. 列表搜尋剛登記的標記（或確認已安全返回）', async ({ page }) => {
@@ -49,16 +50,15 @@ test.describe('E2E POS 會員存酒登記閉環', () => {
       await openPosPage(page, '/pages/inventory/index', '存酒');
     }
 
-    // 若仍在表單頁，取消返回
     if (/\/create/.test(page.url())) {
-      await clickTextButton(page, /^取消$/);
+      await page.locator('uni-button', { hasText: /^取消$/ }).first().click({ force: true });
       await expect(page).toHaveURL(/\/pages\/inventory\/index/, { timeout: 15_000 });
     }
 
     const searchPh = page.locator('.uni-input-placeholder', { hasText: /搜索顾客|酒名|手机号/ }).first();
     if (await searchPh.count()) {
       const input = searchPh.locator('xpath=ancestor::*[contains(@class,"uni-input-wrapper")][1]//input');
-      await input.fill(wineName);
+      await fillUniInput((await input.count()) ? input : page.locator('input.uni-input-input').first(), wineName);
       const searchBtn = page.locator('uni-button', { hasText: /^搜索$/ }).first();
       if (await searchBtn.isVisible().catch(() => false)) await searchBtn.click();
       await page.waitForTimeout(800);

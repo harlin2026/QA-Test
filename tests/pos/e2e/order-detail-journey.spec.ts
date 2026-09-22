@@ -3,7 +3,7 @@
  */
 
 import { test, expect } from '../../fixtures/base-test';
-import { openPosPage } from '../helpers/pos';
+import { clickOrderStatusTab, openPosPage } from '../helpers/pos';
 
 test.describe.configure({ mode: 'serial' });
 
@@ -11,8 +11,8 @@ test.describe('E2E POS 訂單詳情閉環', () => {
   test('1. 訂單列表可篩選', async ({ page }) => {
     await openPosPage(page, '/pages/orders/index', '订单');
     await expect(page.getByText(/全部|待支付|已完成|订单编号/).first()).toBeVisible({ timeout: 15_000 });
-    const tab = page.locator('uni-button, uni-view', { hasText: /已完成|全部/ }).first();
-    if (await tab.isVisible().catch(() => false)) await tab.click();
+    await clickOrderStatusTab(page, '全部');
+    await expect(page).toHaveURL(/\/pages\/orders\/index/);
   });
 
   test('2. 打開訂單詳情或確認列表仍可用', async ({ page }) => {

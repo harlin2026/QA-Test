@@ -11,12 +11,12 @@ const DEFAULT_MINIAPP = {
 const MODE_META = {
   smoke: {
     title: '冒煙測試',
-    desc: '檢查各功能頁能否正常開啟與基本可用性。可單項執行，或跑本類型全部。',
+    desc: '只確認各功能頁能打開、導航與關鍵文案在。不會新增會員、搜單號、沽清或改購物車。',
     runLabel: '跑本類型全部（冒煙）',
   },
   crud: {
     title: 'CRUD 測試',
-    desc: '檢查新增 / 查詢 / 刪除或寫入入口是否可用。可單項執行，或跑本類型全部。',
+    desc: '真正對資料做事：新增／查找／更新／刪除。和冒煙同模組，但不是再開一次頁面。',
     runLabel: '跑本類型全部（CRUD）',
   },
   e2e: {
@@ -55,6 +55,7 @@ const state = {
   stepsModalId: null,
   /** 目前正在編輯的腳本相對路徑 */
   editingSpecFile: null,
+  editingSpecId: null,
   xuqiuTab: 'stories',
   xuqiuSelectedId: null,
   xuqiuItems: [],
@@ -97,6 +98,9 @@ const el = {
   btnEditSpec: document.getElementById('btnEditSpec'),
   btnEditSpecDetail: document.getElementById('btnEditSpecDetail'),
   btnEditSpecFromSteps: document.getElementById('btnEditSpecFromSteps'),
+  btnDeleteSpec: document.getElementById('btnDeleteSpec'),
+  btnDeleteSpecDetail: document.getElementById('btnDeleteSpecDetail'),
+  btnDeleteSpecFromSteps: document.getElementById('btnDeleteSpecFromSteps'),
   btnRunType: document.getElementById('btnRunType'),
   btnAll: document.getElementById('btnAll'),
   typeTotals: document.getElementById('typeTotals'),
@@ -145,7 +149,10 @@ const el = {
   specEditFileLabel: document.getElementById('specEditFileLabel'),
   specEditNote: document.getElementById('specEditNote'),
   specEditSource: document.getElementById('specEditSource'),
+  specAiInstruction: document.getElementById('specAiInstruction'),
+  specAiHint: document.getElementById('specAiHint'),
   btnReloadSpec: document.getElementById('btnReloadSpec'),
+  btnAiRewriteSpec: document.getElementById('btnAiRewriteSpec'),
   btnSaveSpec: document.getElementById('btnSaveSpec'),
   btnCloseSpecEditModal: document.getElementById('btnCloseSpecEditModal'),
   btnExportPdf: document.getElementById('btnExportPdf'),
@@ -194,6 +201,8 @@ const el = {
   btnCloseXuqiuRelatedModal: document.getElementById('btnCloseXuqiuRelatedModal'),
   btnCloseXuqiuGenTestModal: document.getElementById('btnCloseXuqiuGenTestModal'),
   btnXuqiuDoGenTest: document.getElementById('btnXuqiuDoGenTest'),
+  btnXuqiuRewriteGenTest: document.getElementById('btnXuqiuRewriteGenTest'),
+  xuqiuRewriteInstruction: document.getElementById('xuqiuRewriteInstruction'),
   btnXuqiuSaveGenTest: document.getElementById('btnXuqiuSaveGenTest'),
   btnXuqiuRunGenTest: document.getElementById('btnXuqiuRunGenTest'),
   btnXuqiuGenViewResult: document.getElementById('btnXuqiuGenViewResult'),
@@ -225,6 +234,8 @@ const el = {
   globalLoading: document.getElementById('globalLoading'),
   globalLoadingText: document.getElementById('globalLoadingText'),
   btnAiGenerate: document.getElementById('btnAiGenerate'),
+  btnAiRewriteDraft: document.getElementById('btnAiRewriteDraft'),
+  aiRewriteInstruction: document.getElementById('aiRewriteInstruction'),
   btnAiSave: document.getElementById('btnAiSave'),
   btnAiRun: document.getElementById('btnAiRun'),
   btnAiViewResult: document.getElementById('btnAiViewResult'),
@@ -379,8 +390,11 @@ function setBusy(busy) {
   if (el.btnStressStart) el.btnStressStart.disabled = next;
   if (el.btnStressStop) el.btnStressStop.disabled = !next;
   if (el.btnAiGenerate) el.btnAiGenerate.disabled = next;
+  if (el.btnAiRewriteDraft) el.btnAiRewriteDraft.disabled = next;
   if (el.btnAiSave) el.btnAiSave.disabled = next;
   if (el.btnAiRun) el.btnAiRun.disabled = next;
+  if (el.btnAiRewriteSpec) el.btnAiRewriteSpec.disabled = next;
+  if (el.btnXuqiuRewriteGenTest) el.btnXuqiuRewriteGenTest.disabled = next;
   refreshSelectedActions();
   renderSystemBar();
   if (state.mode !== 'stress' && state.nav !== 'aigen' && state.nav !== 'xuqiu') renderSuiteList();
@@ -401,6 +415,7 @@ function refreshSelectedActions() {
   el.btnRunSelected.disabled = !inMode || state.running;
   const hasSpec = !!(item?.file && String(item.file).replace(/\\/g, '/').startsWith('tests/'));
   const canEdit = !!(inMode && hasSpec && !state.running);
+  const canDelete = !!(inMode && !state.running);
   const title = hasSpec
     ? `編輯 ${item.file}`
     : '請先選取一項測試（冒煙／CRUD／E2E／用戶故事皆可）';
@@ -409,6 +424,15 @@ function refreshSelectedActions() {
     btn.disabled = !canEdit;
     btn.hidden = false;
     btn.title = title;
+  }
+  const delTitle = canDelete
+    ? `刪除「${item.module ? item.module + ' / ' : ''}${item.name}」`
+    : '請先選取要刪除的測試項';
+  for (const btn of [el.btnDeleteSpec, el.btnDeleteSpecDetail]) {
+    if (!btn) continue;
+    btn.disabled = !canDelete;
+    btn.hidden = false;
+    btn.title = delTitle;
   }
 }
 
@@ -766,6 +790,7 @@ function renderSuiteList() {
                   </span>
                   <span class="pill ${st}">${statusLabel(st)}</span>
                 </button>
+                <div class="item-actions">
                 ${
                   item.file
                     ? `<button class="btn tiny primary item-edit-btn" type="button" data-edit-spec="${item.id}" ${
@@ -773,6 +798,10 @@ function renderSuiteList() {
                       } title="${escapeHtml(item.file)}">編輯腳本</button>`
                     : ''
                 }
+                <button class="btn tiny danger item-delete-btn" type="button" data-delete-spec="${item.id}" ${
+                  state.running ? 'disabled' : ''
+                } title="刪除「${escapeHtml(item.name)}」">刪除腳本</button>
+                </div>
               </div>
             `;
           })
@@ -972,6 +1001,10 @@ function renderStepsModalContent(itemId = state.stepsModalId) {
     renderExecMeta(null, {});
     renderShotGallery({});
     if (el.btnExportPdf) el.btnExportPdf.disabled = true;
+    if (el.btnDeleteSpecFromSteps) {
+      el.btnDeleteSpecFromSteps.hidden = true;
+      el.btnDeleteSpecFromSteps.disabled = true;
+    }
     return;
   }
 
@@ -991,6 +1024,11 @@ function renderStepsModalContent(itemId = state.stepsModalId) {
     const canEdit = !!(item.file && !state.running);
     el.btnEditSpecFromSteps.hidden = !item.file;
     el.btnEditSpecFromSteps.disabled = !canEdit;
+  }
+  if (el.btnDeleteSpecFromSteps) {
+    el.btnDeleteSpecFromSteps.hidden = false;
+    el.btnDeleteSpecFromSteps.disabled = !!state.running;
+    el.btnDeleteSpecFromSteps.title = `刪除「${item.module ? item.module + ' / ' : ''}${item.name}」`;
   }
   if (el.btnExportPdf) {
     const canExport = done && result.status !== 'idle';
@@ -1050,6 +1088,7 @@ async function openSpecEditor(itemOrId) {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || res.statusText);
     state.editingSpecFile = data.file;
+    state.editingSpecId = item.id;
     if (el.specEditModalTitle) {
       el.specEditModalTitle.textContent = `編輯：${item.name || data.file}`;
     }
@@ -1058,6 +1097,13 @@ async function openSpecEditor(itemOrId) {
     }
     if (el.specEditFileLabel) el.specEditFileLabel.textContent = data.file;
     if (el.specEditSource) el.specEditSource.value = data.content || '';
+    if (el.specAiInstruction) el.specAiInstruction.value = '';
+    const failHint = lastErrorTextOf(item.id);
+    if (el.specAiHint) {
+      el.specAiHint.textContent = failHint
+        ? '不會自動儲存。說明可留空，將依最近一次失敗修復。'
+        : '不會自動儲存。填寫修改說明後按「AI 修改脚本」。';
+    }
     if (el.specEditNote) {
       if (item.kind === 'smoke') {
         el.specEditNote.textContent = `冒煙各頁共用此腳本 ${data.file}；路徑清單請用「路徑管理」。改動會影響全部冒煙項。`;
@@ -1089,6 +1135,57 @@ async function openSpecEditor(itemOrId) {
 function closeSpecEditor() {
   if (el.specEditModal) el.specEditModal.hidden = true;
   state.editingSpecFile = null;
+  state.editingSpecId = null;
+}
+
+async function deleteCatalogItem(itemOrId) {
+  if (state.running) {
+    alert('測試執行中，暫不可刪腳本');
+    return;
+  }
+  const item = typeof itemOrId === 'string' ? findItem(itemOrId) : itemOrId || findItem(state.selectedId);
+  if (!item?.id) {
+    alert('請先選取要刪除的測試項');
+    return;
+  }
+  const label = `${item.module ? `${item.module} / ` : ''}${item.name}`;
+  const fileHint = item.file ? `\n對應檔案：${item.file}` : '';
+  if (
+    !confirm(
+      `確定刪除「${label}」？\n將從測試目錄移除此項；若腳本沒有被其他用例引用，會一併刪除檔案。${fileHint}`,
+    )
+  ) {
+    return;
+  }
+  showLoading('刪除中…');
+  try {
+    const qs = new URLSearchParams({
+      system: state.system,
+      id: item.id,
+    });
+    const res = await fetch(`/api/catalog-item?${qs.toString()}`, { method: 'DELETE' });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || res.statusText);
+    if (data.catalog) state.catalog = data.catalog;
+    else await loadCatalog();
+    if (state.selectedId === item.id) {
+      state.selectedId = modeItems()[0]?.id || null;
+    }
+    if (state.stepsModalId === item.id) closeStepsModal();
+    closeSpecEditor();
+    renderTypeTotals();
+    renderSuiteList();
+    renderDetail();
+    renderSummary();
+    refreshSelectedActions();
+    const gone = data.deletedFile ? `；已刪腳本檔 ${data.deletedFile}` : '';
+    const kept = data.fileKept ? `；檔案仍被其他用例引用，已保留 ${data.fileKept}` : '';
+    appendLog(`已刪除「${label}」${gone}${kept}`);
+  } catch (err) {
+    alert(err.message || String(err));
+  } finally {
+    hideLoading();
+  }
 }
 
 async function reloadSpecEditor() {
@@ -1139,6 +1236,144 @@ async function saveSpecEditor() {
   } finally {
     hideLoading();
     if (el.btnSaveSpec) el.btnSaveSpec.disabled = false;
+  }
+}
+
+function lastErrorTextOf(id) {
+  const result = state.results[id] || {};
+  const parts = [];
+  if (result.error) parts.push(String(result.error));
+  for (const step of result.steps || []) {
+    if (step.status === 'failed') {
+      parts.push(`${step.title || '步驟'}${step.error ? `：${step.error}` : ''}`);
+    }
+  }
+  return parts.join('\n').slice(0, 4000);
+}
+
+async function rewriteScriptWithAi({ source, instruction, lastError, file, system, kind }) {
+  const res = await fetch('/api/ai/rewrite', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      source,
+      instruction,
+      lastError,
+      file,
+      system: system || state.system,
+      kind,
+    }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || res.statusText);
+  return data;
+}
+
+async function applyAiRewriteToSpecEditor() {
+  if (state.running) {
+    alert('測試執行中，暫不可請 AI 改腳本');
+    return;
+  }
+  const source = el.specEditSource?.value || '';
+  const instruction = el.specAiInstruction?.value || '';
+  const lastError = lastErrorTextOf(state.editingSpecId);
+  if (!String(source).trim()) {
+    alert('腳本內容不可為空');
+    return;
+  }
+  if (!String(instruction).trim() && !lastError) {
+    alert('請填寫修改說明，或先執行測試以便依失敗修復');
+    return;
+  }
+  if (el.btnAiRewriteSpec) el.btnAiRewriteSpec.disabled = true;
+  showLoading('AI 正在修改脚本…');
+  try {
+    const item = findItem(state.editingSpecId);
+    const data = await rewriteScriptWithAi({
+      source,
+      instruction,
+      lastError,
+      file: state.editingSpecFile,
+      system: state.system,
+      kind: item?.kind || state.mode,
+    });
+    if (el.specEditSource) el.specEditSource.value = data.specSource || source;
+    if (el.specAiHint) {
+      el.specAiHint.textContent = `AI 已改好（${data.model || '模型'}）：${data.summary || '請檢視後再儲存'}`;
+    }
+    appendLog(`\n—— [AI] 已修改腳本預覽：${state.editingSpecFile} ——`);
+  } catch (err) {
+    alert(err.message || String(err));
+  } finally {
+    hideLoading();
+    if (el.btnAiRewriteSpec) el.btnAiRewriteSpec.disabled = false;
+  }
+}
+
+async function applyAiRewriteToAiPreview() {
+  const source = el.aiSpecSource?.value || state.aiDraft?.specSource || '';
+  const instruction = el.aiRewriteInstruction?.value || '';
+  if (!String(source).trim()) {
+    alert('請先生成草稿，再請 AI 修改');
+    return;
+  }
+  if (!String(instruction).trim() && !String(el.aiRequirement?.value || '').trim()) {
+    alert('請在「再改一版」填寫要怎麼改');
+    return;
+  }
+  if (el.btnAiRewriteDraft) el.btnAiRewriteDraft.disabled = true;
+  showLoading('AI 正在修改草稿…');
+  try {
+    const data = await rewriteScriptWithAi({
+      source,
+      instruction: instruction || el.aiRequirement?.value || '',
+      file: state.aiDraft?.relFile || state.aiDraft?.fileName || '',
+      system: state.aiDraft?.system || el.aiSystem?.value || state.system,
+      kind: state.aiDraft?.kind || el.aiKind?.value || 'e2e',
+    });
+    if (el.aiSpecSource) el.aiSpecSource.value = data.specSource || source;
+    if (state.aiDraft) state.aiDraft = { ...state.aiDraft, specSource: data.specSource || source };
+    appendLog(`\n—— [AI] 已修改草稿：${data.summary || ''} ——`);
+  } catch (err) {
+    alert(err.message || String(err));
+  } finally {
+    hideLoading();
+    if (el.btnAiRewriteDraft) el.btnAiRewriteDraft.disabled = false;
+  }
+}
+
+async function applyAiRewriteToXuqiu() {
+  const source = el.xuqiuGenSpecSource?.value || state.xuqiuTestDraft?.specSource || '';
+  const instruction = el.xuqiuRewriteInstruction?.value || '';
+  if (!String(source).trim()) {
+    alert('請先生成腳本，再請 AI 修改');
+    return;
+  }
+  if (!String(instruction).trim() && !String(el.xuqiuGenRequirement?.value || '').trim()) {
+    alert('請在「再改一版」填寫要怎麼改');
+    return;
+  }
+  if (el.btnXuqiuRewriteGenTest) el.btnXuqiuRewriteGenTest.disabled = true;
+  showLoading('AI 正在修改脚本…');
+  try {
+    const data = await rewriteScriptWithAi({
+      source,
+      instruction: instruction || el.xuqiuGenRequirement?.value || '',
+      file: state.xuqiuTestDraft?.relFile || state.xuqiuTestDraft?.fileName || '',
+      system: state.xuqiuTestDraft?.system || el.xuqiuGenSystem?.value || state.system,
+      kind: state.xuqiuTestDraft?.kind || 'story',
+    });
+    if (el.xuqiuGenSpecSource) el.xuqiuGenSpecSource.value = data.specSource || source;
+    if (state.xuqiuTestDraft) {
+      state.xuqiuTestDraft = { ...state.xuqiuTestDraft, specSource: data.specSource || source };
+    }
+    if (el.xuqiuGenSaveHint) el.xuqiuGenSaveHint.textContent = data.summary || 'AI 已改好，請檢視後再寫入';
+    appendLog(`\n—— [AI] 已修改需求庫腳本：${data.summary || ''} ——`);
+  } catch (err) {
+    alert(err.message || String(err));
+  } finally {
+    hideLoading();
+    if (el.btnXuqiuRewriteGenTest) el.btnXuqiuRewriteGenTest.disabled = false;
   }
 }
 
@@ -1518,6 +1753,13 @@ el.suiteList.addEventListener('click', (ev) => {
     openSpecEditor(id);
     return;
   }
+  const deleteBtn = ev.target.closest('[data-delete-spec]');
+  if (deleteBtn) {
+    ev.preventDefault();
+    ev.stopPropagation();
+    deleteCatalogItem(deleteBtn.dataset.deleteSpec);
+    return;
+  }
   const viewSteps = ev.target.closest('[data-open-steps]');
   if (viewSteps) {
     selectItem(viewSteps.dataset.openSteps, { openSteps: true });
@@ -1627,8 +1869,14 @@ el.btnEditSpecDetail?.addEventListener('click', () => openSpecEditor(state.selec
 el.btnEditSpecFromSteps?.addEventListener('click', () => {
   openSpecEditor(state.stepsModalId || state.selectedId);
 });
+el.btnDeleteSpec?.addEventListener('click', () => deleteCatalogItem(state.selectedId));
+el.btnDeleteSpecDetail?.addEventListener('click', () => deleteCatalogItem(state.selectedId));
+el.btnDeleteSpecFromSteps?.addEventListener('click', () => {
+  deleteCatalogItem(state.stepsModalId || state.selectedId);
+});
 el.btnCloseSpecEditModal?.addEventListener('click', () => closeSpecEditor());
 el.btnReloadSpec?.addEventListener('click', () => reloadSpecEditor());
+el.btnAiRewriteSpec?.addEventListener('click', () => applyAiRewriteToSpecEditor());
 el.btnSaveSpec?.addEventListener('click', () => saveSpecEditor());
 
 el.btnRunType.addEventListener('click', () => {
@@ -1743,8 +1991,9 @@ function emptyPathItem() {
 
 function collectPathItemsFromDom() {
   const rows = [...el.pathEditor.querySelectorAll('.path-row')];
-  return rows.map((row) => {
+  return rows.map((row, index) => {
     const get = (name) => row.querySelector(`[name="${name}"]`)?.value?.trim() || '';
+    const prev = state.pathItems[index] || {};
     if (state.pathKind === 'smoke') {
       const checks = [...row.querySelectorAll('input[type="checkbox"][data-check]:checked')].map(
         (x) => x.dataset.check,
@@ -1760,7 +2009,7 @@ function collectPathItemsFromDom() {
       return item;
     }
     if (state.pathKind === 'crud') {
-      return {
+      const item = {
         id: get('id'),
         module: get('module'),
         name: get('name'),
@@ -1768,6 +2017,8 @@ function collectPathItemsFromDom() {
         file: get('file'),
         description: get('description'),
       };
+      if (prev.grep) item.grep = prev.grep;
+      return item;
     }
     if (state.pathKind === 'story') {
       return {
@@ -3027,6 +3278,7 @@ async function generateAiDraft() {
 }
 
 el.btnAiGenerate?.addEventListener('click', () => generateAiDraft());
+el.btnAiRewriteDraft?.addEventListener('click', () => applyAiRewriteToAiPreview());
 el.btnAiSave?.addEventListener('click', () => saveAiDraft());
 el.btnAiRun?.addEventListener('click', () => runAiDraftNow());
 el.btnAiViewResult?.addEventListener('click', () => {
@@ -3836,6 +4088,7 @@ el.btnXuqiuDelete?.addEventListener('click', () => deleteXuqiuItem());
 el.btnXuqiuGenTest?.addEventListener('click', () => openXuqiuGenTestModal());
 el.btnCloseXuqiuGenTestModal?.addEventListener('click', () => closeXuqiuGenTestModal());
 el.btnXuqiuDoGenTest?.addEventListener('click', () => generateXuqiuStoryTest());
+el.btnXuqiuRewriteGenTest?.addEventListener('click', () => applyAiRewriteToXuqiu());
 el.btnXuqiuSaveGenTest?.addEventListener('click', () => saveXuqiuStoryTest());
 el.btnXuqiuRunGenTest?.addEventListener('click', () => runXuqiuStoryTestNow());
 el.btnXuqiuGenViewResult?.addEventListener('click', () => {

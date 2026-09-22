@@ -12,6 +12,7 @@ import {
   clearCartIfAny,
   clickFirstKitchenAction,
   clickKitchenStatusTab,
+  completeKitchenPickup,
   clickPosNav,
   completeCheckoutPayment,
   openPosPage,
@@ -87,29 +88,35 @@ test.describe('E2E POS 進店點單支付到取餐閉環', () => {
     await openPosPage(page, '/pages/kitchen/index', '制作进度');
     await clickKitchenStatusTab(page, '制作中');
 
-    const done = await clickFirstKitchenAction(page, /完成制作|完成製作|出餐完成|出餐/);
-    // 若制作中為空，嘗試待制作
+    let done = await clickFirstKitchenAction(page, /完成制作[，,]出餐|完成制作|完成製作/);
     if (!done) {
       await clickKitchenStatusTab(page, '待制作');
       await clickFirstKitchenAction(page, /开始制作|開始制作|接单|接單/);
       await clickKitchenStatusTab(page, '制作中');
-      const again = await clickFirstKitchenAction(page, /完成制作|完成製作|出餐完成|出餐/);
-      expect(again, '應能點「完成制作」').toBeTruthy();
+      done = await clickFirstKitchenAction(page, /完成制作[，,]出餐|完成制作|完成製作/);
     }
+    expect(done, '應能點「完成制作，出餐」').toBeTruthy();
 
-    const toPickup = await clickKitchenStatusTab(page, '待取单');
-    expect(toPickup).toBeTruthy();
-    await expect(page.getByText(/待取单|已取单|取餐|暂无订单|订单/).first()).toBeVisible({
+    await clickKitchenStatusTab(page, '待取单');
+    const pickupBtn = page.locator('uni-button', { hasText: /完成取单|已取单/ }).first();
+    if (!(await pickupBtn.isVisible().catch(() => false))) {
+      await clickKitchenStatusTab(page, '超时单');
+    }
+    await expect(page.locator('uni-button', { hasText: /完成取单|已取单/ }).first()).toBeVisible({
       timeout: 15_000,
     });
   });
 
   test('7. 顧客取单 → 已取单 → 已完成', async ({ page }) => {
     await openPosPage(page, '/pages/kitchen/index', '制作进度');
-    await clickKitchenStatusTab(page, '待取单');
 
-    const taken = await clickFirstKitchenAction(page, /已取单|已取單|取餐完成|确认取餐|確認取餐/);
-    expect(taken, '應能點「已取单」').toBeTruthy();
+    let taken = await completeKitchenPickup(page);
+    if (!taken) {
+      await clickKitchenStatusTab(page, '制作中');
+      await clickFirstKitchenAction(page, /完成制作[，,]出餐|完成制作|完成製作/);
+      taken = await completeKitchenPickup(page);
+    }
+    expect(taken, '應能點「完成取单」').toBeTruthy();
 
     await clickKitchenStatusTab(page, '已完成');
     await expect(page.getByText(/已完成|完成|订单|暂无订单/).first()).toBeVisible({ timeout: 15_000 });

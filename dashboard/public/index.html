@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles.css?v=20260921b" />
+    <link rel="stylesheet" href="/styles.css?v=20260921c" />
   </head>
   <body>
     <div class="bg-grid" aria-hidden="true"></div>
@@ -90,6 +90,7 @@
                   <button class="btn primary" id="btnRunType" type="button">跑本類型全部</button>
                   <button class="btn ghost" id="btnRunSelected" type="button" disabled>執行選中項</button>
                   <button class="btn ghost" id="btnEditSpec" type="button" disabled>編輯腳本</button>
+                  <button class="btn ghost danger" id="btnDeleteSpec" type="button" disabled>刪除腳本</button>
                 </div>
               </div>
 
@@ -120,6 +121,7 @@
                   <div><span>結果</span><em id="detailError">—</em></div>
                   <div class="detail-edit-row">
                     <button class="btn tiny primary" id="btnEditSpecDetail" type="button" disabled>編輯腳本</button>
+                    <button class="btn tiny danger" id="btnDeleteSpecDetail" type="button" disabled>刪除腳本</button>
                   </div>
                 </div>
                 <div class="detail-steps-wrap">
@@ -330,6 +332,18 @@
                   腳本內容（可手動修改後再儲存；冒煙類型可為空）
                   <textarea id="aiSpecSource" rows="18" spellcheck="false"></textarea>
                 </label>
+                <div class="spec-ai-row">
+                  <label class="spec-ai-label">
+                    再改一版
+                    <textarea
+                      id="aiRewriteInstruction"
+                      rows="2"
+                      spellcheck="false"
+                      placeholder="例如：查找不要走新增；保留原 test 標題"
+                    ></textarea>
+                  </label>
+                  <button class="btn ghost" id="btnAiRewriteDraft" type="button">AI 修改脚本</button>
+                </div>
                 <div class="aigen-save-row">
                   <label class="stress-check">
                     <input type="checkbox" id="aiOverwrite" />
@@ -556,6 +570,7 @@
           </div>
           <div class="modal-head-actions">
             <button class="btn ghost" id="btnEditSpecFromSteps" type="button" hidden>編輯腳本</button>
+            <button class="btn ghost danger" id="btnDeleteSpecFromSteps" type="button" hidden>刪除腳本</button>
             <button class="btn ghost" id="btnExportPdf" type="button">匯出 PDF</button>
             <button class="btn primary" id="btnRunFromStepsModal" type="button">執行此項</button>
             <button class="btn ghost" id="btnCloseStepsModal" type="button">關閉</button>
@@ -590,11 +605,22 @@
           </div>
           <div class="modal-head-actions">
             <button class="btn ghost" id="btnReloadSpec" type="button">重新載入</button>
+            <button class="btn ghost" id="btnAiRewriteSpec" type="button">AI 修改脚本</button>
             <button class="btn primary" id="btnSaveSpec" type="button">儲存</button>
             <button class="btn ghost" id="btnCloseSpecEditModal" type="button">關閉</button>
           </div>
         </div>
         <p class="path-note" id="specEditNote">冒煙／CRUD／E2E／用戶故事均可編輯對應腳本。</p>
+        <label class="spec-ai-label">
+          修改說明（給 AI）
+          <textarea
+            id="specAiInstruction"
+            rows="3"
+            spellcheck="false"
+            placeholder="例如：查找不要走進新建存酒表單；必要時另開分頁建資料。留空則依最近一次失敗自動修復。"
+          ></textarea>
+        </label>
+        <p class="path-note" id="specAiHint">不會自動儲存。可留空說明，改依最近失敗修復。</p>
         <label class="spec-edit-label">
           腳本內容
           <textarea id="specEditSource" rows="22" spellcheck="false" autocomplete="off"></textarea>
@@ -674,6 +700,18 @@
               <span class="xuqiu-gen-label">TypeScript（可手動修改）</span>
               <textarea id="xuqiuGenSpecSource" rows="14" spellcheck="false" placeholder="點上方「生成腳本」後顯示內容…"></textarea>
             </label>
+            <div class="spec-ai-row">
+              <label class="spec-ai-label">
+                再改一版
+                <textarea
+                  id="xuqiuRewriteInstruction"
+                  rows="2"
+                  spellcheck="false"
+                  placeholder="例如：依關聯任務補上搜尋步驟，不要走新增表單"
+                ></textarea>
+              </label>
+              <button class="btn ghost" id="btnXuqiuRewriteGenTest" type="button">AI 修改脚本</button>
+            </div>
 
             <div class="xuqiu-gen-footer">
               <label class="xuqiu-gen-overwrite">
@@ -726,6 +764,6 @@
       </div>
     </div>
 
-    <script src="/app.js?v=20260921c"></script>
+    <script src="/app.js?v=20260921h"></script>
   </body>
 </html>

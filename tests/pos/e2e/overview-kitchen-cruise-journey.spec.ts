@@ -3,7 +3,7 @@
  */
 
 import { test, expect } from '../../fixtures/base-test';
-import { clickPosNav, openPosPage } from '../helpers/pos';
+import { clickDashboardPeriod, clickPosNav, openPosPage } from '../helpers/pos';
 
 /**
  * 深入閉環：總覽營收看板 → 點單 → 廚房 → 回總覽（班次中段巡航）。
@@ -15,11 +15,7 @@ test.describe('E2E POS 總覽到出餐巡航閉環', () => {
     await openPosPage(page, '/pages/dashboard/index', '总览');
     await expect(page.getByText(/实时营收概览|营业实收|订单数/).first()).toBeVisible({ timeout: 15_000 });
     for (const label of ['今日', '昨日', '本周']) {
-      const btn = page.locator('uni-button, uni-view, button', { hasText: new RegExp(`^${label}$`) }).first();
-      if (await btn.isVisible().catch(() => false)) {
-        await btn.click();
-        await page.waitForTimeout(350);
-      }
+      await clickDashboardPeriod(page, label);
     }
   });
 

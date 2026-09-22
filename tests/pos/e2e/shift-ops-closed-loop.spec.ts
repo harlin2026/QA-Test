@@ -7,6 +7,7 @@ import {
   addFirstAvailableProduct,
   clearCartIfAny,
   clickPosNav,
+  expectDashboardShell,
   openPosPage,
   tryHangOrder,
   tryOpenCheckout,
@@ -20,7 +21,7 @@ test.describe.configure({ mode: 'serial' });
 test.describe('E2E POS 班次運營全鏈路閉環', () => {
   test('1. 總覽確認營收殼層', async ({ page }) => {
     await openPosPage(page, '/pages/dashboard/index', '总览');
-    await expect(page.getByText(/实时营收概览|营业实收|订单数/).first()).toBeVisible({ timeout: 15_000 });
+    await expectDashboardShell(page);
   });
 
   test('2. 點單加購並打開結帳/掛單', async ({ page }) => {

@@ -1,98 +1,110 @@
 [
   {
-    "id": "crud:pos-members",
+    "id": "crud:pos-members:create",
     "module": "會員",
-    "name": "新增會員",
+    "name": "新增",
     "path": "/pages/members/index",
     "file": "tests/pos/crud/members.crud.spec.ts",
-    "description": "新增手機號會員 → 搜尋驗證"
+    "grep": "新增会员",
+    "description": "寫入新會員，不是只打開會員頁"
   },
   {
-    "id": "crud:pos-wine",
+    "id": "crud:pos-members:read",
+    "module": "會員",
+    "name": "查找",
+    "path": "/pages/members/index",
+    "file": "tests/pos/crud/members.crud.spec.ts",
+    "grep": "查找会员",
+    "description": "用手機號搜會員，不會走進新增成功頁"
+  },
+  {
+    "id": "crud:pos-wine:create",
     "module": "存酒",
-    "name": "新建存酒",
+    "name": "新增",
     "path": "/pages/inventory/create",
     "file": "tests/pos/crud/wine-storage.crud.spec.ts",
-    "description": "登記存酒 → 回列表搜尋"
+    "grep": "新增存酒",
+    "description": "提交新建存酒，不是只打開表單"
   },
   {
-    "id": "crud:pos-cart",
+    "id": "crud:pos-wine:read",
+    "module": "存酒",
+    "name": "查找",
+    "path": "/pages/inventory/index",
+    "file": "tests/pos/crud/wine-storage.crud.spec.ts",
+    "grep": "查找存酒",
+    "description": "搜尋存酒列表，不會走進新建存酒表單"
+  },
+  {
+    "id": "crud:pos-cart:create",
     "module": "點單",
-    "name": "購物車增刪",
+    "name": "新增",
     "path": "/pages/pos/index",
     "file": "tests/pos/crud/cart.crud.spec.ts",
-    "description": "加購商品 → 改數量 → 清空購物車"
+    "grep": "購物車增加",
+    "description": "加購後右側購物車列表看得到商品"
   },
   {
-    "id": "crud:pos-kitchen",
-    "module": "廚房",
-    "name": "製作進度分頁",
-    "path": "/pages/kitchen/index",
-    "file": "tests/pos/crud/kitchen.crud.spec.ts",
-    "description": "切換待製作／製作中／已完成分頁"
-  },
-  {
-    "id": "crud:pos-orders",
-    "module": "訂單",
-    "name": "訂單列表與詳情",
-    "path": "/pages/orders/index",
-    "file": "tests/pos/crud/orders.crud.spec.ts",
-    "description": "狀態篩選並嘗試打開訂單詳情"
-  },
-  {
-    "id": "crud:pos-inventory-overview",
-    "module": "總覽",
-    "name": "即時庫存總覽",
-    "path": "/pages/inventory/overview",
-    "file": "tests/pos/crud/inventory-overview.crud.spec.ts",
-    "description": "從總覽進入庫存總覽並同步"
-  },
-  {
-    "id": "crud:pos-extras",
+    "id": "crud:pos-cart:delete",
     "module": "點單",
-    "name": "會員登錄與備註",
+    "name": "刪除",
     "path": "/pages/pos/index",
-    "file": "tests/pos/crud/pos-extras.crud.spec.ts",
-    "description": "會員登錄入口與備註彈層"
+    "file": "tests/pos/crud/cart.crud.spec.ts",
+    "grep": "購物車刪除",
+    "description": "購物車有商品後再清空"
   },
   {
     "id": "crud:pos-product-search",
     "module": "點單",
-    "name": "商品搜尋與分類",
+    "name": "查找",
     "path": "/pages/pos/index",
     "file": "tests/pos/crud/product-search.crud.spec.ts",
-    "description": "切換分類 → 搜尋商品"
+    "grep": "查找商品",
+    "description": "切分類並搜商品名稱，不是只打開點單頁"
   },
   {
-    "id": "crud:pos-cleaning",
-    "module": "沽清",
-    "name": "沽清分頁切換",
-    "path": "/pages/cleaning/index",
-    "file": "tests/pos/crud/cleaning.crud.spec.ts",
-    "description": "未沽清/已沽清與分類切換"
+    "id": "crud:pos-kitchen",
+    "module": "廚房",
+    "name": "更新",
+    "path": "/pages/kitchen/index",
+    "file": "tests/pos/crud/kitchen.crud.spec.ts",
+    "grep": "制作进度",
+    "description": "切分頁並點完成制作，不是只確認頁面能開"
+  },
+  {
+    "id": "crud:pos-orders",
+    "module": "訂單",
+    "name": "查找",
+    "path": "/pages/orders/index",
+    "file": "tests/pos/crud/orders.crud.spec.ts",
+    "grep": "订单查询",
+    "description": "用完整單號搜訂單"
   },
   {
     "id": "crud:pos-orders-filter",
     "module": "訂單",
-    "name": "訂單進階篩選",
+    "name": "查找篩選",
     "path": "/pages/orders/index",
     "file": "tests/pos/crud/orders-filter.crud.spec.ts",
-    "description": "訂單全狀態分頁與今天/昨天快捷篩選"
+    "grep": "可切換售後與日期快捷篩選",
+    "description": "切狀態／今天昨天，不是只打開訂單列表"
   },
   {
-    "id": "crud:pos-scan",
-    "module": "掃碼",
-    "name": "掃碼入口",
-    "path": "/pages/pos/index",
-    "file": "tests/pos/crud/scan.crud.spec.ts",
-    "description": "點擊掃碼入口並保持頁面可用"
+    "id": "crud:pos-cleaning",
+    "module": "沽清",
+    "name": "更新",
+    "path": "/pages/cleaning/index",
+    "file": "tests/pos/crud/cleaning.crud.spec.ts",
+    "grep": "對規格執行沽清寫入並還原",
+    "description": "對商品規格確定沽清並還原"
   },
   {
     "id": "crud:pos-dashboard-periods",
     "module": "總覽",
-    "name": "總覽時段切換",
+    "name": "查找",
     "path": "/pages/dashboard/index",
     "file": "tests/pos/crud/dashboard-periods.crud.spec.ts",
-    "description": "今日到上月等多時段切換"
+    "grep": "可切換更多營收時段",
+    "description": "切換今日／昨日等時段，不是只打開總覽"
   }
 ]

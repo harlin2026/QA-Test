@@ -8,6 +8,7 @@ import {
   clearCartIfAny,
   clickPosNav,
   openPosPage,
+  orderListBody,
   tryHangOrder,
   tryOpenCheckout,
 } from '../helpers/pos';
@@ -41,7 +42,7 @@ test.describe('E2E POS 點單到廚房交接閉環', () => {
         await page.waitForTimeout(400);
       }
     }
-    await expect(page.getByText(/订单编号|暂无|交易|堂食|自提|外带/).first()).toBeVisible({
+    await expect(orderListBody(page)).toBeVisible({
       timeout: 15_000,
     });
   });

@@ -3,7 +3,7 @@
  */
 
 import { test, expect } from '../../fixtures/base-test';
-import { openInventoryOverview, openPosPage } from '../helpers/pos';
+import { clickDashboardPeriod, openInventoryOverview, openPosPage } from '../helpers/pos';
 
 /**
  * 深入：總覽多時段 → 即時庫存 → 回總覽。
@@ -14,11 +14,7 @@ test.describe('E2E POS 總覽時段與庫存閉環', () => {
   test('1. 總覽切換擴展時段', async ({ page }) => {
     await openPosPage(page, '/pages/dashboard/index', '总览');
     for (const label of ['今日', '昨日', '本周', '上周', '本月', '上月', '自定义']) {
-      const btn = page.locator('uni-button, uni-view, button', { hasText: new RegExp(`^${label}$`) }).first();
-      if (await btn.isVisible().catch(() => false)) {
-        await btn.click();
-        await page.waitForTimeout(300);
-      }
+      await clickDashboardPeriod(page, label);
     }
     const cancel = page.locator('uni-button, button', { hasText: /取消|关闭/ }).first();
     if (await cancel.isVisible().catch(() => false)) await cancel.click();

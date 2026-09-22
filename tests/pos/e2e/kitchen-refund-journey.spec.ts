@@ -35,9 +35,12 @@ async function enterDetailAndOpenRefund(page: import('@playwright/test').Page) {
     timeout: 15_000,
   });
 
+  const selected = await selectRefundItems(page);
+  expect(selected, '應能選擇要退的商品').toBeTruthy();
+
   const refundOpened = await openRefundEntry(page);
-  expect(refundOpened, '訂單詳情應有退單／退款入口').toBeTruthy();
-  await expect(page.getByText(/仅退款|退货退款|退单|退款|选择商品|商品/).first()).toBeVisible({
+  expect(refundOpened, '訂單詳情應有退單入口').toBeTruthy();
+  await expect(page.getByText(/仅退款|退货退款|确认退单|确认退款|退款原因/).first()).toBeVisible({
     timeout: 15_000,
   });
 }
@@ -69,10 +72,6 @@ test.describe('E2E POS 制作进度退單閉環', () => {
     const typed = await selectRefundType(page, '仅退款');
     expect(typed, '應能選擇「仅退款」').toBeTruthy();
 
-    const selected = await selectRefundItems(page);
-    expect(selected, '應能選擇要退的商品').toBeTruthy();
-
-    // 語意：可退部分金額、库存不返回（有文案則核對；無文案不強制失敗）
     const hint = await refundInventoryHint(page);
     if (hint !== 'unknown') {
       expect(hint, '仅退款應為库存不返回').toBe('no-return');
@@ -98,9 +97,6 @@ test.describe('E2E POS 制作进度退單閉環', () => {
 
     const typed = await selectRefundType(page, '退货退款');
     expect(typed, '應能選擇「退货退款」').toBeTruthy();
-
-    const selected = await selectRefundItems(page);
-    expect(selected, '應能選擇要退的商品').toBeTruthy();
 
     const hint = await refundInventoryHint(page);
     if (hint !== 'unknown') {

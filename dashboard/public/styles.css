@@ -674,6 +674,14 @@ a.system-menu-link {
   margin-bottom: 4px;
 }
 
+.item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .item-row.active .item,
 .item:hover,
 .item.active {
@@ -689,7 +697,8 @@ a.system-menu-link {
   color: #fff;
 }
 
-.item-row .item-edit-btn {
+.item-row .item-edit-btn,
+.item-row .item-delete-btn {
   white-space: nowrap;
   flex-shrink: 0;
   min-width: 72px;
@@ -1204,6 +1213,45 @@ a.system-menu-link {
   background: #0f1720;
   color: #e8eef5;
   tab-size: 2;
+}
+
+.spec-ai-label,
+.spec-edit-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.spec-ai-label textarea,
+#specAiInstruction,
+#aiRewriteInstruction,
+#xuqiuRewriteInstruction {
+  width: 100%;
+  resize: vertical;
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f8fbfd;
+  color: inherit;
+}
+
+.spec-ai-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin: 8px 0 4px;
+}
+
+.spec-ai-row .spec-ai-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.spec-ai-row .btn {
+  flex-shrink: 0;
+  margin-bottom: 2px;
 }
 
 .modal-head-actions {

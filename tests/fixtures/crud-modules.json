@@ -1,130 +1,452 @@
 [
   {
-    "id": "crud:stores",
-    "module": "商城设置",
-    "name": "门店管理",
+    "id": "crud:stores:create",
+    "module": "门店管理",
+    "name": "新增",
     "path": "/shop/stores",
     "file": "tests/crud/stores.crud.spec.ts",
-    "description": "打開创建门店表單並驗證可填寫"
+    "grep": "新增门店",
+    "description": "單獨點擊：新增门店寫入資料庫"
   },
   {
-    "id": "crud:categories",
-    "module": "商品管理",
-    "name": "商品分类",
+    "id": "crud:stores:read",
+    "module": "门店管理",
+    "name": "查找",
+    "path": "/shop/stores",
+    "file": "tests/crud/stores.crud.spec.ts",
+    "grep": "查找门店",
+    "description": "單獨點擊：查詢门店"
+  },
+  {
+    "id": "crud:stores:update",
+    "module": "门店管理",
+    "name": "更新",
+    "path": "/shop/stores",
+    "file": "tests/crud/stores.crud.spec.ts",
+    "grep": "更新门店",
+    "description": "單獨點擊：更新门店寫入資料庫"
+  },
+  {
+    "id": "crud:stores:delete",
+    "module": "门店管理",
+    "name": "删除",
+    "path": "/shop/stores",
+    "file": "tests/crud/stores.crud.spec.ts",
+    "grep": "删除门店",
+    "description": "單獨點擊：删除门店"
+  },
+  {
+    "id": "crud:page-design:read",
+    "module": "页面设计",
+    "name": "查找",
+    "path": "/shop/page-design",
+    "file": "tests/crud/settings-and-entries.crud.spec.ts",
+    "grep": "查找页面设计",
+    "description": "單獨點擊：進入頁面設計"
+  },
+  {
+    "id": "crud:categories:create",
+    "module": "商品分类",
+    "name": "新增",
     "path": "/goods/categories",
     "file": "tests/crud/categories.crud.spec.ts",
-    "description": "打開新增分类表單並驗證可填寫"
+    "grep": "新增分类",
+    "description": "單獨點擊：新增一级分类寫入資料庫"
   },
   {
-    "id": "crud:filter-models",
-    "module": "商品管理",
-    "name": "筛选模型",
+    "id": "crud:categories:read",
+    "module": "商品分类",
+    "name": "查找",
+    "path": "/goods/categories",
+    "file": "tests/crud/categories.crud.spec.ts",
+    "grep": "查找分类",
+    "description": "單獨點擊：查詢分类"
+  },
+  {
+    "id": "crud:categories:update",
+    "module": "商品分类",
+    "name": "更新",
+    "path": "/goods/categories",
+    "file": "tests/crud/categories.crud.spec.ts",
+    "grep": "更新分类",
+    "description": "單獨點擊：更新分类寫入資料庫"
+  },
+  {
+    "id": "crud:categories:delete",
+    "module": "商品分类",
+    "name": "删除",
+    "path": "/goods/categories",
+    "file": "tests/crud/categories.crud.spec.ts",
+    "grep": "删除分类",
+    "description": "單獨點擊：删除分类"
+  },
+  {
+    "id": "crud:filter-models:create",
+    "module": "筛选模型",
+    "name": "新增",
     "path": "/goods/filter-models",
     "file": "tests/crud/filter-models.crud.spec.ts",
-    "description": "新增 → 更新 → 查詢 → 刪除篩選模型"
+    "grep": "新增筛选模型",
+    "description": "單獨點擊：新增筛选模型寫入資料庫"
   },
   {
-    "id": "crud:product-units",
-    "module": "商品管理",
-    "name": "商品单位",
+    "id": "crud:filter-models:read",
+    "module": "筛选模型",
+    "name": "查找",
+    "path": "/goods/filter-models",
+    "file": "tests/crud/filter-models.crud.spec.ts",
+    "grep": "查找筛选模型",
+    "description": "單獨點擊：查詢筛选模型"
+  },
+  {
+    "id": "crud:filter-models:update",
+    "module": "筛选模型",
+    "name": "更新",
+    "path": "/goods/filter-models",
+    "file": "tests/crud/filter-models.crud.spec.ts",
+    "grep": "更新筛选模型",
+    "description": "單獨點擊：更新筛选模型寫入資料庫"
+  },
+  {
+    "id": "crud:filter-models:delete",
+    "module": "筛选模型",
+    "name": "删除",
+    "path": "/goods/filter-models",
+    "file": "tests/crud/filter-models.crud.spec.ts",
+    "grep": "删除筛选模型",
+    "description": "單獨點擊：删除筛选模型"
+  },
+  {
+    "id": "crud:product-units:create",
+    "module": "商品单位",
+    "name": "新增",
     "path": "/goods/product-units",
     "file": "tests/crud/product-units.crud.spec.ts",
-    "description": "新增 → 更新 → 查詢 → 刪除商品單位"
+    "grep": "新增单位",
+    "description": "單獨點擊：新增商品单位寫入資料庫"
   },
   {
-    "id": "crud:coupons",
-    "module": "促销中心",
-    "name": "优惠券",
-    "path": "/promotion/coupons",
-    "file": "tests/crud/coupons.crud.spec.ts",
-    "description": "打開創建頁並驗證可填寫"
+    "id": "crud:product-units:read",
+    "module": "商品单位",
+    "name": "查找",
+    "path": "/goods/product-units",
+    "file": "tests/crud/product-units.crud.spec.ts",
+    "grep": "查找单位",
+    "description": "單獨點擊：查詢商品单位"
   },
   {
-    "id": "crud:printers",
-    "module": "设置",
-    "name": "小票机管理",
-    "path": "/shop/printers",
-    "file": "tests/crud/printers.crud.spec.ts",
-    "description": "打開新增小票机表單並驗證可填寫"
+    "id": "crud:product-units:update",
+    "module": "商品单位",
+    "name": "更新",
+    "path": "/goods/product-units",
+    "file": "tests/crud/product-units.crud.spec.ts",
+    "grep": "更新单位",
+    "description": "單獨點擊：更新商品单位寫入資料庫"
   },
   {
-    "id": "crud:receipt-templates",
-    "module": "设置",
-    "name": "单据模板",
-    "path": "/system/receipt-template",
-    "file": "tests/crud/receipt-templates.crud.spec.ts",
-    "description": "新增模板並進入編輯"
+    "id": "crud:product-units:delete",
+    "module": "商品单位",
+    "name": "删除",
+    "path": "/goods/product-units",
+    "file": "tests/crud/product-units.crud.spec.ts",
+    "grep": "删除单位",
+    "description": "單獨點擊：删除商品单位"
   },
   {
-    "id": "crud:users",
-    "module": "设置",
-    "name": "用户管理",
-    "path": "/system/users",
-    "file": "tests/crud/users.crud.spec.ts",
-    "description": "新增 → 更新 → 查詢 → 刪除用户"
-  },
-  {
-    "id": "crud:roles",
-    "module": "设置",
-    "name": "角色管理",
-    "path": "/system/roles",
-    "file": "tests/crud/roles.crud.spec.ts",
-    "description": "新增 → 更新 → 查詢 → 刪除角色"
-  },
-  {
-    "id": "crud:settings-entries",
-    "module": "其他可寫入口",
-    "name": "設定與複雜表單入口",
-    "path": "/system/notifications",
-    "file": "tests/crud/settings-and-entries.crud.spec.ts",
-    "description": "通知/存酒設置/積分/商品新增入口/庫存入口/頁面設計"
-  },
-  {
-    "id": "crud:goods",
-    "module": "商品管理",
-    "name": "商品列表",
+    "id": "crud:goods:create",
+    "module": "商品列表",
+    "name": "新增",
     "path": "/goods/list",
     "file": "tests/crud/goods.crud.spec.ts",
-    "description": "添加商品填寫 → 排序/批量入口 → 名稱篩選"
+    "grep": "新增商品",
+    "description": "單獨點擊：新增商品寫入資料庫"
   },
   {
-    "id": "crud:inventory-docs",
-    "module": "库存管理",
-    "name": "出入庫與盤點",
+    "id": "crud:goods:read",
+    "module": "商品列表",
+    "name": "查找",
+    "path": "/goods/list",
+    "file": "tests/crud/goods.crud.spec.ts",
+    "grep": "查找商品",
+    "description": "單獨點擊：查詢商品"
+  },
+  {
+    "id": "crud:goods:update",
+    "module": "商品列表",
+    "name": "更新",
+    "path": "/goods/list",
+    "file": "tests/crud/goods.crud.spec.ts",
+    "grep": "更新商品",
+    "description": "單獨點擊：更新商品寫入資料庫"
+  },
+  {
+    "id": "crud:goods:delete",
+    "module": "商品列表",
+    "name": "删除",
+    "path": "/goods/list",
+    "file": "tests/crud/goods.crud.spec.ts",
+    "grep": "删除商品",
+    "description": "單獨點擊：删除商品"
+  },
+  {
+    "id": "crud:coupons:create",
+    "module": "优惠券",
+    "name": "新增",
+    "path": "/promotion/coupons",
+    "file": "tests/crud/coupons.crud.spec.ts",
+    "grep": "新增优惠券",
+    "description": "單獨點擊：新增优惠券寫入資料庫"
+  },
+  {
+    "id": "crud:coupons:read",
+    "module": "优惠券",
+    "name": "查找",
+    "path": "/promotion/coupons",
+    "file": "tests/crud/coupons.crud.spec.ts",
+    "grep": "查找优惠券",
+    "description": "單獨點擊：查詢优惠券"
+  },
+  {
+    "id": "crud:coupons:update",
+    "module": "优惠券",
+    "name": "更新",
+    "path": "/promotion/coupons",
+    "file": "tests/crud/coupons.crud.spec.ts",
+    "grep": "更新优惠券",
+    "description": "單獨點擊：更新优惠券寫入資料庫"
+  },
+  {
+    "id": "crud:coupons:delete",
+    "module": "优惠券",
+    "name": "删除",
+    "path": "/promotion/coupons",
+    "file": "tests/crud/coupons.crud.spec.ts",
+    "grep": "删除优惠券",
+    "description": "單獨點擊：删除优惠券"
+  },
+  {
+    "id": "crud:printers:create",
+    "module": "小票机管理",
+    "name": "新增",
+    "path": "/shop/printers",
+    "file": "tests/crud/printers.crud.spec.ts",
+    "grep": "新增小票机",
+    "description": "單獨點擊：新增小票机寫入資料庫"
+  },
+  {
+    "id": "crud:printers:read",
+    "module": "小票机管理",
+    "name": "查找",
+    "path": "/shop/printers",
+    "file": "tests/crud/printers.crud.spec.ts",
+    "grep": "查找小票机",
+    "description": "單獨點擊：查詢小票机"
+  },
+  {
+    "id": "crud:printers:update",
+    "module": "小票机管理",
+    "name": "更新",
+    "path": "/shop/printers",
+    "file": "tests/crud/printers.crud.spec.ts",
+    "grep": "更新小票机",
+    "description": "單獨點擊：更新小票机寫入資料庫"
+  },
+  {
+    "id": "crud:printers:delete",
+    "module": "小票机管理",
+    "name": "删除",
+    "path": "/shop/printers",
+    "file": "tests/crud/printers.crud.spec.ts",
+    "grep": "删除小票机",
+    "description": "單獨點擊：删除小票机"
+  },
+  {
+    "id": "crud:receipt-templates:create",
+    "module": "单据模板",
+    "name": "新增",
+    "path": "/system/receipt-template",
+    "file": "tests/crud/receipt-templates.crud.spec.ts",
+    "grep": "新增单据模板",
+    "description": "單獨點擊：新增单据模板寫入資料庫"
+  },
+  {
+    "id": "crud:receipt-templates:read",
+    "module": "单据模板",
+    "name": "查找",
+    "path": "/system/receipt-template",
+    "file": "tests/crud/receipt-templates.crud.spec.ts",
+    "grep": "查找单据模板",
+    "description": "單獨點擊：查詢单据模板"
+  },
+  {
+    "id": "crud:receipt-templates:update",
+    "module": "单据模板",
+    "name": "更新",
+    "path": "/system/receipt-template",
+    "file": "tests/crud/receipt-templates.crud.spec.ts",
+    "grep": "更新单据模板",
+    "description": "單獨點擊：更新单据模板寫入資料庫"
+  },
+  {
+    "id": "crud:receipt-templates:delete",
+    "module": "单据模板",
+    "name": "删除",
+    "path": "/system/receipt-template",
+    "file": "tests/crud/receipt-templates.crud.spec.ts",
+    "grep": "删除单据模板",
+    "description": "單獨點擊：删除单据模板"
+  },
+  {
+    "id": "crud:users:create",
+    "module": "用户管理",
+    "name": "新增",
+    "path": "/system/users",
+    "file": "tests/crud/users.crud.spec.ts",
+    "grep": "新增用户",
+    "description": "單獨點擊：新增用户寫入資料庫"
+  },
+  {
+    "id": "crud:users:read",
+    "module": "用户管理",
+    "name": "查找",
+    "path": "/system/users",
+    "file": "tests/crud/users.crud.spec.ts",
+    "grep": "查找用户",
+    "description": "單獨點擊：查詢用户"
+  },
+  {
+    "id": "crud:users:update",
+    "module": "用户管理",
+    "name": "更新",
+    "path": "/system/users",
+    "file": "tests/crud/users.crud.spec.ts",
+    "grep": "更新用户",
+    "description": "單獨點擊：更新用户寫入資料庫"
+  },
+  {
+    "id": "crud:users:delete",
+    "module": "用户管理",
+    "name": "删除",
+    "path": "/system/users",
+    "file": "tests/crud/users.crud.spec.ts",
+    "grep": "删除用户",
+    "description": "單獨點擊：删除用户"
+  },
+  {
+    "id": "crud:roles:create",
+    "module": "角色管理",
+    "name": "新增",
+    "path": "/system/roles",
+    "file": "tests/crud/roles.crud.spec.ts",
+    "grep": "新增角色",
+    "description": "單獨點擊：新增角色寫入資料庫"
+  },
+  {
+    "id": "crud:roles:read",
+    "module": "角色管理",
+    "name": "查找",
+    "path": "/system/roles",
+    "file": "tests/crud/roles.crud.spec.ts",
+    "grep": "查找角色",
+    "description": "單獨點擊：查詢角色"
+  },
+  {
+    "id": "crud:roles:update",
+    "module": "角色管理",
+    "name": "更新",
+    "path": "/system/roles",
+    "file": "tests/crud/roles.crud.spec.ts",
+    "grep": "更新角色",
+    "description": "單獨點擊：更新角色寫入資料庫"
+  },
+  {
+    "id": "crud:roles:delete",
+    "module": "角色管理",
+    "name": "删除",
+    "path": "/system/roles",
+    "file": "tests/crud/roles.crud.spec.ts",
+    "grep": "删除角色",
+    "description": "單獨點擊：删除角色"
+  },
+  {
+    "id": "crud:notifications:update",
+    "module": "通知管理",
+    "name": "更新",
+    "path": "/system/notifications",
+    "file": "tests/crud/settings-and-entries.crud.spec.ts",
+    "grep": "更新通知",
+    "description": "單獨點擊：切換通知開關並還原"
+  },
+  {
+    "id": "crud:inventory-docs:create",
+    "module": "出入库",
+    "name": "新增",
     "path": "/inventory/stock",
     "file": "tests/crud/inventory-docs.crud.spec.ts",
-    "description": "添加出入庫表單 → 新增盤點/導出導入入口"
+    "grep": "新增入库",
+    "description": "單獨點擊：新增入庫單寫入資料庫"
   },
   {
-    "id": "crud:members",
+    "id": "crud:inventory-check:create",
+    "module": "库存盘点",
+    "name": "新增",
+    "path": "/inventory/check",
+    "file": "tests/crud/inventory-docs.crud.spec.ts",
+    "grep": "新增盘点",
+    "description": "單獨點擊：新增盤點寫入資料庫"
+  },
+  {
+    "id": "crud:members:read",
     "module": "会员列表",
-    "name": "會員查看",
+    "name": "查找",
     "path": "/vip/list",
     "file": "tests/crud/members.crud.spec.ts",
-    "description": "篩選會員並打開詳情"
+    "grep": "查找会员",
+    "description": "單獨點擊：從資料庫查找會員並打開詳情（新增在 POS）"
   },
   {
-    "id": "crud:orders",
+    "id": "crud:orders:read",
     "module": "订单管理",
-    "name": "訂單列表",
+    "name": "查找",
     "path": "/orders/list",
     "file": "tests/crud/orders.crud.spec.ts",
-    "description": "訂單篩選並打開詳情"
+    "grep": "查找订单",
+    "description": "單獨點擊：從資料庫查找訂單並打開詳情"
   },
   {
-    "id": "crud:points",
-    "module": "积分管理",
-    "name": "積分列表",
+    "id": "crud:points:read",
+    "module": "积分列表",
+    "name": "查找",
     "path": "/points/list",
     "file": "tests/crud/points.crud.spec.ts",
-    "description": "積分列表搜尋篩選"
+    "grep": "查找积分",
+    "description": "單獨點擊：從資料庫查找積分流水"
   },
   {
-    "id": "crud:wine-storage",
-    "module": "存酒管理",
-    "name": "存酒列表",
+    "id": "crud:points-setting:update",
+    "module": "积分设置",
+    "name": "更新",
+    "path": "/points/setting",
+    "file": "tests/crud/points.crud.spec.ts",
+    "grep": "更新积分设置",
+    "description": "單獨點擊：保存積分設置寫入資料庫"
+  },
+  {
+    "id": "crud:wine-storage:read",
+    "module": "存酒列表",
+    "name": "查找",
     "path": "/wine-storage/list",
     "file": "tests/crud/wine-storage.crud.spec.ts",
-    "description": "存酒搜尋、重置與導出入口"
+    "grep": "查找存酒",
+    "description": "單獨點擊：從資料庫查找存酒"
+  },
+  {
+    "id": "crud:wine-setting:update",
+    "module": "存酒设置",
+    "name": "更新",
+    "path": "/wine-storage/setting",
+    "file": "tests/crud/wine-storage.crud.spec.ts",
+    "grep": "更新存酒设置",
+    "description": "單獨點擊：保存存酒設置寫入資料庫"
   }
 ]

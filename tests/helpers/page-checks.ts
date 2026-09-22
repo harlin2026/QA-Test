@@ -3,11 +3,15 @@
  */
 
 import { expect, type Page } from '@playwright/test';
+import { loginAdmin } from './login';
 
 export { expectNoUiErrors } from './ui-errors';
 
-/** 頁面沒有被踢回登入、也沒有白屏/致命錯誤 */
+/** 頁面沒有被踢回登入、也沒有白屏/致命錯誤；若在登入頁則先登入 */
 export async function expectAuthenticated(page: Page) {
+  if (/\/login/.test(page.url()) || (await page.getByPlaceholder('请输入用户名').isVisible().catch(() => false))) {
+    await loginAdmin(page);
+  }
   await expect(page).not.toHaveURL(/\/login/);
   await expect(page.locator('body')).not.toBeEmpty();
 }

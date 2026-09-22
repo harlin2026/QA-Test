@@ -1105,6 +1105,116 @@ function saveGeneratedDraft(draft, { overwrite = false } = {}) {
   };
 }
 
+function inferSystemKindFromFile(relFile) {
+  const rel = String(relFile || '').replace(/\\/g, '/');
+  const systemId = rel.startsWith('tests/pos/') ? 'pos' : 'admin';
+  let kind = 'e2e';
+  if (/\/smoke\//.test(rel) || /\.smoke\.spec\.ts$/.test(rel)) kind = 'smoke';
+  else if (/\/crud\//.test(rel) || /\.crud\.spec\.ts$/.test(rel)) kind = 'crud';
+  else if (/\/story\//.test(rel) || /\.story\.spec\.ts$/.test(rel)) kind = 'story';
+  else if (/\/e2e\//.test(rel)) kind = 'e2e';
+  return { systemId, kind };
+}
+
+function unwrapCodeFence(text) {
+  const raw = String(text || '').trim();
+  const fenced = raw.match(/^```(?:ts|typescript|js|javascript)?\s*\n?([\s\S]*?)\n?```$/i);
+  return (fenced ? fenced[1] : raw).trim();
+}
+
+function extractRewriteResult(content) {
+  try {
+    const parsed = extractJson(content);
+    const specSource = unwrapCodeFence(parsed.specSource || parsed.source || parsed.code || '');
+    if (specSource) {
+      return {
+        specSource,
+        summary: String(parsed.summary || parsed.note || '').trim(),
+      };
+    }
+  } catch {
+    // 模型可能直接回程式碼
+  }
+  const raw = String(content || '').trim();
+  const fence = raw.match(/```(?:ts|typescript|js|javascript)?\s*([\s\S]*?)```/i);
+  if (fence) return { specSource: fence[1].trim(), summary: '' };
+  if (/^(?:\/\*\*|import\s+)/.test(raw)) return { specSource: raw, summary: '' };
+  throw new Error('模型未回傳可辨識的腳本內容');
+}
+
+/**
+ * 依使用者說明（或最近失敗）改寫既有 Playwright 腳本，不自動落盤。
+ */
+async function rewriteSpecSource(input) {
+  const source = String(input.source || '').trim();
+  const instruction = stripPlaywrightGenInstruction(String(input.instruction || '').trim());
+  const lastError = String(input.lastError || '').trim();
+  const file = String(input.file || '').replace(/\\/g, '/');
+  if (!source) throw new Error('腳本內容為空');
+  if (source.length > 80_000) throw new Error('腳本過長，無法一次交給 AI 修改');
+  if (instruction.length > 4_000) throw new Error('修改說明過長（最多 4000 字）');
+  if (lastError.length > 6_000) throw new Error('失敗訊息過長');
+  if (!instruction && !lastError) {
+    throw new Error('請填寫修改說明，或先執行測試以便依失敗修復');
+  }
+
+  const inferred = inferSystemKindFromFile(file);
+  const systemId = String(input.system || inferred.systemId || 'pos');
+  const kind = String(input.kind || inferred.kind || 'e2e');
+  const cfg = aiConfig();
+  if (!cfg.configured) {
+    throw new Error('尚未設定 API Key，請先在「AI 配置」中填寫');
+  }
+
+  const systemPrompt = `
+你是 Peterson QA Lab 的測試工程師，要依說明修改【既有】Playwright 腳本。
+必須輸出【單一 JSON 物件】，不要 markdown 圍欄，不要解釋文字。
+
+JSON schema：
+{
+  "specSource": "完整 TypeScript 測試原始碼（整份檔案）",
+  "summary": "改了什麼（一句中文）"
+}
+
+規則：
+1. 只改使用者要求／失敗相關的部分，其餘邏輯、@author harlin、既有 helper 都保留。
+2. 檔案若含多個 test()，必須保留原 test 標題字串（Dashboard grep 靠標題隔離）。
+3. 查找／read 類用例：測試可見頁面不得走進新增表單；若需要資料，另開分頁 seed。
+4. import 路徑不可搞混：pos 用 '../../fixtures/base-test' 與 '../helpers/pos'；admin 用 '../fixtures/base-test'。
+5. 不要新增與本題無關的 test，不要刪掉無關的其它 test。
+6. specSource 必須是完整可執行檔案，不要省略未改動的函式。
+
+${helperHints(systemId, kind)}
+`.trim();
+
+  const userPrompt = [
+    file ? `檔案：${file}` : '',
+    `系統：${systemId}`,
+    `類型：${kind}`,
+    instruction ? `修改說明：\n${instruction}` : '修改說明：（無，請依失敗訊息修復）',
+    lastError ? `最近執行失敗：\n${lastError}` : '',
+    '目前腳本：',
+    source,
+  ]
+    .filter(Boolean)
+    .join('\n\n');
+
+  const content = await callChatModel({ systemPrompt, userPrompt });
+  const parsed = extractRewriteResult(content);
+  const specSource = fixSpecImportPaths(parsed.specSource, systemId, file || `tests/${systemId}/${kind}/rewrite.spec.ts`);
+  if (!specSource.trim()) throw new Error('AI 回傳的腳本是空的');
+  return {
+    specSource,
+    summary: parsed.summary || '已依說明修改腳本',
+    mode: 'ai',
+    model: cfg.model,
+    provider: cfg.provider,
+    file,
+    system: systemId,
+    kind,
+  };
+}
+
 module.exports = {
   AI_PROVIDERS,
   AI_CONFIG_FILE,
@@ -1113,6 +1223,7 @@ module.exports = {
   publicAiConfigPayload,
   saveAiFileConfig,
   generateTestDraft,
+  rewriteSpecSource,
   saveGeneratedDraft,
   fixSpecImportPaths,
   slugify,

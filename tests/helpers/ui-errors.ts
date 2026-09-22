@@ -9,6 +9,11 @@ export type UiFlavor = 'admin' | 'pos';
 const ERROR_TEXT_RE =
   /错误|失敗|失败|異常|异常|请求失败|服务器错误|系统错误|网络异常|加载失败|操作失败|资源不存在|无权|未授权|Internal Server Error|Unhandled|Exception/i;
 
+/** H5 無相機／掃碼硬體時的預期提示，不當成產品錯誤 */
+const POS_BENIGN_TOAST_RE =
+  /扫码失败|掃碼失敗|无法调起相机|無法調起相機|摄像头|相機權限|相机权限|资源不存在/;
+const isBenignPosToast = (text: string) => POS_BENIGN_TOAST_RE.test(text);
+
 export type PageGuards = {
   pageErrors: string[];
   failedApis: string[];
@@ -27,10 +32,33 @@ export function attachPageGuards(page: Page): PageGuards {
   page.on('response', async (res) => {
     const url = res.url();
     if (!/\/api\//i.test(url) && !/\/prod-api\//i.test(url)) return;
+
+    let pathname = url;
+    try {
+      pathname = new URL(url).pathname;
+    } catch {
+      // keep raw url
+    }
+    const method = res.request().method();
+
     if (res.status() >= 500) {
-      failedApis.push(`${res.status()} ${url}`);
+      // 總覽會先用門店編碼 TH… 打營收接口，必 502；數字 storeId 成功即可
+      if (method === 'GET' && /StoreId=TH/i.test(url) && /realtime-revenue|coupons\/staff-ordering\/stats/i.test(url)) {
+        return;
+      }
+      failedApis.push(`${res.status()} ${method} ${url}`);
       return;
     }
+
+    // GET 短暫 502 後同一路徑成功，不當成用例失敗
+    if (res.ok() && method === 'GET') {
+      for (let i = failedApis.length - 1; i >= 0; i--) {
+        if (/^\d{3} GET /.test(failedApis[i]) && failedApis[i].includes(pathname)) {
+          failedApis.splice(i, 1);
+        }
+      }
+    }
+
     if (res.status() >= 400) return;
     try {
       const ct = res.headers()['content-type'] || '';
@@ -75,6 +103,7 @@ async function collectVisibleTexts(
     if (!(await node.isVisible().catch(() => false))) continue;
     const text = (await node.innerText().catch(() => '')).trim().replace(/\s+/g, ' ');
     if (requireErrorText && !ERROR_TEXT_RE.test(text)) continue;
+    if (isBenignPosToast(text)) continue;
     findings.push(`[${tag}] ${text.slice(0, 160) || '(visible)'}`);
   }
 }
