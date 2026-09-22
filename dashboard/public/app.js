@@ -74,7 +74,29 @@ const state = {
   aiLastRunId: null,
   loadingDepth: 0,
   miniapp: { ...DEFAULT_MINIAPP },
+  auth: null,
+  bootStarted: false,
 };
+
+const nativeFetch = window.fetch.bind(window);
+window.fetch = async (input, init) => {
+  const res = await nativeFetch(input, init);
+  const url = String(typeof input === 'string' ? input : input?.url || '');
+  if (
+    res.status === 401 &&
+    url.includes('/api/') &&
+    !url.includes('/api/auth/login') &&
+    !url.includes('/api/auth/me')
+  ) {
+    state.auth = null;
+    showLoginGate('登入已過期，請重新登入');
+  }
+  return res;
+};
+
+function isAdmin() {
+  return state.auth?.role === 'admin';
+}
 
 const el = {
   systemBar: document.getElementById('systemBar'),
@@ -304,6 +326,22 @@ const el = {
   mP95: document.getElementById('mP95'),
   mP99: document.getElementById('mP99'),
   summary: document.getElementById('summary'),
+  loginGate: document.getElementById('loginGate'),
+  loginForm: document.getElementById('loginForm'),
+  loginUsername: document.getElementById('loginUsername'),
+  loginPassword: document.getElementById('loginPassword'),
+  loginError: document.getElementById('loginError'),
+  sessionWho: document.getElementById('sessionWho'),
+  btnUsers: document.getElementById('btnUsers'),
+  btnLogout: document.getElementById('btnLogout'),
+  usersModal: document.getElementById('usersModal'),
+  usersCreateForm: document.getElementById('usersCreateForm'),
+  usersTableBody: document.getElementById('usersTableBody'),
+  usersModalHint: document.getElementById('usersModalHint'),
+  newUserName: document.getElementById('newUserName'),
+  newUserDisplay: document.getElementById('newUserDisplay'),
+  newUserPass: document.getElementById('newUserPass'),
+  btnCloseUsersModal: document.getElementById('btnCloseUsersModal'),
 };
 
 function allItems() {
@@ -525,8 +563,8 @@ function renderModeTabs() {
   if (el.summary) el.summary.hidden = isStress || isTool;
   if (el.btnAll) el.btnAll.hidden = isStress || isTool;
   if (el.typeTotals) el.typeTotals.hidden = isStress || isTool;
-  if (el.btnSystemConfig) el.btnSystemConfig.hidden = isTool;
-  if (el.btnManagePaths) el.btnManagePaths.hidden = isTool;
+  if (el.btnSystemConfig) el.btnSystemConfig.hidden = isTool || !isAdmin();
+  if (el.btnManagePaths) el.btnManagePaths.hidden = isTool || !isAdmin();
 
   if (isTool || isStress) return;
   const meta = MODE_META[state.mode];
@@ -792,15 +830,19 @@ function renderSuiteList() {
                 </button>
                 <div class="item-actions">
                 ${
-                  item.file
-                    ? `<button class="btn tiny primary item-edit-btn" type="button" data-edit-spec="${item.id}" ${
+                  isAdmin() && item.file
+                    ? `<button class="btn tiny primary item-edit-btn admin-only" type="button" data-edit-spec="${item.id}" ${
                         state.running ? 'disabled' : ''
                       } title="${escapeHtml(item.file)}">編輯腳本</button>`
                     : ''
                 }
-                <button class="btn tiny danger item-delete-btn" type="button" data-delete-spec="${item.id}" ${
-                  state.running ? 'disabled' : ''
-                } title="刪除「${escapeHtml(item.name)}」">刪除腳本</button>
+                ${
+                  isAdmin()
+                    ? `<button class="btn tiny danger item-delete-btn admin-only" type="button" data-delete-spec="${item.id}" ${
+                        state.running ? 'disabled' : ''
+                      } title="刪除「${escapeHtml(item.name)}」">刪除腳本</button>`
+                    : ''
+                }
                 </div>
               </div>
             `;
@@ -1072,6 +1114,10 @@ function editableSpecFileOf(item) {
 }
 
 async function openSpecEditor(itemOrId) {
+  if (!isAdmin()) {
+    alert('目前帳號僅可執行腳本，無法編輯。');
+    return;
+  }
   if (state.running) {
     alert('測試執行中，暫不可編輯腳本');
     return;
@@ -1139,6 +1185,10 @@ function closeSpecEditor() {
 }
 
 async function deleteCatalogItem(itemOrId) {
+  if (!isAdmin()) {
+    alert('目前帳號僅可執行腳本，無法刪除。');
+    return;
+  }
   if (state.running) {
     alert('測試執行中，暫不可刪腳本');
     return;
@@ -4110,12 +4160,219 @@ el.xuqiuRelatedList?.addEventListener('click', (ev) => {
 el.btnXuqiuShowRelated2?.addEventListener('click', () => openXuqiuRelatedModal());
 el.btnCloseXuqiuRelatedModal?.addEventListener('click', () => closeXuqiuRelatedModal());
 
-(async function init() {
+function roleLabel(role) {
+  return role === 'admin' ? '管理員' : '執行者';
+}
+
+function applyRoleUI() {
+  const admin = isAdmin();
+  document.body.classList.toggle('role-admin', admin);
+  document.body.classList.toggle('role-runner', !!state.auth && !admin);
+  if (el.sessionWho && state.auth) {
+    const name = state.auth.displayName || state.auth.username || '';
+    el.sessionWho.textContent = `${name}（${roleLabel(state.auth.role)}）`;
+  }
+  if (el.btnUsers) el.btnUsers.hidden = !admin;
+}
+
+function showLoginGate(message) {
+  document.body.classList.add('auth-locked');
+  document.body.classList.remove('role-admin', 'role-runner');
+  if (el.loginError) {
+    if (message) {
+      el.loginError.hidden = false;
+      el.loginError.textContent = message;
+    } else {
+      el.loginError.hidden = true;
+      el.loginError.textContent = '';
+    }
+  }
+  el.loginUsername?.focus();
+}
+
+function hideLoginGate() {
+  document.body.classList.remove('auth-locked');
+}
+
+async function fetchMe() {
+  try {
+    const res = await nativeFetch('/api/auth/me');
+    const data = await res.json();
+    return data?.user || null;
+  } catch {
+    return null;
+  }
+}
+
+async function submitLogin(ev) {
+  ev?.preventDefault();
+  const username = el.loginUsername?.value.trim() || '';
+  const password = el.loginPassword?.value || '';
+  if (!username || !password) {
+    showLoginGate('請輸入帳號與密碼');
+    return;
+  }
+  try {
+    const res = await nativeFetch('/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      showLoginGate(data.error || '登入失敗');
+      return;
+    }
+    state.auth = data.user;
+    applyRoleUI();
+    hideLoginGate();
+    if (el.loginPassword) el.loginPassword.value = '';
+    await bootApp();
+  } catch (err) {
+    showLoginGate(err.message || '登入失敗');
+  }
+}
+
+async function logout() {
+  try {
+    await nativeFetch('/api/auth/logout', { method: 'POST' });
+  } catch {
+    // ignore
+  }
+  state.auth = null;
+  state.bootStarted = false;
+  closeUsersModal();
+  showLoginGate('');
+}
+
+function closeUsersModal() {
+  if (el.usersModal) el.usersModal.hidden = true;
+}
+
+async function openUsersModal() {
+  if (!isAdmin()) return;
+  if (el.usersModal) el.usersModal.hidden = false;
+  await loadUsers();
+}
+
+async function loadUsers() {
+  if (!el.usersTableBody) return;
+  try {
+    const res = await fetch('/api/users');
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || res.statusText);
+    const users = data.users || [];
+    el.usersTableBody.innerHTML = users
+      .map((u) => {
+        const admin = u.role === 'admin';
+        return `<tr>
+          <td><code>${escapeHtml(u.username)}</code></td>
+          <td>${escapeHtml(u.displayName || u.username)}</td>
+          <td class="${admin ? 'role-admin' : ''}">${roleLabel(u.role)}</td>
+          <td>${u.disabled ? '已停用' : '啟用'}</td>
+          <td>
+            ${
+              admin
+                ? '—'
+                : `<div class="users-row-actions">
+                    <button class="btn tiny" type="button" data-user-reset="${u.id}">重設密碼</button>
+                    <button class="btn tiny" type="button" data-user-toggle="${u.id}" data-disabled="${u.disabled ? '1' : '0'}">${
+                      u.disabled ? '啟用' : '停用'
+                    }</button>
+                    <button class="btn tiny danger" type="button" data-user-del="${u.id}">刪除</button>
+                  </div>`
+            }
+          </td>
+        </tr>`;
+      })
+      .join('');
+    if (el.usersModalHint) el.usersModalHint.textContent = `共 ${users.length} 位用戶`;
+  } catch (err) {
+    if (el.usersModalHint) el.usersModalHint.textContent = err.message || String(err);
+  }
+}
+
+async function createUser(ev) {
+  ev?.preventDefault();
+  try {
+    const res = await fetch('/api/users', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username: el.newUserName?.value.trim(),
+        displayName: el.newUserDisplay?.value.trim(),
+        password: el.newUserPass?.value,
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || res.statusText);
+    if (el.newUserName) el.newUserName.value = '';
+    if (el.newUserDisplay) el.newUserDisplay.value = '';
+    if (el.newUserPass) el.newUserPass.value = '';
+    await loadUsers();
+  } catch (err) {
+    alert(err.message || String(err));
+  }
+}
+
+async function handleUsersTableClick(ev) {
+  const resetBtn = ev.target.closest('[data-user-reset]');
+  const toggleBtn = ev.target.closest('[data-user-toggle]');
+  const delBtn = ev.target.closest('[data-user-del]');
+  try {
+    if (resetBtn) {
+      const password = window.prompt('請輸入新密碼（至少 6 字元）');
+      if (!password) return;
+      const res = await fetch(`/api/users/${encodeURIComponent(resetBtn.dataset.userReset)}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || res.statusText);
+      alert('已重設密碼，該用戶需重新登入。');
+      await loadUsers();
+      return;
+    }
+    if (toggleBtn) {
+      const disabled = toggleBtn.dataset.disabled !== '1';
+      const res = await fetch(`/api/users/${encodeURIComponent(toggleBtn.dataset.userToggle)}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ disabled }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || res.statusText);
+      await loadUsers();
+      return;
+    }
+    if (delBtn) {
+      if (!confirm('確定刪除此執行者帳號？')) return;
+      const res = await fetch(`/api/users/${encodeURIComponent(delBtn.dataset.userDel)}`, {
+        method: 'DELETE',
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || res.statusText);
+      await loadUsers();
+    }
+  } catch (err) {
+    alert(err.message || String(err));
+  }
+}
+
+async function bootApp() {
+  if (state.bootStarted) {
+    applyRoleUI();
+    renderSuiteList();
+    renderModeTabs();
+    return;
+  }
+  state.bootStarted = true;
+  applyRoleUI();
   await loadSystems();
   await loadMiniappConfig();
   await loadState();
   await loadCatalog();
-  // 刷新時優先用磁碟上的 current 快照，避免只依賴記憶體
   try {
     const res = await fetch(`/api/current?system=${encodeURIComponent(state.system)}`);
     const cur = await res.json();
@@ -4129,4 +4386,26 @@ el.btnCloseXuqiuRelatedModal?.addEventListener('click', () => closeXuqiuRelatedM
   setMode(state.mode === 'stress' ? 'stress' : state.mode || 'smoke');
   await loadHistory();
   if (state.mode === 'stress') await loadStressHistory();
+}
+
+el.loginForm?.addEventListener('submit', submitLogin);
+el.btnLogout?.addEventListener('click', () => logout());
+el.btnUsers?.addEventListener('click', () => openUsersModal());
+el.btnCloseUsersModal?.addEventListener('click', () => closeUsersModal());
+el.usersCreateForm?.addEventListener('submit', createUser);
+el.usersTableBody?.addEventListener('click', handleUsersTableClick);
+el.usersModal?.addEventListener('click', (ev) => {
+  if (ev.target === el.usersModal) closeUsersModal();
+});
+
+(async function init() {
+  const me = await fetchMe();
+  if (!me) {
+    showLoginGate('');
+    return;
+  }
+  state.auth = me;
+  applyRoleUI();
+  hideLoginGate();
+  await bootApp();
 })();

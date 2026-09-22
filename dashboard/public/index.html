@@ -10,11 +10,33 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles.css?v=20260921c" />
+    <link rel="stylesheet" href="/styles.css?v=20260922a" />
   </head>
-  <body>
+  <body class="auth-locked">
     <div class="bg-grid" aria-hidden="true"></div>
-    <div class="app shell">
+    <div class="login-gate" id="loginGate">
+      <div class="login-card">
+        <div class="login-brand">
+          <div class="brand-mark">QA</div>
+          <p class="brand-kicker">Peterson QA Lab</p>
+          <h1>測試控制台</h1>
+          <p>請登入後執行測試。管理員可新增用戶；一般用戶僅可執行腳本。</p>
+        </div>
+        <form class="login-form" id="loginForm" autocomplete="on">
+          <label>
+            帳號
+            <input id="loginUsername" name="username" autocomplete="username" required />
+          </label>
+          <label>
+            密碼
+            <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <p class="login-error" id="loginError" hidden></p>
+          <button class="btn primary" type="submit" id="btnLogin">登入</button>
+        </form>
+      </div>
+    </div>
+    <div class="app shell" id="appShell">
       <aside class="sidebar" aria-label="系統選單">
         <div class="sidebar-brand">
           <div class="brand-mark">QA</div>
@@ -35,8 +57,13 @@
               <h2 id="workspaceSystemName">後台管理</h2>
             </div>
             <div class="top-actions">
-              <button class="btn ghost" id="btnSystemConfig" type="button">系統配置</button>
-              <button class="btn ghost" id="btnManagePaths" type="button">路徑管理</button>
+              <div class="session-chip">
+                <span id="sessionWho">—</span>
+                <button class="btn ghost tiny admin-only" id="btnUsers" type="button">用戶管理</button>
+                <button class="btn ghost tiny" id="btnLogout" type="button">登出</button>
+              </div>
+              <button class="btn ghost admin-only" id="btnSystemConfig" type="button">系統配置</button>
+              <button class="btn ghost admin-only" id="btnManagePaths" type="button">路徑管理</button>
               <div class="all-run-group">
                 <span class="type-totals" id="typeTotals" title="目前系統各類型測試項數量">
                   冒煙 <strong id="totalSmoke">0</strong>
@@ -89,8 +116,8 @@
                   <button class="btn ghost danger" id="btnStopRun" type="button" hidden>停止執行</button>
                   <button class="btn primary" id="btnRunType" type="button">跑本類型全部</button>
                   <button class="btn ghost" id="btnRunSelected" type="button" disabled>執行選中項</button>
-                  <button class="btn ghost" id="btnEditSpec" type="button" disabled>編輯腳本</button>
-                  <button class="btn ghost danger" id="btnDeleteSpec" type="button" disabled>刪除腳本</button>
+                  <button class="btn ghost admin-only" id="btnEditSpec" type="button" disabled>編輯腳本</button>
+                  <button class="btn ghost danger admin-only" id="btnDeleteSpec" type="button" disabled>刪除腳本</button>
                 </div>
               </div>
 
@@ -120,8 +147,8 @@
                   <div><span>說明</span><em id="detailDesc">—</em></div>
                   <div><span>結果</span><em id="detailError">—</em></div>
                   <div class="detail-edit-row">
-                    <button class="btn tiny primary" id="btnEditSpecDetail" type="button" disabled>編輯腳本</button>
-                    <button class="btn tiny danger" id="btnDeleteSpecDetail" type="button" disabled>刪除腳本</button>
+                    <button class="btn tiny primary admin-only" id="btnEditSpecDetail" type="button" disabled>編輯腳本</button>
+                    <button class="btn tiny danger admin-only" id="btnDeleteSpecDetail" type="button" disabled>刪除腳本</button>
                   </div>
                 </div>
                 <div class="detail-steps-wrap">
@@ -284,9 +311,9 @@
                   </p>
                 </div>
                 <div class="stage-actions">
-                  <button class="btn ghost" id="btnAiConfig" type="button">AI 配置</button>
+                  <button class="btn ghost admin-only" id="btnAiConfig" type="button">AI 配置</button>
                   <button class="btn ghost" id="btnAiReloadStatus" type="button">重新檢查</button>
-                  <button class="btn primary" id="btnAiGenerate" type="button">生成草稿</button>
+                  <button class="btn primary admin-only" id="btnAiGenerate" type="button">生成草稿</button>
                 </div>
               </div>
 
@@ -342,10 +369,10 @@
                       placeholder="例如：查找不要走新增；保留原 test 標題"
                     ></textarea>
                   </label>
-                  <button class="btn ghost" id="btnAiRewriteDraft" type="button">AI 修改脚本</button>
+                  <button class="btn ghost admin-only" id="btnAiRewriteDraft" type="button">AI 修改脚本</button>
                 </div>
-                <div class="aigen-save-row">
-                  <label class="stress-check">
+                <div class="aigen-save-row admin-only">
+                    <label class="stress-check">
                     <input type="checkbox" id="aiOverwrite" />
                     若檔案／目錄項已存在則覆寫
                   </label>
@@ -376,8 +403,8 @@
                   </p>
                 </div>
                 <div class="stage-actions">
-                  <button class="btn ghost" id="btnXuqiuImport" type="button">重新匯入 CSV</button>
-                  <button class="btn primary" id="btnXuqiuCreate" type="button">新增</button>
+                  <button class="btn ghost admin-only" id="btnXuqiuImport" type="button">重新匯入 CSV</button>
+                  <button class="btn primary admin-only" id="btnXuqiuCreate" type="button">新增</button>
                 </div>
               </div>
 
@@ -405,9 +432,9 @@
                   <div class="suite-head">
                     <h3 id="xuqiuEditorTitle">編輯</h3>
                     <div class="xuqiu-editor-actions">
-                      <button class="btn ghost" id="btnXuqiuGenTest" type="button" disabled>生成測試</button>
-                      <button class="btn ghost danger" id="btnXuqiuDelete" type="button" disabled>刪除</button>
-                      <button class="btn primary" id="btnXuqiuSave" type="button" disabled>儲存</button>
+                      <button class="btn ghost admin-only" id="btnXuqiuGenTest" type="button" disabled>生成測試</button>
+                      <button class="btn ghost danger admin-only" id="btnXuqiuDelete" type="button" disabled>刪除</button>
+                      <button class="btn primary admin-only" id="btnXuqiuSave" type="button" disabled>儲存</button>
                     </div>
                   </div>
                   <form class="system-form xuqiu-form" id="xuqiuForm"></form>
@@ -417,7 +444,7 @@
                       <h3 id="xuqiuRelatedTitle">關聯資料</h3>
                       <div class="xuqiu-editor-actions">
                         <span class="path-file" id="xuqiuRelatedHint">選擇左側項目後顯示</span>
-                        <button class="btn tiny ghost" id="btnXuqiuAddTaskRow" type="button" hidden>＋ 新增任務</button>
+                        <button class="btn tiny ghost admin-only" id="btnXuqiuAddTaskRow" type="button" hidden>＋ 新增任務</button>
                         <button class="btn tiny ghost" id="btnXuqiuShowRelated2" type="button" disabled>放大查看</button>
                       </div>
                     </div>
@@ -569,8 +596,8 @@
             <p class="path-file" id="stepsModalPath"></p>
           </div>
           <div class="modal-head-actions">
-            <button class="btn ghost" id="btnEditSpecFromSteps" type="button" hidden>編輯腳本</button>
-            <button class="btn ghost danger" id="btnDeleteSpecFromSteps" type="button" hidden>刪除腳本</button>
+            <button class="btn ghost admin-only" id="btnEditSpecFromSteps" type="button" hidden>編輯腳本</button>
+            <button class="btn ghost danger admin-only" id="btnDeleteSpecFromSteps" type="button" hidden>刪除腳本</button>
             <button class="btn ghost" id="btnExportPdf" type="button">匯出 PDF</button>
             <button class="btn primary" id="btnRunFromStepsModal" type="button">執行此項</button>
             <button class="btn ghost" id="btnCloseStepsModal" type="button">關閉</button>
@@ -684,7 +711,7 @@
             </div>
 
             <div class="xuqiu-gen-actions">
-              <button class="btn primary" id="btnXuqiuDoGenTest" type="button">生成腳本</button>
+              <button class="btn primary admin-only" id="btnXuqiuDoGenTest" type="button">生成腳本</button>
             </div>
           </section>
 
@@ -710,10 +737,10 @@
                   placeholder="例如：依關聯任務補上搜尋步驟，不要走新增表單"
                 ></textarea>
               </label>
-              <button class="btn ghost" id="btnXuqiuRewriteGenTest" type="button">AI 修改脚本</button>
+              <button class="btn ghost admin-only" id="btnXuqiuRewriteGenTest" type="button">AI 修改脚本</button>
             </div>
 
-            <div class="xuqiu-gen-footer">
+            <div class="xuqiu-gen-footer admin-only">
               <label class="xuqiu-gen-overwrite">
                 <input type="checkbox" id="xuqiuGenOverwrite" checked />
                 <span>若腳本已存在則覆寫</span>
@@ -757,6 +784,42 @@
       </div>
     </div>
 
+    <div class="modal-backdrop" id="usersModal" hidden>
+      <div class="modal-card modal-card-users" role="dialog" aria-modal="true" aria-labelledby="usersModalTitle">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">權限</p>
+            <h2 id="usersModalTitle">用戶管理</h2>
+            <p class="detail-desc">管理員可新增登入帳號。一般用戶僅能執行腳本，不可編輯或刪除。</p>
+          </div>
+          <button class="btn ghost" id="btnCloseUsersModal" type="button">關閉</button>
+        </div>
+        <form class="system-form users-form" id="usersCreateForm">
+          <label>帳號<input id="newUserName" name="username" autocomplete="off" placeholder="例如 operator1" required /></label>
+          <label>顯示名稱<input id="newUserDisplay" name="displayName" autocomplete="off" placeholder="可留空" /></label>
+          <label>密碼<input id="newUserPass" name="password" type="password" autocomplete="new-password" required /></label>
+          <div class="users-form-actions">
+            <button class="btn primary" type="submit" id="btnCreateUser">新增執行者</button>
+          </div>
+        </form>
+        <p class="path-note" id="usersModalHint"></p>
+        <div class="users-table-wrap">
+          <table class="users-table">
+            <thead>
+              <tr>
+                <th>帳號</th>
+                <th>名稱</th>
+                <th>角色</th>
+                <th>狀態</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <div id="globalLoading" class="global-loading" hidden aria-live="polite" aria-busy="true">
       <div class="global-loading-card">
         <div class="global-loading-spinner" aria-hidden="true"></div>
@@ -764,6 +827,6 @@
       </div>
     </div>
 
-    <script src="/app.js?v=20260921h"></script>
+    <script src="/app.js?v=20260922a"></script>
   </body>
 </html>

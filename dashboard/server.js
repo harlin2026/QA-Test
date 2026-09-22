@@ -52,6 +52,7 @@ const {
   saveGeneratedDraft,
 } = require('./ai-generate');
 const xuqiuDb = require('./xuqiu-db');
+const auth = require('./auth');
 
 const PUBLIC = path.join(__dirname, 'public');
 const SYSTEMS_FILE = path.join(ROOT, 'systems.json');
@@ -600,11 +601,12 @@ function deleteCatalogItem(systemId, itemId) {
   };
 }
 
-function sendJson(res, status, data) {
+function sendJson(res, status, data, extraHeaders) {
   const body = JSON.stringify(data);
   res.writeHead(status, {
     'Content-Type': 'application/json; charset=utf-8',
     'Cache-Control': 'no-store',
+    ...(extraHeaders || {}),
   });
   res.end(body);
 }
@@ -1612,6 +1614,85 @@ function runStress(options, sse) {
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const method = String(req.method || 'GET').toUpperCase();
+
+  if (url.pathname.startsWith('/api/')) {
+    const authUser = auth.userFromRequest(req);
+
+    if (url.pathname === '/api/auth/login' && method === 'POST') {
+      if (!auth.checkLoginRate(req)) {
+        return sendJson(res, 429, { error: '嘗試次數過多，請稍後再試' });
+      }
+      try {
+        const body = await readRequestBody(req);
+        const result = auth.login(body?.username, body?.password);
+        if (!result.ok) return sendJson(res, 401, { error: result.error });
+        return sendJson(
+          res,
+          200,
+          { ok: true, user: auth.publicUser(result.user) },
+          { 'Set-Cookie': auth.cookieHeader(result.token, auth.SESSION_TTL_SEC) },
+        );
+      } catch (err) {
+        return sendJson(res, 400, { error: err.message || String(err) });
+      }
+    }
+
+    if (url.pathname === '/api/auth/me' && method === 'GET') {
+      return sendJson(res, 200, { user: auth.publicUser(authUser) });
+    }
+
+    if (url.pathname === '/api/auth/logout' && (method === 'POST' || method === 'GET')) {
+      auth.destroySession(req);
+      return sendJson(res, 200, { ok: true }, { 'Set-Cookie': auth.clearCookieHeader() });
+    }
+
+    if (!authUser) {
+      return sendJson(res, 401, { error: '請先登入' });
+    }
+    if (authUser.role !== 'admin' && !auth.runnerMay(method, url.pathname)) {
+      return sendJson(res, 403, { error: '權限不足：執行者僅可執行腳本，不可編輯或刪除' });
+    }
+
+    if (url.pathname === '/api/users' && method === 'GET') {
+      if (authUser.role !== 'admin') return sendJson(res, 403, { error: '僅管理員可管理用戶' });
+      return sendJson(res, 200, { users: auth.listUsers() });
+    }
+    if (url.pathname === '/api/users' && method === 'POST') {
+      if (authUser.role !== 'admin') return sendJson(res, 403, { error: '僅管理員可新增用戶' });
+      try {
+        const body = await readRequestBody(req);
+        const user = auth.createRunner({
+          username: body?.username,
+          password: body?.password,
+          displayName: body?.displayName,
+        });
+        return sendJson(res, 200, { ok: true, user });
+      } catch (err) {
+        return sendJson(res, 400, { error: err.message || String(err) });
+      }
+    }
+    if (url.pathname.startsWith('/api/users/') && (method === 'PUT' || method === 'PATCH')) {
+      if (authUser.role !== 'admin') return sendJson(res, 403, { error: '僅管理員可修改用戶' });
+      try {
+        const id = decodeURIComponent(url.pathname.slice('/api/users/'.length));
+        const body = await readRequestBody(req);
+        const user = auth.patchUser(id, body || {}, authUser);
+        return sendJson(res, 200, { ok: true, user });
+      } catch (err) {
+        return sendJson(res, err.status || 400, { error: err.message || String(err) });
+      }
+    }
+    if (url.pathname.startsWith('/api/users/') && method === 'DELETE') {
+      if (authUser.role !== 'admin') return sendJson(res, 403, { error: '僅管理員可刪除用戶' });
+      try {
+        const id = decodeURIComponent(url.pathname.slice('/api/users/'.length));
+        return sendJson(res, 200, auth.deleteUser(id, authUser));
+      } catch (err) {
+        return sendJson(res, err.status || 400, { error: err.message || String(err) });
+      }
+    }
+  }
 
   if (url.pathname === '/api/systems') {
     reloadSystems();
